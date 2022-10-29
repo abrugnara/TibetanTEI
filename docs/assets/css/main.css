@@ -1,8 +1,14 @@
 @font-face {
-    font-family: "PlayfairDisplay-Regular";
-    src: url("../fonts/PlayfairDisplay-Regular.woff2") format("woff2")
-  }
-
+  font-family: "PlayfairDisplay-Regular";
+  src: url("../fonts/PlayfairDisplay-Regular.woff2") format("woff2");
+}
+@font-face {
+  font-family: "NotoSansMarchen";
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url("../fonts//NotoSansMarchen.woff2") format("woff2");
+}
 :root {
   --content-width: min(100%, 72rem);
   --header-width: min(100%, 72rem);
@@ -22,8 +28,12 @@
   --copy: -apple-system, --system, BlinkMacSystemFont, "Segoe UI", "Roboto",
     "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
     sans-serif;
-  --headlines: "PlayfairDisplay-Regular",var(--copy);
+  --headlines: "PlayfairDisplay-Regular", var(--copy);
   --source: source-code-pro, Menlo, Monaco, Consolas, "Courier New", monospace;
+}
+[lang="bo"] {
+  font-family: "NotoSansMarchen", Kokonor, "Microsoft Himalaya", sans-serif;
+  display: none;
 }
 
 html {
@@ -56,10 +66,6 @@ a {
 }
 a:hover {
   color: var(--second);
-  text-decoration: underline;
-  text-decoration: var(--second) underline;
-  text-decoration-thickness: 2px;
-  text-decoration-color: var(--color);
 }
 
 h1,
@@ -98,14 +104,14 @@ header > div {
   width: var(--header-width);
 }
 header a.page-title {
-font-size: 2rem;
-padding: 1rem;
+  font-size: 2rem;
+  padding: 1rem;
   display: block;
   font-family: var(--headlines);
 }
 header a.page-title:hover {
-    text-decoration: none;
-    color: var(--color);
+  text-decoration: none;
+  color: var(--color);
 }
 header nav.menu {
   flex: 1;
@@ -116,12 +122,12 @@ header nav.menu {
   align-items: center;
 }
 header .badge {
-    display: flex;
-    align-items: center;
-    padding:1rem;
+  display: flex;
+  align-items: center;
+  padding: 1rem;
 }
 .menu a {
-    margin-right: 4rem;
+  margin-right: 4rem;
 }
 .menu a.active {
   margin-right: 4rem;
@@ -131,30 +137,72 @@ body {
 }
 
 footer {
-  padding: 1rem;
+  padding: 4rem;
   text-align: center;
 }
-.section {
+.section, .meta, .reader {
   margin: 0 auto;
-  padding: 1rem;
+  padding: 0 1rem;
   width: calc(var(--content-width) - 2rem);
 }
+/* Page:Texts */
 
 .text-list {
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr 1fr;
-    gap: 1rem;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  gap: 1rem;
 }
 .text-item {
-    background-color: var(--background);
+  background-color: var(--background);
 }
 .text-item img {
-    max-width: 100%;
-    display: flex;
-    flex-direction: row;
+  max-width: 100%;
+  display: flex;
+  flex-direction: row;
 }
 .text-item h2 {
-    margin-top: 0;
-    font-size: 1.5rem;
-    margin-bottom: 1rem;
+  margin-top: 0;
+  font-size: 1.5rem;
+  margin-bottom: 1rem;
+}
+
+/* Page:Detail */
+.breadcrumbs {
+    border-bottom: 1px solid var(--color);
+    padding: 1rem 0;
+    font-size: .8rem;
+}
+.tab-button, .button {
+    font-size: .8rem;
+    line-height: 1.5rem;
+    padding: 0 1rem;
+    border-radius: 0.1rem;
+    cursor: pointer;
+    border: 1px solid white;
+    background-color: white;
+    display: inline-block;
+}
+.tab-button:hover {
+    color: var(--second);
+}
+.button span {
+    font-size: smaller;
+}
+.tab-button.active {
+
+    border: 1px solid var(--color);
+    background-color: var(--background);
+    border-bottom: none;
+
+    border-bottom-left-radius: 0;
+    
+border-bottom-right-radius: 0;
+}
+.pane {
+  display: none;
+  padding: 1rem 0;
+}
+
+.pane.active {
+  display: block;
 }

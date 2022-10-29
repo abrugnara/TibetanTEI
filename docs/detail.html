@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>Brugnara - TibetianTEI</title>
+    <title>Brugnara - TibetianTEI Detail</title>
     <link rel="icon" type="image/x-icon" href="favicon.ico" />
     <link rel="stylesheet" type="text/css" href="assets/css/main.css" />
   </head>
@@ -11,8 +11,8 @@
       <div>
         <a class="page-title" href="/">Brugnara - TibetianTEI</a>
         <nav class="menu">
-          <a href="#" class="active">Info</a>
-          <a href="/texts.html">Texte</a>
+          <a href="/index.html">Info</a>
+          <a href="/texts.html" class="active">Texte</a>
         </nav>
         <div class="badge">
           <a href="https://github.com/abrugnara/TibetianTei" target="_blank">
@@ -43,34 +43,22 @@
     </header>
 
     <main>
-      <section class="section">
-        <h1>&Uuml;ber das Projekt</h1>
-        <p>
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean varius
-          mauris pharetra iaculis accumsan. Fusce imperdiet fermentum quam, eget
-          ornare ex tristique at. In maximus dolor lectus, volutpat vulputate
-          mauris maximus eu. Vestibulum aliquet molestie volutpat. Cras
-          tincidunt euismod arcu, et efficitur sem ultrices non. Praesent
-          sollicitudin arcu ac ipsum auctor, sed interdum nunc cursus. Aenean
-          suscipit ex eget sollicitudin vulputate. Sed scelerisque finibus metus
-          id dictum. Donec nec est porta, blandit magna vel, egestas turpis.
-          Nunc molestie molestie lorem, ut commodo massa interdum et. Sed lacus
-          sapien, euismod sit amet hendrerit id, faucibus eget mauris. Etiam
-          mattis odio urna, quis volutpat purus fringilla eu. Nulla ipsum magna,
-          dignissim vel justo in, fringilla elementum sapien. Maecenas semper,
-          lorem vel finibus lobortis, turpis nulla bibendum ligula, vel
-          elementum arcu lorem vitae tellus. Ut faucibus velit eget orci egestas
-          dignissim.
-        </p>
-        <p>
-          Nunc lobortis justo sed quam vulputate egestas. Vivamus non magna a
-          erat pulvinar pretium. Quisque arcu nisl, sagittis non risus sed,
-          posuere tincidunt tellus. Mauris sit amet metus id dolor lacinia
-          sagittis. Ut bibendum sem rutrum ex consectetur faucibus. Suspendisse
-          fringilla augue in sapien faucibus, nec condimentum lacus rutrum.
-          Vivamus semper ac dui eu suscipit. Orci varius natoque penatibus et
-          magnis dis.
-        </p>
+      <section class="meta">
+        <div class="breadcrumbs"><a href="texts.html">Text</a> / Detail</div>
+        <h1 id="title">Unbenannt</h1>
+      </section>
+      <section class="reader">
+        <nav>
+          <button class="tab-button active" data-id="facs">Facsimile</button>
+          <button class="tab-button" data-id="tibetian">Tibetian</button>
+          <button class="tab-button" data-id="translations">&Uuml;bersetzung</button>
+          <a class="button" target="_blank" href="https://github.com/abrugnara/TibetianTEI/tree/main/TibetanTEI-main/content"><span>&lt;/&gt;</span> XML</a>
+        </nav>
+        <div class="panes">
+          <div class="pane facs active" id="facs">kein Facsimile gefunden</div>
+          <div class="pane tibetian" id="tibetian">keine Text gefunden</div>
+          <div class="pane translation" id="translations">keine &Uuml;bersetzung gefunden</div>
+        </div>
       </section>
     </main>
 
@@ -126,5 +114,107 @@
         </div>
       </nav>
     </footer>
+    <script>
+      const NS = "http://www.tei-c.org/ns/1.0";
+
+      const texts = [
+        { id: "1", url: "content/1_gompopa.xml" },
+        { id: "2", url: "content/2_dignaga.xml" },
+        { id: "3", url: "content/3_ganden.xml" },
+        { id: "4", url: "content/4_shrisena.xml" },
+      ];
+      window.onload = function () {
+        try {
+          var url_string = window.location.href.toLowerCase();
+          var url = new URL(url_string);
+          var id = url.searchParams.get("id");
+
+          loadText(id);
+        } catch (err) {
+          alert("document not found");
+          console.log("Issues with Parsing URL Parameter's - " + err);
+        }
+      };
+
+      /* Helper */
+      const getNodes = (path, xml) =>
+        xml.evaluate(
+          path,
+          xml,
+          function (prefix) {
+            if (prefix === "TEI") {
+              return NS;
+            } else {
+              return null;
+            }
+          },
+          XPathResult.ANY_TYPE,
+          null
+        );
+
+      function loadText(id) {
+        var xhttp = new XMLHttpRequest();
+        xhttp.onreadystatechange = function () {
+          if (this.readyState == 4 && this.status == 200) {
+            showResult(xhttp.responseXML);
+          }
+        };
+        const text = texts.find((text) => text.id === id);
+        xhttp.open("GET", text.url, true);
+        xhttp.send();
+
+        function showResult(xml) {
+          var doc = {};
+          // Title
+          var txt = "";
+          path = "//TEI:title";
+          var nodes = getNodes(path, xml);
+          var result = nodes.iterateNext();
+          while (result) {
+            txt += result.childNodes[0].nodeValue + "<br>";
+            result = nodes.iterateNext();
+          }
+          doc.title = txt;
+
+          // Translation
+          var txt = "";
+          path = "//TEI:trans";
+          var nodes = getNodes(path, xml);
+          var result = nodes.iterateNext();
+          while (result) {
+            txt += result.childNodes[0].nodeValue + "<br>";
+            result = nodes.iterateNext();
+          }
+          doc.translations = txt;
+
+          // Render
+          document.getElementById("title").innerHTML = doc.title;
+          document.getElementById("translations").innerHTML = doc.translations;
+        }
+      }
+
+      // Tabs
+
+      var tabs = document.querySelector(".reader");
+      var tabButton = document.querySelectorAll(".tab-button");
+      var panes = document.querySelectorAll(".pane");
+      console.log(tabs);
+      tabs.onclick = (e) => {
+        const id = e.target.dataset.id;
+        console.log(id);
+        if (id) {
+          tabButton.forEach((btn) => {
+            btn.classList.remove("active");
+          });
+          e.target.classList.add("active");
+
+          panes.forEach((content) => {
+            content.classList.remove("active");
+          });
+          const element = document.getElementById(id);
+          element.classList.add("active");
+        }
+      };
+    </script>
   </body>
 </html>
