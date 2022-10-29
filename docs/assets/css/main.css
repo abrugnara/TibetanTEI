@@ -120,7 +120,9 @@ header .badge {
     align-items: center;
     padding:1rem;
 }
-
+.menu a {
+    margin-right: 4rem;
+}
 .menu a.active {
   margin-right: 4rem;
   color: var(--second);
@@ -136,4 +138,23 @@ footer {
   margin: 0 auto;
   padding: 1rem;
   width: calc(var(--content-width) - 2rem);
+}
+
+.text-list {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    gap: 1rem;
+}
+.text-item {
+    background-color: var(--background);
+}
+.text-item img {
+    max-width: 100%;
+    display: flex;
+    flex-direction: row;
+}
+.text-item h2 {
+    margin-top: 0;
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
 }
