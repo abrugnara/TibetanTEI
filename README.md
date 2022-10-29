@@ -1,9 +1,10 @@
 # TibetianTEI Albert Brugnara
-Institut für Südasien-, Tibet- und Buddhismuskunde (ISTB); https://stb.univie.ac.at)
+Dieses Repository ist Teil des Lehrmaterials für die Lehrveranstaltungen und BA- und MA-Arbeiten des Institut für Südasien-, Tibet- und Buddhismuskunde [(ISTB)](https://stb.univie.ac.at/)
+Das Repository enthält Darstellungen von TEI-kodierten diplomatischen Ausgaben von tibetischem Unicode-Text in einem Browser. Die Markierungen sind so konfiguriert, dass auch tibetischer Text mit Faksimile-Bildern im traditionellen Pecha-Format angezeigt werden. Das in den editionen angewandte TEI-Kodierungsschema wurde in Übereinstimmung mit den TEI P5-Richtlinien für die Kommentierung besonders tibetischer historischer Werke, Kolophone oder Textauszüge auf diplomatische Weise mit nur einem einzigen Textzeugen entwickelt. Allerdings wurde dieser Textzeuge mit anderen abgeglichen und notwendige Korrekturen markiert. Die Kodierung deckt die Markierung grundlegender redaktioneller Merkmale, historischer Einheiten und Daten sowie übersetzter Teile und Fachterminologie ab, Ebenso die tibetische Syntax (siehe Dokumentation zur Markierung unten).
 
-Grundlegendes TEI-Markup für tibetische historische Texte (diplomatische Editionen)
+Die aktuelle Anpassung ist inspiriert von der Online-TEI-bp-Ausgabe von James Beresfords Übersetzung der Aeneis von Virgil, kodiert und digital veröffentlicht von William Dorner, University of Central Florida. Die Funktion "Übersetzung anzeigen/ausblenden" ist der Textansicht von W. Dorner nachempfunden. Die Faksimile-Anzeige oberhalb des Textes ist inspiriert von einem Blogbeitrag von Charles Riondet, TEI Boilerplate: Anzeige eines Faksimiles neben einer Transkription.
 
-     
+Grundlegendes TEI-Markup für tibetische historische Texte (diplomatische Editionen) 
     divisions: <div>...</div>
     paragraphs: <p>...</p>
     line breaks: <lb/> 
@@ -23,3 +24,10 @@ Grundlegendes TEI-Markup für tibetische historische Texte (diplomatische Editio
     persons: <persName>...</persName>; e.g. <persName type="BUDA" key="P3183">རྡོ་རྗེ་གདན་པ་ཀུན་དགའ་རྣམ་རྒྱལ་དཔལ་བཟང་པོ</persName>
     places: <placeName>...</placeName>; e.g. <placeName type="BUDA" key="G2800">ལྷ་ས</placeName>
     work titles: <title>...</title>; e.g. <title type="RKTS" key="3219">བྱང་ཆུབ་སེམས་དཔའི་སྤྱོད་པ་ལ་འཇུག་པའི་ལེགས་པར་སྦྱར་བ</title>།"
+    
+    Annotation für tibetische Syntax
+    komplexe Sätze
+    Wortarten
+    Suffixe / Partikel
+    Erklärungen
+    
