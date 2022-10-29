@@ -51,13 +51,29 @@
         <nav>
           <button class="tab-button active" data-id="facs">Facsimile</button>
           <button class="tab-button" data-id="tibetian">Tibetian</button>
-          <button class="tab-button" data-id="translations">&Uuml;bersetzung</button>
-          <a class="button" target="_blank" href="https://github.com/abrugnara/TibetianTEI/tree/main/TibetanTEI-main/content"><span>&lt;/&gt;</span> XML</a>
+          <button class="tab-button" data-id="translations">
+            &Uuml;bersetzung
+          </button>
+          <a
+            class="button"
+            target="_blank"
+            href="https://github.com/abrugnara/TibetianTEI/tree/main/TibetanTEI-main/content"
+            ><span>&lt;/&gt;</span> XML</a
+          >
+          <label>
+            Seite:
+            <select id="selectPage"></select>
+            / <span id="pageCount">0</span>
+          </label>
         </nav>
         <div class="panes">
-          <div class="pane facs active" id="facs">kein Facsimile gefunden</div>
+          <div class="pane facs active" id="facs">
+            <img id="facsimile" alt="Facsimile" />
+          </div>
           <div class="pane tibetian" id="tibetian">keine Text gefunden</div>
-          <div class="pane translation" id="translations">keine &Uuml;bersetzung gefunden</div>
+          <div class="pane translation" id="translations">
+            keine &Uuml;bersetzung gefunden
+          </div>
         </div>
       </section>
     </main>
@@ -123,6 +139,7 @@
         { id: "3", url: "content/3_ganden.xml" },
         { id: "4", url: "content/4_shrisena.xml" },
       ];
+      var doc = {};
       window.onload = function () {
         try {
           var url_string = window.location.href.toLowerCase();
@@ -152,6 +169,32 @@
           null
         );
 
+      //Filters the given array to those which when passed into matcher return true
+      Array.prototype.where = function (matcher) {
+        var result = [];
+        for (var i = 0; i < this.length; i++) {
+          if (matcher(this[i])) {
+            result.push(this[i]);
+          }
+        }
+        return result;
+      };
+
+      function getElementsByAttribute(tag, attr, attrValue, nodes) {
+        //Get elements and convert to array
+        var elems = Array.prototype.slice.call(
+          nodes.getElementsByTagName(tag),
+          0
+        );
+
+        //Matches an element by its attribute and attribute value
+        var matcher = function (el) {
+          return el.getAttribute(attr) == attrValue;
+        };
+
+        return elems.where(matcher);
+      }
+
       function loadText(id) {
         var xhttp = new XMLHttpRequest();
         xhttp.onreadystatechange = function () {
@@ -164,7 +207,6 @@
         xhttp.send();
 
         function showResult(xml) {
-          var doc = {};
           // Title
           var txt = "";
           path = "//TEI:title";
@@ -176,8 +218,41 @@
           }
           doc.title = txt;
 
-          // Translation
+          // Pages
           var txt = "";
+          path = "//TEI:pb";
+          var nodes = getNodes(path, xml);
+          var result = nodes.iterateNext();
+          var trans;
+          var pages = [];
+          console.log(nodes);
+          while (result) {
+            // console.log(result.childNodes)
+            // // transBo = getElementsByAttribute("trans","xml:lang","bo",result.childNodes[0].nodeValue);
+            // trans = result.childNodes
+            // // transDE = getElementsByAttribute("trans","xml:lang","de",result.childNodes[0])
+            const pageNumber = result.getAttribute("n");
+            if (pageNumber) {
+              pages.push({
+                facsimile: result.getAttribute("facs"),
+                n: parseInt(pageNumber),
+              });
+            }
+            result = nodes.iterateNext();
+          }
+          doc.pages = pages;
+
+          // Body
+          var txt = "";
+          path = "//TEI:body";
+          var nodes = getNodes(path, xml);
+          var body = nodes.iterateNext();
+          doc.body = body;
+
+          // Translations
+          var img = "";
+          var transBo = "";
+          var transDE = "";
           path = "//TEI:trans";
           var nodes = getNodes(path, xml);
           var result = nodes.iterateNext();
@@ -185,11 +260,41 @@
             txt += result.childNodes[0].nodeValue + "<br>";
             result = nodes.iterateNext();
           }
-          doc.translations = txt;
+          doc.translations = { unsorted: txt };
 
-          // Render
+          console.log(doc);
+
+          // Render (on Page Change)
+          const render = (pageNumber) => {
+            console.log(doc.pages, pageNumber);
+            document.getElementById("facsimile").src = doc.pages.find(
+              (p) => p.n === pageNumber
+            ).facsimile;
+
+            document.getElementById("translations").innerHTML =
+              doc.translations.unsorted;
+          };
+
+          const changePage = (e) => {
+            console.log(select.value);
+            render(parseInt(select.value));
+          };
+          // Meta
           document.getElementById("title").innerHTML = doc.title;
-          document.getElementById("translations").innerHTML = doc.translations;
+          // First Page
+          render(1);
+
+          // Page Selector
+          var select = document.getElementById("selectPage");
+          document.getElementById("pageCount").innerHTML = doc.pages.length;
+          for (var i = 0; i < doc.pages.length; i++) {
+            var opt = doc.pages[i].n;
+            var el = document.createElement("option");
+            el.textContent = opt;
+            el.value = opt;
+            select.appendChild(el);
+          }
+          select.addEventListener("change", changePage);
         }
       }
 
@@ -198,10 +303,8 @@
       var tabs = document.querySelector(".reader");
       var tabButton = document.querySelectorAll(".tab-button");
       var panes = document.querySelectorAll(".pane");
-      console.log(tabs);
       tabs.onclick = (e) => {
         const id = e.target.dataset.id;
-        console.log(id);
         if (id) {
           tabButton.forEach((btn) => {
             btn.classList.remove("active");
