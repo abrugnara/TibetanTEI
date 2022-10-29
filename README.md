@@ -2,8 +2,8 @@
 Institut für Südasien-, Tibet- und Buddhismuskunde (ISTB); https://stb.univie.ac.at)
 
 Grundlegendes TEI-Markup für tibetische historische Texte (diplomatische Editionen)
+
      
-    page breaks: <pb/>; e.g. <pb ed="A" n="1a"/>
     divisions: <div>...</div>
     paragraphs: <p>...</p>
     line breaks: <lb/> 
