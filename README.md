@@ -6,7 +6,7 @@ Die aktuelle Anpassung ist inspiriert von der Online-TEI-bp-Ausgabe von James Be
 Dies wurde nun weiterentwickelt nach den Mustern der österreichischen Nationalbibliothek der Notitzbücher von peter Handke https://edition.onb.ac.at/context:hnb
 
 
-Grundlegendes TEI-Markup für tibetische historische Texte (diplomatische Editionen)br
+Grundlegendes TEI-Markup für tibetische historische Texte (diplomatische Editionen) /br
 
     divisions: <div>...</div>
     paragraphs: <p>...</p>
