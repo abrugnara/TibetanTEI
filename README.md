@@ -6,7 +6,8 @@ Die aktuelle Anpassung ist inspiriert von der Online-TEI-bp-Ausgabe von James Be
 Dies wurde nun weiterentwickelt nach den Mustern der österreichischen Nationalbibliothek der Notitzbücher von peter Handke https://edition.onb.ac.at/context:hnb
 
 
-Grundlegendes TEI-Markup für tibetische historische Texte (diplomatische Editionen) 
+Grundlegendes TEI-Markup für tibetische historische Texte (diplomatische Editionen)br
+
     divisions: <div>...</div>
     paragraphs: <p>...</p>
     line breaks: <lb/> 
@@ -16,7 +17,7 @@ Grundlegendes TEI-Markup für tibetische historische Texte (diplomatische Editio
 
     gaps: <gap></gap>; e.g. <gap extent="4" unit="letters"></gap>
     unclear sections: <unclear>...</unclear>
-    translation part: <trans>...</trans>; e.g. <trans xml:lang="en">...</trans>
+    translation part: <div type="translation"><p xml:lang="de">...</p></div>; e.g. <p xml:lang="whylie">...</p>
     special terminology in the translation (Sanskrit or Tibetan): <term>...</term>; e.g. <term>pravrajyā</term>
     corrections: <choice><sic>...</sic><corr>...</corr></choice>; e.g. བསམ་<choice><sic>གྱི་</sic><corr>གྱིས་</corr></choice>མི་ཁྱག་་་་
     regulations: <choice><orig>...</orig><reg>...</reg></choice>
