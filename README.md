@@ -3,6 +3,8 @@ Dieses Repository ist Teil des Lehrmaterials für die Lehrveranstaltungen und BA
 Das Repository enthält Darstellungen von TEI-kodierten diplomatischen Ausgaben von tibetischem Unicode-Text in einem Browser. Die Markierungen sind so konfiguriert, dass auch tibetischer Text mit Faksimile-Bildern im traditionellen Pecha-Format angezeigt werden. Das in den editionen angewandte TEI-Kodierungsschema wurde in Übereinstimmung mit den TEI P5-Richtlinien für die Kommentierung besonders tibetischer historischer Werke, Kolophone oder Textauszüge auf diplomatische Weise mit nur einem einzigen Textzeugen entwickelt. Allerdings wurde dieser Textzeuge mit anderen abgeglichen und notwendige Korrekturen markiert. Die Kodierung deckt die Markierung grundlegender redaktioneller Merkmale, historischer Einheiten und Daten sowie übersetzter Teile und Fachterminologie ab, Ebenso die tibetische Syntax (siehe Dokumentation zur Markierung unten).
 
 Die aktuelle Anpassung ist inspiriert von der Online-TEI-bp-Ausgabe von James Beresfords Übersetzung der Aeneis von Virgil, kodiert und digital veröffentlicht von William Dorner, University of Central Florida. Die Funktion "Übersetzung anzeigen/ausblenden" ist der Textansicht von W. Dorner nachempfunden. Die Faksimile-Anzeige oberhalb des Textes ist inspiriert von einem Blogbeitrag von Charles Riondet, TEI Boilerplate: Anzeige eines Faksimiles neben einer Transkription.
+Dies wurde nun weiterentwickelt nach den Mustern der österreichischen Nationalbibliothek der Notitzbücher von peter Handke https://edition.onb.ac.at/context:hnb
+
 
 Grundlegendes TEI-Markup für tibetische historische Texte (diplomatische Editionen) 
     divisions: <div>...</div>
