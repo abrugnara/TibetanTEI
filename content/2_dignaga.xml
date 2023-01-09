@@ -1,547 +1,521 @@
 ﻿<?xml version="1.0" encoding="UTF-8"?>
-<?xml-stylesheet type="text/xsl" href="./teibp.xsl"?>
-<?xml-stylesheet type="text/xsl" href="./custom.xsl"?>
-<TEI xmlns="http://www.tei-c.org/ns/1.0">
-  <teiHeader>
-    <!-- Beschreibt die Metadaten des Documents -->
-    <fileDesc>
-      <!-- mandatory!  bibliographic description of the digital file -->
-      <titleStmt>
-        <!-- mandatory!  Titles, author and editor/s of the digital document -->
-        <title xml:lang="bo">རྗེ་བཙུན་ཏཱ་ར་ནཱ་ཐའི་གསུང་འབུམ་</title>
-        <title xml:lang="de">rje btsun tA ra nA tha'i gsung 'bum: SoSe 2022 Historiografische
-          Berichte über bedeutende buddhistische Gelehrte (Dignāga (c.480–c.540))</title>
-        <author>
-          <name xml:lang="bo"> ཏཱ་ར་ནཱ་ཐ་</name>
-        </author>
-        <respStmt>
-          <resp>Text input:</resp>
-          <name>Albert Brugnara</name>
-        </respStmt>
-        <respStmt>
-          <!-- Editing of the digital text (encoding, markup) -->
-          <resp>TEI Encoding and Markup:</resp>
-          <name>2022S 142079-1 Historiografische Berichte über bedeutende buddhistische Gelehrte"
-            (2022SoSe), University of Vienna</name>
-        </respStmt>
-      </titleStmt>
-      <publicationStmt>
-        <!-- mandatory!  information about the publication/distribution of the digital text -->
-        <publisher>Ist noch einzugeben</publisher>
-        <date>17xx</date>
-        <availability>
-          <p>This digital text is made available under a CC (Creative Commons) License Attribution
-            Share-Alike, 4.0.</p>
-        </availability>
-      </publicationStmt>
-      <sourceDesc>
-        <!-- mandatory!  bibliographic information about the source/s from which the digital text is derived or generated -->
-        <listWit>
-          <!-- list of consulted editions (manuscript/block print), editor, place and year of publication, extent-->
-          <witness xml:id="A">
-            <bibl>'dzam thang</bibl>
-          </witness>
-          <witness xml:id="B">
-            <bibl>s.n.</bibl>
-          </witness>
-        </listWit>
-      </sourceDesc>
-    </fileDesc>
-    <encodingDesc>
-      <!-- optional! information of editorial principles -->
-      <editorialDecl>
-        <p>Named entities of the text (i.e. persons, places, work titles, dates) are annotated and
-          linked to online resources including the Buddhist Digital Archives (BUDA;
-          https://https://library.bdrc.io//), the Sakya Research Centre (SRC;
-          https://sakyaresearch.org/) and the Resources for Kanjur &amp; Tanjur Studies (rKTs;
-          https://www.istb.univie.ac.at/kanjur). Non-canonical works are referred to by its Tohoku
-          catalogue number (i.e. A catalogue of the Tohoku University collection of Tibetan works on
-          Buddhism. Kanakura et al. (eds.). Sendai: Seminary of Indology, Tohoku University, 1953).
-          Dates of persons are given according to the BUDA database.</p>
-      </editorialDecl>
-    </encodingDesc>
-    <encodingDesc>
-      <tagsDecl>
-        <rendition xml:id="b" n="teibp:bold" scheme="css">font-weight:bold;</rendition>
-        <rendition xml:id="i" n="teibp:italics" scheme="css">font-style:italic;</rendition>
-        <rendition xml:id="du" n="teibp:underline" scheme="css">text-decoration:underline;
-          text-decoration-style:dashed;</rendition>
-        <rendition xml:id="blue" scheme="css">color:blue;</rendition>
-        <rendition xml:id="green" scheme="css">color:green;</rendition>
-        <rendition xml:id="orange" scheme="css">color:orange;</rendition>
-        <rendition xml:id="pink" scheme="css">color:pink;</rendition>
-        <namespace name="http://www.tei-c.org/ns/1.0">
-          <tagUsage gi="date" render="#pink"/>
-          <tagUsage gi="term" render="#i"/>
-          <tagUsage gi="unclear" render="#du"/>
-          <tagUsage gi="persName" render="#blue"/>
-          <tagUsage gi="placeName" render="#orange"/>
-          <tagUsage gi="title" render="#green"/>
-          <tagUsage gi="tdate" render="#pink"/>
-        </namespace>
-      </tagsDecl>
-    </encodingDesc>
-    <profileDesc>
-      <!-- optional! -->
-      <langUsage>
-        <language ident="en">English</language>
-        <language ident="wylie">Tibetan (Wylie)</language>
-        <language ident="bo">Tibetan (Tibetan script)</language>
-        <language ident="sa">Sanskrit</language>
-      </langUsage>
-    </profileDesc>
-    <revisionDesc>
-      <!-- optional! version history -->
-      <change when="2019-03-11" who="#mf">witness added to TEI-header</change>
-      <change when="2019-03-26" who="#mf">revision of first paragraph, completion of markup</change>
-      <change when="2019-03-27" who="#mf">identification of persons in first paragraph, linking to
-        BUDA</change>
-      <change when="2019-04-10" who="#mf">tagging of persons, places and dates in first paragraph,
-        pp. 119.6-120.3</change>
-      <change when="2019-05-08" who="#mf">tagging of titles, linking places in the first two
-        paragraphs</change>
-      <change when="2022-07-04" who="#ab">tagging of Verbs and Suffixes</change>
-    </revisionDesc>
-  </teiHeader>
-  <text>
-    <body>
-      <pb ed="A" n="65a" facs="../images/dignaga/taranatha_dignaga_Page_593.jpeg"/>
-      <p xml:lang="bo">Beginn des Textes: Image 593, Page 65a: 5. Zeile Mitte:
-          སློབ་དཔོན་ཆེན་པོ་<persName type="BUDA" key="P6119">དབྱིག་གཉེན</persName>་གྱི་སྐུ་ཚེ<font
-          color="red">འི</font>་སྨད་ཙམ་<font color="red">གྱི</font>་དུས་<font color="red">ན</font>།
-          <persName type="BUDA" key="???">རྒྱལ་པོ་ཟབ་མོ<font color="red"
-          >འི</font>་ཕྱོགས</persName>་འདས་པ<font color="red">འི</font>་<font color="brown"
-          >འོག</font>་<font color="red">ཏུ</font>་ནུབ་ཕྱོགས་<placeName type="BUDA" key="???"
-          >མ་རུ</placeName><font color="red">འི</font>་ཡུལ་<font color="red">དུ</font>་<font
-          color="brown">སྐྱེས་པ</font>་<persName type="BUDA" key="???">རྒྱལ་བོ་
-          ཤྲཱི་ཧརྴ</persName>་ཞེས་<font color="brown">བྱ་བ</font>་ལས<font color="red"
-          >ཀྱི</font>་སྟོབས་ཤིན་<font color="red">ཏུ</font>་ཆེ་བ་<font color="brown"
-          >བྱུང</font>་<font color="red">སྟེ</font>་ནུབ་ཕྱོགས་<font color="red"
-          >ཀྱི</font>་རྒྱལ་ཁམས་ཐམས་ཅད་<font color="red">ལ</font>་དབང་<font color="brown"
-          >བསྒྱུར</font>། ཕྱིས་སངས་རྒྱས་<font color="red">ཀྱི</font>་བསྟན་པ་<font color="red"
-          >ལ</font>་<font color="red">དད</font>་པ་<font color="brown">ཐོབ</font>་<font color="red"
-          >སྟེ</font>་སློབ་དཔོན་<persName type="BUDA" key="P6242">ཡོན་ཏན་འོད</persName>་བླ་མར་<font
-          color="brown">བཀུར་བ</font>་ཞིག་<font color="brown">བྱུང</font>། དུས་དེ་ཙམ་<font
-          color="red">ན</font>་ཤར་ཕྱོགས་<font color="red">སུ</font>་ <persName type="BUDA"
-          key="P6242">རྒྱལ་བོ་བྲྀཀྵ་ཙནྡྲ</persName><font color="red">འི</font>་བུ་བརྒྱུད་<font
-          color="red">ལ</font>་<persName type="BUDA" key="???"> རྒྱལ་པོ་བི་ག་མ་ཙནྡྲ</persName>་<font
-          color="red">དང</font>། དེ<font color="red">འི</font>་བུ་<persName type="BUDA" key="???"
-          >ཀཱ་མ་ཙནྡྲ</persName>་གཉིས་<font color="red">ཀྱིས</font>་<font color="brown"
-          >རྒྱལ་སྲིད་སྐྱོང་བ</font><font color="red">འི</font>་དུས་<font color="red">ཏེ</font>།
-        རྒྱལ་པོ་དེ་གཉིས་</p>
-      <p xml:lang="de"><trans>Als zur Zeit der zweiten Lebenshälfte des großen Lehrers Vasubandhu
-          (dbyig gnyen) der König zab mo'i phyogs gestorben war und es wurde in der Westlichen
-          Region in ma ru der sogenannte König (mit dem Namen) Śriharṣa geboren, der große
-          Aktivitätskraft hat und der über die gesamten Königsreiche in westlicher Richtung
-          herrschte. Später vertraute er der Buddhalehre und er erlangte Vertrauen und war einer der
-          den Lehrer Guṇaprabha als seinen Lehrer verehrte. Um dieselbe Zeit herrschte im Osten, aus
-          der Nachkommenschaft des Königs Vṛkshatsandra, der König Vigamatsandra und dessen Sohn
-          Kāmatsandra .</trans></p>
-      <pb ed="A" n="65b" facs="../images/dignaga/taranatha_dignaga_Page_594.jpeg"/>
-      <p xml:lang="bo">དབང་ཐང་དང་ལོངས་སྤྱོད་ཀྱང་ཆེ། སྦྱིན་པ་ལ་དགའ།
-        རྒྱལ་སྲིད་ཆོས་ལུགས་བཞིན་དུ་སྐྱོང་བ་ཡིན་ཀྱང་དཀོན་མཆོག་གསུམ་ལ་སྐྱབས་སུ་མ་སོང་སྟེ།
-        ཕྱི་ནང་གཉིས་ཀར་མཆོད་ཅིང་ཁྱད་པར་གཅེར་བུ་པ་རྣམས་ལ་མོས་སོ། <placeName type="BUDA"
-          key="G2DB25458">ཁ་ཆེ</placeName>་ར་དེ་ཙམ་ན་ཡང་<persName type="BUDA" key="???"
-          >རྒྱལ་པོ་མང་པོ</persName>ས་བཀུར་བ་ཉིད་ཡོད་དོ་ཞེས་གྲགས་སོ༎
-          དེའི་ཚེ་ཤར་ཕྱོགས་སུ་སློབ་དཔོན་<persName type="BUDA" key="???"
-        >བློ་གྲོས་བརྟན་པ</persName>་དང། <persName type="BUDA" key="???"
-        >ཕྱོགས་ཀྱི་གླང་པོ</persName>ས་འགྲོ་དོན་མཛད། ནུབ་ཕྱོགས་སུ་འཕགས་པ་<persName type="BUDA"
-          key="???">ཐོགས་མེད</persName>་ཀྱི་སློབ་མ་<persName type="BUDA" key="???"
-          >སངས་རྒྱས་འབངས</persName>་ཀྱི་སྐུ་ཚེའི་སྨད་ཀྱི་འགྲོ་དོན་དང། <persName type="BUDA"
-          key="???">ཡོན་ཏན་འོད</persName>་ཀྱི་འགྲོ་དོན་དར་བའི་དུས་སོ།</p>
-      <p xml:lang="bo"><placeName type="BUDA" key="???">ཁ་ཆེའི་ཡུལ</placeName>་དུ་བཙུན་པ་<persName
-          type="BUDA" key="P6119">དགེ་འདུན་འབངས</persName>་ཀྱིས་འགྲོ་བའི་དོན་ཆེར་མཛད།
-          སློབ་དཔོན་<persName type="BUDA" key="P6119"
-        >ཆོས་འབང</persName>ས་ཡུལ་ཐམས་ཅད་དུ་གཤེགས་ཤིང་ཆོས་སྟོན་པ་ཞིག་བྱུང་ལ།
-          ལྷོ་ཕྱོགས་ཀྱི་རྒྱུད་དུ་སློབ་དཔོན་<persName type="BUDA" key="P4CZ1523"
-          >སངས་རྒྱས་བསྐྱངས</persName>་བྱོན། <persName type="BUDA" key="???">ལེགས་ལྡན</persName>་དང།
-          <persName type="BUDA" key="P0RK660"
-        >རྣམ་གྲོལ་སྡེ</persName>་གཉིས་ཀྱི་སྐུ་ཚེའི་སྟོད་ཀྱི་དུས་ཙམ་ཡིན། <placeName type="BUDA"
-          key="???">ཨོ་ཊི་བི་ཤ</placeName>འི་ཡུལ་དུ་རྒྱལ་པོ་<persName type="BUDA" key="???"
-          >ཛ་ལེ་རུ་ཧེའི</persName>་བུ་<persName type="BUDA" key="???">ནཱ་གེ་ཤ</persName>་དང།
-          བློན་པོ་བྲམ་ཟེ་<persName type="BUDA" key="???">ནཱ་ག་ཀེ་ཤ</persName>་ཞེས་བྱ་བ་བྱུང་སྟེ།
-        ལོ་བདུན་ཙམ་རྒྱལ་སྲིད་བསྐྱངས་པས་ཤིན་ཏུ་དབང་ཐང་ཆེ་ཞིང། <persName type="BUDA" key="???"
-          >བི་ཁ་མ་ཙནྡྲ</persName>ས་ཀྱང་ཕྱག་བྱས། སློབ་དཔོན་<persName type="BUDA" key="???"
-          >ལོ་ཡི་པ</persName>ས་བཏུལ་ཏེ་རྒྱལ་སྲིད་སྤངས། གྲུབ་པ་ཐོབ་པ་ནི་རྒྱལ་པོ་<persName type="BUDA"
-          key=")4CZ15083">ད་རི་ཀ་པ</persName>་དང། བློན་པོ་<persName type="BUDA" key="???"
-          >ཌེཾ་གི་པ</persName>འོ། །</p>
-      <trans>
-        <p xml:lang="de">Beide Könige waren von großer Macht und von großem Reichtum und hatten ihre
-          Freude am Geben; allein obwohl sie ihre Herrschaft der Lehre gemäß ausübten, nahmen sie
-          dennoch nicht [ihre] Zuflucht zu den drei Kostbarkeiten, sondern indem sie sowohl den
-          Nichtbuddhisten und den Buddhisten Ehre erwiesen, verehrten sie besonders die Nirgrantha's
-          (die Nackten: Jainas). Auch zu dieser Zeit war der König in Kaschmir Mahāsammatha, so ist
-          es bekannt. Die Zeit in der Sthiramati und Dignāga im Osten das Wohl der Lebewesen
-          bewirkten, und [einerseits] sang rgyas 'bangs, der ein Schüler von thog med war, in der
-          zweiten Lebenshälfte und [andererseits] yan tan 'od im Westen den Nutzen der Lebewesen
-          verbreiteten.</p>
-        <p>In Kaschmir wirkte der Mönch Saṁghadāsa sehr zum Wohl der Lebewesen, der Guru Dharmadhāsa
-          aber war ein Lehrer des Dharma, der begab sich in alle Regionen, und in den Süden aber
-          ging der Lehrer Buddhapālita und dies ist in etwa in der der ersten Hälfte der Lebenszeit
-          von von den beiden Bhavja und Vimuktasena</p>
-        <p>In der Region von Odiviśa verweilte der Sohn des Königs Dshaleruha, Nāgeśa, genannt und
-          als Minister den Brahmanen namens Nāgakeśa . Er übte die Herrschaft ungefähr sieben Jahre
-          aus und wurde sehr mächtig (hatte große Macht), sogar Vigamatshandra verehrte ihn. Er
-          wurde vom Lehrer Lo yi pa bekehrt. Er gab die Herrschaft auf; was die Mahasidda betrifft
-          wurden sie König und DeMa gi Minister.</p>
-      </trans>
-      <p xml:lang="bo">སློབ་དཔོན་<persName type="BUDA" key="???"
-          >དཀོན་མཆོག་གསུམ་གྱི་འབང</persName>ས་ཞེས་པའང་<persName type="BUDA" key="???"
-          >ལེགས་ལྡན</persName>་དང་དུས་མཉམ་པ་ཙམ་ཡིན་ཞིང། <placeName type="BUDA" key="???"
-          >ཨོ་ཌི་བི་ཤ</placeName>ར་བྲམ་ཟེ་<persName type="BUDA" key="???"
-        >བྷ་དྲ་པཱ་ལི་ཏ</persName>་ཞེས་བྱ་བའི་ཀྱང་བསྟན་པ་ལ་བྱ་བ་ཆེར་བྱས་སོ། །དེ་དག་ལས།</p>
-      <trans>
-        <p xml:lang="de">Der Lehrer Triratnadasha existiert zur gleichen Zeit. In Odiviśa der
-          sogenannte Brahmane Bhadrapalita machte für die Lehre in hohem Ausmaß Handlungen. Unter
-          diesen:</p>
-      </trans>
-      <pb ed="A" n="66a" facs="../images/dignaga/taranatha_dignaga_Page_595.jpeg"/>
-      <p xml:lang="bo">རྒྱལ་པོ་<persName type="BUDA" key="???"
-        >ཤྲཱི་ཧརྴ</persName>་འགྲན་ཟླ་མེད་པའི་རྒྱལ་པོར་གྱུར་པའི་ཚེ་ཀླ་ཀློའི་ཆོས་རྣམས་ནུབ་པར་འདོད་པས།
-          ཡུལ་<placeName type="BUDA" key="???"
-        >མཽ་ལ་ཏ་ན</placeName>་དང་ཉེ་བའི་ཡུལ་ཕྲན་ཞིག་ཏུ་མ་སི་ཏ་སྟེ་ཀླ་ཀློའི་དགོན་གནས་ཆེན་པོ་ཤིང་ཁང་འབའ་ཞིག་ཡིན་པ་བརྩིགས་ནས་ཀླ་ཀློའི་སྟོན་པ་མཐའ་དག་བོས།
-        ཟླ་བ་མང་པོར་ཡོ་བྱད་ཐམས་ཅད་ཀྱིས་བསྟབས། དེའི་རིང་ལུགས་ཀྱི་གླེགས་བམ་ཐམས་ཅད་ཀྱང་བསྡུས།
-        ཐམས་ཅད་མེ་ལ་བསྲེགས་པས་ཀླ་ཀློའི་གྲུབ་མཐའ་འཛིན་པ་སྟོང་ཕྲག་བཅུ་གཉིས་ཚིག་གོ
-          །དེ་སྐབས་ཡུལ་<placeName type="BUDA" key="???"
-        >ཁོ་རཱ་ས་ཎ</placeName>ར་ཀླ་ཀློའི་ཆོས་ཤེས་པ་གཅིག་ཐགས་འཐག་ཅིང་ཡོད་དོ།
-        །དེ་ལས་རིམ་གྱིས་མཆེད་པ་ནི་ཕྱིས་ཀྱི་ཀླ་ཀློ་ཐམས་ཅད་ཡིན་ནོ༎
-        རྒྱལ་པོ་དེས་དེ་ལྟར་བསྣུབས་པ་ལ་བརྟེན་ཏེ་ལོ་བརྒྱར་ཉེ་བར་སྟག་གཟིག་སོག་པོའི་ཆོས་ལུགས་དེ་སྤྱོད་པ་ཤིན་ཏུ་ཉུང་ངོ།
-        ། དེ་ནས་སྡིག་པ་སྦྱོང་བའི་དོན་དུ་<placeName type="BUDA" key="???">མ་རུ</placeName>་དང།
-          <placeName type="BUDA" key="???">མ་ལ་ཝ</placeName>་དང། <placeName type="BUDA" key="???"
-          >མེ་ཝ</placeName>་ར་དང། <placeName type="BUDA" key="???">པི་ཏུ་ཝ</placeName>་དང། <persName
-          type="BUDA" key="???"
-        >ཙི་ཏཱ་ཝ</persName>་ར་ཞེས་པའི་ཡུལ་རྣམས་སུ་གཙུག་ལག་ཁང་ཆེན་པོ་རེ་རེ་བཞེངས།
-        དགེ་སློང་སྟོང་ཕྲག་རེ་རེའི་འཚོ་བ་སྦྱར་ཞིང་ཆོས་ཤིན་ཏུ་དར་བར་བྱས་སོ། །</p>
-      <p xml:lang="bo">སློབ་དཔོན་ཆེན་པོ་ཡོན་ཏན་འོད་ནི། ཡུལ་བཅོམ་བརླག་ཏུ་བྲམ་ཟེའི་རིགས་སུ་སྐྱེས།
-        རིག་བྱེད་དང་བསྟན་བཅོས་མཐའ་དག་ལེགས་པར་བྱང་བ་ཕྱིས་དེ་ཉིད་ཀྱི་གཙུག་ལག་ཁང་ཞིག་ཏུ་རབ་ཏུ་བྱུང་ཞིང་བསྙེན་པར་རྫོགས་ནས།
-          སློབ་དཔོན་ཆེན་པོ་<persName type="BUDA" key="???"
-        >དབྱིག་གཉེན</persName>་གྱི་དྲུང་དུ་ཉན་ཐོས་ཀྱི་སྡེ་སྣོད་གསུམ་དང།
-        ཐེག་པ་ཆེན་པོའི་མདོ་སྡེ་དུ་མ་ལ་ཡང་མཁས་པར་སྦྱངས།
-        སྡེ་པ་ཐ་དད་པའི་འདུལ་བ་བསྟན་བཅོས་དང་བཅས་པ་མཐའ་དག་མཁས་པར་མཁྱེན།</p>
-      <trans>Unter diesen nun / von diesen nun: der König Śriharṣa . Als er zu einem König der ohne
-        ebenbürtigen Gegner war, geworden war und den Wunsch hatte, dass die Mleschtscha
-        (Barbaren)-Religionen untergehen möchten, errichtete er in einem kleinen Lande unfern
-        Maulasthāna eine Mosche, aus einem einzigen Holzgebäude bestehendes grosses
-        Mletschtschha-Kloster, rief alle Barbaren-Lehrer, versorgte sie während vieler Monate
-        hindurch mit allen Gütern; auch sammelte er sämmtliche traditionellen Schriften, und nachdem
-        er alle im Feuer verbrannt hatte, an den Glaubenssätzen der Muslime festhaltend kamen 12,000
-        Anhänger der Mletschtschha-Systeme um. Zu der Zeit webte der einzige Kenner der
-        Mlecchalehren als Weber, von diesen aus verbreiteten sie sich nach und nach kamen all die
-        späteren Muslime. Weil der König [sie] dementsprechend / in dieser Weise unterdrückte, war
-        die Ausübung der Praxis der Persier und der Mongolen nahezu 100 Jahre gering an der Zahl.
-        Darauf errichtete er, um seine Sünden zu sühnen, in Maru, Mālava, Mewar, Pituva und
-        Tshitavara je ein goßes Vihara (buddhistisches Klostergebäude), unterhielt in jedem
-        derselben 1000 Mönche und verbreitete die Lehre sehr. <p>Der große Lehrer Guṇaprabha wurde
-          in Mathura in einem Brahmanengeschlecht geboren, er lernte die Veden und Shāstras auf das
-          vorzüglichste, trat später genau in das Kloster ein und nachdem er die Gelübde nahm und
-          die Vollordination bekam. Der große Lehrer Vasubandhu hörte den Dreikorb der Hörer, er
-          wurde zu einem Gelehrten in vielen Mahayana Sūtras sowie Kenntnisse (der Shāstras) der
-          ausgestattet ist, mit Kommentaren, und er erkannte auf Expertenweise all diese
-          Ordensdisziplinen aller Schulen gemeinsam mit den Lehrwerken.</p></trans>
-      <pb ed="A" n="66b" facs="../images/dignaga/taranatha_dignaga_Page_596.jpg"/>
-      <p xml:lang="bo">འདུལ་བ་འབུམ་སྟེ་རྟག་ཏུ་ཐུགས་ལ་འདོན་པར་མཛད། ཡུལ་<placeName type="BUDA"
-          key="???">བཅོམ་བརླག</placeName>་གི་གཙུག་ལག་ཁང་ཨ་གྲ་པུ་རི་ཞེས་བྱ་བར་བཞུགས་ཏེ།</p>
-      <p xml:lang="bo">ལྷན་ཅིག་གནས་པ་དགེ་སློང་སྟོང་ཕྲག་ལྔ་རེ་ཡོད་ཅིང།
-        ཐམས་ཅད་ཀྱང་བསྡམ་བྱའི་ཉེས་བྱས་ཕྲ་མོ་ཚུན་ཆོད་སོ་སོའི་ཕྱིར་བཅོས་ཀྱིས་འཕྲལ་འཕྲལ་དུ་བཅོས་པས་ཚུལ་ཁྲིམས་རྣམ་པར་དག་པ་ནི་སྔོན་དགྲ་བཅོམ་པ་རྣམས་ཀྱིས་བསྟན་པ་སྐྱོང་བའི་དུས་བཞིན་ཡོད་ལ།
-        མདོ་སྡེ་འཛིན་པ་དང། མ་མོ་འཛིན་པའང་མང་དུ་ཡོད་ཅིང། འདུལ་བ་འབུམ་སྡེ་ཐོན་པའང་ལྔ་བརྒྱ་ཙམ་མོ། །</p>
-      <p xml:lang="bo">ཚུལ་ཁྲིམས་རྣམ་པར་དག་པའི་སྟོབས་ཀྱིས་རྒྱལ་པོ་<persName type="BUDA" key="???"
-          >ཤྲཱིཧརྴ</persName>་འི་བློན་པོ་ <persName type="BUDA" key="???">མ་ཏངྒ་རཱ་ཛེ</persName>་
-        ཞེས་བྱ་བ་ལན་ཅིག་རྒྱལ་པོའི་ཆད་པས་མིག་ཕྱུང་བ་ཡང་སློབ་དཔོན་གྱི་སྨོན་ལམ་གྱི་སྟོབས་ཀྱིས་སོར་ཆུད།
-        རྒྱལ་པོའི་བླ་མར་གྱུར་པས་ཉིན་རེ་བཞིན་ཡོ་བྱད་དཔག་ཏུ་མེད་པའི་འདུ་བ་བྱུང་ཡང་དེ་མ་ཐག་ཐམས་ཅད་དགེ་བར་
-        བསྒྱུར་ཏེ། རང་ཉིད་བྱངས་པའི་ཡོན་ཏན་ལས་ཉམས་པ་མི་མངའ་འོ། །</p>
-      <p xml:lang="bo">སློབ་དཔོན་<persName type="BUDA" key="???"
-          >བློ་གྲོས་བརྟན་པ</persName>་ནི།སློབ་དཔོན་<persName type="BUDA" key="???"
-          >དབྱིག་གཉེན</persName>་འབུམ་སྡེ་དགུ་བཅུ་གོ་དགུར་གྲགས་པའི་གསུང་རབ་རྣམས་ཞལ་འདོན་མཛད་པའི་ཚེ།
-        གདུང་གི་ཕྲག་ན་ཕུག་རོན་ཅང་ཤེས་པ་ཞིག་གནས་པ་ཤིན་ཏུ་གུས་པས་ཉན་ནོ། །</p>
-      <p xml:lang="bo">དེ་ཤི་ནས་ལྷོ་ཕྱོགས་<persName type="BUDA" key="???"
-        >དནྚ་ཀ་ར</persName>་ནྱ་ཞེས་བྱ་བར་ཚོང་དཔོན་གྱི་བུ་ཞིག་ཏུ་སྐྱེས།
-        སྐྱེས་མ་ཐག་ཏུ་སློབ་དཔོན་ག་ན་བཞུགས་དྲིས་པ་ལ། སློབ་དཔོན་སུ་ཡིན་དྲིས་པས།
-        དབྱིག་གཉེན་ཡིན་ཏེ་མ་ག་དྷཱ་ན་བཞུགས་ཟེར། ཡུལ་དེའི་ཚོང་པ་ལ་དྲིས་པས་ཀྱང་བཞུགས་ཟེར་བས།
-          ལོ་བདུན་ལོན་པའི་དུས་ན་སློབ་དཔོན་<persName type="BUDA" key="???"
-        >དབྱིག་གཉེན</persName>་དྲུང་དུ་བསྐྱལ་ཏེ་རིག་པ་སློབ་</p>
-      <trans>Er rezitiert die hunderttausend Vinaja-Abschnitte beständig im Geiste. Während er im
-        Vihara (buddhistisches Klostergebäude) Agrapuri in Mathurā verweilte. Es gab jeweils (in
-        jeder Saison) 5000 zusammen lebende Mönche. (Ferner) gab es dort eine Sittenreinheit wie zu
-        den Zeiten als die früheren Arhats die Lehre bewahrten, und diese Sittenreinheit war dadurch
-        gegeben, dass sie diese Sittenreinheit bis zu den kleinsten Vergehen hin sofort durch die
-        Wiedergutmachung die Sittenreinheit wieder herstellten. Ferner gab es dort viele Sūtrataras
-        und Mathrikataras und die, die 100.000 Vinayastrophen rezietieren konnten, waren ungefähr
-        500. Durch die Kraft der reinen Sittlichkeit geschah es, dass, als Bestrafung des Königs dem
-        Minister des Königs Śriharṣa Mātangarādsha einmal die Augen ausgestochen werden sollten ,
-        wurde durch die Kraft des Gebets des Lehrers die Augen wiederhergestellt. Als er der Guru
-        des Königs geworden war, verschaffte er ihm auch täglich eine Ansammlung Gegenstände, obwohl
-        das so ist; kurz darauf wurden alle in tugendhafte Werke umgewandelt. Besitzt er nicht einen
-        Verstoß der Qualitäten der Tugend. Was den Lehrer Stiramati betrifft: Einmal (Zu der Zeit),
-        als der Lehrer Vasubandhu das, als aus 99 Abtheilungen in 100,000 Versen bestehende
-        Buddha-Wort bekannt, gelesen haben soll (gemacht haben soll), hörte eine wissende (mit
-        Verstand begabte) Taube, auf einem Balkenende sitzend, mit Hochachtung (voll Andacht) zu.
-        Als diese [Taube] umgekommen war, wurde sie im Süden Daṇḍarakāṇja als Sohn eines Händler
-        wiedergeboren. Sogleich nach der Geburt fragte [er], wo der Lehrer verweile und [sein Vater]
-        fragte wer der Lehrer sei, sagte [er ihm], dass es Vasubandhu sei und dass er sich in
-        Magadha aufhalte (befinde). Die Kaufleute dieser Region, [von ihm] befragt, sagten, dass er
-        dort verweile. Als er sieben Jahre alt geworden war (als sieben Jahre vergangen waren),
-        wurde er zum Lehrer Vasubandhu gebracht,</trans>
-      <pb ed="A" n="67a " facs="../images/dignaga/taranatha_dignaga_Page_597.jpg"/>
-      ཅིང་ཡོད་པས་ཀྱང་དཀའ་བ་མེད་པར་ཤེས། དེའི་ཚེ་སྲན་མ་སྦར་གང་རྙེད་པ་ཟའམ་སྙམ་ནས་<persName type="BUDA"
-        key="???">སྒྲོལ་མ</persName>འི་ལྷ་ཁང་ཞིག་ན་ཡོད་པ་ལ།
-      འཕགས་མ་ལ་མ་ཕུལ་བར་བཟའ་མི་རུང་སྙམ་ནས་སྲན་མ་འགའ་ཞིག་ཕུལ་བས་འགྲིལ་ནས་བྱུང།
-      འཕགས་མས་མ་གསོལ་བར་རང་ཟ་བ་མི་འོང་སྙམ་ནས། ཟད་ཟད་ཕུལ་ཡང་འགྲིལ་ཏེ་བྱུང་བ་ན།
-      བྱིས་པར་གྱུར་པས་ངུས་སོ། ། འཕགས་མས་ཞལ་མངོན་སུམ་དུ་བསྟན་ཏེ།
-      ཁྱོད་མ་ངུ་ཞིག་ངས་བྱིན་གྱིས་རློབ་བོ་ཞེས་གསུངས། སྐད་ཅིག་དེ་ལ་བློ་གྲོས་མཐའ་ཡས་པར་གྱུར་ཞིང།
-        སྐུ་བརྙན་དེ་ལ་ཡང་<persName type="BUDA" key="???">མ་ཥ་ཏཱ་ར</persName>་ཞེས་གྲགས་སོ། །
-        ཕྱིས་<persName type="BUDA" key="???"
-      >གནས་བརྟན</persName>་སྡེ་སྣོད་གསུམ་འཛིན་པ་ཁྱད་པར་དུ་ཐེག་པ་ཆེ་ཆུང་གི་མངོན་པ་མཐའ་དག་ལ་མཁས་པ་འཕགས་པ་དཀོན་མཆོག་བརྩེགས་པ་ལ་ཞལ་འདོན་མཛད་པ།
-        བྱ་བ་ཐམས་ཅད་འཕགས་མ་<persName type="BUDA" key="???">སྒྲོལ་མ</persName>ས་ལུང་སྟོན་པ་ཞིག་སྟེ།
-      དཀོན་མཆོག་བརྩེགས་པ་འདུས་པ་ཞེ་དགུ་དང་དབུ་མ་རྩ་བ་ལ་འགྲེལ་པ་ཡང་མཛད། སློབ་དཔོན་<persName
-        type="BUDA" key="???">དབྱིག</persName>་གཉེན་སྐུ་འདས་ཙམ་ན།
-      མུ་སྟེགས་བེཥྟ་བཱ་ལ་ལ་སོགས་པ་རྒོལ་བ་མང་པོ་ཚར་བཅད་དེ་སྨྲ་བའི་དབང་ཕྱུག་ཏུ་གྲགས།
-        སློབ་དཔོན་<persName type="BUDA" key="???"
-      >དབྱིང་གཉེན་གྱིས་མཛད</persName>་པའི་འགྲེལ་པ་ཕལ་ཆེར་འགྲེལ་བཤད་དང།
-      གཞུང་ལ་འགྲེལ་པ་ཡང་མང་དུ་མཛད་དོ། ། མངོན་པ་མཛོད་ལའང་འགྲེལ་པ་མཛད་ཟེར་ཏེ།
-      སློབ་དཔོན་འདི་ཉིད་ཡིན་མིན་མི་ཤེས་སོ།
-      །སློབ་དཔོན་སྔ་མ་རྣམས་ཀྱི་དུས་སུ་བཙུགས་པའི་ཆོས་གཞི་རྣམས་དེ་ཙམ་ན་ཆེར་མེད་པས།སློབ་དཔོན་འདིས་ཀྱང་ཆོས་གཞི་བརྒྱ་རྩ་བཙུགས་སོ་ཞེས་ཀྱང་གྲགས་སོ།
-      ། སློབ་དཔོན་<persName type="BUDA" key="???">ཕྱོགས་ཀྱི་གླང་པོ</persName>་ནི།
-        ལྷོ་ཕྱོགས་གྲོང་ཁྱེར་<placeName type="BUDA" key="???">སིངྒ་བཀྟ</placeName>་ <trans>[Er]
-        lernte das Wissen und es ist nicht schwierig [es] zu wissen. Als er zu der Zeit eine
-        Handvoll Bohnen erhalten hatte und dachte, ob er sie (die erhaltenen Bohnen) essen sollte,
-        dachte er, dass es nicht angemessen wäre dieselben zu essen, ohne zuvor, da es einen
-        Tārā-Tempel gab, der ehrwürdigen Göttin davon gegeben zu haben. Als er einige Bohnen
-        geopfert hatte, rollten diese herab; da meinte er, dass, wenn die Ehrwürdige dieselben nicht
-        ässe, auch er sie nicht essen dürfe. Als er Bohnen darbrachte (bis keine mehr da waren),
-        diese aber herabrollten, fing er, da er ein Kind war, an zu weinen. Da zeigte ihm die
-        Gottheit ihr Antlitz und sprach zu ihm : Weine nicht, ich werde dich segnen. Aber
-        diesbezüglich entstand (gyur) augenblicklich [in ihm] unendliche Einsicht und das Bildnis
-        selbst wurde bekannt unter dem Namen Māsha Tārā (d. h. Bohnen-Tārā); Später wurde er
-        Sthavira, Kenner des Tripitaka, war gelehrt im ganzen Mahajana- und HinajAna-Abhidharma,
-        konnte besonders das edle Ratnakūta-Sūtra auswendig¸all diese Tätigkeiten war eine
-        Prophezeihung der ehrwürdigen Tārā. er verfasste auch einen Kommentar zu den 49
-        Ratnakūta-sūtren- Abschnitten und zu dem Mūlamadhjamaka, Zur Zeit, als Vasnbandhu starb,
-        besiegte er viele Debattierer wie (la sogs pa) den Tirthika (Heretiker – Nichtbuddhist)
-        Veshtapāla, worauf er als Herrscher der Rede bekannt wurde. Zu den vom Lehrer Vasubandhu
-        verfassten Kommentaren verfasste er im großen Ausmaß Erklärungen und auch Kommentare zu
-        seinen Werken. Es wird gesagt, dass [er: Asanga)] Kommentare wie das Abhidharmakosha
-        (Schatzhaus des höheren Wissens) verfasst habe, ich weiss nicht, ob dies derselbe Lehrer ist
-        oder nicht (Er bezweifelt die Urheberschaft von Stiramati). Da, die zur Zeit der früheren
-        Lehrer gegründeten Dharmazentren zu der Zeit nicht mehr zunahmen, hat dieser Lehrer hundert
-        [neue] gegründet.</trans>
-      <pb ed="A" n="67b " facs="../images/dignaga/taranatha_dignaga_Page_598.jpg"/>
-        ཞེས་བྱ་བ<placeName type="BUDA" key="???"
-      >་ཀཉྩི</placeName>འི་ཡུལ་དང་ཉེ་བ་ཞིག་ཏུ་བྲམ་ཟེའི་རིགས་སུ་འཁྲུངས་ཤིང།
-        མུ་སྟེགས་ཀྱི་གྲུབ་མཐའ་ཐམས་ཅད་ལ་ཤིན་ཏུ་མཁས་པར་བྱས་པ་ཞིག་གནས་<persName type="BUDA" key="???"
-        >མ་བུའི་སྡེ་པ</persName>འི་མཁན་པོ་སྡེ་པ་དེ་ཉིད་ཀྱི་གྲུབ་མཐའ་འཛིན་པ་<placeName type="BUDA"
-        key="???">ནཱ་ག་དཏྟ</placeName>་སྟེ་<persName type="BUDA" key="???"
-        >གླང་པོ་བྱིན</persName>་ཞེས་བྱ་བ་ལས་རབ་ཏུ་བྱུང་ཞིང་<persName type="BUDA" key="???"
-        >ཉན་ཐོས་ཀྱི་སྡེ་སྣོད་གསུམ</persName>་ལ་མཁས་པར་བྱས་ནས། <persName type="BUDA" key="???"
-        >མཁན་པོ་དེ་ཉིད</persName>་ལ་གདམས་ངག་ཞུས་པས། བརྗོད་དུ་མེད་པའི་བདག་འཚོལ་བའི་གདམས་པ་བྱིན་ནོ། །
-      དེར་རྣམ་པར་བརྟགས་ཤིང་བཙལ་ན་ཡོད་པར་མ་མཐོང་སྟེ། ཉིན་མོ་སྐར་ཁུང་ཐམས་ཅད་བསལ།
-      མཚན་མོ་ཕྱོགས་བཞིར་མར་མེ་བཏང་སྟེ། ལུས་གཅེར་བུར་ཕྱུང་ནས་ཕྱི་ནང་ཀུན་ཏུ་ཡང་བལྟས་སོ། །
-      དེ་ལྟར་བྱེད་པ་གྲོགས་ཀྱིས་མཐོང་ནས་མཁན་པོ་ལ་བཤད་པས་མཁན་པོས་ཀྱང་དྲིས་པ་ན།
-      བདག་ནི་བློ་རྟུལ་ཞིང་བློ་གྲོས་དམན་པས་མཁན་པོས་བསྟན་པའི་དེ་ཉིད་གང་ཡིན་པ་དེ་ནི་བདག་གིས་མི་མཐོང་སྟེ།
-      དེའི་ཕྱིར་སྒྲིབ་བྱེད་ཀྱིས་བསྒྲིབས་སམ་སྙམ་དེ་ལྟར་བྱས་ནས་བལྟ་བ་ཡིན་ཟེར།
-      དོན་གྱིས་དེ་འགོག་པར་བྱེད་པའི་རིག་པ་རྣམས་ཀྱང་བསྟན་པས། མཁན་པོ་ཁྲོས་ཏེ།
-      ཁོ་བོའི་གྲུབ་མཐའ་ལ་ཟུར་ཟ་བ་ཁྱོད་མ་འདུག་ཅིག་ཅེས་སྐྲོད་པའི་གནས་མ་ཡིན་པར་བསྐྲད་པ་ན།
-      དེ་ཉིད་དུ་རིག་པས་སུན་དབྱུང་བར་ནུས་མོད་ཀྱིས། འོས་མ་ཡིན་པས་ཕྱག་བཙལ་ནས་ཕྱིར་བྱོན།
-        མཐར་གྱིས་སློབ་དཔོན་<persName type="BUDA" key="???">དབྱིང་གཉེན</persName>་གྱི་དྲུང་དུ་གཤེགས།
-      ཐེག་པ་ཆེ་ཆུང་གི་སྡེ་སྣོད་མཐའ་དག་གསན། མཐར་མདོ་ལྔ་བརྒྱ་ཙམ་བཟུང་བར་གྲགས་ཏེ་ ཐེག་པ་ཆེ་ཆུང་དང།
-      གཟུངས་སྔགས་ཚུན་ཆད་བསྡོམས་པའོ། ཁྱད་པར་དུ་<persName type="BUDA" key="???"
-        >སྔགས་མཁན་གྱི་སློབ</persName>་ <trans>Der ācārya Dignāga: Er wurde im Süden, in einer bei
-        dem Lande Kantschi gelegnen Stadt Siṁhavaktra , in einem Brahmanengeschlecht geboren und
-        erwarb sich grosse Kennt­ nisse in allen Tirthja (Heretiker, Glaubensverräter;
-        Nichtbuddhist)- Systemen. Er war ein Abt der Vatsiputrija-Schule und der sich an die
-        Lehrsätze hält, eben dieser Schule, genannt Nagadatta, d. h. Elephantengabe, ist er in den
-        Orden eingetreten, erlangte Gelehrsamkeit in dem Tripitaka der srāvaka's , er bittet jenen
-        Abt um mündliche Anweisungen über das unaussprechliche Selbst zu suchen. Als er prüfend
-        suchte suchte, es ( das unaussprechliche Selbst) aber nicht erblicken konnte, öffnete er
-        tagsüber alle Fenster, in der Nacht aber stellte er an allen vier Seiten Lampen auf, sich
-        nackt auszog und sich innen und aussen rundherum umschaute. Als die Freunde den Tuenden
-        sahen (Als die Freunde sahen, dass er sich so verhielt), sagten sie es dem Abt und als der
-        Abt ihn fragte, sagte er (Dignāga) : Ich bin von eingeschränktem Verstand und geringer
-        Einsicht, ich kann sie nicht sehen, welche die vom Abt gelehrte Wirklichkeit ist. ich fragte
-        mich (ob dieser Dinge) es durch ein Hindernis verdeckt ist, und so handelte ich auf diese
-        Weise und schaute (zer), der Abt wurde ärgerlich weil er indirekt kenntnisse gezeigt hat,
-        welche dies widerlegt hatten. "Wenn du mein System kritisierst, so bleibe nicht !"Dann
-        verbannte er ihn und schickte ihn weg. In der Art und Weise kann Wissen unglücklich machen,
-        weil er nicht geeignet ist, sich zu verbeugen, reiste er schließlich ab. Schließlich ging er
-        zum Lehrer Vasubandhu, hörte alle Texte des großen und kleinen fahrzeugs (Dreikorb), obwohl
-        er kein passendes Objekt zum vertreiben ist, vertrieb er ihn. In der art und weise kann er
-        es durch Logik widerlegen. am ende hat er 500 Sūtras erfasst, so ist es überliefert (so ist
-        es bakannt) Texte des großen und kleinen Fahrzeugs inklusive der Mantras ( das ergibt die
-        500) </trans>
-      <pb ed="A" n="68a " facs="../images/dignaga/taranatha_dignaga_Page_599.jpg"/>
-      དཔོན་ཞིག་ལས་རིག་སྔགས་ནོས་ཏེ་བསྒྲུབས་པས་འཕགས་པ་འཇམ་དཔལ་གྱི་ཞལ་མངོན་སུམ་དུ་གཟིགས་པས་ཇི་ལྟར་བཞེད་པ་ན་ཆོས་གསན་པར་མཛད་དོ༎
-        <placeName type="BUDA" key="???"
-        >ཨོ་ཌི་བི་ཤ</placeName>འི་ཡུལ་ནགས་ཚལ་ཤིན་ཏུ་དབེན་པའི་ཕྱོགས་གཅིག་<placeName type="BUDA"
-        key="???">བྷོ་ཏ་སཻལ</placeName>་ཞེས་བྱ་བའི་བྲག་རིའི་ཕུག་ཏུ་བཞུགས།
-      རྩེ་གཅིག་ཏུ་བསམ་གཏན་ལ་རྩོལ་བར་མཛད་དོ། ། ལོ་འགའ་ཞིག་འདས་པ་ན། <persName type="BUDA" key="???"
-        >དཔལ་ནཱ་ལེནྡྲ</persName>ར་མུ་སྟེགས་ཀྱི་རྩོད་པ་ཆེར་བྱུང། དེར་བྲམ་ཟེ་<persName type="BUDA"
-        key="???"
-      >སུ་དུར་ཛ་ཡ</persName>་ཞེས་བྱ་བ་རང་གིས་བསྒྲུབས་པའི་ལྷ་མངོན་སུམ་མཐོང་བ་རྟོག་གེ་ལ་ཤིན་ཏུ་བྱང་བ་ཐུབ་པར་དཀའ་བ་ཞིག་ཀྱང་འདུས་ཏེ།
-      དེར་སངས་རྒྱས་པ་རྣམས་ཀྱིས་རྩོད་པར་མ་ནུས་ནས། ཤར་ཕྱོགས་ནས་སློབ་དཔོན་<persName type="BUDA"
-        key="???">ཕྱོགས་ཀྱི་གླང་པོ</persName>་སྤྱན་དྲངས་སོ། ། མུ་སྟེགས་དེ་ལན་གསུམ་དུ་ཕམ་པར་བྱས་ཤིང།
-      དེར་འཚོགས་པའི་མུ་སྟེགས་ཀྱི་རྒོལ་བ་ཐམས་ཅད་ཀྱང་རེ་རེ་ནས་སུན་ཕྱུང། སངས་རྒྱས་ཀྱི་བསྟན་པ་ལ་བཀོད།
-      གནས་དེར་དགེ་འདུན་རྣམས་ལ་མདོ་སྡེ་དུ་མ་རྣམ་པར་བཤད་ཅིང། ཆོས་མངོན་པ་ཡང་རྒྱས་པར་བྱས།
-      རྣམ་རིག་དང་རྟོག་གེའི་བསྟན་བཅོས་ཐོར་བུ་ཡང་མང་དུ་མཛད་དེ།
-      ཡོངས་སུ་བསྡོམས་པ་ལ་བསྟན་བཅོས་བརྒྱ་རྩ་མཛད་པར་གྲགས། སླར་ཡང་<placeName type="BUDA" key="???"
-        >ཨོ་ཊི་བི་ཤ</placeName>འི་ཡུལ་དུ་གཤེགས་ནས་བསམ་གཏན་ལ་བརྩོན་པར་མཛད་དོ།
-      དེར་རང་གི་ཐུན་མོང་མ་ཡིན་པའི་བློ་གྲོས་ཀྱི་མཐུ་ལས་བྱུང་བ་རྟོག་གེའི་ཚུལ་ལུགས་འདི་ལ་སྔར་བརྩམས་པའི་བསྟན་བཅོས་རྣམས་འཐོར་བ་བཞིན་དུ་གྱུར་པས་གཅིག་ཏུ་བྱ་བར་དགོངས་ཏེ།
-      ཚད་མ་ཀུན་ལས་བཏུས་པའི་མཆོད་བརྗོད་དམ་བཅའ། ཚད་མར་གྱུར་པ་འགྲོ་ལ་ཕན་བཞེད་པ། ། <trans>Besonders bei
-        einem mantrawissenden Lehrer erhielt [er = Dignāga ] das Wissensmantra, als er unmittelbar
-        durch seine besondere Praxis das Gesicht des phags pa 'jam dpal gesehen hat; auf welche
-        weise er die Lehre wünschte. nach Verlauf einiger Jahre geschah es, dass, als in Nālanda ein
-        grosser Wettstreit mit den Tirthja's entstanden war und auch der Brahmane Sudurdshaja,
-        welcher die ihm gewogene Gottheit gesehen hatte, die Logik sehrgut gekann hat und schwer zu
-        besiegen war, erschienen war, die BuddbaAnänger mit ihm nicht streiten konnten, Die
-        Buddhisten konnten ich in der Debatte nicht besiegen, sondern luden den Atschtrja Dignäga
-        aus dem Osten ein. Nachdem er die Tirthja's dreimal besiegt hatte hatte, widerlegte er alle
-        Debattierer dort versammelten Ttrthja-Streiter jeden einzeln, er setzte die Buddha-Lehre
-        ein, erklärte der Sanga viele Sūtra's, verbreitete das Abhidharma, verfasste auch viele
-        einzelne Werke (Einzelwerke) zur Erkenntniss und Shāstra's der Logik. Und es ist bekannt,
-        dass er hundert Shāstra's verfasst hat. Wieder nach Odiviśa gekommen, strebte er nach
-        Versenkung und machte Anstrengungen. Selbst die Methodik die durch die Kraft seiner
-        ungewöhnlichen Intelligenz entstanden ist, die Shāstras die er früher verfasste, plante er
-        zu einem [Werk] zu machen, weil sie zerstreut waren. Lobpreisung und Inhaltsankündigung: im
-        Werk Pramanasamutschaja: nachdem ich mich vor einem verbeugt habe, einer der das Wohl der
-        Lebewesen wünschende, einer der zum Erkenntnismittel geworden ist (zur Authorität geworden
-        ist). </trans>
-      <pb ed="A" n="68b " facs="../images/dignaga/taranatha_dignaga_Page_600.jpg"/>
-      སྟོན་པ་བདེ་གཤེགས་སྐྱོབ་ལ་ཕྱག་འཚལ་ནས། །ཚད་མ་བསྒྲུབ་ཕྱིར་རང་གི་གཞུང་ཀུན་ལས།
-      །བཏུས་ཏེ་སྣ་ཚོགས་འཐོར་རྣམས་འདིར་གཅིག་བྱ། །ཞེས་རྡོ་ཐལ་གྱིས་བྲིས་པས། ས་གཡོ་བ་དང།
-      ཕྱོགས་ཀུན་ཏུ་སྣང་བས་ཁྱབ་པ་དང། <persName type="BUDA" key="???"
-      >སྒྲ་ཆེན་པོ</persName>་གྲགས་པར་གྱུར། དེར་བྲམ་ཟེ་<persName type="BUDA" key="???"
-        >ནག་པོ</persName>་ཞེས་བྱ་བས་དེ་ལྟ་བུའི་ལྟས་ཡིན་པར་ཤེས་ཏེ།
-      སློབ་དཔོན་བསོད་སྙོམས་ལ་བཞུད་པའི་ཤུལ་དུ་དེས་འོངས་ཏེ་བསུབས།
-      དེ་ལྟར་ལན་གཉིས་སུ་བསུབས་པས་ལན་གསུམ་པ་བྲིས་པས།
-      འདི་ཀུ་རེ་དང་ཀྱལ་ཀའི་ཕྱིར་བསུབ་པ་ཡིན་ན་དགོས་པ་ཆེན་པོ་ཡོད་པས་མ་བསུབ་ཅིག།་གལ་ཏེ་དོན་ནོར་ཏེ་རྩོད་པར་འདོད་ན་ལུས་སྣང་བར་གྱིས་ཞེས་པ་བྲིས་ཏེ།
-      ཡང་བསོད་སྙོམས་ལ་གཤེགས་པའི་ཤུལ་དུ་བསུབ་ཏུ་འོངས་པས་ཡི་གེ་མཐོང་ནས་བསྡད་དོ། །
-      དེར་སློབ་དཔོན་འཁོར་ནས། བསྟན་པ་དཔང་དུ་བཙུགས་ཏེ་བརྩད་པས་ལན་མང་པོར་མུ་སྟེགས་ཕམ་པར་བྱས་པས།
-      ད་ཁྱོད་སངས་རྒྱས་ཀྱི་བསྟན་པ་ཞུགས་ཤིག་བྱས་པ་ན།
-      དེས་སྔགས་བཟླས་པའི་ཐལ་བ་གཏོར་བས་སློབ་དཔོན་གྱི་ཡོ་བྱད་རྣམས་ཚིགསློབ་དཔོན་ཡང་ཚིག་ལ་ཁད་པར་བྱུང་སྟེ།
-      མུ་སྟེགས་དེ་ཕྱིར་སོང་ངོ། །
-      བདག་གིས་འདི་ཅིག་པུའི་དོན་ཡང་མི་ནུས་ན་གཞན་གྱི་དོན་ག་ལ་ནུས་སྙམ་དུ་སེམས་བསྐྱེད་གཏོང་བར་བརྩམས་པ་ན།
-      འཕགས་པ་འཇམ་དཔལ་མངོན་སུམ་དུ་བྱོན་ཏེ།
-      བུ་མ་བྱེད་མ་བྱེད་སྐྱེ་བོ་དམན་དང་འཕྲད་ལས་བླཽ་གྲོས་ངན་སྐྱེ་སྟེ། །
-      ཁྱོད་ཀྱི་བསྟན་བཅོས་འདི་ལ་མུ་སྟེགས་ཚོགས་ཀྱིས་གནོད་མི་ནུས་པར་ཤེས།
-      ཁྱོད་ཀྱི་སངས་རྒྱས་མ་ཐོབ་བར་དུ་དགེ་བའི་བཤེས་སུ་ང་འགྱུར་གྱི། །ཕྱི་མའི་དུས་ <trans>ein Lehrer,
-        ein Sugata und Schützer, um das Erkenntnismittel zu etablieren. Die verschiedenen eigenen
-        zerstreuten Ideen (Werke) werde ich aus meinen eigenen früheren verfassten Werken
-        zusammenfassend in eines zu stellen , und dies verfasste er mit Kreide. Die Erde erbebte,
-        überall das Licht verbreitete sich in allen Himmelsrichtungen und man hörte ein großes
-        Getöse (es ertönte ein großes Getöse). Der Brahmane Krishna hat erkannt, dass [dieses] ein
-        derartiges Zeichen ist. Als der Lehrer [Dignāga ] zum Bettelgang aufgebrochen war, ist
-        dieser [der Brahmane] gekommen und löschte den [Vers] aus, als er auf diese Weise ihn [den
-        Vers] zum zweiten mal ausgelöscht hatte, schrieb er [Dignāga ][ihn] zu dritten Mal mal [und
-        fügte hinzu]: Wenn man zum Scherz und Spaß auslöscht, möge man das, was von großem Interess
-        ist, nicht auslöschen. Wenn dadurch der Inhalt meiner Verse missverstanden wird, so schrieb,
-        wünscht, dass [wir beide] debattieren, zeig dich in Person (lass diesen Körper erscheinen].
-        Als er um Almosen ging, kam er wieder um es auszulöschen, als er die Buchstaben (den Text)
-        sah, blieb er. Als der Lehrer zurückkehrt war, die Lehre aufs Spiel setzend und debattierte,
-        und er besiegte oftmals die Nichtbuddhisten. und sagte: tritt in diezur Buddha-Lehre ein,
-        Mantra besprochene Asche streute jener hin, und alle Gegenstände des Lehrers verbrannte,
-        auch der Lehrer (Dignāga ) stand kurz davor verbrennen und der Nichtbuddhist ging fort.
-        (siehe auch Schwieger 5.6.3.2.13) Als er so dachte, wenn ich nichteinmal den Nutzen dieses
-        einzigen bewirken zu können, wohl nicht imstand sein könne, das Heil anderer zu bewirken ,
-        zu beginnen aufzugeben das Erleuchtungsdenken zu produzieren, erschien ihm Manjushri
-        persönlich [und sprach zu ihm]. Sohn tu das nicht, tu das nicht. Aus der Durch Gesellschaft
-        mit einem niedrigen Menschen ist eine schlechte Denkart [in dir] entstanden. </trans>
-      <pb ed="A" n="69a " facs="../images/dignaga/taranatha_dignaga_Page_601.jpg"/>
-      སུ་བསྟན་བཅོས་ཀུན་གྱི་མིག་གཅིག་ཏུ་ནི་འདི་འགྱུར་རོ། ། ཞེས་གསུངས་པ་ལ། སློབ་དཔོན་གྱིས།
-      བཟོད་དཀའི་སྡུག་བསྔལ་དུ་མ་དང་ལྡན་བརྣག་དཀའ་ ལ། །སེམས་ཀྱང་དམ་པ་མིན་པའི་སྤྱོད་པ་ལ་དགའ་ཞིང། །
-      སྐྱེ་བོ་དམ་པ་འཕྲད་དཀའ་གལ་ཏེ་ཁྱོད་ཀྱི་ཞལ་མཐོང་ཡང། །བདག་ལ་བྱིན་གྱིས་མ་བརླབས་དེ་ལ་ཅི་བགྱིར་མཆི།
-      །ཞེས་ཞུས་པས། བུ་ཁྱོད་མ་དགའ་བར་མ་བྱེད་ཅིག །ཉམ་ང་བ་ཐམས་ཅད་ལས་བདག་གིས་བསྲུང་ངོ། །
-      ཞེས་གསུངས་ནས་མི་སྣང་བར་གྱུར་ ཏོ། ། དེ་ནས་བསྟན་བཅོས་དེ་ཡང་ལེགས་པར་བརྩམས།
-      ལན་ཅིག་ཅུང་སྙུང་བར་གྱུར་ཏེ།
-      གྲོང་ཁྱེར་ནས་བསོད་སྙོམས་བསླངས་ཏེ་ནགས་མཐོང་ཞིག་ཏུ་བཞུགས་པས་ཡུར་ཏེ་མནལ་དུ་སོང།
-      མནལ་ལམ་དུ་སངས་རྒྱས་མང་པོའི་ཞལ་མཐོང་ཞིང་ཏིང་ངེ་འཛིན་མང་པོ་ཐོབ།
-      ཕྱི་རོལ་ཏུ་ལྷ་རྣམས་ཀྱིས་མེ་ཏོག་གི་ཆར་ཕབ། ནགས་ཀྱི་མེ་ཏོག་རྣམས་ཀྱང་འདུད་པར་གྱུར།
-      གླང་པོ་ཆེ་རྣམས་བསིལ་གྲིབ་ཏུ་བྱེད་ཅིང་ཡོད་པ་ལས་ཡུལ་གྱི་རྒྱལ་པོ་སྐྱེ་བོའི་འཁོར་དང་བཅས་པ་སྐྱོ་སངས་ལ་འོངས་པས་མཐོང་སྟེ།
-      ངོ་མཚར་སྐྱེས་ནས་རོལ་མོའི་སྒྲ་བསྒྲགས་པས་མནལ་སད་དེ། ཁྱོད་<persName type="BUDA" key="???"
-        >ཕྱོགས་ཀྱི་གླང་པོ</persName>་ཡིན་ནམ་དྲིས་པས། དེ་ལྟར་འདོགས་གསུངས། དེར་རྒྱལ་པོས་ཞབས་ལ་ཕྱག་བྱས།
-      དེ་ནས་མཐར་ལྷོ་ཕྱོགས་ཀྱི་རྒྱུད་དུ་བྱོན། SoSe2022
-      Endeཡུལ་ཐ་དད་ཀྱི་མུ་སྟེགས་ཀྱི་རྒོལ་བ་ཕལ་ཆེར་ཚར་བཅད་དེ།
-      སྔོན་གྱི་སློབ་དཔོན་རྣམས་ཀྱིས་བཙུགས་པའི་ཆོས་གཞི་ཉམས་པ་ཕལ་ཆེར་སོར་ཆུད་པར་མཛད།
-      སླར་ཡང་ཨོ་ཌོ་བི་ཤའི་རྒྱལ་པོའི་བློན་པོ་བྷ་དྲ་ <trans>Ich weiß, dass die Nichtbuddhisten,
-        diesem, deinem Shāstra nicht schaden können, da solange bis du Buddhaschaft nicht erreicht
-        hast, dein Tugendfreund [bleiben] werde, in Zukunft wird dies das einzige Auge (=das
-        leitende element aller deiner Lehrwerke) aller Shāstra werden. Der Lehrer sprach: diese mit
-        vielen unerträglichen Leiden versehene [Welt] ist wschwer zu ertragenund auch der Geist hat
-        Freude an den nicht guten Handlungen.Es ist schwer mit edlen Wesen zusammenzutreffen, was
-        nützt es mir, wenn [ich] in dein Gesicht schaue, wenn du mich nicht segnest? [Manushri]
-        entgegnete: Sohn, betrübe dich nicht, ich werde dich vor großer Furcht bewahren, das sagte
-        er und vesrschwand. Dann verfasste er jenes vortreffliche Shāstra ( das Pramanasamucchaja).
-        Als er einmal ein wenig krank wurde und in der Stadt Almosen gebettelt hat und in einer
-        Waldlichtung weilend eingschlafen war, träumte er. Im Traum erblickte er das Antlitz vieler
-        Buddhas und erlangte viele Samadhis (Versenkungszustände). Aber draußen (ausßerhalb des
-        Traums) sandten die Götter einen Blumenregen herhab, auch die Blumen des Waldes verneigten
-        sich vor ihm und die Elephanten machten ihm kühlenden Schatten. Also erblickte ihn der König
-        des Landes, welcher mit Gefolge gekommen war, zur Erholung. Und voll Verwunderung ließ er
-        ihn durch die Töne der Zimbal aus dem Schlafe wecken. Auf die Frage ob er Dignāga sei,
-        entgegnete er, dass er so heiße, und der König fiel ihm zu Füßen. Darauf gelangte er endlich
-        in den Süden Ende SoSe 2022</trans>
-      <pb ed="A" n="69b " facs="../images/dignaga/taranatha_dignaga_Page_602.jpg"/>
-      པཱ་ལི་ཏ་ཞེས་བྱ་བ་རྒྱལ་པོའི་མཛོད་ཀྱི་སྤྱན་པ་ཡིན་པ་དེ་སངས་རྒྱས་ཀྱི་བསྟན་པ་ལ་བཅུག་སྟེ།
-      བྲམ་ཟེ་དེས་གཙུག་ལག་ཁང་ཆེན་པོ་བཅུ་དྲུག་བཞེངས། དེ་རེ་རེར་དགེ་འདུན་གྱི་སྡེ་ཆེན་པོ་རེ་བཙུགས།
-      གཙུག་ལག་ཁང་རེ་རེར་ཡང་ཆོས་གཞི་དུ་མ་ཡོད་པ་བྱས། ཚུལ་ཁྲིམས་རྣམ་པར་དག་པའི་རྟགས་སུ།
-        བྲམ་ཟེ་དེའི་སྐྱེད་མོད་ཚལ་ན་ནད་ཐམས་ཅད་གསོ་བར་ནུས་པ་<persName type="BUDA" key="???"
-        >མུཥྟི་ཧ་རི་ཏ་ཀ</persName>་ཞེས་བྱ་བ་ཨ་རུ་རའི་ཁྱད་པར་ཞིག་གི་སྡོང་པོ་ཡོད་པས་སྐྱེ་བོ་མང་པོ་ལ་ཕན་པ་ཞིག་ལས།
-      ལན་ཅིག་ཤིང་གི་སྡོང་པོ་ཤིན་ཏུ་བསྐམས་པར་གྱུར་པ་ལ་སློབ་དཔོན་གྱིས་སོས་པར་སྨོན་ལམ་བཏབ་པས་ཞག་བདུན་ན་སོར་ཆུད་
-      དོ། ། དེ་ལྟར་མུ་སྟེགས་ཀྱི་རྒོལ་བ་ཕལ་ཆེར་ཚར་བཅད་པས་རྩོད་པའི་ཁྱུ་མཆོག་ཏུ་གྲགས་ཤིང།
-      ཆོས་ཀྱིས་སྦྲེལ་བའི་སློབ་མས་ནི་ཕྱོགས་ཐམས་ཅད་ཁྱབ་པར་ཡོད།
-      ཕྱི་བཞིན་འབྲང་བའི་དགེ་སློང་ནི་གཅིག་ཀྱང་ཡོངས་སུ་མ་བཟུང།
-      འདོད་པ་ཆུང་ཞིང་ཆོག་ཤེས་པས་ཇི་སྲིད་འཚོའི་བར་དུ་སྦྱངས་པའི་ཡོན་ཏན་བཅུ་གཉིས་ལ་གནས་བཞིན་དུ་ཨོ་ཌོ་བི་ཤའི་ནགས་ཚལ་དབེན་པ་ཞིག་ཏུ་སྐུ་འདས་སོ།
-      ། བཙུན་པ་དགེ་འདུན་འབངས་ནི། སློབ་དཔོན་དབྱིག་གཉེན་གྱི་སློབ་མ་ཞིག་སྟེ།
-      ཡུལ་ལྷོ་ཕྱོགས་པ་རིགས་བྲམ་ཟེ། སྡེ་པ་ཐམས་ཅད་ཡོད་པར་སྨྲ་བ་ཡིན།
-      དེས་རྡོ་རྗེའི་གདན་དུ་ཡུན་རིང་དུ་བཞུགས་ཤིང། རྡོ་རྗེའི་གདན་དུ་འདུལ་བ་དང།
-      མངོན་པའི་ཆོས་གཞི་ཉི་ཤུ་རྩ་བཞི་བཙུགས། རྒྱལ་པོ་ཏུ་རུཥྐ་མང་པོས་བཀུར་བས་སྤྱན་དྲངས་ཏེ་ཁ་ཆེར་བྱོན།
-      རིན་ཆེན་སྦས་པའི་གཙུག་ལག་ཁང་དང། ཀུམྦྷ་ཀུནྚ་ལིའི་གཙུག་ <pb ed="A" n="69b "
-        facs="../images/dignaga/taranatha_dignaga_Page_602.jpg"/>
-      པཱ་ལི་ཏ་ཞེས་བྱ་བ་རྒྱལ་པོའི་མཛོད་ཀྱི་སྤྱན་པ་ཡིན་པ་དེ་སངས་རྒྱས་ཀྱི་བསྟན་པ་ལ་བཅུག་སྟེ།
-      བྲམ་ཟེ་དེས་གཙུག་ལག་ཁང་ཆེན་པོ་བཅུ་དྲུག་བཞེངས། དེ་རེ་རེར་དགེ་འདུན་གྱི་སྡེ་ཆེན་པོ་རེ་བཙུགས།
-      གཙུག་ལག་ཁང་རེ་རེར་ཡང་ཆོས་གཞི་དུ་མ་ཡོད་པ་བྱས། ཚུལ་ཁྲིམས་རྣམ་པར་དག་པའི་རྟགས་སུ།
-      བྲམ་ཟེ་དེའི་སྐྱེད་མོད་ཚལ་ན་ནད་ཐམས་ཅད་གསོ་བར་ནུས་པ་མུཥྟི་ཧ་རི་ཏ་ཀ་ཞེས་བྱ་བ་ཨ་རུ་རའི་ཁྱད་པར་ཞིག་གི་སྡོང་པོ་ཡོད་པས་སྐྱེ་བོ་མང་པོ་ལ་ཕན་པ་ཞིག་ལས།
-      ལན་ཅིག་ཤིང་གི་སྡོང་པོ་ཤིན་ཏུ་བསྐམས་པར་གྱུར་པ་ལ་སློབ་དཔོན་གྱིས་སོས་པར་སྨོན་ལམ་བཏབ་པས་ཞག་བདུན་ན་སོར་ཆུད་
-      དོ། ། དེ་ལྟར་མུ་སྟེགས་ཀྱི་རྒོལ་བ་ཕལ་ཆེར་ཚར་བཅད་པས་རྩོད་པའི་ཁྱུ་མཆོག་ཏུ་གྲགས་ཤིང།
-      ཆོས་ཀྱིས་སྦྲེལ་བའི་སློབ་མས་ནི་ཕྱོགས་ཐམས་ཅད་ཁྱབ་པར་ཡོད།
-      ཕྱི་བཞིན་འབྲང་བའི་དགེ་སློང་ནི་གཅིག་ཀྱང་ཡོངས་སུ་མ་བཟུང།
-      འདོད་པ་ཆུང་ཞིང་ཆོག་ཤེས་པས་ཇི་སྲིད་འཚོའི་བར་དུ་སྦྱངས་པའི་ཡོན་ཏན་བཅུ་གཉིས་ལ་གནས་བཞིན་དུ་ཨོ་ཌོ་བི་ཤའི་ནགས་ཚལ་དབེན་པ་ཞིག་ཏུ་སྐུ་འདས་སོ།
-      ། བཙུན་པ་དགེ་འདུན་འབངས་ནི། སློབ་དཔོན་དབྱིག་གཉེན་གྱི་སློབ་མ་ཞིག་སྟེ།
-      ཡུལ་ལྷོ་ཕྱོགས་པ་རིགས་བྲམ་ཟེ། སྡེ་པ་ཐམས་ཅད་ཡོད་པར་སྨྲ་བ་ཡིན།
-      དེས་རྡོ་རྗེའི་གདན་དུ་ཡུན་རིང་དུ་བཞུགས་ཤིང། རྡོ་རྗེའི་གདན་དུ་འདུལ་བ་དང།
-      མངོན་པའི་ཆོས་གཞི་ཉི་ཤུ་རྩ་བཞི་བཙུགས། རྒྱལ་པོ་ཏུ་རུཥྐ་མང་པོས་བཀུར་བས་སྤྱན་དྲངས་ཏེ་ཁ་ཆེར་བྱོན།
-      རིན་ཆེན་སྦས་པའི་གཙུག་ལག་ཁང་དང། ཀུམྦྷ་ཀུནྚ་ལིའི་གཙུག་ <trans/>
-      <pb ed="A" n="70a " facs="../images/dignaga/taranatha_dignaga_Page_603.jpg"/> ལག་ཁང་བཞེངས།
-      ཐེག་པ་ཆེན་པོའི་ཆོས་མང་དུ་དར་བར་མཛད་ནས་ཡུལ་དེ་ཉིད་དུ་འདས་སོ།
-      ཁ་ཆེའི་ཡུལ་དུ་སྔོན་ཐེག་པ་ཆེན་པོའི་བསྟན་པ་ཆེར་མེད།
-      ཐོགས་མེད་སྐུ་མཆེད་ཀྱི་སྐུ་རིང་ལ་ཅུང་ཟད་ཙམ་དར། སློབ་དཔོན་འདི་ནས་བརྩམས་ཏེ་ཇེ་དར་དུ་སོང་ངོ༌། །
-      སློབ་དཔོན་ཆོས་འབངས་ནི། ཤར་ཕྱོགས་བྷཾ་ག་ལར་འཁྲུངས་ཤིང༌།
-      ཐོགས་མེད་སྐུ་མཆེད་གཉིས་ཀར་གྱི་སློབ་མ་ཡིན།
-      ཕྱོགས་བཞིའི་ཡུལ་ཐམས་ཅད་དུ་བྱོན་ནས་འཕགས་པ་འཇམ་དཔལ་གྱི་ལྷ་ཁང་རེ་བཞེངས།
-      རྣལ་འབྱོར་སྤྱོད་པའི་ས་ཡོངས་སུ་རྫོགས་པ་ལ་འགྲེལ་པ་མཛད་དོ་ཞེས་གྲགས་སོ། །
-      སློབ་དཔོན་སངས་རྒྱས་བསྐྱངས་ནི། ལྷོ་ཕྱོགས་ཏམྦ་ལའི་ཡུལ་གྱི་བྱེ་བྲག་ངང་པས་རྩེ་བ་ཞེས་བྱ་བར་འཁྲུངས།
-      ཡུལ་དེ་ཉིད་དུ་རབ་ཏུ་བྱུང་ཞིང་མང་དུ་ཐོས་པར་མཛད་པ་ཞིག་སློབ་དཔོན་ཀླུའི་བཤེས་གཉེན་ཀྱི་སློབ་མ།
-      སློབ་དཔོན་དགེ་འདུན་སྲུང་བ་ལས་སློབ་དཔོན་ཀླུ་སྒྲུབ་ཀྱི་གཞུང་ལུགས་རྣམས་ཐོས་པར་བྱས་ནས།
-      རྩེ་གཅིག་ཏུ་བསྒོམ་པས་ཡེ་ཤེས་མཆོག་བརྙེས། འཕགས་པ་འཇམ་དཔལ་གྱི་ཞལ་གཟིགས་ཤིང།
-      ལྷོ་ཕྱོགས་ཀྱི་གཙུག་ལག་ཁང་དནྜ་པུ་རི་ཞེས་བྱ་བར་བཞུགས་ནས་ཆོས་ཀྱང་མང་དུ་བསྟན། འཕགས་པ་ཡབ་སྲས་དང།
-      སློབ་དཔོན་དཔའ་བོ་ལ་སོགས་པས་མཛད་པའི་བསྟན་བཅོས་མང་པོ་ལ་རྣམ་བཤད་མཛད།
-      མཐར་རི་ལུའི་དངོས་གྲུབ་བསྒྲུབས་པས་གྲུབ་བོ།
-      སློབ་དཔོན་ལེགས་ལྡན་ནི་ལྷོ་ཕྱོགས་མ་ལྱ་རར་རྒྱལ་རིགས་མཆོག་ཏུ་སྐྱེ་བ་བརྙེས།
-      ཡུལ་དེ་ཉིད་དུ་རབ་ཏུ་བྱུང་ནས་སྡེ་སྣོད་གསུམ་ལ་མཁས་པར་བྱས། ཡུལ་དབུས་སུ་བྱོན་ནས་ <pb ed="A"
-        n="70b " facs="../images/dignaga/taranatha_dignaga_Page_604.jpg"/>
-      སློབ་དཔོན་དགེ་འདུན་སྲུང་བ་ལས། ཐེག་པ་ཆེན་པོའི་མདོ་སྡེ་དུ་མ་དང་ཀླུ་སྒྲུབ་ཀྱི་མན་ངག་ནོས་ཏེ།
-      སླར་ཡང་ལྷོ་ཕྱོགས་ཀྱི་རྒྱུད་དུ་གཤེགས་ནས་ཕྱག་ན་རྡོ་རྗེའི་ཞལ་མཐོང་བར་མཛད་དེ།
-      ཏིང་ངེ་འཛིན་ཁྱད་པར་ཅན་ཡང་བསྒྲུབས།
-      ལྷོ་ཕྱོགས་ཀྱི་གཙུག་ལག་ལྔ་བཅུ་ཙམ་གྱི་བདག་པོ་མཛད་དེ་ཆོས་མང་དུ་བསྟན།
-      སློབ་དཔོན་སངས་རྒྱས་བསྐྱངས་སྐུ་འདས་པའི་འོག་རོལ་དུ་དེས་མཛད་པའི་བསྟན་བཅོས་རྣམས་གཟིགས།
-      དབུ་མ་རྩ་བའི་གཞུང་ལ་སློབ་དཔོན་སྔ་མའི་བཞེད་པ་དེ་སུན་ཕྱུང་སྟེ།
-      འགྲེལ་པ་མཛད་ཅིང་ཀླུ་སྒྲུབ་ཀྱི་མན་ངག་ལ་བརྟེན་པར་ཞལ་གྱིས་བཞེས་ནས་མདོ་སྡེ་འགའ་ཞིག་ལ་འགྲེལ་པ་མཛད་དོ།
-      ། མཐར་འདིས་ཀྱང་རིལ་བུའི་དངོས་གྲུབ་བསྒྲུབས་ཏེ་གྲུབ་ལ།
-      འོན་ཀྱང་སློབ་དཔོན་འདི་གཉིས་ཆར་གྱི་རྣམ་པར་སྨིན་པའི་སྐུ་ལུས་བོར་ནས་རིག་སྔགས་འཆང་གི་གནས་སུ་གཤེགས་སོ།
-      ། དེ་ལ་སློབ་དཔོན་འདི་གཉིས་ཀྱིས་དབུ་མ་ངོ་བོ་ཉིད་མེད་པར་སྨྲ་བའི་གཞུང་བཙུག་ཤིང།
-      སངས་རྒྱས་བསྐྱངས་སློབ་མ་ཧ་ཅང་མང་བ་མ་ཡིན་ཀྱང།
-      སློབ་དཔོན་ལེགས་ལྡན་ནི་སློབ་མ་ཤིན་ཏུ་མང་བ་དགེ་སློང་སྟོང་ཕྲག་དུ་མ་རྗེས་སུ་འབྲང་བ་ཡིན་པས་ལུགས་དེ་ཤིན་ཏུ་དར་བར་གྱུར་ཏོ།
-      ། སློབ་དཔོན་འདི་གཉིས་མ་བྱོན་གྱི་བར་དུ་ཐེག་པ་ཆེན་པོ་པ་མཐའ་དག་བསྟན་པ་གཅིག་ཏུ་གནས་པ་ལས།
-      སློབ་དཔོན་འདི་གཉིས་ཀྱིས་འཕགས་པ་ཀླུ་སྒྲུབ་དང། འཕགས་པ་ཐོགས་མེད་ཀྱི་ལུགས་གཉིས་ནི་ཤིན་ཏུ་ཐ་དད་དེ།
-      ཐོགས་མེད་ཀྱི་ལུགས་ནི་དབུ་མའི་ལམ་སྟོན་པ་མ་ཡིན་པར་སེམས་ཙམ་ཁོ་ན་ཡིན་ལ།
-      འཕགས་པ་ཀླུ་སྒྲུབ་ཀྱི་བཞེད་པ་ནི་ཁོ་བོ་ཅག་གི་འདི་ལས་གཞན་དུ་མེད་དོ་ཞེས་མཐའ་གཞན་འགོག་པར་མཛད་པས།
-      ལེགས་ </body>
-  </text>
+<?xml-model href="http://www.tei-c.org/release/xml/tei/custom/schema/relaxng/tei_all.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
+<?xml-model href="http://www.tei-c.org/release/xml/tei/custom/schema/relaxng/tei_all.rng" type="application/xml"
+	schematypens="http://purl.oclc.org/dsdl/schematron"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0" xmlns:dc="https://purl.org/dc/elements/1.1/">
+
+    <teiHeader>
+        <fileDesc>
+            <titleStmt>
+                <!-- mandatory!  Titles, author and editor/s of the digital document -->
+                <title xml:lang="bo">རྗེ་བཙུན་ཏཱ་ར་ནཱ་ཐའི་གསུང་འབུམ་</title>
+                <title xml:lang="de">rje btsun tA ra nA tha'i gsung 'bum: SoSe 2022
+                    Historiografische Berichte über bedeutende buddhistische Gelehrte (Dignāga
+                    (c.480–c.540))</title>
+                <author>
+                    <name xml:lang="bo">ཏཱ་ར་ནཱ་ཐ་</name>
+                </author>
+                <respStmt>
+                    <resp>Text input:</resp>
+                    <name>Albert Brugnara</name>
+                </respStmt>
+                <respStmt>
+                    <!-- Editing of the digital text (encoding, markup) -->
+                    <resp>TEI Encoding and Markup:</resp>
+                    <name>Übung "Erzählungen aus früheren Leben des Buddha" (2021WS), University of
+                        Vienna</name>
+                </respStmt>
+            </titleStmt>
+            <editionStmt>
+                <edition>
+                    <date>2021</date>
+                </edition>
+            </editionStmt>
+            <publicationStmt>
+                <distributor>Horst Lasic, Universität Wien, ISTB</distributor>
+                <!-- <address>
+               <addrLine>Print and Computing Services,</addrLine>
+               <addrLine>Leh,</addrLine>
+               <addrLine>UT Ladakh,</addrLine>
+               <addrLine>IN</addrLine>
+            </address>  -->
+                <availability>
+                    <p>This digital text is made available under a CC (Creative Commons) License
+                        Attribution Share-Alike, 4.0.</p>
+                </availability>
+            </publicationStmt>
+            <notesStmt>
+                <note>Brief notes on the text are in a supplementary file.</note>
+            </notesStmt>
+            <sourceDesc>
+                <biblStruct>
+                    <monogr>
+                        <editor>unknown</editor>
+                        <title>boc kyi bcu phrag rig mdzod chen mo/_ dpal ldan sa skya pa'i gsung
+                            rab_</title>
+                        <imprint>
+                            <pubPlace>Ladakh</pubPlace>
+                            <publisher>Horst Lasic</publisher>
+                            <date>1774</date>
+                        </imprint>
+                    </monogr>
+                </biblStruct>
+            </sourceDesc>
+        </fileDesc>
+        <encodingDesc>
+            <editorialDecl>
+                <p>Named entities of the text (i.e. persons, places, work titles, dates) are
+                    annotated and linked to online resources including the Buddhist Digital Archives
+                    (BUDA; https://https://library.bdrc.io//), the Sakya Research Centre (SRC;
+                    https://sakyaresearch.org/) and the Resources for Kanjur &amp; Tanjur Studies
+                    (rKTs; https://www.istb.univie.ac.at/kanjur). Non-canonical works are referred
+                    to by its Tohoku catalogue number (i.e. A catalogue of the Tohoku University
+                    collection of Tibetan works on Buddhism. Kanakura et al. (eds.). Sendai:
+                    Seminary of Indology, Tohoku University, 1953). Dates of persons are given
+                    according to the BUDA database.</p>
+                <correction status="high" method="silent">
+                    <!-- Status high: mittels Kollation; es gibt einen modernen Druck siehe Images -->
+                    <p>The following errors in the edition have been corrected: <list>
+                            <!-- Keine Korrektur in den ersten Pechas -->
+                            <item>see next version</item>
+                        </list>
+                    </p>
+                </correction>
+                <quotation marks="all">
+                    <p>All double quotation marks rendered with ", all single quotation marks with
+                        apostrophe'</p>
+                </quotation>
+                <hyphenation eol="none">
+                    <p>Hyphenated words that appear at the end of the line in this edition have been
+                        reformed like sa as a subskript</p>
+                </hyphenation>
+                <interpretation>
+                    <p>Persons are marked.</p>
+                    <p>Dates are marked.</p>
+                    <p>Places are marked.</p>
+                    <p>Worktitle are marked.</p>
+                    <p>Italics are recorded Expression in original Language like for Sanskrit. </p>
+                </interpretation>
+            </editorialDecl>
+        </encodingDesc>
+        <profileDesc>
+            <textClass>
+                <keywords>
+                    <term>Jatakas<note>Wiergeburtsgeschichten Buddha's</note></term>
+                </keywords>
+            </textClass>
+            <creation>
+                <date>1774</date>
+            </creation>
+            <langUsage>
+                <language ident="de">Deutsch</language>
+                <language ident="en">English</language>
+                <language ident="wylie">Tibetan (Wylie)</language>
+                <language ident="bo">Tibetan (Tibetan script)</language>
+                <language ident="sa">Sanskrit</language>
+            </langUsage>
+        </profileDesc>
+        <revisionDesc>
+            <change when="2022-01-22" who="#MSM">finished proofreading</change>
+            <change when="2022-06-30" who="#LB">finished proofreading</change>
+            <change notBefore="2021-07-04" who="#AB">finished data entry at end of term</change>
+            <change notAfter="2021-01-01" who="#AB">began data entry before New Year 2021</change>
+            <change when="2022-11-05" who="#AB">tagging Person, Place, Date</change>
+            <change when="2022-11-05" who="#AB">editoral declaration ergänzt</change>
+        </revisionDesc>
+    </teiHeader>
+    <standOff>
+        <listPerson>
+            <person xml:id="vasubandhu" role="teacher">
+                <persName xml:lang="bo">དབྱིག་གཉེན་</persName>
+                <idno type="URI"
+                    >https://library.bdrc.io/show/bdr:P6119?s=q%3D%2522%25E0%25BD%2591%25E0%25BD%2596%25E0%25BE%25B1%25E0%25BD%25B2%25E0%25BD%2582%25E0%25BC%258B%2522~1%26lg%3Dbo%26t%3DPerson%26n%3D1</idno>
+                <idno>https://de.wikipedia.org/wiki/Vasubandhu</idno>
+                <!--  CP:  das type finde ich nicht gut. das müsste man vesser normalisierne; mit rom und to kann man einen range definierne. -->
+                <birth from="0300" to="0400"/>
+                <birth type="4.Jhd_n.u.Z"/>
+                <death type="4.Jhd_n.u.Z"/>
+            </person>
+            <!-- CP: zweimal xml:lang ; es ist dann nicht mehr klar was in welcher sprache ist DEN NAMEN SOLLTE JEDER UNTER DER TRANSLITERATION UND DEM TIBETISCHEN SCRIPT FINDEN wichtig ist allerdings nur die xml:id -->
+            <person xml:lang="wylie" xml:id="zab-mo-i-phyogs">
+                <persName xml:lang="bo">ཟབ་མོའི་ཕྱོགས་</persName>
+                <!--CP: hier sind die type nid im element  ERLEDIGT -->
+                <idno type="URI">https://></idno>
+            </person>
+            <person xml:id="shrIharsha" role="king">
+                <persName xml:lang="bo">ཤྲཱི་ཧརྴ་</persName>
+                <idno> type="URI">https://</idno>
+            </person>
+            <person xml:id="guṇaprabha">
+                <persName xml:lang="bo">ཡོན་ཏན་འོད་</persName>
+            </person>
+            <person xml:id="sthiramati">
+                <persName xml:lang="bo">བློ་གྲོས་བརྟན་པ་</persName>
+                <!-- idno in idno ist nicht gut; elemente und attribute passen nicht VERGESSEN ZU LÖSCHEN ERLEDIGT -->
+                <idno> type="URI">https://legacy.tbrc.org/#!rid=P4CZ16794</idno>
+            </person>
+            <person xml:id="vrikShatsandra">
+                <persName xml:lang="bo">བྲྀཀྵ་ཙནྡྲ་</persName>
+            </person>
+            <person xml:id="vigamatsandra">
+                <persName xml:lang="bo">བི་ག་མ་ཙནྡྲ་</persName>
+            </person>
+            <person xml:id="kamatsandra">
+                <persName xml:lang="bo">ཀཱ་མ་ཙནྡྲ་</persName>
+            </person>
+            <person xml:id="mahAsammata">
+                <persName xml:lang="bo">མང་པོས་བཀུར་བ་</persName>
+            </person>
+            <person xml:id="samgadAsa">
+                <persName xml:lang="bo">དགེ་འདུན་འབངས་</persName>
+                <idno> type="URI">https://</idno>
+            </person>
+            <person xml:id="dharmadAsa">
+                <persName xml:lang="bo">ཆོས་འབང་</persName>
+                <idno> type="URI">https://</idno>
+            </person>
+            <person xml:id="sangs_rgyas_bskyang">
+                <persName xml:lang="bo">སངས་རྒྱས་བསྐྱང་</persName>
+            </person>
+            <person xml:id="darika">
+                <persName xml:lang="bo">ད་རི་ཀ་པ་</persName>
+                <idno> type="URI">https://legacy.tbrc.org/#!rid=P4CZ15083</idno>
+            </person>
+            <person xml:id="dkon_mchog_gsum_gyi_abang">
+                <persName xml:lang="bo">དཀོན་མཆོག་གསུམ་གྱི་འབང་</persName>
+                <idno> type="URI">https://legacy.tbrc.org/#!rid=P1943</idno>
+            </person>
+            <person xml:id="bhavya">
+                <persName xml:lang="bo">ལེགས་ལྡན་</persName>
+                <idno> type="URI">https://legacy.tbrc.org/#!rid=P1701</idno>
+            </person>
+            <person xml:id="vimuktasena">
+                <persName xml:lang="bo">གྲོལ་སྡེ་</persName>
+                <idno> type="URI">https://legacy.tbrc.org/#!rid=P4CZ15637</idno>
+            </person>
+            <person xml:id="dza-le-ru-he ">
+                <persName xml:lang="bo">ཛ་ལེ་རུ་ཧེ་</persName>
+                <idno> type="URI">https://legacy.tbrc.org/#!rid=P4CZ15637</idno>
+            </person>
+            <person xml:id="nAgakesha">
+                <persName xml:lang="bo">ནཱ་གེ་ཤ་</persName>
+            </person>
+            <person xml:id="lo-yi-pa">
+                <persName xml:lang="bo">ལོ་ཡི་པ་</persName>
+            </person>
+            <person xml:id="deM-gi-pa">
+                <persName xml:lang="bo">ཌེཾ་གི་པ་</persName>
+            </person>
+            <person xml:id="badrapalita">
+                <persName xml:lang="bo">བྷ་དྲ་པཱ་ལི་ཏ་</persName>
+            </person>
+            <person xml:id="tsihawa">
+                <persName xml:lang="bo">ཙི་ཏཱ་ཝ་</persName>
+            </person>
+            <person xml:id="dignAga">
+                <persName xml:lang="bo">ཕྱོགས་ཀྱི་གླང་པོ་</persName>
+                <idno> type="URI">https://legacy.tbrc.org/#!rid=P6035</idno>
+            </person>
+        </listPerson>
+        <listPlace>
+            <place xml:id="maru" type="village">
+                <placeName>མ་རུ་</placeName>
+            </place>
+            <place xml:id="kache" type="region">
+                <placeName xml:lang="bo">ཁ་ཆེ་</placeName>
+                <idno type="URI">https://legacy.tbrc.org/#!rid=G2DB25458</idno>
+            </place>
+            <place xml:id="kache_i_yul" type="country">
+                <placeName xml:lang="bo">ཁ་ཆེའི་ཡུལ་</placeName>
+            </place>
+            <place xml:id="otivisha" type="village">
+                <placeName xml:lang="bo">ཨོ་ཊི་བི་ཤ་</placeName>
+            </place>
+            <place xml:id="Maulasthāna" type="village">
+                <placeName xml:lang="bo">མཽ་ལ་ཏ་ན་</placeName>
+            </place>
+            <place xml:id="kho_rA_sa_na" type="village">
+                <placeName xml:lang="bo">ཁོ་རཱ་ས་ཎ་</placeName>
+            </place>
+            <!-- CP: ist das ein Dorf in einem Dorf? weil zweimal village? SIND ZWEI UNTERSCHIEDLICHE ORTE ODER WÄRE ES HIER BESSER JEDEN PLACE MIT </PLACE> SEPARAT ABZUSCHLIESSEN? DANN WAR DAS EIN LOGISCHER FEHLER -->
+            <place xml:id="ma_la_wa" type="village">
+                <placeName xml:lang="bo">མ་ལ་ཝ་</placeName>
+            </place>
+            <place xml:id="me_wa" type="village">
+                <placeName xml:lang="bo">མེ་ཝ་</placeName>
+            </place>
+            <place xml:id="pi_tu_wa" type="village">
+                <placeName xml:lang="bo">པི་ཏུ་ཝ་</placeName>
+            </place>
+            <place xml:id="bcom_brlag" type="village">
+                <placeName xml:lang="bo">བཅོམ་བརླག་</placeName>
+            </place>
+            <place xml:id="singga_bakta" type="village">
+                <placeName xml:lang="bo">སིངྒ་བཀྟ་</placeName>
+            </place>
+        </listPlace>
+    </standOff>
+    <text>
+        <body>
+            <div>
+                <pb ed="A" n="65a" facs="../images/dignaga/taranatha_dignaga_Page_593.jpg"/>
+                <head>Beginn des Textes: Image 593, Page 65a: 5. Zeile Mitte</head>
+                <p xml:lang="bo">
+                    <s xml:id="p65a01">ཿ་སློབ་དཔོན་ཆེན་པོ་<persName xml:id="vasubandhu_01"
+                            role="Mitbegründer der Yogacara Schule" type="BUDA" key="P6119"
+                            >དབྱིག་གཉེན</persName>་གྱི་སྐུ་ཚེའི་སྨད་ཙམ་གྱི་དུས་ན། <persName
+                            xml:id="zab-mo" role="king" type="BUDA" key="???"
+                            >རྒྱལ་པོ་ཟབ་མོའི་ཕྱོགས</persName>་འདས་པའི་འོག་ཏུ་ནུབ་<lb/>ཕྱོགས་<placeName
+                            type="BUDA" key="???">མ་རུ</placeName>འི་ཡུལ་དུ་སྐྱེས་པ་<persName
+                            xml:id="shriharsa" ref="shriharsa" role="king" type="BUDA" key="???"
+                            >རྒྱལ་བོ་ཤྲཱི་ཧརྴ</persName>་<w type="Partikel_Sprecher">ཞེས་</w><w
+                            pos="VMPP" type="VG6" subtype="tmdV" msd="SF1.,2.3.4."
+                        >བྱ་བ་</w>ལས་ཀྱི་སྟོབས་
+                    ཤིན་ཏུ་ཆེ་བ་བྱུང་སྟེ་</s>ནུབ་ཕྱོགས་ཀྱི་རྒྱལ་ཁམས་ཐམས་ཅད་ལ་དབང་བསྒྱུར།
+                        ཕྱིས་སངས་རྒྱས་ཀྱི་བསྟན་པ་ལ་དད་པ་ཐོབ་སྟེ་སློབ་དཔོན་<persName
+                        xml:id="gunaprabha" role="teacher" type="BUDA" key="P1308"
+                        >ཡོན་<lb/>ཏན་འོད</persName>་བླ་མར་བཀུར་བ་ཞིག་བྱུང།
+                        དུས་དེ་ཙམ་ན་ཤར་ཕྱོགས་སུ་རྒྱལ་བོ་<persName xml:id="vrikshatsandra"
+                        role="king" type="BUDA" key="???"
+                        >བྲྀཀྵ་ཙནྡྲ</persName>འི་བུ་བརྒྱུད་ལ་རྒྱལ་པོ་<persName role="king"
+                        corresp="#vigamatsandra" xml:id="vigamatshandra">བི་ག་མ་ཙནྡྲ</persName>་དང།
+                        དེའི་བུ་<persName xml:id="kamatshandra" role="son" type="BUDA" key="???"
+                        >ཀཱ་མ་ཙནྡྲ</persName>་གཉིས་ཀྱིས་རྒྱལ་སྲིད་སྐྱོང་བའི་དུས་ཏེ། <w type="Nomen"
+                        subtype="d.O.">རྒྱལ་པོ</w>་དེ་གཉིས་<lb/>
+                </p>
+                <p xml:lang="de"><s corresp="#p65a01">Als zur Zeit der zweiten Lebenshälfte des
+                        großen Lehrers Vasubandhu (dbyig gnyen) der König zab mo'i phyogs gestorben
+                        war und es wurde in der Westlichen Region in ma ru der sogenannte König (mit
+                        dem Namen) Śriharṣa geboren, der große Aktivitätskraft hat und der über die
+                        gesamten Königsreiche in westlicher Richtung herrschte. Später vertraute er
+                        der Buddhalehre und er erlangte Vertrauen</s> und war einer der den Lehrer
+                    Guṇaprabha als seinen Lehrer verehrte. Um dieselbe Zeit herrschte im Osten, aus
+                    der Nachkommenschaft des Königs Vṛikshatshandra, der König Vigamatchandra und
+                    dessen Sohn Kāmadshandra.</p>
+            </div>
+            <div>
+                <pb ed="A" n="65b" facs="../images/dignaga/taranatha_dignaga_Page_594.jpg"/>
+                <p xml:lang="bo">དབང་ཐང་<w type="Konjunktion">དང</w>་ལོངས་སྤྱོད་<w
+                        type="Fokuspartikel">ཀྱང་</w>ཆེ། <w type="Prädikat_substantiviert"
+                        subtype="tmdV">སྦྱིན་པ་</w><w type="KasSuffix">ལ་</w>དག<w type="Suff">འ</w>།
+                        རྒྱལ་སྲིད་ཆོས་ལུགས་བཞིན་<w type="Suffix">དུ་</w>སྐྱོང་བ་<w type="Auxillary"
+                        >ཡིན་</w><w type="Konjunktion">ཀྱང་</w>དཀོན་མཆོག་གསུམ་<w type="Suffix"
+                        >ལ་</w>སྐྱབས་<w type="Suffix">སུ་</w><w type="Negation">མ་</w>སོང་<w
+                        type="Suffix" subtype="Semifinalpartikel">སྟེ</w>།
+                    ཕྱི་ནང་གཉིས་ཀར་མཆོད་ཅིང་ཁྱད་པར་གཅེར་བུ་པ་རྣམས་<lb/>ལ་མོས་སོ། <placeName
+                        type="BUDA" key="G2DB25458">ཁ་ཆེ</placeName>ར་དེ་ཙམ་ན་ཡང་རྒྱལ་པོ་<persName
+                        type="BUDA" key="???">མང་པོས་བཀུར་བ</persName>་ཉིད་ཡོད་དོ་ཞེས་གྲགས་སོ༎
+                        དེའི་ཚེ་ཤར་ཕྱོགས་སུ་སློབ་དཔོན་<persName type="BUDA" key="???"
+                        >བློ་གྲོས་བརྟན་པ</persName>་དང། <persName type="BUDA" key="???"
+                        >ཕྱོགས་ཀྱི་གླང་པོ</persName>ས་འགྲོ་དོན་མཛད། ནུབ་ཕྱོགས་<lb/>
+                        སུ་འཕགས་པ་<persName type="BUDA" key="???"
+                        >ཐོགས་མེད</persName>་ཀྱི་སློབ་མ་<persName type="BUDA" key="???"
+                        >སངས་རྒྱས་འབངས</persName>་ཀྱི་སྐུ་ཚེའི་སྨད་ཀྱི་འགྲོ་དོན་དང། <persName
+                        type="BUDA" key="???">ཡོན་ཏན་འོད</persName>་ཀྱི་འགྲོ་དོན་དར་བའི་དུས་སོ།
+                        <placeName type="BUDA" key="???">ཁ་ཆེའི་ཡུལ</placeName>་དུ་བཙུན་པ་<persName
+                        type="BUDA" key="P6119">དགེ་འདུན་འབངས</persName>་ཀྱིས་འགྲོ་བའི་དོན་<lb/>
+                    ཆེར་མཛད། སློབ་དཔོན་<persName type="BUDA" key="P6119"
+                    >ཆོས་འབང</persName>ས་ཡུལ་ཐམས་ཅད་དུ་གཤེགས་ཤིང་ཆོས་སྟོན་པ་ཞིག་བྱུང་ལ།
+                        ལྷོ་ཕྱོགས་ཀྱི་རྒྱུད་དུ་སློབ་དཔོན་<persName type="BUDA" key="P4CZ1523"
+                        >སངས་རྒྱས་བསྐྱང</persName>ས་བྱོན། <persName type="BUDA" key="???"
+                        >ལེགས་ལྡན</persName>་དང། རྣམ་<lb/><persName type="BUDA" key="P0RK660"
+                        >གྲོལ་སྡེ</persName>་གཉིས་ཀྱི་སྐུ་ཚེའི་སྟོད་ཀྱི་དུས་ཙམ་ཡིན། <placeName
+                        type="BUDA" key="???">ཨོ་ཊི་བི་ཤ</placeName>འི་འི་ཡུལ་དུ་རྒྱལ་པོ་<persName
+                        type="BUDA" key="???">ཛ་ལེ་རུ་ཧེའི་བུ་</persName><persName type="BUDA"
+                        key="???">ནཱ་གེ་ཤ</persName>་དང། བློན་པོ་བྲམ་ཟེ་ནཱ་ག་ཀེ་ཤ་ཞེས་བྱ་བ་བྱུང་སྟེ།
+                    ལོ་བདུན་ཙམ་རྒྱལ་སྲིད་བསྐྱངས་<lb/> པས་ཤིན་ཏུ་དབང་ཐང་ཆེ་ཞིང། <persName type="BUDA"
+                        key="???">བི་ཁ་མ་ཙནྡྲ</persName>ས་ཀྱང་ཕྱག་བྱས། སློབ་དཔོན་<persName
+                        type="BUDA" key="???">ལོ་ཡི་པ</persName>ས་བཏུལ་ཏེ་རྒྱལ་ སྲིད་སྤངས།
+                        གྲུབ་པ་ཐོབ་པ་ནི་རྒྱལ་པོ་<persName type="BUDA" key="4CZ15083"
+                        >ད་རི་ཀ</persName>་པ་དང། བློན་པོ་<persName type="BUDA" key="???"
+                        >ཌེཾ་གི་པ</persName>འོ། ། སློབ་<lb/> དཔོན་<persName type="BUDA" key="???"
+                        >དཀོན་མཆོག་གསུམ་གྱི་འབང</persName>ས་ཞེས་པའང་<persName type="BUDA" key="???"
+                        >ལེགས་ལྡན</persName>་དང་དུས་མཉམ་པ་ཙམ་ཡིན་ཞིང། <placeName type="BUDA"
+                        key="???">ཨོ་ཌི་བི་ཤ</placeName>ར་བྲམ་ཟེ་<persName type="BUDA" key="???"
+                        >བྷ་དྲ་པཱ་ལི་ཏ</persName>་ཞེས་བྱ་བའི་ཀྱང་བསྟན་པ་ལ་བྱ་བ་ཆེར་བྱས་སོ།
+                    །དེ་དག་ལས། །</p>
+                <lb/>
+                <p xml:lang="de">Beide Könige waren von großer Macht und von großem Reichtum und
+                    hatten ihre Freude am Geben; allein obwohl sie ihre Herrschaft der Lehre gemäß
+                    ausübten, nahmen sie dennoch nicht [ihre] Zuflucht zu den drei Kostbarkeiten,
+                    sondern indem sie sowohl den Nichtbuddhisten und den Buddhisten Ehre erwiesen,
+                    verehrten sie besonders die Nirgrantha's (die Nackten: Jainas). Auch zu dieser
+                    Zeit war der König in Kaschmir Mahāsammatha, so ist es bekannt. Die Zeit in der
+                    Sthiramati und Dignāga im Osten das Wohl der Lebewesen bewirkten, und
+                    [einerseits] sang rgyas 'bangs, der ein Schüler von thog med war, in der zweiten
+                    Lebenshälfte und [andererseits] yan tan 'od im Westen den Nutzen der Lebewesen
+                    verbreiteten. In Kaschmir wirkte der Mönch Saṁghadāsa sehr zum Wohl der
+                    Lebewesen, der Guru Dharmadhāsa aber war ein Lehrer des Dharma, der begab sich
+                    in alle Regionen, und in den Süden aber ging der Lehrer Buddhapālita und dies
+                    ist in etwa in der der ersten Hälfte der Lebenszeit von von den beiden Bhavja
+                    und Vimuktasena In der Region von Odiviśa verweilte der Sohn des Königs
+                    Dshaleruha, Nāgeśa, genannt und als Minister den Brahmanen namens Nāgakeśa . Er
+                    übte die Herrschaft ungefähr sieben Jahre aus und wurde sehr mächtig (hatte
+                    große Macht), sogar Vigamatshandra verehrte ihn. Er wurde vom Lehrer Lo yi pa
+                    bekehrt. Er gab die Herrschaft auf; was die Mahasidda betrifft wurden sie König
+                    und DeMa gi Minister. Der Lehrer Triratnadasha existiert zur gleichen Zeit. In
+                    Odiviśa der sogenannte Brahmane Bhadrapalita machte für die Lehre in hohem
+                    Ausmaß Handlungen. Unter diesen:</p>
+            </div>
+            <div>
+                <pb ed="A" n="66a" facs="../images/dignaga/taranatha_dignaga_Page_595.jpg"/>
+                <p xml:lang="bo">རྒྱལ་པོ་ <!-- CP: key ??? -->
+                    <persName type="BUDA" key="???"
+                    >ཤྲཱི་ཧརྴ</persName>་འགྲན་ཟླ་མེད་པའི་རྒྱལ་པོར་གྱུར་པའི་ཚེ་ཀླ་ཀློའི་ཆོས་རྣམས་ནུབ་པར་འདོད་པས།
+                        ཡུལ་<placeName type="BUDA" key="???"
+                    >མཽ་ལ་ཏ་ན</placeName>་དང་ཉེ་བའི་ཡུལ་ཕྲན་ཞིག་ཏུ་མ་སི་ཏ་སྟེ་ཀླ་ཀློའི་དགོན་གནས་ཆེན་པོ་ཤིང་ཁང་འབའ་<lb/>ཞིག་ཡིན་པ་བརྩིགས་ནས་
+                    ཀློའི་སྟོན་པ་མཐའ་དག་བོས། ཟླ་བ་མང་པོར་ཡོ་བྱད་ཐམས་ཅད་ཀྱིས་བསྟབས།
+                    དེའི་རིང་ལུགས་ཀྱི་གླེགས་བམ་ཐམས་ཅད་ཀྱང་བསྡུས།
+                    ཐམས་ཅད་མེ་ལ་བསྲེགས་པས་ཀླ་<lb/>ཀློའི་ གྲུབ་མཐའ་འཛིན་པ་སྟོང་ཕྲག་བཅུ་གཉིས་ཚིག་གོ
+                        །དེ་སྐབས་ཡུལ་<placeName type="BUDA" key="???"
+                    >ཁོ་རཱ་ས་ཎ</placeName>ར་ཀླ་ཀློའི་ ཆོས་ཤེས་པ་གཅིག་ཐགས་འཐག་ཅིང་ཡོད་དོ།
+                    །དེ་ལས་རིམ་གྱིས་མཆེད་པ་ནི་ཕྱིས་ཀྱི་ཀླ་ཀློ་ཐམས་ཅད་ཡིན་ནོ༎<lb/>
+                    རྒྱལ་པོ་དེས་དེ་ལྟར་བསྣུབས་པ་ལ་
+                    བརྟེན་ཏེ་ལོ་བརྒྱར་ཉེ་བར་སྟག་གཟིག་སོག་པོའི་ཆོས་ལུགས་དེ་སྤྱོད་པ་ཤིན་ཏུ་ཉུང་ངོ། །
+                        དེ་ནས་སྡིག་པ་སྦྱོང་བའི་དོན་དུ་<placeName type="BUDA" key="???"
+                        >མ་རུ</placeName>་དང། <placeName type="BUDA" key="???">མ་ལ་ཝ</placeName>་དང།
+                        <placeName type="BUDA" key="???">མེ་ཝ</placeName>་ར་དང། <placeName
+                        type="BUDA" key="???">པི་ཏུ་ཝ</placeName>་<lb/>དང། <placeName type="BUDA"
+                        key="???"
+                    >ཙི་ཏཱ་ཝ</placeName>་ར་ཞེས་པའི་ཡུལ་རྣམས་སུ་གཙུག་ལག་ཁང་ཆེན་པོ་རེ་རེ་བཞེངས།
+                    དགེ་སློང་སྟོང་ཕྲག་རེ་རེའི་འཚོ་བ་སྦྱར་ཞིང་ཆོས་ཤིན་ཏུ་དར་བར་བྱས་སོ། །
+                        སློབ་དཔོན་ཆེན་པོ་<persName>ཡོན་ཏན་འོད</persName>་ནི།
+                    ཡུལ་<lb/>བཅོམ་བརླག་ཏུ་བྲམ་ཟེའི་རིགས་སུ་སྐྱེས།
+                    རིག་བྱེད་དང་བསྟན་བཅོས་མཐའ་དག་ལེགས་པར་བྱང་བ་ཕྱིས་དེ་ཉིད་ཀྱི་གཙུག་ལག་ཁང་ཞིག་ཏུ་རབ་ཏུ་བྱུང་ཞིང་བསྙེན་པར་
+                    རྫོགས་ནས། སློབ་དཔོན་ཆེན་པོ་<persName type="BUDA" key="???"
+                        >དབྱིག་<lb/>གཉེན</persName>་གྱི་ དྲུང་དུ་ཉན་ཐོས་ཀྱི་སྡེ་སྣོད་གསུམ་དང།
+                    ཐེག་པ་ཆེན་པོའི་མདོ་སྡེ་དུ་མ་ལ་ཡང་མཁས་པར་སྦྱངས།
+                    སྡེ་པ་ཐ་དད་པའི་འདུལ་བ་བསྟན་བཅོས་དང་བཅས་པ་མཐའ་དག་མཁས་པར་མཁྱེན། འདུལ་<lb/>
+                </p>
+                <p xml:lang="de">Unter diesen nun / von diesen nun: der König Śriharṣa. Als er zu
+                    einem König der ohne ebenbürtigen Gegner war, geworden war und den Wunsch hatte,
+                    dass die Mleschtscha (Barbaren)-Religionen untergehen möchten, errichtete er in
+                    einem kleinen Lande unfern Maulasthāna eine Mosche, aus einem einzigen
+                    Holzgebäude bestehendes grosses Mletschtschha-Kloster, rief alle
+                    Barbaren-Lehrer, versorgte sie während vieler Monate hindurch mit allen Gütern;
+                    auch sammelte er sämmtliche traditionellen Schriften, und nachdem er alle im
+                    Feuer verbrannt hatte, an den Glaubenssätzen der Muslime festhaltend kamen
+                    12,000 Anhänger der Mletschtschha-Systeme um. Zu der Zeit webte der einzige
+                    Kenner der Mlecchalehren als Weber, von diesen aus verbreiteten sie sich nach
+                    und nach kamen all die späteren Muslime. Weil der König [sie] dementsprechend /
+                    in dieser Weise unterdrückte, war die Ausübung der Praxis der Persier und der
+                    Mongolen nahezu 100 Jahre gering an der Zahl. Darauf errichtete er, um seine
+                    Sünden zu sühnen, in Maru, Mālava, Mewar, Pituva und Tshitavara je ein goßes
+                    Vihara, unterhielt in jedem derselben 1000 Mönche und verbreitete die Lehre
+                    sehr. Der große Lehrer Guṇaprabha wurde in Mathura in einem Brahmanengeschlecht
+                    geboren, er lernte die Veden und Shāstras auf das vorzüglichste, trat später
+                    genau in das Kloster ein und nachdem er die Gelübde nahm und die Vollordination
+                    bekam. Der große Lehrer Vasubandhu hörte den Dreikorb der Hörer, er wurde zu
+                    einem Gelehrten in vielen Mahayana Sūtras sowie Kenntnisse (der Shāstras) der
+                    ausgestattet ist, mit Kommentaren, und er erkannte auf Expertenweise all diese
+                    Ordensdisziplinen aller Schulen gemeinsam mit den Lehrwerken.</p>
+            </div>
+            <div>
+                <pb ed="A" n="66b" facs="../images/dignaga/taranatha_dignaga_Page_596.jpg"/>
+                <p xml:lang="bo">བ་འབུམ་སྟེ་རྟག་ཏུ་ཐུགས་ལ་འདོན་པར་མཛད། ཡུལ་<placeName type="BUDA"
+                        key="???">བཅོམ་བརླག</placeName>་གི་གཙུག་ལག་ཁང་ཨ་གྲ་པུ་རི་ཞེས་བྱ་བར་བཞུགས་ཏེ།
+                    ལྷན་ཅིག་གནས་པ་དགེ་སློང་སྟོང་ཕྲག་ལྔ་རེ་ཡོད་ཅིང། ཐམས་ཅད་ཀྱང་
+                    བསྡམ་བྱའི་<lb/>ཉེས་བྱས་ཕྲ་མོ་ཚུན་ཆོད་སོ་སོའི་ཕྱིར་བཅོས་ཀྱིས་འཕྲལ་འཕྲལ་དུ་བཅོས་
+                    པས་ཚུལ་ཁྲིམས་རྣམ་པར་དག་པ་ནི་སྔོན་དགྲ་བཅོམ་པ་རྣམས་ཀྱིས་བསྟན་པ་སྐྱོང་བའི་དུས་བཞིན་ཡོད་ལ།
+                    མདོ་སྡེ་འཛིན་པ་དང། མ་མོ་<lb/>འཛིན་པའང་མང་དུ་ ཡོད་ཅིང།
+                    འདུལ་བ་འབུམ་སྡེ་ཐོན་པའང་ལྔ་བརྒྱ་ཙམ་མོ། །
+                        ཚུལ་ཁྲིམས་རྣམ་པར་དག་པའི་སྟོབས་ཀྱིས་རྒྱལ་པོ་<persName type="BUDA" key="???"
+                        >ཤྲཱིཧརྴ</persName>་འི་བློན་པོ་ <persName type="BUDA" key="???"
+                        >མ་ཏངྒ་རཱ་ཛེ</persName>་ ཞེས་བྱ་བ་ལན་ཅིག་རྒྱལ་པོའི་ཆད་
+                    པས་མིག་<lb/>ཕྱུང་བ་ཡང་སློབ་དཔོན་གྱི་སྨོན་ ལམ་གྱི་སྟོབས་ཀྱིས་སོར་ཆུད།
+                    རྒྱལ་པོའི་བླ་མར་གྱུར་པས་ཉིན་རེ་
+                    བཞིན་ཡོ་བྱད་དཔག་ཏུ་མེད་པའི་འདུ་བ་བྱུང་ཡང་དེ་མ་ཐག་ཐམས་ཅད་དགེ་བར་ བསྒྱུར་ཏེ།
+                    རང་ཉིད་བྱངས་པའི་<lb/>ཡོན་ཏན་ལས་ཉམས་པ་མི་མངའ་འོ། ། སློབ་དཔོན་<persName
+                        type="BUDA" key="???">བློ་གྲོས་བརྟན་པ</persName>་ནི།སློབ་དཔོན་<persName
+                        type="BUDA" key="???"
+                    >དབྱིག་གཉེན</persName>་འབུམ་སྡེ་དགུ་བཅུ་གོ་དགུར་གྲགས་པའི་གསུང་རབ་རྣམས་ཞལ་འདོན་མཛད་པའི་ཚེ།
+                    གདུང་གི་ཕྲག་<lb/> ན་ཕུག་རོན་ཅང་ཤེས་པ་ཞིག་གནས་པ་ཤིན་ཏུ་གུས་པས་ཉན་ནོ། །
+                        དེ་ཤི་ནས་ལྷོ་ཕྱོགས་<persName type="BUDA" key="???"
+                    >དནྚ་ཀ</persName>་ར་ནྱ་ཞེས་བྱ་བར་ཚོང་དཔོན་གྱི་བུ་ཞིག་ཏུ་ སྐྱེས།
+                    སྐྱེས་མ་ཐག་ཏུ་སློབ་དཔོན་ག་ན་བཞུགས་དྲིས་པ་ལ། སློབ་དཔོན་<lb/>སུ་ཡིན་དྲིས་པས།
+                    དབྱིག་གཉེན་ཡིན་ཏེ་མ་ག་དྷཱ་ན་བཞུགས་ཟེར།
+                    ཡུལ་དེའི་ཚོང་པ་ལ་དྲིས་པས་ཀྱང་བཞུགས་ཟེར་བས།
+                        ལོ་བདུན་ལོན་པའི་དུས་ན་སློབ་དཔོན་<persName type="BUDA" key="???"
+                        >དབྱིག་གཉེན</persName>་དྲུང་དུ་བསྐྱལ་ཏེ་རིག་པ་སློབ་ </p>
+                <p xml:lang="de">Er rezitiert die hunderttausend Vinaja-Abschnitte beständig im
+                    Geiste. Während er im Vihara Agrapurt in Mathurā verweilte. Es gab jeweils (in
+                    jeder Saison) 5000 zusammen lebende Mönche. (Ferner) gab es dort eine
+                    Sittenreinheit wie zu den Zeiten als die früheren Arhats die Lehre bewahrten,
+                    und diese Sittenreinheit war dadurch gegeben, dass sie diese Sittenreinheit bis
+                    zu den kleinsten Vergehen hin sofort durch die Wiedergutmachung die
+                    Sittenreinheit wieder herstellten. Ferner gab es dort viele Sūtrataras und
+                    Mathrikataras und die, die 100.000 Vinayastrophen rezietieren konnten, waren
+                    ungefähr 500. Durch die Kraft der reinen Sittlichkeit geschah es, dass, als
+                    Bestrafung des Königs dem Minister des Königs Śriharṣa Mātangarādsha einmal die
+                    Augen ausgestochen werden sollten , wurde durch die Kraft des Gebets des Lehrers
+                    die Augen wiederhergestellt. Als er der Guru des Königs geworden war,
+                    verschaffte er ihm auch täglich eine Ansammlung Gegenstände, obwohl das so ist;
+                    kurz darauf wurden alle in tugendhafte Werke umgewandelt. Besitzt er nicht einen
+                    Verstoß der Qualitäten der Tugend. Was den Lehrer Stiramati betrifft: Einmal (Zu
+                    der Zeit), als der Lehrer Vasubandhu das, als aus 99 Abtheilungen in 100,000
+                    Versen bestehende Buddha-Wort bekannt, gelesen haben soll (gemacht haben soll),
+                    hörte eine wissende (mit Verstand begabte) Taube, auf einem Balkenende sitzend,
+                    mit Hochachtung (voll Andacht) zu. Als diese [Taube] umgekommen war, wurde sie
+                    im Süden Daṇḍarakāṇja als Sohn eines Händler wiedergeboren. Sogleich nach der
+                    Geburt fragte [er], wo der Lehrer verweile und [sein Vater] fragte wer der
+                    Lehrer sei, sagte [er ihm], dass es Vasubandhu sei und dass er sich in Magadha
+                    aufhalte (befinde). Die Kaufleute dieser Region, [von ihm] befragt, sagten, dass
+                    er dort verweile. Als er sieben Jahre alt geworden war (als sieben Jahre
+                    vergangen waren), wurde er zum Lehrer Vasubandhu gebracht,</p>
+            </div>
+            <div>
+                <pb ed="A" n="67a " facs="../images/dignaga/taranatha_dignaga_Page_597.jpg"/>
+                <p xml:lang="bo">ཅིང་ཡོད་པས་ཀྱང་དཀའ་བ་མེད་པར་ཤེས། དེའི་ཚེ་སྲན་མ་སྦར་གང་རྙེད་པ་
+                        ཟའམ་སྙམ་ནས་<persName type="BUDA" key="???"
+                    >སྒྲོལ་མ</persName>འི་ལྷ་ཁང་ཞིག་ན་ཡོད་པ་ལ།
+                    འཕགས་མ་ལ་མ་ཕུལ་བར་བཟའ་མི་རུང་སྙམ་ནས་སྲན་མ་འགའ་ཞིག་<lb/> ཕུལ་བས་འགྲིལ་ནས་བྱུང།
+                    འཕགས་མས་མ་གསོལ་བར་རང་ཟ་བ་མི་འོང་སྙམ་ནས། ཟད་ཟད་ཕུལ་ཡང་འགྲིལ་ཏེ་བྱུང་བ་ན།
+                    བྱིས་པར་གྱུར་པས་ངུས་སོ། ། འཕགས་མས་ཞལ་མངོན་སུམ་དུ་བསྟན་ཏེ།
+                    ཁྱོད་མ་<lb/>ངུ་ཞིག་ངས་བྱིན་གྱིས་རློབ་བོ་ཞེས་གསུངས། སྐད་ཅིག་དེ་ལ་བློ་གྲོས་མཐའ་ཡས་
+                    པར་གྱུར་ཞིང། སྐུ་བརྙན་དེ་ལ་ཡང་<persName type="BUDA" key="???"
+                        >མ་ཥ་ཏཱ་ར</persName>་ཞེས་གྲགས་སོ། ། ཕྱིས་<persName type="BUDA" key="???"
+                        >གནས་བརྟན</persName>་སྡེ་སྣོད་གསུམ་འཛིན་པ་ཁྱད་པར་དུ་
+                    ཐེག་པ་ཆེ་ཆུང་<lb/>གི་མངོན་པ་མཐའ་དག་ལ་མཁས་པ་འཕགས་པ་དཀོན་མཆོག་བརྩེགས་པ་ལ་ཞལ་འདོན་མཛད་པ།
+                        བྱ་བ་ཐམས་ཅད་འཕགས་མ་<persName type="BUDA" key="???">སྒྲོལ་མ</persName>ས་ལུང་
+                    སྟོན་པ་ཞིག་སྟེ།
+                    དཀོན་མཆོག་བརྩེགས་པ་འདུས་པ་ཞེ་དགུ་དང་<lb/>འབུ་མ་རྩ་བ་ལ་འགྲེལ་པ་ཡང་མཛད།
+                        སློབ་དཔོན་<persName type="BUDA" key="???"
+                    >དབྱིག</persName>་གཉེན་སྐུ་འདས་ཙམ་ན།
+                    མུ་སྟེགས་བེཥྟ་བཱ་ལ་ལ་སོགས་པ་རྒོལ་བ་མང་པོ་ཚར་བཅད་དེ་སྨྲ་བའི་དབང་ཕྱུག་ཏུ་གྲགས།
+                        སློབ་དཔོན་<persName type="BUDA" key="???"
+                    >དབྱིང་གཉེན</persName>་གྱིས་<lb/>མཛད་པའི་འགྲེལ་པ་ཕལ་ཆེར་འགྲེལ་བཤད་དང།
+                    གཞུང་ལ་འགྲེལ་པ་ཡང་མང་དུ་མཛད་དོ། ། མངོན་པ་མཛོད་ལའང་འགྲེལ་པ་མཛད་ཟེར་ཏེ།
+                    སློབ་དཔོན་འདི་ཉིད་ཡིན་མིན་མི་ཤེས་སོ།
+                    །སློབ་དཔོན་སྔ་མ་རྣམས་<lb/>ཀྱི་དུས་སུ་བཙུགས་པའི་ཆོས་གཞི་རྣམས་དེ་ཙམ་ན་ཆེར་མེད་པས།སློབ་དཔོན་འདིས་
+                    ཀྱང་ཆོས་གཞི་བརྒྱ་རྩ་བཙུགས་སོ་ཞེས་ཀྱང་གྲགས་སོ། ། སློབ་དཔོན་<persName type="BUDA"
+                        key="???">ཕྱོགས་ཀྱི་གླང་པོ</persName>་ནི། ལྷོ་ཕྱོགས་གྲོང་ཁྱེར་<placeName
+                        type="BUDA" key="???">སིངྒ་བཀྟ</placeName>་<lb/></p>
+                <p xml:lang="de">[Er] lernte das Wissen und es ist nicht schwierig [es] zu wissen.
+                    Als er zu der Zeit eine Handvoll Bohnen erhalten hatte und dachte, ob er sie
+                    (die erhaltenen Bohnen) essen sollte, dachte er, dass es nicht angemessen wäre
+                    dieselben zu essen, ohne zuvor, da es einen Tārā-Tempel gab, der ehrwürdigen
+                    Göttin davon gegeben zu haben. Als er einige Bohnen geopfert hatte, rollten
+                    diese herab; da meinte er, dass, wenn die Ehrwürdige dieselben nicht ässe, auch
+                    er sie nicht essen dürfe. Als er Bohnen darbrachte (bis keine mehr da waren),
+                    diese aber herabrollten, fing er, da er ein Kind war, an zu weinen. Da zeigte
+                    ihm die Gottheit ihr Antlitz und sprach zu ihm : Weine nicht, ich werde dich
+                    segnen. Aber diesbezüglich entstand (gyur) augenblicklich [in ihm] unendliche
+                    Einsicht und das Bildnis selbst wurde bekannt unter dem Namen Māsha Tārā (d. h.
+                    Bohnen-Tārā); Später wurde er Sthavira, Kenner des Tripitaka, war gelehrt im
+                    ganzen Mahajana- und HinajAna-Abhidharma, konnte besonders das edle
+                    Ratnakūta-Sūtra auswendig¸all diese Tätigkeiten war eine Prophezeihung der
+                    ehrwürdigen Tārā. er verfasste auch einen Kommentar zu den 49 Ratnakūta-sūtren-
+                    Abschnitten und zu dem Mūlamadhjamaka, Zur Zeit, als Vasnbandhu starb, besiegte
+                    er viele Debattierer wie (la sogs pa) den Tirthika (Heretiker – Nichtbuddhist)
+                    Veshtapāla, worauf er als Herrscher der Rede bekannt wurde. Zu den vom Lehrer
+                    Vasubandhu verfassten Kommentaren verfasste er im großen Ausmaß Erklärungen und
+                    auch Kommentare zu seinen Werken. Es wird gesagt, dass [er: Asanga)] Kommentare
+                    wie das Abhidharmakosha (Schatzhaus des höheren Wissens) verfasst habe, ich
+                    weiss nicht, ob dies derselbe Lehrer ist oder nicht (Er bezweifelt die
+                    Urheberschaft von Stiramati). Da, die zur Zeit der früheren Lehrer gegründeten
+                    Dharmazentren zu der Zeit nicht mehr zunahmen, hat dieser Lehrer hundert [neue]
+                    gegründet.</p>
+            </div>
+        </body>
+    </text>
 </TEI>
