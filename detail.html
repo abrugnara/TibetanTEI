@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>Brugnara - TibetianTEI</title>
+    <title>Brugnara - TibetianTEI Detail</title>
     <link rel="icon" type="image/x-icon" href="favicon.ico" />
     <link rel="stylesheet" type="text/css" href="assets/css/main.css" />
   </head>
@@ -9,10 +9,10 @@
   <body>
     <header>
       <div>
-        <a class="page-title" href="/TibetanTEI">Brugnara - TibetianTEI</a>
+        <a class="page-title" href="/TibetianTEI">Brugnara - TibetianTEI</a>
         <nav class="menu">
-          <a href="#" class="active">Info</a>
-          <a href="texts.html">Texte</a>
+          <a href="index.html">Info</a>
+          <a href="texts.html" class="active">Texte</a>
         </nav>
         <div class="badge">
           <a href="https://github.com/abrugnara/TibetianTEI" target="_blank">
@@ -43,34 +43,38 @@
     </header>
 
     <main>
-      <section class="section">
-        <h1>&Uuml;ber das Projekt</h1>
-        <p>
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean varius
-          mauris pharetra iaculis accumsan. Fusce imperdiet fermentum quam, eget
-          ornare ex tristique at. In maximus dolor lectus, volutpat vulputate
-          mauris maximus eu. Vestibulum aliquet molestie volutpat. Cras
-          tincidunt euismod arcu, et efficitur sem ultrices non. Praesent
-          sollicitudin arcu ac ipsum auctor, sed interdum nunc cursus. Aenean
-          suscipit ex eget sollicitudin vulputate. Sed scelerisque finibus metus
-          id dictum. Donec nec est porta, blandit magna vel, egestas turpis.
-          Nunc molestie molestie lorem, ut commodo massa interdum et. Sed lacus
-          sapien, euismod sit amet hendrerit id, faucibus eget mauris. Etiam
-          mattis odio urna, quis volutpat purus fringilla eu. Nulla ipsum magna,
-          dignissim vel justo in, fringilla elementum sapien. Maecenas semper,
-          lorem vel finibus lobortis, turpis nulla bibendum ligula, vel
-          elementum arcu lorem vitae tellus. Ut faucibus velit eget orci egestas
-          dignissim.
-        </p>
-        <p>
-          Nunc lobortis justo sed quam vulputate egestas. Vivamus non magna a
-          erat pulvinar pretium. Quisque arcu nisl, sagittis non risus sed,
-          posuere tincidunt tellus. Mauris sit amet metus id dolor lacinia
-          sagittis. Ut bibendum sem rutrum ex consectetur faucibus. Suspendisse
-          fringilla augue in sapien faucibus, nec condimentum lacus rutrum.
-          Vivamus semper ac dui eu suscipit. Orci varius natoque penatibus et
-          magnis dis.
-        </p>
+      <section class="meta">
+        <div class="breadcrumbs"><a href="texts.html">Text</a> / Detail</div>
+        <h1 id="title">Unbenannt</h1>
+      </section>
+      <section class="reader">
+        <nav>
+          <button class="tab-button active" data-id="facs">Facsimile</button>
+          <button class="tab-button" data-id="tibetian">Tibetian</button>
+          <button class="tab-button" data-id="translations">
+            &Uuml;bersetzung
+          </button>
+          <a
+            class="button"
+            target="_blank"
+            href="https://github.com/abrugnara/TibetianTEI/tree/main/TibetanTEI-main/content"
+            ><span>&lt;/&gt;</span> XML</a
+          >
+          <label>
+            Seite:
+            <select id="selectPage"></select>
+            / <span id="pageCount">0</span>
+          </label>
+        </nav>
+        <div class="panes">
+          <div class="pane facs active" id="facs">
+            <img id="facsimile" alt="Facsimile" />
+          </div>
+          <div class="pane tibetian" id="tibetian">keine Text gefunden</div>
+          <div class="pane translation" id="translations">
+            keine &Uuml;bersetzung gefunden
+          </div>
+        </div>
       </section>
     </main>
 
@@ -126,5 +130,6 @@
         </div>
       </nav>
     </footer>
+    <script src="assets/app/detail.js"></script>
   </body>
 </html>
