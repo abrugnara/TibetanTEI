@@ -1,4 +1,3 @@
-import { texts } from "./texts";
 const NS = "http://www.tei-c.org/ns/1.0";
       var doc = {};
       window.onload = function () {
