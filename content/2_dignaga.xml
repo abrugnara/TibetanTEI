@@ -144,7 +144,7 @@
             </person>
             <person xml:id="shrIharsha" role="king">
                 <persName xml:lang="bo">ཤྲཱི་ཧརྴ་</persName>
-                <idno> type="URI">https://</idno>
+                <idno type="URI">https://</idno>
             </person>
             <person xml:id="guṇaprabha">
                 <persName xml:lang="bo">ཡོན་ཏན་འོད་</persName>
@@ -152,7 +152,7 @@
             <person xml:id="sthiramati">
                 <persName xml:lang="bo">བློ་གྲོས་བརྟན་པ་</persName>
                 <!-- idno in idno ist nicht gut; elemente und attribute passen nicht VERGESSEN ZU LÖSCHEN ERLEDIGT -->
-                <idno> type="URI">https://legacy.tbrc.org/#!rid=P4CZ16794</idno>
+                <idno type="URI">https://legacy.tbrc.org/#!rid=P4CZ16794</idno>
             </person>
             <person xml:id="vrikShatsandra">
                 <persName xml:lang="bo">བྲྀཀྵ་ཙནྡྲ་</persName>
@@ -168,34 +168,34 @@
             </person>
             <person xml:id="samgadAsa">
                 <persName xml:lang="bo">དགེ་འདུན་འབངས་</persName>
-                <idno> type="URI">https://</idno>
+                <idno type="URI">https://</idno>
             </person>
             <person xml:id="dharmadAsa">
                 <persName xml:lang="bo">ཆོས་འབང་</persName>
-                <idno> type="URI">https://</idno>
+                <idno type="URI">https://</idno>
             </person>
             <person xml:id="sangs_rgyas_bskyang">
                 <persName xml:lang="bo">སངས་རྒྱས་བསྐྱང་</persName>
             </person>
             <person xml:id="darika">
                 <persName xml:lang="bo">ད་རི་ཀ་པ་</persName>
-                <idno> type="URI">https://legacy.tbrc.org/#!rid=P4CZ15083</idno>
+                <idno type="URI">https://legacy.tbrc.org/#!rid=P4CZ15083</idno>
             </person>
             <person xml:id="dkon_mchog_gsum_gyi_abang">
                 <persName xml:lang="bo">དཀོན་མཆོག་གསུམ་གྱི་འབང་</persName>
-                <idno> type="URI">https://legacy.tbrc.org/#!rid=P1943</idno>
+                <idno type="URI">https://legacy.tbrc.org/#!rid=P1943</idno>
             </person>
             <person xml:id="bhavya">
                 <persName xml:lang="bo">ལེགས་ལྡན་</persName>
-                <idno> type="URI">https://legacy.tbrc.org/#!rid=P1701</idno>
+                <idno type="URI">https://legacy.tbrc.org/#!rid=P1701</idno>
             </person>
             <person xml:id="vimuktasena">
                 <persName xml:lang="bo">གྲོལ་སྡེ་</persName>
-                <idno> type="URI">https://legacy.tbrc.org/#!rid=P4CZ15637</idno>
+                <idno type="URI">https://legacy.tbrc.org/#!rid=P4CZ15637</idno>
             </person>
             <person xml:id="dza-le-ru-he ">
                 <persName xml:lang="bo">ཛ་ལེ་རུ་ཧེ་</persName>
-                <idno> type="URI">https://legacy.tbrc.org/#!rid=P4CZ15637</idno>
+                <idno type="URI">https://legacy.tbrc.org/#!rid=P4CZ15637</idno>
             </person>
             <person xml:id="nAgakesha">
                 <persName xml:lang="bo">ནཱ་གེ་ཤ་</persName>
@@ -214,7 +214,7 @@
             </person>
             <person xml:id="dignAga">
                 <persName xml:lang="bo">ཕྱོགས་ཀྱི་གླང་པོ་</persName>
-                <idno> type="URI">https://legacy.tbrc.org/#!rid=P6035</idno>
+                <idno type="URI">https://legacy.tbrc.org/#!rid=P6035</idno>
             </person>
         </listPerson>
         <listPlace>
@@ -258,7 +258,7 @@
     <text>
         <body>
             <div>
-                <pb ed="A" n="65a" facs="../images/dignaga/taranatha_dignaga_Page_593.jpg"/>
+                <pb ed="A" n="65a" facs="../content/images/dignaga/taranatha_dignaga_Page_593.jpg"/>
                 <head>Beginn des Textes: Image 593, Page 65a: 5. Zeile Mitte</head>
                 <p xml:lang="bo">
                     <s xml:id="p65a01">ཿ་སློབ་དཔོན་ཆེན་པོ་<persName xml:id="vasubandhu_01"
@@ -294,7 +294,7 @@
                     dessen Sohn Kāmadshandra.</p>
             </div>
             <div>
-                <pb ed="A" n="65b" facs="../images/dignaga/taranatha_dignaga_Page_594.jpg"/>
+                <pb ed="A" n="65b" facs="../content/images/dignaga/taranatha_dignaga_Page_594.jpg"/>
                 <p xml:lang="bo">དབང་ཐང་<w type="Konjunktion">དང</w>་ལོངས་སྤྱོད་<w
                         type="Fokuspartikel">ཀྱང་</w>ཆེ། <w type="Prädikat_substantiviert"
                         subtype="tmdV">སྦྱིན་པ་</w><w type="KasSuffix">ལ་</w>དག<w type="Suff">འ</w>།
@@ -358,7 +358,7 @@
                     Ausmaß Handlungen. Unter diesen:</p>
             </div>
             <div>
-                <pb ed="A" n="66a" facs="../images/dignaga/taranatha_dignaga_Page_595.jpg"/>
+                <pb ed="A" n="66a" facs="../content/images/dignaga/taranatha_dignaga_Page_595.jpg"/>
                 <p xml:lang="bo">རྒྱལ་པོ་ <!-- CP: key ??? -->
                     <persName type="BUDA" key="???"
                     >ཤྲཱི་ཧརྴ</persName>་འགྲན་ཟླ་མེད་པའི་རྒྱལ་པོར་གྱུར་པའི་ཚེ་ཀླ་ཀློའི་ཆོས་རྣམས་ནུབ་པར་འདོད་པས།
@@ -411,7 +411,7 @@
                     Ordensdisziplinen aller Schulen gemeinsam mit den Lehrwerken.</p>
             </div>
             <div>
-                <pb ed="A" n="66b" facs="../images/dignaga/taranatha_dignaga_Page_596.jpg"/>
+                <pb ed="A" n="66b" facs="../content/images/dignaga/taranatha_dignaga_Page_596.jpg"/>
                 <p xml:lang="bo">བ་འབུམ་སྟེ་རྟག་ཏུ་ཐུགས་ལ་འདོན་པར་མཛད། ཡུལ་<placeName type="BUDA"
                         key="???">བཅོམ་བརླག</placeName>་གི་གཙུག་ལག་ཁང་ཨ་གྲ་པུ་རི་ཞེས་བྱ་བར་བཞུགས་ཏེ།
                     ལྷན་ཅིག་གནས་པ་དགེ་སློང་སྟོང་ཕྲག་ལྔ་རེ་ཡོད་ཅིང། ཐམས་ཅད་ཀྱང་
@@ -464,7 +464,7 @@
                     vergangen waren), wurde er zum Lehrer Vasubandhu gebracht,</p>
             </div>
             <div>
-                <pb ed="A" n="67a " facs="../images/dignaga/taranatha_dignaga_Page_597.jpg"/>
+                <pb ed="A" n="67a " facs="../content/images/dignaga/taranatha_dignaga_Page_597.jpg"/>
                 <p xml:lang="bo">ཅིང་ཡོད་པས་ཀྱང་དཀའ་བ་མེད་པར་ཤེས། དེའི་ཚེ་སྲན་མ་སྦར་གང་རྙེད་པ་
                         ཟའམ་སྙམ་ནས་<persName type="BUDA" key="???"
                     >སྒྲོལ་མ</persName>འི་ལྷ་ཁང་ཞིག་ན་ཡོད་པ་ལ།

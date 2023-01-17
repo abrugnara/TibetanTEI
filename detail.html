@@ -4,11 +4,19 @@
     <title>Brugnara - TibetianTEI Detail</title>
     <link rel="icon" type="image/x-icon" href="favicon.ico" />
     <link rel="stylesheet" type="text/css" href="assets/css/main.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/prism/9000.0.1/themes/prism.min.css"
+      integrity="sha512-/mZ1FHPkg6EKcxo0fKXF51ak6Cr2ocgDi5ytaTBjsQZIH/RNs6GF6+oId/vPe3eJB836T36nXwVh/WBl/cWT4w=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/tippy.js/2.5.4/tippy.css" integrity="sha512-wYhtIFU+mDV48662uSmS8BA6uIuSRXB15B014+WdZgtU1Umfn/v8+Yq3hidRunKqTBmhBijyyuqSzCxmj6KlTg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <meta charset="utf-8" />
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
   </head>
 
-  <body>
+  <body class="detail">
     <header>
       <div>
         <a class="page-title" href="/">Brugnara - TibetianTEI</a>
@@ -46,35 +54,89 @@
 
     <main>
       <section class="meta">
-        <div class="breadcrumbs"><a href="texts.html">Text</a> / Detail</div>
-        <h1 id="title">Unbenannt</h1>
+        <div class="actions">
+          <div class="breadcrumbs">
+            <a href="texts.html">Text</a> / Detail</div>
+            <a href="#" id="editLink">Text auf Github bearbeiten
+            </a>
+            <label>
+              Seite:
+              <select id="selectPage"></select>
+              / <span id="pageCount">0</span>
+            </label>
+          </div>
+          <h2 id="title"></h2>
+        </div>
       </section>
       <section class="reader">
-        <nav>
-          <button class="tab-button active" data-id="facs">Facsimile</button>
-          <button class="tab-button" data-id="tibetian">Tibetian</button>
-          <button class="tab-button" data-id="translations">
-            &Uuml;bersetzung
-          </button>
-          <a
-            class="button"
-            target="_blank"
-            href="https://github.com/abrugnara/TibetianTEI/tree/main/TibetanTEI-main/content"
-            ><span>&lt;/&gt;</span> XML</a
-          >
-          <label>
-            Seite:
-            <select id="selectPage"></select>
-            / <span id="pageCount">0</span>
-          </label>
-        </nav>
-        <div class="panes">
-          <div class="pane facs active" id="facs">
-            <img id="facsimile" alt="Facsimile" />
+        <div id="reader-left" class="tabs">
+          <nav>
+            <button class="tab-button active" data-id="facs-left">
+              Facsimile
+            </button>
+            <button class="tab-button" data-id="tibetian-left">Tibetian</button>
+            <button class="tab-button" data-id="german-left">
+              &Uuml;bersetzung
+            </button>
+            <button class="tab-button" data-id="xml-left">
+              <span>&lt;/&gt;</span> XML
+            </button>
+          </nav>
+          <div class="panes">
+            <div class="pane facs active" id="facs-left">
+              <figure
+                class="zoom"
+                id="facsimile-left"
+                onmousemove="zoom(event)"
+              >
+                <img alt="Facsimile" />
+              </figure>
+            </div>
+            <div class="pane tibetian" id="tibetian-left">
+              keine Text gefunden
+            </div>
+            <div class="pane german" id="german-left">
+              keine &Uuml;bersetzung gefunden
+            </div>
+            <div class="pane xml" id="xml-left">
+              keine XML gefunden
+            </div>
           </div>
-          <div class="pane tibetian" id="tibetian">keine Text gefunden</div>
-          <div class="pane translation" id="translations">
-            keine &Uuml;bersetzung gefunden
+        </div>
+        <div id="reader-right" class="tabs">
+          <nav>
+            <button class="tab-button active" data-id="facs-right">
+              Facsimile
+            </button>
+            <button class="tab-button" data-id="tibetian-right">
+              Tibetian
+            </button>
+            <button class="tab-button" data-id="german-right">
+              &Uuml;bersetzung
+            </button>
+            <button class="tab-button" data-id="xml-right">
+              <span>&lt;/&gt;</span> XML
+            </button>
+          </nav>
+          <div class="panes">
+            <div class="pane facs active" id="facs-right">
+              <figure
+                class="zoom"
+                id="facsimile-right"
+                onmousemove="zoom(event)"
+              >
+                <img alt="Facsimile" />
+              </figure>
+            </div>
+            <div class="pane tibetian" id="tibetian-right">
+              keine Text gefunden
+            </div>
+            <div class="pane german" id="german-right">
+              keine &Uuml;bersetzung gefunden
+            </div>
+            <div class="pane xml" id="xml-right">
+              keine XML gefunden
+            </div>
           </div>
         </div>
       </section>
@@ -132,6 +194,27 @@
         </div>
       </nav>
     </footer>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.3/jquery.min.js"
+      integrity="sha512-STof4xm1wgkfm7heWqFJVn58Hm3EtS31XFaagaa8VMReCXAkQnJZ+jEy8PCC/iT18dFy95WcExNHFTqLyp72eQ=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    ></script>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/jquery-xpath/0.3.1/jquery.xpath.min.js"
+      integrity="sha512-j98OvxcYGNtdLlhL4yi2QD6CsSDS1edBfOt/ZUMNztI3xCpnYPvDiOZk+HOA5qGWWVYI4+vJyV7MPp7EqDBD+w=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    ></script>
+    
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/prism/9000.0.1/prism.min.js"
+      integrity="sha512-UOoJElONeUNzQbbKQbjldDf9MwOHqxNz49NNJJ1d90yp+X9edsHyJoAs6O4K19CZGaIdjI5ohK+O2y5lBTW6uQ=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+      data-manual
+    ></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/tippy.js/2.5.4/tippy.all.js" integrity="sha512-jIIh0z4fzfV4cFju6uTH2QY9Q/UrRd09aa35FKbh759/sl4VyIlA9JMbjM3nSFLNESeiih6pzDlsB4GLd0JZlw==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
     <script src="assets/app/detail.js"></script>
     <script src="assets/app/texts.js"></script>
   </body>

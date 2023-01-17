@@ -20,6 +20,7 @@
   /* Semantic Colors */
   --color-title: #00ff00;
   --color-date: #ff00ff;
+  --color-person: #00f;
   --color-verb: #805300;
   --color-place: #ffa500;
   --color-particle: #f00;
@@ -140,7 +141,7 @@ footer {
   padding: 4rem;
   text-align: center;
 }
-.section, .meta, .reader {
+.section {
   margin: 0 auto;
   padding: 0 1rem;
   width: calc(var(--content-width) - 2rem);
@@ -167,10 +168,16 @@ footer {
 }
 
 /* Page:Detail */
-.breadcrumbs {
+.actions {
     border-bottom: 1px solid var(--color);
     padding: 1rem 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
     font-size: .8rem;
+}
+.detail h2 {
+  font-size: 1.5rem;
 }
 .tab-button, .button {
     font-size: .8rem;
@@ -188,6 +195,15 @@ footer {
 .button span {
     font-size: smaller;
 }
+.reader, .meta {
+  padding: 0 1rem;
+}
+.reader {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1rem;
+}
+
 .reader nav {
     display: flex;
     gap: .25rem;
@@ -215,4 +231,33 @@ border-bottom-right-radius: 0;
 }
 .pane.active {
   display: block;
+}
+.pane.xml textarea{
+  width: 100%;
+  height: 50vh;
+}
+
+figure.zoom {
+  background-position: 50% 50%;
+  position: relative;
+  width: 100%;
+  overflow: hidden;
+  cursor: zoom-in;
+  margin:0;
+}
+figure.zoom img:hover {
+  opacity: 0;
+}
+figure.zoom img {
+  transition: opacity 0.5s;
+  display: block;
+  width: 100%;
+}
+
+
+persname {
+  color: var(--color-person);
+}
+placename {
+  color: var(--color-place);
 }
