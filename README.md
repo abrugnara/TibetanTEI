@@ -34,3 +34,17 @@ Grundlegendes TEI-Markup für tibetische historische Texte (diplomatische Editio
     Suffixe / Partikel
     Erklärungen
     
+### Neuen Text einpflegen
+
+Neue Texte werden als XML im Ordner `content` abgelegt. Zu jedem Text wird ein Unterordner angelegt dessen Name im Idealfall dem des Dokuments gleicht. `content/mein_text`.
+
+Um den Text sichtbar zu machen, muss dieser noch registriert werden in `app/texts.js`. Dabei wird eine `id` und der relative `url` zum XML in eine Liste eingetragen. 
+
+```javascript
+const texts = [
+    { id: "1_gompopa", url: "content/1_gompopa.xml" },
+    { id: "2_dignaga", url: "content/2_dignaga.xml" },
+    { id: "3", url: "content/3_ganden.xml" },
+    { id: "4", url: "content/4_shrisena.xml" },
+];
+```
