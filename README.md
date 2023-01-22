@@ -1,4 +1,4 @@
-# TibetianTEI Albert Brugnara
+# TibetanTEI Albert Brugnara
 Dieses Repository ist Teil des Lehrmaterials für die Lehrveranstaltungen und BA- und MA-Arbeiten des Institut für Südasien-, Tibet- und Buddhismuskunde [(ISTB)](https://stb.univie.ac.at/)
 Das Repository enthält Darstellungen von TEI-kodierten diplomatischen Ausgaben von tibetischem Unicode-Text in einem Browser. Die Markierungen sind so konfiguriert, dass auch tibetischer Text mit Faksimile-Bildern im traditionellen Pecha-Format angezeigt werden. Das in den editionen angewandte TEI-Kodierungsschema wurde in Übereinstimmung mit den TEI P5-Richtlinien für die Kommentierung besonders tibetischer historischer Werke, Kolophone oder Textauszüge auf diplomatische Weise mit nur einem einzigen Textzeugen entwickelt. Allerdings wurde dieser Textzeuge mit anderen abgeglichen und notwendige Korrekturen markiert. Die Kodierung deckt die Markierung grundlegender redaktioneller Merkmale, historischer Einheiten und Daten sowie übersetzter Teile und Fachterminologie ab, Ebenso die tibetische Syntax (siehe Dokumentation zur Markierung unten).
 
