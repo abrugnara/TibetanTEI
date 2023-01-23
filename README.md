@@ -30,7 +30,7 @@ Grundlegendes TEI-Markup für tibetische historische Texte (diplomatische Editio
     
     Annotation für tibetische Syntax und Semantik
     komplexe Sätze Satzmodelle Satztypen Satzarten
-    Wortarten nach SttS
+    Wortarten nach Stuttgart-Tübingen-Tagset (STTS) 
     Suffixe / Partikel mit und ohne grammatikalischer Bedeutung
     Erklärungen
     
