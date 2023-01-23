@@ -28,10 +28,10 @@ Grundlegendes TEI-Markup für tibetische historische Texte (diplomatische Editio
     places: <placeName>...</placeName>; e.g. <placeName type="BUDA" key="G2800">ལྷ་ས</placeName>
     work titles: <title>...</title>; e.g. <title type="RKTS" key="3219">བྱང་ཆུབ་སེམས་དཔའི་སྤྱོད་པ་ལ་འཇུག་པའི་ལེགས་པར་སྦྱར་བ</title>།"
     
-    Annotation für tibetische Syntax
-    komplexe Sätze
-    Wortarten
-    Suffixe / Partikel
+    Annotation für tibetische Syntax und Semantik
+    komplexe Sätze Satzmodelle Satztypen Satzarten
+    Wortarten nach SttS
+    Suffixe / Partikel mit und ohne grammatikalischer Bedeutung
     Erklärungen
     
 ### Neuen Text einpflegen
