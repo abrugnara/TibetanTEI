@@ -24,9 +24,9 @@ Grundlegendes TEI-Markup für tibetische historische Texte (diplomatische Editio
 
     annotations (by the author/scribe): <gloss>...</gloss>
     dates: <date>...</date>; e.g. <date when="1446">མེ་ཕོ་སྟག་གི་ལོ</date>
-    persons: <persName>...</persName>; e.g. <persName type="BUDA" key="P3183">རྡོ་རྗེ་གདན་པ་ཀུན་དགའ་རྣམ་རྒྱལ་དཔལ་བཟང་པོ</persName>
-    places: <placeName>...</placeName>; e.g. <placeName type="BUDA" key="G2800">ལྷ་ས</placeName>
-    work titles: <title>...</title>; e.g. <title type="RKTS" key="3219">བྱང་ཆུབ་སེམས་དཔའི་སྤྱོད་པ་ལ་འཇུག་པའི་ལེགས་པར་སྦྱར་བ</title>།"
+    persons: <persName>...</persName>; e.g. <persName type="BUDA" xml:id="P3183">རྡོ་རྗེ་གདན་པ་ཀུན་དགའ་རྣམ་རྒྱལ་དཔལ་བཟང་པོ</persName>
+    places: <placeName>...</placeName>; e.g. <placeName type="BUDA" xml:id="G2800">ལྷ་ས</placeName>
+    work titles: <title>...</title>; e.g. <title type="RKTS" xml:id="3219">བྱང་ཆུབ་སེམས་དཔའི་སྤྱོད་པ་ལ་འཇུག་པའི་ལེགས་པར་སྦྱར་བ</title>།"
     
     Annotation für tibetische Syntax und Semantik nach P.Schwieger 2009 und M. Hahn 2005
     komplexe Sätze Satzmodelle Satztypen Satzarten
