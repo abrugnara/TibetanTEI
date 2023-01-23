@@ -28,9 +28,10 @@ Grundlegendes TEI-Markup für tibetische historische Texte (diplomatische Editio
     places: <placeName>...</placeName>; e.g. <placeName type="BUDA" key="G2800">ལྷ་ས</placeName>
     work titles: <title>...</title>; e.g. <title type="RKTS" key="3219">བྱང་ཆུབ་སེམས་དཔའི་སྤྱོད་པ་ལ་འཇུག་པའི་ལེགས་པར་སྦྱར་བ</title>།"
     
-    Annotation für tibetische Syntax und Semantik
+    Annotation für tibetische Syntax und Semantik nach P.Schwieger 2009 und M. Hahn 2005
     komplexe Sätze Satzmodelle Satztypen Satzarten
-    Wortarten nach Stuttgart-Tübingen-Tagset (STTS) auch Schiller - Teufel - Thielen - Stöckert
+    Wortarten nach Stuttgart-Tübingen-Tagset (STTS) auch Schiller - Teufel - Thielen - Stöckert 
+    https://www.ims.uni-stuttgart.de/documents/ressourcen/lexika/tagsets/stts-1999.pdf
     Suffixe / Partikel mit und ohne grammatikalischer Bedeutung
     Erklärungen
     
