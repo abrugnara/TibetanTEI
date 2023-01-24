@@ -139,12 +139,12 @@ function loadText(id) {
       ).text;
       document.getElementById("german-right").innerHTML =
         page.translations.find((t) => t.lang == "de").text;
-      document.getElementById("tibetian-left").innerHTML = $(
+      document.getElementById("tibetan-left").innerHTML = $(
         page.translations.find((t) => t.lang == "bo").el
       )
         .html()
         .replace(/\n/g, "<br />");
-      document.getElementById("tibetian-right").innerHTML = $(
+      document.getElementById("tibetan-right").innerHTML = $(
         page.translations.find((t) => t.lang == "bo").el
       )
         .html()
@@ -169,7 +169,7 @@ function loadText(id) {
       doc.title.find((t) => t.lang === "de").text;
     document.getElementById(
       "editLink"
-    ).href = `https://github.com/abrugnara/TibetianTEI/tree/main/${doc.url}`;
+    ).href = `https://github.com/abrugnara/TibetanTEI/tree/main/${doc.url}`;
 
     // Page Selector
     var select = document.getElementById("selectPage");
