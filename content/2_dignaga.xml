@@ -148,6 +148,7 @@
             </person>
             <person xml:id="guṇaprabha">
                 <persName xml:lang="bo">ཡོན་ཏན་འོད་</persName>
+                <idno type="URI">https://</idno>
             </person>
             <person xml:id="sthiramati">
                 <persName xml:lang="bo">བློ་གྲོས་བརྟན་པ་</persName>
@@ -156,15 +157,19 @@
             </person>
             <person xml:id="vrikShatsandra">
                 <persName xml:lang="bo">བྲྀཀྵ་ཙནྡྲ་</persName>
+                <idno type="URI">https://</idno>
             </person>
             <person xml:id="vigamatsandra">
                 <persName xml:lang="bo">བི་ག་མ་ཙནྡྲ་</persName>
+                <idno type="URI">https://</idno>
             </person>
             <person xml:id="kamatsandra">
                 <persName xml:lang="bo">ཀཱ་མ་ཙནྡྲ་</persName>
+                <idno type="URI">https://</idno>
             </person>
             <person xml:id="mahAsammata">
                 <persName xml:lang="bo">མང་པོས་བཀུར་བ་</persName>
+                <idno type="URI">https://</idno>
             </person>
             <person xml:id="samgadAsa">
                 <persName xml:lang="bo">དགེ་འདུན་འབངས་</persName>
@@ -176,6 +181,7 @@
             </person>
             <person xml:id="sangs_rgyas_bskyang">
                 <persName xml:lang="bo">སངས་རྒྱས་བསྐྱང་</persName>
+                <idno type="URI">https://</idno>
             </person>
             <person xml:id="darika">
                 <persName xml:lang="bo">ད་རི་ཀ་པ་</persName>
@@ -199,18 +205,23 @@
             </person>
             <person xml:id="nAgakesha">
                 <persName xml:lang="bo">ནཱ་གེ་ཤ་</persName>
+                <idno type="URI">https://</idno>
             </person>
             <person xml:id="lo-yi-pa">
                 <persName xml:lang="bo">ལོ་ཡི་པ་</persName>
+                <idno type="URI">https://</idno>
             </person>
             <person xml:id="deM-gi-pa">
                 <persName xml:lang="bo">ཌེཾ་གི་པ་</persName>
+                <idno type="URI">https://</idno>
             </person>
             <person xml:id="badrapalita">
                 <persName xml:lang="bo">བྷ་དྲ་པཱ་ལི་ཏ་</persName>
+                <idno type="URI">https://</idno>
             </person>
             <person xml:id="tsihawa">
                 <persName xml:lang="bo">ཙི་ཏཱ་ཝ་</persName>
+                <idno type="URI">https://</idno>
             </person>
             <person xml:id="dignAga">
                 <persName xml:lang="bo">ཕྱོགས་ཀྱི་གླང་པོ་</persName>
@@ -220,6 +231,7 @@
         <listPlace>
             <place xml:id="maru" type="village">
                 <placeName>མ་རུ་</placeName>
+                <idno type="URI">https://</idno>
             </place>
             <place xml:id="kache" type="region">
                 <placeName xml:lang="bo">ཁ་ཆེ་</placeName>
@@ -227,31 +239,40 @@
             </place>
             <place xml:id="kache_i_yul" type="country">
                 <placeName xml:lang="bo">ཁ་ཆེའི་ཡུལ་</placeName>
+                <idno type="URI">https://</idno>
             </place>
             <place xml:id="otivisha" type="village">
                 <placeName xml:lang="bo">ཨོ་ཊི་བི་ཤ་</placeName>
+                <idno type="URI">https://</idno>
             </place>
             <place xml:id="Maulasthāna" type="village">
                 <placeName xml:lang="bo">མཽ་ལ་ཏ་ན་</placeName>
+                <idno type="URI">https://</idno>
             </place>
             <place xml:id="kho_rA_sa_na" type="village">
                 <placeName xml:lang="bo">ཁོ་རཱ་ས་ཎ་</placeName>
+                <idno type="URI">https://</idno>
             </place>
             <!-- CP: ist das ein Dorf in einem Dorf? weil zweimal village? SIND ZWEI UNTERSCHIEDLICHE ORTE ODER WÄRE ES HIER BESSER JEDEN PLACE MIT </PLACE> SEPARAT ABZUSCHLIESSEN? DANN WAR DAS EIN LOGISCHER FEHLER -->
             <place xml:id="ma_la_wa" type="village">
                 <placeName xml:lang="bo">མ་ལ་ཝ་</placeName>
+                <idno type="URI">https://</idno>
             </place>
             <place xml:id="me_wa" type="village">
                 <placeName xml:lang="bo">མེ་ཝ་</placeName>
+                <idno type="URI">https://</idno>
             </place>
             <place xml:id="pi_tu_wa" type="village">
                 <placeName xml:lang="bo">པི་ཏུ་ཝ་</placeName>
+                <idno type="URI">https://</idno>
             </place>
             <place xml:id="bcom_brlag" type="village">
                 <placeName xml:lang="bo">བཅོམ་བརླག་</placeName>
+                <idno type="URI">https://</idno>
             </place>
             <place xml:id="singga_bakta" type="village">
                 <placeName xml:lang="bo">སིངྒ་བཀྟ་</placeName>
+                <idno type="URI">https://</idno>
             </place>
         </listPlace>
     </standOff>

@@ -7,7 +7,7 @@
     <teiHeader>
         <fileDesc>
             <titleStmt>
-                <!-- mandatory!   Titles, author and editor/s of the digital document -->
+                <!-- mandatory!  Titles, author and editor/s of the digital document -->
                 <title xml:lang="bo">རྗེ་བཙུན་ཏཱ་ར་ནཱ་ཐའི་གསུང་འབུམ་</title>
                 <title xml:lang="de">rje btsun tA ra nA tha'i gsung 'bum: SoSe 2022
                     Historiografische Berichte über bedeutende buddhistische Gelehrte (Dignāga
