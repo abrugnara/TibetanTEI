@@ -1,1 +1,1 @@
-## Wie erstelle ich Änderungen
+## Beitragsrichtlinien: Wie erstelle ich Änderungen
