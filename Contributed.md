@@ -16,12 +16,12 @@ PRs für unsere Bibliotheken sind immer willkommen und können ein schneller Weg
       * Eine vollständige Pull Request-Vorlage beifügen (wird automatisch geladen, wenn ein PR erstellt wird).
   Für Änderungen, die die Kernfunktionalität betreffen oder einschneidende Änderungen erfordern würden (z.B. bei einem größeren Release), ist es am besten, zuerst einen Issue zu eröffnen, um Ihren Vorschlag zu diskutieren. Dies ist nicht erforderlich, kann aber Zeit bei der Erstellung und Überprüfung von Änderungen sparen.
 Im Allgemeinen folgen wir dem "fork-and-pull" Git-Workflow
-    1. Forken Sie das Repository in Ihr eigenes Github-Konto 
-    2. Klonen Sie das Projekt auf Ihren Rechner 
-    3. Erstellen Sie lokal einen Zweig mit einem prägnanten, aber aussagekräftigen Namen 
-    4. Übertragen Sie die Änderungen in den Zweig 
-    5. Befolgen Sie alle Formatierungs- und Testrichtlinien, die für dieses Repository gelten 
-    6. Übertragen Sie die Änderungen in Ihren Fork 
-    7. Eröffnen Sie einen PR in unserem Repository und folgen Sie der PR-Vorlage, damit wir die Änderungen effizient überprüfen können.
+    -  1. Forken Sie das Repository in Ihr eigenes Github-Konto 
+    -  2. Klonen Sie das Projekt auf Ihren Rechner 
+    -  3. Erstellen Sie lokal einen Zweig mit einem prägnanten, aber aussagekräftigen Namen 
+    -  4. Übertragen Sie die Änderungen in den Zweig 
+   -   5. Befolgen Sie alle Formatierungs- und Testrichtlinien, die für dieses Repository gelten 
+    -  6. Übertragen Sie die Änderungen in Ihren Fork 
+  -    7. Eröffnen Sie einen PR in unserem Repository und folgen Sie der PR-Vorlage, damit wir die Änderungen effizient überprüfen können.
   * Links zu externer Dokumentation, zu Verteilerlisten oder zu einem Verhaltenskodex.
   * Erwartungen der Community und Verhaltensregeln
