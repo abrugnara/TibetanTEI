@@ -289,10 +289,10 @@
                             >རྒྱལ་པོ་ཟབ་མོའི་ཕྱོགས</persName>་འདས་པའི་འོག་ཏུ་ནུབ་<lb/>ཕྱོགས་<placeName
                             type="BUDA" key="???">མ་རུ</placeName>འི་ཡུལ་དུ་སྐྱེས་པ་<persName
                             xml:id="shriharsa" ref="shriharsa" role="king" type="BUDA" key="???"
-                            >རྒྱལ་བོ་ཤྲཱི་ཧརྴ</persName>་<w type="Partikel_Sprecher">ཞེས་</w><w
+                            >རྒྱལ་བོ་ཤྲཱི་ཧརྴ</persName>་<w type="partikel_sprecher">ཞེས་</w><w
                             pos="VMPP" type="VG6" subtype="tmdV" msd="SF1.,2.3.4."
-                        >བྱ་བ་</w>ལས་ཀྱི་སྟོབས་
-                    ཤིན་ཏུ་ཆེ་བ་བྱུང་སྟེ་</s>ནུབ་ཕྱོགས་ཀྱི་རྒྱལ་ཁམས་ཐམས་ཅད་ལ་དབང་བསྒྱུར།
+                        >བྱ་བ་</w><w type="partikel">ལས་</w><w type="partikel">ཀྱི་</w>སྟོབས་
+                    ཤིན་<w type="partikel">ཏུ་</w>ཆེ་བ་བྱུང་སྟེ་</s>ནུབ་ཕྱོགས་ཀྱི་རྒྱལ་ཁམས་ཐམས་ཅད་ལ་དབང་བསྒྱུར།
                         ཕྱིས་སངས་རྒྱས་ཀྱི་བསྟན་པ་ལ་དད་པ་ཐོབ་སྟེ་སློབ་དཔོན་<persName
                         xml:id="gunaprabha" role="teacher" type="BUDA" key="P1308"
                         >ཡོན་<lb/>ཏན་འོད</persName>་བླ་མར་བཀུར་བ་ཞིག་བྱུང།
@@ -416,7 +416,7 @@
                     ཐེག་པ་ཆེན་པོའི་མདོ་སྡེ་དུ་མ་ལ་ཡང་མཁས་པར་སྦྱངས།
                     སྡེ་པ་ཐ་དད་པའི་འདུལ་བ་བསྟན་བཅོས་དང་བཅས་པ་མཐའ་དག་མཁས་པར་མཁྱེན། འདུལ་<lb/>
                 </p>
-<p xml:lang="wylie">gyi  drung nyan thos kyi  </p>
+<p xml:lang="wylie">gyi  drung nyan thos kyi sde </p>
                 <p xml:lang="de">Unter diesen nun / von diesen nun: der König Śriharṣa. Als er zu
                     einem König der ohne ebenbürtigen Gegner war, geworden war und den Wunsch hatte,
                     dass die Mleschtscha (Barbaren)-Religionen untergehen möchten, errichtete er in
