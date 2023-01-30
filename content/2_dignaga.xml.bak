@@ -148,6 +148,7 @@
             </person>
             <person xml:id="guṇaprabha">
                 <persName xml:lang="bo">ཡོན་ཏན་འོད་</persName>
+                <idno type="URI">https://</idno>
             </person>
             <person xml:id="sthiramati">
                 <persName xml:lang="bo">བློ་གྲོས་བརྟན་པ་</persName>
@@ -156,15 +157,19 @@
             </person>
             <person xml:id="vrikShatsandra">
                 <persName xml:lang="bo">བྲྀཀྵ་ཙནྡྲ་</persName>
+                <idno type="URI">https://</idno>
             </person>
             <person xml:id="vigamatsandra">
                 <persName xml:lang="bo">བི་ག་མ་ཙནྡྲ་</persName>
+                <idno type="URI">https://</idno>
             </person>
             <person xml:id="kamatsandra">
                 <persName xml:lang="bo">ཀཱ་མ་ཙནྡྲ་</persName>
+                <idno type="URI">https://</idno>
             </person>
             <person xml:id="mahAsammata">
                 <persName xml:lang="bo">མང་པོས་བཀུར་བ་</persName>
+                <idno type="URI">https://</idno>
             </person>
             <person xml:id="samgadAsa">
                 <persName xml:lang="bo">དགེ་འདུན་འབངས་</persName>
@@ -176,6 +181,7 @@
             </person>
             <person xml:id="sangs_rgyas_bskyang">
                 <persName xml:lang="bo">སངས་རྒྱས་བསྐྱང་</persName>
+                <idno type="URI">https://</idno>
             </person>
             <person xml:id="darika">
                 <persName xml:lang="bo">ད་རི་ཀ་པ་</persName>
@@ -199,18 +205,23 @@
             </person>
             <person xml:id="nAgakesha">
                 <persName xml:lang="bo">ནཱ་གེ་ཤ་</persName>
+                <idno type="URI">https://</idno>
             </person>
             <person xml:id="lo-yi-pa">
                 <persName xml:lang="bo">ལོ་ཡི་པ་</persName>
+                <idno type="URI">https://</idno>
             </person>
             <person xml:id="deM-gi-pa">
                 <persName xml:lang="bo">ཌེཾ་གི་པ་</persName>
+                <idno type="URI">https://</idno>
             </person>
             <person xml:id="badrapalita">
                 <persName xml:lang="bo">བྷ་དྲ་པཱ་ལི་ཏ་</persName>
+                <idno type="URI">https://</idno>
             </person>
             <person xml:id="tsihawa">
                 <persName xml:lang="bo">ཙི་ཏཱ་ཝ་</persName>
+                <idno type="URI">https://</idno>
             </person>
             <person xml:id="dignAga">
                 <persName xml:lang="bo">ཕྱོགས་ཀྱི་གླང་པོ་</persName>
@@ -220,6 +231,7 @@
         <listPlace>
             <place xml:id="maru" type="village">
                 <placeName>མ་རུ་</placeName>
+                <idno type="URI">https://</idno>
             </place>
             <place xml:id="kache" type="region">
                 <placeName xml:lang="bo">ཁ་ཆེ་</placeName>
@@ -227,31 +239,40 @@
             </place>
             <place xml:id="kache_i_yul" type="country">
                 <placeName xml:lang="bo">ཁ་ཆེའི་ཡུལ་</placeName>
+                <idno type="URI">https://</idno>
             </place>
             <place xml:id="otivisha" type="village">
                 <placeName xml:lang="bo">ཨོ་ཊི་བི་ཤ་</placeName>
+                <idno type="URI">https://</idno>
             </place>
             <place xml:id="Maulasthāna" type="village">
                 <placeName xml:lang="bo">མཽ་ལ་ཏ་ན་</placeName>
+                <idno type="URI">https://</idno>
             </place>
             <place xml:id="kho_rA_sa_na" type="village">
                 <placeName xml:lang="bo">ཁོ་རཱ་ས་ཎ་</placeName>
+                <idno type="URI">https://</idno>
             </place>
             <!-- CP: ist das ein Dorf in einem Dorf? weil zweimal village? SIND ZWEI UNTERSCHIEDLICHE ORTE ODER WÄRE ES HIER BESSER JEDEN PLACE MIT </PLACE> SEPARAT ABZUSCHLIESSEN? DANN WAR DAS EIN LOGISCHER FEHLER -->
             <place xml:id="ma_la_wa" type="village">
                 <placeName xml:lang="bo">མ་ལ་ཝ་</placeName>
+                <idno type="URI">https://</idno>
             </place>
             <place xml:id="me_wa" type="village">
                 <placeName xml:lang="bo">མེ་ཝ་</placeName>
+                <idno type="URI">https://</idno>
             </place>
             <place xml:id="pi_tu_wa" type="village">
                 <placeName xml:lang="bo">པི་ཏུ་ཝ་</placeName>
+                <idno type="URI">https://</idno>
             </place>
             <place xml:id="bcom_brlag" type="village">
                 <placeName xml:lang="bo">བཅོམ་བརླག་</placeName>
+                <idno type="URI">https://</idno>
             </place>
             <place xml:id="singga_bakta" type="village">
                 <placeName xml:lang="bo">སིངྒ་བཀྟ་</placeName>
+                <idno type="URI">https://</idno>
             </place>
         </listPlace>
     </standOff>
@@ -283,6 +304,7 @@
                         >ཀཱ་མ་ཙནྡྲ</persName>་གཉིས་ཀྱིས་རྒྱལ་སྲིད་སྐྱོང་བའི་དུས་ཏེ། <w type="Nomen"
                         subtype="d.O.">རྒྱལ་པོ</w>་དེ་གཉིས་<lb/>
                 </p>
+                <p xml:lang="wylie">rgyal po</p>
                 <p xml:lang="de"><s corresp="#p65a01">Als zur Zeit der zweiten Lebenshälfte des
                         großen Lehrers Vasubandhu (dbyig gnyen) der König zab mo'i phyogs gestorben
                         war und es wurde in der Westlichen Region in ma ru der sogenannte König (mit
@@ -292,6 +314,8 @@
                     Guṇaprabha als seinen Lehrer verehrte. Um dieselbe Zeit herrschte im Osten, aus
                     der Nachkommenschaft des Königs Vṛikshatshandra, der König Vigamatchandra und
                     dessen Sohn Kāmadshandra.</p>
+                <p xml:lang="en">When at the time of the second half of the life of the great
+                    teacher Vasubandhu (dbyig gnyen), the king zab mo'i phyogs had died.</p>
             </div>
             <div>
                 <pb ed="A" n="65b" facs="../content/images/dignaga/taranatha_dignaga_Page_594.jpg"/>
@@ -356,6 +380,11 @@
                     und DeMa gi Minister. Der Lehrer Triratnadasha existiert zur gleichen Zeit. In
                     Odiviśa der sogenannte Brahmane Bhadrapalita machte für die Lehre in hohem
                     Ausmaß Handlungen. Unter diesen:</p>
+                <p xml:lang="en">Both kings were of great power and of great wealth, and they and
+                    had their delight in giving; but though they exercised their dominion according
+                    to the doctrine yet they did not take [their] refuge in the three precious
+                    things, but in paying homage to both the non-Buddhists and the Buddhists, they
+                    especially worshipped the Nirgrantha's (the naked: Jainas).</p>
             </div>
             <div>
                 <pb ed="A" n="66a" facs="../content/images/dignaga/taranatha_dignaga_Page_595.jpg"/>
@@ -387,6 +416,7 @@
                     ཐེག་པ་ཆེན་པོའི་མདོ་སྡེ་དུ་མ་ལ་ཡང་མཁས་པར་སྦྱངས།
                     སྡེ་པ་ཐ་དད་པའི་འདུལ་བ་བསྟན་བཅོས་དང་བཅས་པ་མཐའ་དག་མཁས་པར་མཁྱེན། འདུལ་<lb/>
                 </p>
+<p xml:lang="wylie">gyi  drung nyan thos kyi  </p>
                 <p xml:lang="de">Unter diesen nun / von diesen nun: der König Śriharṣa. Als er zu
                     einem König der ohne ebenbürtigen Gegner war, geworden war und den Wunsch hatte,
                     dass die Mleschtscha (Barbaren)-Religionen untergehen möchten, errichtete er in
