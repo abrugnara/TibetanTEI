@@ -95,6 +95,7 @@ function loadText(id) {
           var newPage = {
             translations: translations,
             facsimile: $(this).find(`pb`).attr("facs"),
+            xml: $(this).html(),
             n: $(this).find(`pb`).attr("n"),
             head: $(this).find(`head`).text(),
           };
@@ -118,41 +119,62 @@ function loadText(id) {
       let left = {
         facsimile: document.getElementById("facsimile-left"),
         german: document.getElementById("german-left"),
-        tibetian: document.getElementById("tibetian-left"),
+        tibetan: document.getElementById("tibetan-left"),
+        english: document.getElementById("english-left"),
+        wylie: document.getElementById("wylie-left"),
         xml: document.getElementById("xml-left"),
+        persons: document.getElementById("persons-left"),
       };
       let right = {
         facsimile: document.getElementById("facsimile-right"),
         german: document.getElementById("german-right"),
-        tibetian: document.getElementById("tibetian-right"),
+        tibetan: document.getElementById("tibetan-right"),
+        english: document.getElementById("english-right"),
+        wylie: document.getElementById("wylie-right"),
         xml: document.getElementById("xml-right"),
+        persons: document.getElementById("persons-right"),
       };
       // facs
       left.facsimile.style.backgroundImage = `url(${page.facsimile})`;
       left.facsimile.querySelector("img").src = page.facsimile;
       right.facsimile.style.backgroundImage = `url(${page.facsimile})`;
       right.facsimile.querySelector("img").src = page.facsimile;
+      // translations
+      trans = {
+        german: page.translations.find((t) => t.lang == "de").text,
+        wylie: page.translations.find((t) => t.lang == "wylie").text,
+        english: page.translations.find((t) => t.lang == "en").text,
+        tibetan: page.translations
+          .find((t) => t.lang == "bo")
+          .el.html()
+          .replace(/\n/g, "<br />"),
+      };
       // german
-      left.german.innerHTML = page.translations.find(
-        (t) => t.lang == "de"
-      ).text;
-      right.german.innerHTML = page.translations.find(
-        (t) => t.lang == "de"
-      ).text;
-      // tibetian
-      left.tibetian.innerHTML = $(
-        page.translations.find((t) => t.lang == "bo").el
-      )
-        .html()
-        .replace(/\n/g, "<br />");
-      right.tibetian.innerHTML = $(
-        page.translations.find((t) => t.lang == "bo").el
-      )
-        .html()
-        .replace(/\n/g, "<br />");
+      left.german.innerHTML = trans.german;
+      right.german.innerHTML = trans.german;
+      // wylie
+      left.wylie.innerHTML = trans.wylie;
+      right.wylie.innerHTML = trans.wylie;
+      // en
+      left.english.innerHTML = trans.english;
+      right.english.innerHTML = trans.english;
+      // tibetan
+      left.tibetan.innerHTML = trans.tibetan;
+      right.tibetan.innerHTML = trans.tibetan;
       // xml
-      left.xml.innerHTML = "<textarea>" + doc.xml + `</textarea>`;
-      right.xml.innerHTML = "<textarea>" + doc.xml + "</textarea>";
+      left.xml.innerHTML = "<textarea>" + page.xml + `</textarea>`;
+      right.xml.innerHTML = "<textarea>" + page.xml + "</textarea>";
+
+      // persons
+      let personsHTML = "";
+      doc.listPerson.forEach((person) => {
+        personsHTML += `<li><a href="${person.idno ? person.idno : "#"}">${
+          person.name
+        }</a> ${person.role ? person.role : ""}</li>`;
+      });
+      personsHTML = `<ul>${personsHTML}</ul>`;
+      left.persons.innerHTML = personsHTML;
+      right.persons.innerHTML = personsHTML;
 
       // tooltips
       $("placename").each(function () {
