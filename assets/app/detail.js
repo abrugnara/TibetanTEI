@@ -1,5 +1,27 @@
 const NS = "http://www.tei-c.org/ns/1.0";
 var doc = {};
+// Gather HTML elements
+let left = {
+  facsimile: document.getElementById("facsimile-left"),
+  german: document.getElementById("german-left"),
+  tibetan: document.getElementById("tibetan-left"),
+  english: document.getElementById("english-left"),
+  wylie: document.getElementById("wylie-left"),
+  xml: document.getElementById("xml-left"),
+  persons: document.getElementById("persons-left"),
+  places: document.getElementById("places-left"),
+};
+let right = {
+  facsimile: document.getElementById("facsimile-right"),
+  german: document.getElementById("german-right"),
+  tibetan: document.getElementById("tibetan-right"),
+  english: document.getElementById("english-right"),
+  wylie: document.getElementById("wylie-right"),
+  xml: document.getElementById("xml-right"),
+  persons: document.getElementById("persons-right"),
+  places: document.getElementById("places-right"),
+};
+
 window.onload = function () {
   try {
     var url_string = window.location.href.toLowerCase();
@@ -115,25 +137,6 @@ function loadText(id) {
         alert("Page not found");
         return;
       }
-      // gather double sided view elements
-      let left = {
-        facsimile: document.getElementById("facsimile-left"),
-        german: document.getElementById("german-left"),
-        tibetan: document.getElementById("tibetan-left"),
-        english: document.getElementById("english-left"),
-        wylie: document.getElementById("wylie-left"),
-        xml: document.getElementById("xml-left"),
-        persons: document.getElementById("persons-left"),
-      };
-      let right = {
-        facsimile: document.getElementById("facsimile-right"),
-        german: document.getElementById("german-right"),
-        tibetan: document.getElementById("tibetan-right"),
-        english: document.getElementById("english-right"),
-        wylie: document.getElementById("wylie-right"),
-        xml: document.getElementById("xml-right"),
-        persons: document.getElementById("persons-right"),
-      };
       // facs
       left.facsimile.style.backgroundImage = `url(${page.facsimile})`;
       left.facsimile.querySelector("img").src = page.facsimile;
@@ -164,7 +167,6 @@ function loadText(id) {
       // xml
       left.xml.innerHTML = "<textarea>" + page.xml + `</textarea>`;
       right.xml.innerHTML = "<textarea>" + page.xml + "</textarea>";
-
       // persons
       let personsHTML = "";
       doc.listPerson.forEach((person) => {
@@ -172,9 +174,19 @@ function loadText(id) {
           person.name
         }</a> ${person.role ? person.role : ""}</li>`;
       });
-      personsHTML = `<ul>${personsHTML}</ul>`;
+      personsHTML = `<h6>Personen Register</h6><ul>${personsHTML}</ul>`;
       left.persons.innerHTML = personsHTML;
       right.persons.innerHTML = personsHTML;
+      //places
+      let placesHTML = "";
+      doc.listPlaces.forEach((place) => {
+        placesHTML += `<li><a href="${place.idno ? place.idno : "#"}">${
+          place.name
+        }</a> ${place.type ? place.type : ""}</li>`;
+      });
+      placesHTML = `<h6>Orts Register</h6><ul>${placesHTML}</ul>`;
+      left.places.innerHTML = placesHTML;
+      right.places.innerHTML = placesHTML;
 
       // tooltips
       $("placename").each(function () {

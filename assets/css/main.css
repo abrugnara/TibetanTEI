@@ -80,6 +80,10 @@ h6 {
   letter-spacing: 0.05rem;
   font-size: 2rem;
 }
+h5, h6 {
+  font-size: 1.25rem;
+  margin: 0;
+}
 b,
 strong {
   font-weight: 400;
@@ -240,7 +244,7 @@ border-bottom-right-radius: 0;
 .pane.tibetan {
   font-size: 1.5rem;
 }
-.pane.english, .pane.german, .pane.wylie {
+.pane.english, .pane.german, .pane.wylie, .pane.persons li, .pane.places li {
   font-size: 1.25rem;
 }
 .pane.xml textarea {
@@ -249,6 +253,9 @@ border-bottom-right-radius: 0;
 }
 .pane.persons a {
   color: var(--color-person);
+}
+.pane.places a {
+  color: var(--color-place);
 }
 
 figure.zoom {
