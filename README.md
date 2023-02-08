@@ -48,3 +48,30 @@ const texts = [
     { id: "4", url: "content/4_shrisena.xml" },
 ];
 ```
+
+### 
+```javascript
+const references = [
+    {
+    id: "BUDA",
+    url: "https://library.bdrc.io/show/bdr:MW1KG13833?uilang=en"
+    },
+    {
+        id: "DOHO",
+        url: "https://library.bdrc.io/show/bdr:MW1KG13833"
+    },
+    {
+        id: "SRS",
+        url: ""
+    },
+    {
+        id: "rKTs",
+        url: ""
+    },
+    {
+        id: "DOHO",
+        url: "https://library.bdrc.io/show/bdr:MW1KG13833"
+    }
+]
+
+```
