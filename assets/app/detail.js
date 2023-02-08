@@ -5,11 +5,9 @@ window.onload = function () {
     var url_string = window.location.href.toLowerCase();
     var url = new URL(url_string);
     var id = url.searchParams.get("id");
-
     loadText(id);
   } catch (err) {
-    // alert("document not found");
-    console.log("Issues with Parsing URL Parameter's - " + err);
+    console.warn("Issues with Parsing URL Parameter's - " + err);
   }
 };
 
@@ -47,7 +45,7 @@ function loadText(id) {
         listPlaces: [],
         xml: xmlToString(response),
       };
-      //header
+      // header
       $(response)
         .find("title")
         .each(function () {
@@ -62,6 +60,7 @@ function loadText(id) {
         .each(function () {
           doc.listPerson.push({
             id: $(this).attr("xml:id"),
+            role: $(this).attr("role"),
             name: $(this).find("persName").text(),
             idno: $(this).find("idno").text(),
           });
@@ -72,12 +71,13 @@ function loadText(id) {
         .each(function () {
           doc.listPlaces.push({
             id: $(this).attr("xml:id"),
+            type: $(this).attr("type"),
             name: $(this).find("placeName").text(),
             idno: $(this).find("idno").text(),
           });
         });
 
-      //pages
+      // pages
       $(response)
         .find("div")
         .each(function () {
@@ -89,14 +89,6 @@ function loadText(id) {
                 lang: $(this).attr("xml:lang"),
                 el: $(this),
                 formattedHtml: $(this).html(),
-                // .find("w")
-                // .each(function () {
-                //   $(this).replaceWith(function () {
-                //     console.log($(this).html())
-                //     return $("<b />", { html: $(this).html() });
-                //   });
-                // })
-                // .html(),
                 text: $(this).html().replace(/\n/g, "<br />"),
               });
             });
@@ -109,57 +101,101 @@ function loadText(id) {
 
           doc.pages.push(newPage);
         });
-      showResult(doc);
       console.log(doc);
+      showResult(doc);
     },
   });
 
   function showResult(doc) {
-    // Render (on Page Change)
+    // render on page change
     const render = (pageNumber) => {
-      // LEFT AND RIGHT
-      let left = {
-        facsimile: document.getElementById("facsimile-left"),
-      };
-      let right = {
-        facsimile: document.getElementById("facsimile-right"),
-      };
       let page = doc.pages.find((p) => p.n === pageNumber);
       if (!page) {
         alert("Page not found");
         return;
       }
+      // gather double sided view elements
+      let left = {
+        facsimile: document.getElementById("facsimile-left"),
+        german: document.getElementById("german-left"),
+        tibetian: document.getElementById("tibetian-left"),
+        xml: document.getElementById("xml-left"),
+      };
+      let right = {
+        facsimile: document.getElementById("facsimile-right"),
+        german: document.getElementById("german-right"),
+        tibetian: document.getElementById("tibetian-right"),
+        xml: document.getElementById("xml-right"),
+      };
+      // facs
       left.facsimile.style.backgroundImage = `url(${page.facsimile})`;
       left.facsimile.querySelector("img").src = page.facsimile;
       right.facsimile.style.backgroundImage = `url(${page.facsimile})`;
       right.facsimile.querySelector("img").src = page.facsimile;
-
-      document.getElementById("german-left").innerHTML = page.translations.find(
+      // german
+      left.german.innerHTML = page.translations.find(
         (t) => t.lang == "de"
       ).text;
-      document.getElementById("german-right").innerHTML =
-        page.translations.find((t) => t.lang == "de").text;
-      document.getElementById("tibetan-left").innerHTML = $(
+      right.german.innerHTML = page.translations.find(
+        (t) => t.lang == "de"
+      ).text;
+      // tibetian
+      left.tibetian.innerHTML = $(
         page.translations.find((t) => t.lang == "bo").el
       )
         .html()
         .replace(/\n/g, "<br />");
-      document.getElementById("tibetan-right").innerHTML = $(
+      right.tibetian.innerHTML = $(
         page.translations.find((t) => t.lang == "bo").el
       )
         .html()
         .replace(/\n/g, "<br />");
+      // xml
+      left.xml.innerHTML = "<textarea>" + doc.xml + `</textarea>`;
+      right.xml.innerHTML = "<textarea>" + doc.xml + "</textarea>";
 
-      // document.getElementById("xml-left").innerHTML = "<pre>" + Prism.highlight(doc.xml,Prism.languages.markup, 'html') + "</pre>";
-      // document.getElementById("xml-right").innerHTML = "<pre>" + Prism.highlight(doc.xml,Prism.languages.markup, 'html')+ "</pre>";
-      document.getElementById("xml-left").innerHTML =
-        "<textarea>" + doc.xml + `</textarea>`;
-      document.getElementById("xml-right").innerHTML =
-        "<textarea>" + doc.xml + "</textarea>";
+      // tooltips
+      $("placename").each(function () {
+        let place = doc.listPlaces.find((p) => p.id === $(this).attr("key"));
+        if (!place) return;
+        let url = place.idno ? place.idno : "#";
+        console.log(
+          "PLACE",
+          place,
+          $(this).attr("key"),
+          tippy($(this), {
+            content: `<a href="${url}">${place.name}</a>`,
+            allowHTML: true,
+          })
+        );
+        tippy($(this), {
+          content: `<a href="${url}">${place.name}</a>`,
+          allowHTML: true,
+        });
+      });
+      $("persname").each(function () {
+        let person = doc.listPerson.find(
+          (p) => p.id === $(this).attr("xml:id")
+        );
+        if (!person) return;
+        let url = person.idno ? person.idno : "#";
+        console.log(
+          "PERSON",
+          person,
+          $(this).attr("xml:id"),
+          tippy($(this), {
+            content: `<a href="${url}">${person.name}</a>`,
+            allowHTML: true,
+          })
+        );
+        tippy($(this), {
+          content: `<a href="${url}">${person.name}</a>`,
+          allowHTML: true,
+        });
+      });
     };
 
     const changePage = (e) => {
-      console.log(select.value);
       render(select.value);
     };
     // Meta
@@ -188,7 +224,6 @@ function loadText(id) {
 }
 
 // Tabs
-
 var sides = document.querySelectorAll(".tabs");
 sides.forEach((side) => {
   var tabButton = side.querySelectorAll(".tab-button");
