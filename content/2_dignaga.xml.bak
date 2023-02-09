@@ -66,7 +66,7 @@
             <editorialDecl>
                 <p>Named entities of the text (i.e. persons, places, work titles, dates) are
                     annotated and linked to online resources including the Buddhist Digital Archives
-                    (BUDA; https://https://library.bdrc.io//), the Sakya Research Centre (SRC;
+                    (BUDA; https://library.bdrc.io//), the Sakya Research Centre (SRC;
                     https://sakyaresearch.org/) and the Resources for Kanjur &amp; Tanjur Studies
                     (rKTs; https://www.istb.univie.ac.at/kanjur). Non-canonical works are referred
                     to by its Tohoku catalogue number (i.e. A catalogue of the Tohoku University
@@ -90,10 +90,10 @@
                         reformed like sa as a subskript</p>
                 </hyphenation>
                 <interpretation>
-                    <p>Persons are marked.</p>
-                    <p>Dates are marked.</p>
-                    <p>Places are marked.</p>
-                    <p>Worktitle are marked.</p>
+                    <p>Persons are marked blue.</p>
+                    <p>Dates are marked pink.</p>
+                    <p>Places are marked orange.</p>
+                    <p>Worktitle are marked green.</p>
                     <p>Italics are recorded Expression in original Language like for Sanskrit. </p>
                 </interpretation>
             </editorialDecl>
@@ -282,14 +282,15 @@
                 <pb ed="A" n="65a" facs="../content/images/dignaga/taranatha_dignaga_Page_593.jpg"/>
                 <head>Beginn des Textes: Image 593, Page 65a: 5. Zeile Mitte</head>
                 <p xml:lang="bo">
-                    <s xml:id="p65a01"><!-- Einfügung zum Test Titel und Gregorianisches Jahr --><date when="1450"
-                                >་<unclear>རབ་བྱུང་བརྒྱད་པའི་ལྕགས་རྟ</unclear></date><title><unclear>་དུས་འཁོར་ཊིཀ་ཆེན</unclear></title>་<!-- Testeinfügung Ende --> ཿ་སློབ་དཔོན་ཆེན་པོ་<persName
-                            xml:id="vasubandhu_01" role="Mitbegründer der Yogacara Schule"
-                            type="BUDA" key="P6119">དབྱིག་གཉེན</persName>་<w type="suffix"
-                            subtype="attrsuff">གྱི་</w>སྐུ་ཚེ<w type="suffix" subtype="attrsuff"
-                            >འི་</w>སྨད་ཙམ་<w type="suffix" subtype="gensuff">གྱི་</w>དུས་<w
-                            type="suffix">ན</w>། <persName xml:id="zab-mo" role="king" type="BUDA"
-                            key="???"
+                    <s xml:id="p65a01"
+                        ><!-- Einfügung zum Test Titel und Gregorianisches Jahr date when="1450"
+                                >་<unclear>རབ་བྱུང་བརྒྱད་པའི་ལྕགས་རྟ</unclear></date><title><unclear>་དུས་འཁོར་ཊིཀ་ཆེན</unclear></title>་ Testeinfügung Ende -->
+                            ཿ་སློབ་དཔོན་ཆེན་པོ་<persName xml:id="vasubandhu_01"
+                            role="Mitbegründer der Yogacara Schule" type="BUDA" key="P6119"
+                            >དབྱིག་གཉེན</persName>་<w type="suffix" subtype="attrsuff"
+                            >གྱི་</w>སྐུ་ཚེ<w type="suffix" subtype="attrsuff">འི་</w>སྨད་ཙམ་<w
+                            type="suffix" subtype="gensuff">གྱི་</w>དུས་<w type="suffix">ན</w>།
+                            <persName xml:id="zab-mo" role="king" type="BUDA" key="???"
                             >རྒྱལ་པོ་ཟབ་མོའི་ཕྱོགས</persName>་འདས་པའི་འོག་ཏུ་ནུབ་<lb/>ཕྱོགས་<placeName
                             type="BUDA" key="???">མ་རུ</placeName>འི་ཡུལ་དུ་སྐྱེས་པ་<persName
                             xml:id="shriharsa" ref="shriharsa" role="king" type="BUDA" key="???"
@@ -304,9 +305,9 @@
                         >ཡོན་<lb/>ཏན་འོད</persName>་བླ་མར་བཀུར་བ་ཞིག་བྱུང།
                         དུས་དེ་ཙམ་ན་ཤར་ཕྱོགས་སུ་རྒྱལ་བོ་<persName xml:id="vrikshatsandra"
                         role="king" type="BUDA" key="???"
-                        >བྲྀཀྵ་ཙནྡྲ</persName>འི་བུ་བརྒྱུད་ལ་རྒྱལ་པོ་<persName role="king"
-                        corresp="#vigamatsandra" xml:id="vigamatsandra1">བི་ག་མ་ཙནྡྲ</persName>་དང།
-                        དེའི་བུ་<persName xml:id="vigamatsandra2" role="son" type="BUDA" key="???"
+                        >བྲྀཀྵ་ཙནྡྲ</persName>འི་བུ་བརྒྱུད་ལ་རྒྱལ་པོ་<persName role="king" type="BUDA" key="???"
+                        xml:id="vigamatsandra">བི་ག་མ་ཙནྡྲ</persName>་དང།
+                        དེའི་བུ་<persName xml:id="kamatsandra" role="son" type="BUDA" key="???"
                         >ཀཱ་མ་ཙནྡྲ</persName>་གཉིས་ཀྱིས་རྒྱལ་སྲིད་སྐྱོང་བའི་དུས་ཏེ། <w type="Nomen"
                         subtype="d.O.">རྒྱལ་པོ</w>་དེ་གཉིས་<lb/>
                 </p>
