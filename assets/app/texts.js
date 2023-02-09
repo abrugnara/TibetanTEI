@@ -7,23 +7,19 @@ const texts = [
 
 const references = [
   {
-    id: "BUDA",
-    url: "https://library.bdrc.io/show/bdr:MW1KG13833?uilang=en",
+    type: "BUDA",
+    url: "https://library.bdrc.io/show/bdr:",
   },
   {
-    id: "DOHO",
-    url: "https://library.bdrc.io/show/bdr:MW1KG13833",
+    type: "DOHO",
+    url: "https://library.bdrc.io/show/bdr:",
   },
   {
-    id: "SRS",
+    type: "SRS",
     url: "",
   },
   {
-    id: "rKTs",
+    type: "rKTs",
     url: "",
-  },
-  {
-    id: "DOHO",
-    url: "https://library.bdrc.io/show/bdr:MW1KG13833",
   },
 ];
