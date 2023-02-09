@@ -282,31 +282,28 @@
                 <pb ed="A" n="65a" facs="../content/images/dignaga/taranatha_dignaga_Page_593.jpg"/>
                 <head>Beginn des Textes: Image 593, Page 65a: 5. Zeile Mitte</head>
                 <p xml:lang="bo">
-                    <s xml:id="p65a01"
-                        ><!-- Einfügung zum Test Titel und Gregorianisches Jahr date when="1450"
-                                >་<unclear>རབ་བྱུང་བརྒྱད་པའི་ལྕགས་རྟ</unclear></date><title><unclear>་དུས་འཁོར་ཊིཀ་ཆེན</unclear></title>་ Testeinfügung Ende -->
-                            ཿ་སློབ་དཔོན་ཆེན་པོ་<persName xml:id="vasubandhu_01"
+                    <s xml:id="p65a01"> ཿ་སློབ་དཔོན་ཆེན་པོ་<persName xml:id="vasubandhu_01"
                             role="Mitbegründer der Yogacara Schule" type="BUDA" key="P6119"
                             >དབྱིག་གཉེན</persName>་<w type="suffix" subtype="attrsuff"
                             >གྱི་</w>སྐུ་ཚེ<w type="suffix" subtype="attrsuff">འི་</w>སྨད་ཙམ་<w
                             type="suffix" subtype="gensuff">གྱི་</w>དུས་<w type="suffix">ན</w>།
                             <persName xml:id="zab-mo" role="king" type="BUDA" key="???"
-                            >རྒྱལ་པོ་ཟབ་མོའི་ཕྱོགས</persName>་འདས་པའི་འོག་ཏུ་ནུབ་<lb/>ཕྱོགས་<placeName
-                            type="BUDA" key="???">མ་རུ</placeName>འི་ཡུལ་དུ་སྐྱེས་པ་<persName
+                            >རྒྱལ་པོ་ཟབ་མོའི་ཕྱོགས</persName>་འདས་པའི་འོག་<w type="suffix">ཏུ་</w>ནུབ་<lb/>ཕྱོགས་<placeName
+                            type="BUDA" key="???">མ་རུ</placeName><w type="suffix">འི</w>་ཡུལ་དུ་སྐྱེས་པ་<persName
                             xml:id="shriharsa" ref="shriharsa" role="king" type="BUDA" key="???"
                             >རྒྱལ་བོ་ཤྲཱི་ཧརྴ</persName>་<w type="partikel"
                             subtype="partikel_sprecher">ཞེས་</w><w pos="VMPP" type="VG6"
                             subtype="tmdV" msd="SF1.,2.3.4.">བྱ་བ་</w><w type="suffix">ལས་</w><w
                             type="suffix">ཀྱི་</w>སྟོབས་ ཤིན་<w type="suffix">ཏུ་</w>ཆེ་བ་བྱུང་<w
                             type="partikel" subtype="semifinalpartikel">སྟེ་</w></s>ནུབ་ཕྱོགས་<w
-                        type="suffix" subtype="kassuff">ཀྱི་</w>རྒྱལ་ཁམས་ཐམས་ཅད་ལ་དབང་བསྒྱུར།
-                        ཕྱིས་སངས་རྒྱས་ཀྱི་བསྟན་པ་ལ་དད་པ་ཐོབ་སྟེ་སློབ་དཔོན་<persName
+                        type="suffix" subtype="kassuff">ཀྱི་</w>རྒྱལ་ཁམས་ཐམས་ཅད་<w type="suffix">ལ</w>་དབང་བསྒྱུར།
+                        ཕྱིས་སངས་རྒྱས་<w type="suffix">ཀྱི</w>་བསྟན་པ་<w type="sufix">ལ་</w><w type="suffix">དད</w>་པ་ཐོབ་<w type="partikel">སྟེ</w>་སློབ་དཔོན་<persName
                         xml:id="gunaprabha" role="teacher" type="BUDA" key="P1308"
                         >ཡོན་<lb/>ཏན་འོད</persName>་བླ་མར་བཀུར་བ་ཞིག་བྱུང།
-                        དུས་དེ་ཙམ་ན་ཤར་ཕྱོགས་སུ་རྒྱལ་བོ་<persName xml:id="vrikshatsandra"
+                        དུས་<w type="suffix">དེ</w>་ཙམ་<w type="suffix">ན</w>་ཤར་ཕྱོགས་<w type="suffix">སུ</w>་རྒྱལ་བོ་<persName xml:id="vrikshatsandra"
                         role="king" type="BUDA" key="???"
-                        >བྲྀཀྵ་ཙནྡྲ</persName>འི་བུ་བརྒྱུད་ལ་རྒྱལ་པོ་<persName role="king" type="BUDA" key="???"
-                        xml:id="vigamatsandra_01">བི་ག་མ་ཙནྡྲ</persName>་དང།
+                        >བྲྀཀྵ་ཙནྡྲ</persName>འི་བུ་བརྒྱུད་ལ་རྒྱལ་པོ་<persName role="king"
+                        type="BUDA" key="???" xml:id="vigamatsandra_01">བི་ག་མ་ཙནྡྲ</persName>་<w type="partikel">དང</w>།
                         དེའི་བུ་<persName xml:id="kamatsandra_01" role="son" type="BUDA" key="???"
                         >ཀཱ་མ་ཙནྡྲ</persName>་གཉིས་ཀྱིས་རྒྱལ་སྲིད་སྐྱོང་བའི་དུས་ཏེ། <w type="Nomen"
                         subtype="d.O.">རྒྱལ་པོ</w>་དེ་གཉིས་<lb/>
