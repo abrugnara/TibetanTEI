@@ -199,7 +199,7 @@ function loadText(id) {
           // defined display tooltip
         } else {
           let url = place.idno ? place.idno : "#";
-          el.innerHTML = `<a href="${url}">${
+          el.innerHTML = `<a target="_blank" href="${url}">${
             place.name
           }</a><span>${el.getAttribute("xml:id")} ${place.type ? place.type : ""}</span>`;
         }
@@ -215,7 +215,7 @@ function loadText(id) {
           // defined display tooltip
         } else {
           let url = person.idno ? person.idno : "#";
-          el.innerHTML = `<a href="${url}">${
+          el.innerHTML = `<a target="_blank" href="${url}">${
             person.name
           }</a><span>${el.getAttribute("xml:id")} ${person.role ? person.role : ""}</span>`;
         }
