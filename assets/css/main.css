@@ -93,6 +93,10 @@ strong {
 w,
 s {
   text-decoration: none !important;
+  
+}
+w:hover, s:hover {
+  color: var(--color-particle);
 }
 
 code {
