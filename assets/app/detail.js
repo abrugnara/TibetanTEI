@@ -165,15 +165,19 @@ function loadText(id) {
       right.facsimile.style.backgroundImage = `url(${page.facsimile})`;
       right.facsimile.querySelector("img").src = page.facsimile;
       // translations
-      trans = {
-        german: page.translations.find((t) => t.lang == "de").text,
-        wylie: page.translations.find((t) => t.lang == "wylie").text,
-        english: page.translations.find((t) => t.lang == "en").text,
-        tibetan: page.translations
+      trans = {};
+      if (page.translations.find((t) => t.lang == "de"))
+        trans.german = page.translations.find((t) => t.lang == "de").text;
+      if (page.translations.find((t) => t.lang == "wylie"))
+        trans.wylie = page.translations.find((t) => t.lang == "wylie").text;
+      if (page.translations.find((t) => t.lang == "en"))
+        trans.english = page.translations.find((t) => t.lang == "en").text;
+      if (page.translations.find((t) => t.lang == "bo"))
+        trans.tibetan = page.translations
           .find((t) => t.lang == "bo")
           .el.html()
-          .replace(/<lb\s*\/?>/gi, "<br />"),
-      };
+          .replace(/<lb\s*\/?>/gi, "<br />")
+          .replace(/<\/?unclear\s*\/?>/gi, "");
       // german
       left.german.innerHTML = trans.german;
       right.german.innerHTML = trans.german;
@@ -197,7 +201,9 @@ function loadText(id) {
             person.name
           }</a> ${person.type}</li>`;
         } else {
-          personsHTML += `<li>${person.name} ${person.type ? person.type : ""}</li>`;
+          personsHTML += `<li>${person.name} ${
+            person.type ? person.type : ""
+          }</li>`;
         }
       });
       personsHTML = `<h6>Personen Register</h6><ul>${personsHTML}</ul>`;
@@ -216,9 +222,7 @@ function loadText(id) {
 
       // tooltips
       document.querySelectorAll("placename").forEach((el) => {
-        let place = doc.listPlaces.find(
-          (p) => p.id === el.innerHTML
-        );
+        let place = doc.listPlaces.find((p) => p.id === el.innerHTML);
         // undefined display contribution link
         if (!place) {
           el.innerHTML += `<span>Nicht deklariert</span>`;
@@ -226,15 +230,11 @@ function loadText(id) {
         } else {
           el.innerHTML = `<a target="_blank" href="${place.url}">${
             place.name
-          }</a><span>${el.innerHTML} ${
-            place.type ? place.type : ""
-          }</span>`;
+          }</a><span>${el.innerHTML} ${place.type ? place.type : ""}</span>`;
         }
       });
       document.querySelectorAll("persname").forEach((el) => {
-        let person = doc.listPerson.find(
-          (p) => p.name === el.innerHTML
-        );
+        let person = doc.listPerson.find((p) => p.name === el.innerHTML);
         // undefined display contribution link
         if (!person) {
           el.innerHTML += `<span>Nicht deklariert</span>`;
@@ -242,7 +242,9 @@ function loadText(id) {
         } else {
           el.innerHTML = `<a target="_blank" href="${person.url}">${
             person.name
-          }</a><span>${el.getAttribute("key")} ${person.type} ${person.key}</span>`;
+          }</a><span>${el.getAttribute("key")} ${person.type} ${
+            person.key
+          }</span>`;
         }
       });
     };

@@ -292,6 +292,13 @@ persname, persname a {
 placename, placename a {
   color: var(--color-place);
 }
+date {
+  color: var(--color-date);
+}
+body title {
+  display: inline;
+  color: var(--color-title);
+}
 
 placename,
 persname {
