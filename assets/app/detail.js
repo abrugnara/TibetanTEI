@@ -189,43 +189,36 @@ function loadText(id) {
       right.places.innerHTML = placesHTML;
 
       // tooltips
-      $("placename").each(function () {
-        let place = doc.listPlaces.find((p) => p.id === $(this).attr("key"));
-        if (!place) return;
-        let url = place.idno ? place.idno : "#";
-        console.log(
-          "PLACE",
-          place,
-          $(this).attr("key"),
-          tippy($(this), {
-            content: `<a href="${url}">${place.name}</a>`,
-            allowHTML: true,
-          })
+      document.querySelectorAll("placename").forEach((el) => {
+        let place = doc.listPlaces.find(
+          (p) => p.id === el.getAttribute("xml:id")
         );
-        tippy($(this), {
-          content: `<a href="${url}">${place.name}</a>`,
-          allowHTML: true,
-        });
+        // undefined display contribution link
+        if (!place) {
+          el.innerHTML += `<span>Nicht deklariert</span>`;
+          // defined display tooltip
+        } else {
+          let url = place.idno ? place.idno : "#";
+          el.innerHTML = `<a href="${url}">${
+            place.name
+          }</a><span>${el.getAttribute("xml:id")} ${place.type ? place.type : ""}</span>`;
+        }
       });
-      $("persname").each(function () {
+      document.querySelectorAll("persname").forEach((el) => {
         let person = doc.listPerson.find(
-          (p) => p.id === $(this).attr("xml:id")
+          (p) => p.id === el.getAttribute("xml:id")
         );
-        if (!person) return;
-        let url = person.idno ? person.idno : "#";
-        console.log(
-          "PERSON",
-          person,
-          $(this).attr("xml:id"),
-          tippy($(this), {
-            content: `<a href="${url}">${person.name}</a>`,
-            allowHTML: true,
-          })
-        );
-        tippy($(this), {
-          content: `<a href="${url}">${person.name}</a>`,
-          allowHTML: true,
-        });
+        console.log(el.getAttribute("xml:id"), el, person);
+        // undefined display contribution link
+        if (!person) {
+          el.innerHTML += `<span>Nicht deklariert</span>`;
+          // defined display tooltip
+        } else {
+          let url = person.idno ? person.idno : "#";
+          el.innerHTML = `<a href="${url}">${
+            person.name
+          }</a><span>${el.getAttribute("xml:id")} ${person.role ? person.role : ""}</span>`;
+        }
       });
     };
 

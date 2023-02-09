@@ -80,7 +80,8 @@ h6 {
   letter-spacing: 0.05rem;
   font-size: 2rem;
 }
-h5, h6 {
+h5,
+h6 {
   font-size: 1.25rem;
   margin: 0;
 }
@@ -89,7 +90,8 @@ strong {
   font-weight: 400;
 }
 /* prevents TEI artefacts to be stripped out in xml */
-w,s {
+w,
+s {
   text-decoration: none !important;
 }
 
@@ -178,33 +180,35 @@ footer {
 
 /* Page:Detail */
 .actions {
-    border-bottom: 1px solid var(--color);
-    padding: 1rem 0;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    font-size: .8rem;
+  border-bottom: 1px solid var(--color);
+  padding: 1rem 0;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  font-size: 0.8rem;
 }
 .detail h2 {
   font-size: 1.5rem;
 }
-.tab-button, .button {
-    font-size: .8rem;
-    line-height: 1.5rem;
-    padding: 0 1rem;
-    border-radius: 0.1rem;
-    cursor: pointer;
-    border: 1px solid white;
-    background-color: white;
-    display: inline-block;
+.tab-button,
+.button {
+  font-size: 0.8rem;
+  line-height: 1.5rem;
+  padding: 0 1rem;
+  border-radius: 0.1rem;
+  cursor: pointer;
+  border: 1px solid white;
+  background-color: white;
+  display: inline-block;
 }
 .tab-button:hover {
-    color: var(--second);
+  color: var(--second);
 }
 .button span {
-    font-size: smaller;
+  font-size: smaller;
 }
-.reader, .meta {
+.reader,
+.meta {
   padding: 0 1rem;
 }
 .reader {
@@ -214,29 +218,28 @@ footer {
 }
 
 .reader nav {
-    display: flex;
-    gap: .25rem;
+  display: flex;
+  gap: 0.25rem;
 }
 .reader label {
-    flex: 1;
-    text-align: right;
+  flex: 1;
+  text-align: right;
 }
 .tab-button.active {
+  border: 1px solid var(--color);
+  background-color: var(--background);
+  border-bottom: none;
 
-    border: 1px solid var(--color);
-    background-color: var(--background);
-    border-bottom: none;
+  border-bottom-left-radius: 0;
 
-    border-bottom-left-radius: 0;
-    
-border-bottom-right-radius: 0;
+  border-bottom-right-radius: 0;
 }
 .pane {
   display: none;
   padding: 1rem 0;
 }
 .pane img {
-    width: 100%;
+  width: 100%;
 }
 .pane.active {
   display: block;
@@ -244,7 +247,11 @@ border-bottom-right-radius: 0;
 .pane.tibetan {
   font-size: 1.5rem;
 }
-.pane.english, .pane.german, .pane.wylie, .pane.persons li, .pane.places li {
+.pane.english,
+.pane.german,
+.pane.wylie,
+.pane.persons li,
+.pane.places li {
   font-size: 1.25rem;
 }
 .pane.xml textarea {
@@ -264,7 +271,7 @@ figure.zoom {
   width: 100%;
   overflow: hidden;
   cursor: zoom-in;
-  margin:0;
+  margin: 0;
 }
 figure.zoom img:hover {
   opacity: 0;
@@ -275,10 +282,73 @@ figure.zoom img {
   width: 100%;
 }
 
-
-persname {
+/* Persons & Places */
+persname, persname a {
   color: var(--color-person);
 }
-placename {
+placename, placename a {
   color: var(--color-place);
+}
+
+placename,
+persname {
+  cursor: pointer;
+  transition: 0.1s;
+  position: relative;
+}
+placename span,
+persname span {
+  position: absolute;
+  bottom: calc(100% + 12px);
+  width: max-content;
+  left: 50%;
+  pointer-events: none;
+  transform: translateX(-50%);
+  opacity: 0;
+  background: var(--color);
+  padding: 0.2rem;
+  font-size: .9rem;
+  color: var(--background);
+  border-radius: 0.5rem;
+}
+placename span::before,
+persname span::before {
+  content: "";
+  position: absolute;
+  top: 100%;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 0;
+  height: 0;
+  border-left: 0.5rem solid transparent;
+  border-right: 0.5rem solid transparent;
+  border-top: 0.5rem solid var(--color);
+}
+placename:hover,
+placename.active,
+persname:hover,
+persname.active {
+  transform: translateY(-2px);
+}
+placename:hover span,
+placename.active span,
+persname:hover span,
+persname.active span {
+  animation: show-tool-tip 5s;
+  animation-delay: 0.4s;
+}
+
+@keyframes show-tool-tip {
+  0% {
+    opacity: 0;
+  }
+  5% {
+    opacity: 1;
+  }
+  95% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
 }
