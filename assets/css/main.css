@@ -92,7 +92,6 @@ strong {
 /* prevents TEI artefacts to be stripped out in xml */
 s {
   text-decoration: none !important;
-  
 }
 w:hover {
   color: var(--color-particle);
@@ -247,6 +246,7 @@ footer {
 .pane.active {
   display: block;
 }
+/* Darstellung der Panes */
 .pane.tibetan {
   font-size: 1.5rem;
 }
@@ -286,10 +286,12 @@ figure.zoom img {
 }
 
 /* Persons & Places */
-persname, persname a {
+persname,
+persname a {
   color: var(--color-person);
 }
-placename, placename a {
+placename,
+placename a {
   color: var(--color-place);
 }
 date {
@@ -301,13 +303,15 @@ body title {
 }
 
 placename,
-persname {
+persname,
+date {
   cursor: pointer;
   transition: 0.1s;
   position: relative;
 }
 placename span,
-persname span {
+persname span,
+date span {
   position: absolute;
   bottom: calc(100% + 12px);
   width: max-content;
@@ -317,12 +321,13 @@ persname span {
   opacity: 0;
   background: var(--color);
   padding: 0.2rem;
-  font-size: .9rem;
+  font-size: 0.9rem;
   color: var(--background);
   border-radius: 0.5rem;
 }
 placename span::before,
-persname span::before {
+persname span::before,
+date span::before {
   content: "";
   position: absolute;
   top: 100%;
@@ -336,12 +341,16 @@ persname span::before {
 }
 placename:hover,
 placename.active,
+date:hover,
+date.active,
 persname:hover,
 persname.active {
   transform: translateY(-2px);
 }
 placename:hover span,
 placename.active span,
+date:hover span,
+date.active span,
 persname:hover span,
 persname.active span {
   animation: show-tool-tip 5s;

@@ -143,7 +143,6 @@ function loadText(id) {
             n: $(this).find(`pb`).attr("n"),
             head: $(this).find(`head`).text(),
           };
-
           doc.pages.push(newPage);
         });
       console.log(doc);
@@ -220,7 +219,8 @@ function loadText(id) {
       left.places.innerHTML = placesHTML;
       right.places.innerHTML = placesHTML;
 
-      // tooltips
+      // Tooltips
+      // placeName
       document.querySelectorAll("placename").forEach((el) => {
         let place = doc.listPlaces.find((p) => p.id === el.innerHTML);
         // undefined display contribution link
@@ -233,6 +233,7 @@ function loadText(id) {
           }</a><span>${el.innerHTML} ${place.type ? place.type : ""}</span>`;
         }
       });
+      // persName
       document.querySelectorAll("persname").forEach((el) => {
         let person = doc.listPerson.find((p) => p.name === el.innerHTML);
         // undefined display contribution link
@@ -242,10 +243,15 @@ function loadText(id) {
         } else {
           el.innerHTML = `<a target="_blank" href="${person.url}">${
             person.name
-          }</a><span>${el.getAttribute("key")} ${person.type} ${
-            person.key
-          }</span>`;
+          }</a><span>${el.getAttribute("key")} ${person.type} ${person.role ? person.role : ""}</span>`;
         }
+      });
+      // date
+      document.querySelectorAll("date").forEach((el) => {
+        if (el.getAttribute("when")) {
+          el.innerHTML += `<span>${el.getAttribute("when")}</span>`;
+          
+        } 
       });
     };
 
