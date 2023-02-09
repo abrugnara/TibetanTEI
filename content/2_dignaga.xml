@@ -289,7 +289,7 @@
                             type="suffix" subtype="gensuff">གྱི་</w>དུས་<w type="suffix">ན</w>།
                             <persName xml:id="zab-mo" role="king" type="BUDA" key="???"
                             >རྒྱལ་པོ་ཟབ་མོའི་ཕྱོགས</persName>་འདས་པའི་འོག་<w type="suffix">ཏུ་</w>ནུབ་<lb/>ཕྱོགས་<placeName
-                            type="BUDA" key="???">མ་རུ</placeName><w type="suffix">འི</w>་ཡུལ་དུ་སྐྱེས་པ་<persName
+                            type="BUDA" key="???">མ་རུ</placeName><w type="suffix">འི</w>་ཡུལ་<w type="suffix">དུ</w>་སྐྱེས་པ་<persName
                             xml:id="shriharsa" ref="shriharsa" role="king" type="BUDA" key="???"
                             >རྒྱལ་བོ་ཤྲཱི་ཧརྴ</persName>་<w type="partikel"
                             subtype="partikel_sprecher">ཞེས་</w><w pos="VMPP" type="VG6"
