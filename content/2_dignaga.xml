@@ -90,10 +90,10 @@
                         reformed like sa as a subskript</p>
                 </hyphenation>
                 <interpretation>
-                    <p>Persons are marked.</p>
-                    <p>Dates are marked.</p>
-                    <p>Places are marked.</p>
-                    <p>Worktitle are marked.</p>
+                    <p>Persons are marked blue.</p>
+                    <p>Dates are marked pink.</p>
+                    <p>Places are marked orange.</p>
+                    <p>Worktitle are marked green.</p>
                     <p>Italics are recorded Expression in original Language like for Sanskrit. </p>
                 </interpretation>
             </editorialDecl>
@@ -282,7 +282,7 @@
                 <pb ed="A" n="65a" facs="../content/images/dignaga/taranatha_dignaga_Page_593.jpg"/>
                 <head>Beginn des Textes: Image 593, Page 65a: 5. Zeile Mitte</head>
                 <p xml:lang="bo">
-                    <s xml:id="p65a01"><!-- Einfügung zum Test Tiotel und Gregorianisches Jahr --><date when="1450"
+                    <s xml:id="p65a01"><!-- Einfügung zum Test Titel und Gregorianisches Jahr --><date when="1450"
                                 >་<unclear>རབ་བྱུང་བརྒྱད་པའི་ལྕགས་རྟ</unclear></date><title><unclear>་དུས་འཁོར་ཊིཀ་ཆེན</unclear></title>་<!-- Testeinfügung Ende --> ཿ་སློབ་དཔོན་ཆེན་པོ་<persName
                             xml:id="vasubandhu_01" role="Mitbegründer der Yogacara Schule"
                             type="BUDA" key="P6119">དབྱིག་གཉེན</persName>་<w type="suffix"
