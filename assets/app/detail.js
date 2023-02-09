@@ -1,15 +1,35 @@
 const NS = "http://www.tei-c.org/ns/1.0";
 var doc = {};
+// Gather HTML elements
+let left = {
+  facsimile: document.getElementById("facsimile-left"),
+  german: document.getElementById("german-left"),
+  tibetan: document.getElementById("tibetan-left"),
+  english: document.getElementById("english-left"),
+  wylie: document.getElementById("wylie-left"),
+  xml: document.getElementById("xml-left"),
+  persons: document.getElementById("persons-left"),
+  places: document.getElementById("places-left"),
+};
+let right = {
+  facsimile: document.getElementById("facsimile-right"),
+  german: document.getElementById("german-right"),
+  tibetan: document.getElementById("tibetan-right"),
+  english: document.getElementById("english-right"),
+  wylie: document.getElementById("wylie-right"),
+  xml: document.getElementById("xml-right"),
+  persons: document.getElementById("persons-right"),
+  places: document.getElementById("places-right"),
+};
+
 window.onload = function () {
   try {
     var url_string = window.location.href.toLowerCase();
     var url = new URL(url_string);
     var id = url.searchParams.get("id");
-
     loadText(id);
   } catch (err) {
-    // alert("document not found");
-    console.log("Issues with Parsing URL Parameter's - " + err);
+    console.warn("Issues with Parsing URL Parameter's - " + err);
   }
 };
 
@@ -47,7 +67,7 @@ function loadText(id) {
         listPlaces: [],
         xml: xmlToString(response),
       };
-      //header
+      // header
       $(response)
         .find("title")
         .each(function () {
@@ -62,6 +82,7 @@ function loadText(id) {
         .each(function () {
           doc.listPerson.push({
             id: $(this).attr("xml:id"),
+            role: $(this).attr("role"),
             name: $(this).find("persName").text(),
             idno: $(this).find("idno").text(),
           });
@@ -72,12 +93,13 @@ function loadText(id) {
         .each(function () {
           doc.listPlaces.push({
             id: $(this).attr("xml:id"),
+            type: $(this).attr("type"),
             name: $(this).find("placeName").text(),
             idno: $(this).find("idno").text(),
           });
         });
 
-      //pages
+      // pages
       $(response)
         .find("div")
         .each(function () {
@@ -89,77 +111,118 @@ function loadText(id) {
                 lang: $(this).attr("xml:lang"),
                 el: $(this),
                 formattedHtml: $(this).html(),
-                // .find("w")
-                // .each(function () {
-                //   $(this).replaceWith(function () {
-                //     console.log($(this).html())
-                //     return $("<b />", { html: $(this).html() });
-                //   });
-                // })
-                // .html(),
                 text: $(this).html().replace(/\n/g, "<br />"),
               });
             });
           var newPage = {
             translations: translations,
             facsimile: $(this).find(`pb`).attr("facs"),
+            xml: $(this).html(),
             n: $(this).find(`pb`).attr("n"),
             head: $(this).find(`head`).text(),
           };
 
           doc.pages.push(newPage);
         });
-      showResult(doc);
       console.log(doc);
+      showResult(doc);
     },
   });
 
   function showResult(doc) {
-    // Render (on Page Change)
+    // render on page change
     const render = (pageNumber) => {
-      // LEFT AND RIGHT
-      let left = {
-        facsimile: document.getElementById("facsimile-left"),
-      };
-      let right = {
-        facsimile: document.getElementById("facsimile-right"),
-      };
       let page = doc.pages.find((p) => p.n === pageNumber);
       if (!page) {
         alert("Page not found");
         return;
       }
+      // facs
       left.facsimile.style.backgroundImage = `url(${page.facsimile})`;
       left.facsimile.querySelector("img").src = page.facsimile;
       right.facsimile.style.backgroundImage = `url(${page.facsimile})`;
       right.facsimile.querySelector("img").src = page.facsimile;
+      // translations
+      trans = {
+        german: page.translations.find((t) => t.lang == "de").text,
+        wylie: page.translations.find((t) => t.lang == "wylie").text,
+        english: page.translations.find((t) => t.lang == "en").text,
+        tibetan: page.translations
+          .find((t) => t.lang == "bo")
+          .el.html()
+          .replace(/\n/g, "<br />"),
+      };
+      // german
+      left.german.innerHTML = trans.german;
+      right.german.innerHTML = trans.german;
+      // wylie
+      left.wylie.innerHTML = trans.wylie;
+      right.wylie.innerHTML = trans.wylie;
+      // en
+      left.english.innerHTML = trans.english;
+      right.english.innerHTML = trans.english;
+      // tibetan
+      left.tibetan.innerHTML = trans.tibetan;
+      right.tibetan.innerHTML = trans.tibetan;
+      // xml
+      left.xml.innerHTML = "<textarea>" + page.xml + `</textarea>`;
+      right.xml.innerHTML = "<textarea>" + page.xml + "</textarea>";
+      // persons
+      let personsHTML = "";
+      doc.listPerson.forEach((person) => {
+        personsHTML += `<li><a href="${person.idno ? person.idno : "#"}">${
+          person.name
+        }</a> ${person.role ? person.role : ""}</li>`;
+      });
+      personsHTML = `<h6>Personen Register</h6><ul>${personsHTML}</ul>`;
+      left.persons.innerHTML = personsHTML;
+      right.persons.innerHTML = personsHTML;
+      //places
+      let placesHTML = "";
+      doc.listPlaces.forEach((place) => {
+        placesHTML += `<li><a href="${place.idno ? place.idno : "#"}">${
+          place.name
+        }</a> ${place.type ? place.type : ""}</li>`;
+      });
+      placesHTML = `<h6>Orts Register</h6><ul>${placesHTML}</ul>`;
+      left.places.innerHTML = placesHTML;
+      right.places.innerHTML = placesHTML;
 
-      document.getElementById("german-left").innerHTML = page.translations.find(
-        (t) => t.lang == "de"
-      ).text;
-      document.getElementById("german-right").innerHTML =
-        page.translations.find((t) => t.lang == "de").text;
-      document.getElementById("tibetan-left").innerHTML = $(
-        page.translations.find((t) => t.lang == "bo").el
-      )
-        .html()
-        .replace(/\n/g, "<br />");
-      document.getElementById("tibetan-right").innerHTML = $(
-        page.translations.find((t) => t.lang == "bo").el
-      )
-        .html()
-        .replace(/\n/g, "<br />");
-
-      // document.getElementById("xml-left").innerHTML = "<pre>" + Prism.highlight(doc.xml,Prism.languages.markup, 'html') + "</pre>";
-      // document.getElementById("xml-right").innerHTML = "<pre>" + Prism.highlight(doc.xml,Prism.languages.markup, 'html')+ "</pre>";
-      document.getElementById("xml-left").innerHTML =
-        "<textarea>" + doc.xml + `</textarea>`;
-      document.getElementById("xml-right").innerHTML =
-        "<textarea>" + doc.xml + "</textarea>";
+      // tooltips
+      document.querySelectorAll("placename").forEach((el) => {
+        let place = doc.listPlaces.find(
+          (p) => p.id === el.getAttribute("xml:id")
+        );
+        // undefined display contribution link
+        if (!place) {
+          el.innerHTML += `<span>Nicht deklariert</span>`;
+          // defined display tooltip
+        } else {
+          let url = place.idno ? place.idno : "#";
+          el.innerHTML = `<a target="_blank" href="${url}">${
+            place.name
+          }</a><span>${el.getAttribute("xml:id")} ${place.type ? place.type : ""}</span>`;
+        }
+      });
+      document.querySelectorAll("persname").forEach((el) => {
+        let person = doc.listPerson.find(
+          (p) => p.id === el.getAttribute("xml:id")
+        );
+        console.log(el.getAttribute("xml:id"), el, person);
+        // undefined display contribution link
+        if (!person) {
+          el.innerHTML += `<span>Nicht deklariert</span>`;
+          // defined display tooltip
+        } else {
+          let url = person.idno ? person.idno : "#";
+          el.innerHTML = `<a target="_blank" href="${url}">${
+            person.name
+          }</a><span>${el.getAttribute("xml:id")} ${person.role ? person.role : ""}</span>`;
+        }
+      });
     };
 
     const changePage = (e) => {
-      console.log(select.value);
       render(select.value);
     };
     // Meta
@@ -188,7 +251,6 @@ function loadText(id) {
 }
 
 // Tabs
-
 var sides = document.querySelectorAll(".tabs");
 sides.forEach((side) => {
   var tabButton = side.querySelectorAll(".tab-button");
