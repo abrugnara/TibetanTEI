@@ -175,7 +175,7 @@ function loadText(id) {
         trans.tibetan = page.translations
           .find((t) => t.lang == "bo")
           .el.html()
-          .replace(/<lb\s*\/?>/gi, "<br />")
+          .replace(/<lb\s*[^\s]*\/>/gi, "<br />")
           .replace(/<\/?unclear\s*\/?>/gi, "");
       // german
       left.german.innerHTML = trans.german;
