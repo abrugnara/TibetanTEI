@@ -90,12 +90,11 @@ strong {
   font-weight: 400;
 }
 /* prevents TEI artefacts to be stripped out in xml */
-w,
 s {
   text-decoration: none !important;
   
 }
-w:hover, s:hover {
+w:hover {
   color: var(--color-particle);
 }
 

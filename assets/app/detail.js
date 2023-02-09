@@ -78,25 +78,47 @@ function loadText(id) {
         });
       // listPerson
       $(response)
-        .find("person")
+        // .find("person")
+        // TODO: change to tag persname
+        .find("persName")
         .each(function () {
-          doc.listPerson.push({
-            id: $(this).attr("xml:id"),
-            role: $(this).attr("role"),
-            name: $(this).find("persName").text(),
-            idno: $(this).find("idno").text(),
-          });
+          // Register from body occurances
+          if (!doc.listPerson.find((p) => p.name === $(this).text())) {
+            let url = null;
+            if (references.find((r) => r.type === $(this).attr("type"))) {
+              url = `${
+                references.find((r) => r.type === $(this).attr("type")).url
+              }${$(this).attr("key")}`;
+            }
+            doc.listPerson.push({
+              role: $(this).attr("role"),
+              key: $(this).attr("key"),
+              type: $(this).attr("type"),
+              name: $(this).text(), // here the reference from the stand off is essential to have enough meta data to display anything meaning full
+              url: url,
+            });
+          }
         });
       // listPlaces
       $(response)
-        .find("place")
+        .find("placeName")
         .each(function () {
-          doc.listPlaces.push({
-            id: $(this).attr("xml:id"),
-            type: $(this).attr("type"),
-            name: $(this).find("placeName").text(),
-            idno: $(this).find("idno").text(),
-          });
+          console.log(doc.listPlaces.find((p) => p.name === $(this).text()));
+          if (!doc.listPlaces.find((p) => p.name === $(this).text())) {
+            let url = null;
+            if (references.find((r) => r.type === $(this).attr("type"))) {
+              url = `${
+                references.find((r) => r.type === $(this).attr("type")).url
+              }${$(this).attr("key")}`;
+            }
+            doc.listPlaces.push({
+              role: $(this).attr("role"),
+              key: $(this).attr("key"),
+              type: $(this).attr("type"),
+              name: $(this).text(), // here the reference from the stand off is essential to have enough meta data to display anything meaning full
+              url: url,
+            });
+          }
         });
 
       // pages
@@ -150,7 +172,7 @@ function loadText(id) {
         tibetan: page.translations
           .find((t) => t.lang == "bo")
           .el.html()
-          .replace(/\n/g, "<br />"),
+          .replace(/<lb\s*\/?>/gi, "<br />"),
       };
       // german
       left.german.innerHTML = trans.german;
@@ -170,9 +192,13 @@ function loadText(id) {
       // persons
       let personsHTML = "";
       doc.listPerson.forEach((person) => {
-        personsHTML += `<li><a href="${person.idno ? person.idno : "#"}">${
-          person.name
-        }</a> ${person.role ? person.role : ""}</li>`;
+        if (person.url) {
+          personsHTML += `<li><a href="${person.url ? person.url : "#"}">${
+            person.name
+          }</a> ${person.type}</li>`;
+        } else {
+          personsHTML += `<li>${person.name} ${person.type ? person.type : ""}</li>`;
+        }
       });
       personsHTML = `<h6>Personen Register</h6><ul>${personsHTML}</ul>`;
       left.persons.innerHTML = personsHTML;
@@ -191,33 +217,32 @@ function loadText(id) {
       // tooltips
       document.querySelectorAll("placename").forEach((el) => {
         let place = doc.listPlaces.find(
-          (p) => p.id === el.getAttribute("xml:id")
+          (p) => p.id === el.innerHTML
         );
         // undefined display contribution link
         if (!place) {
           el.innerHTML += `<span>Nicht deklariert</span>`;
           // defined display tooltip
         } else {
-          let url = place.idno ? place.idno : "#";
-          el.innerHTML = `<a target="_blank" href="${url}">${
+          el.innerHTML = `<a target="_blank" href="${place.url}">${
             place.name
-          }</a><span>${el.getAttribute("xml:id")} ${place.type ? place.type : ""}</span>`;
+          }</a><span>${el.innerHTML} ${
+            place.type ? place.type : ""
+          }</span>`;
         }
       });
       document.querySelectorAll("persname").forEach((el) => {
         let person = doc.listPerson.find(
-          (p) => p.id === el.getAttribute("xml:id")
+          (p) => p.name === el.innerHTML
         );
-        console.log(el.getAttribute("xml:id"), el, person);
         // undefined display contribution link
         if (!person) {
           el.innerHTML += `<span>Nicht deklariert</span>`;
           // defined display tooltip
         } else {
-          let url = person.idno ? person.idno : "#";
-          el.innerHTML = `<a target="_blank" href="${url}">${
+          el.innerHTML = `<a target="_blank" href="${person.url}">${
             person.name
-          }</a><span>${el.getAttribute("xml:id")} ${person.role ? person.role : ""}</span>`;
+          }</a><span>${el.getAttribute("key")} ${person.type} ${person.key}</span>`;
         }
       });
     };
