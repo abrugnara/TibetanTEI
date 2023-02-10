@@ -338,7 +338,7 @@ das ist das Ende einer möglichen Taxonomie -->
                             <persName xml:id="zab-mo" role="king" type="BUDA" key="???"
                                 >རྒྱལ་པོ་ཟབ་མོ<w type="suffix">འི</w>་ཕྱོགས</persName>་འདས་པ<w
                             type="suffix">འི</w>་འོག་<w type="suffix"
-                            >ཏུ་</w>ནུབ་<lb/>ཕྱོགས་<placeName xml:id="ma-ru" type="BUDA" key="???"
+                            >ཏུ་</w>ནུབ་<lb/>ཕྱོགས་<placeName xml:id="ma_ru" type="BUDA" key="???"
                             >མ་རུ</placeName><w type="suffix">འི</w>་ཡུལ་<w type="suffix"
                             >དུ</w>་སྐྱེས་པ་<persName xml:id="shriharsa" ref="shriharsa" role="king"
                             type="BUDA" key="???">རྒྱལ་བོ་ཤྲཱི་ཧརྴ</persName>་<w type="partikel"
