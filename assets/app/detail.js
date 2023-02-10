@@ -79,7 +79,6 @@ function loadText(id) {
       // listPerson
       $(response)
         // .find("person")
-        // TODO: change to tag persname
         .find("persName")
         .each(function () {
           // Register from body occurances
