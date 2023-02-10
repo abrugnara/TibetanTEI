@@ -344,7 +344,7 @@ das ist das Ende einer möglichen Taxonomie -->
                             type="BUDA" key="???">རྒྱལ་བོ་ཤྲཱི་ཧརྴ</persName>་<w type="partikel"
                             subtype="partikel_sprecher">ཞེས་</w><w pos="VMPP" type="VG6"
                             subtype="tmdV" msd="SF1.,2.3.4.">བྱ་བ་</w><w type="suffix">ལས་</w><w
-                            type="suffix">ཀྱི་</w>སྟོབས་ ཤིན་<w type="suffix">ཏུ་</w>ཆེ་བ་བྱུང་<w
+                            type="suffix">ཀྱི་</w>སྟོབས་ ཤིན་<w type="suffix">ཏུ་</w>ཆེ་བ་<w type="verb">བྱུང</w>་<w
                             type="partikel" subtype="semifinalpartikel">སྟེ་</w></s>ནུབ་ཕྱོགས་<w
                         type="suffix" subtype="kassuff">ཀྱི་</w>རྒྱལ་ཁམས་ཐམས་ཅད་<w type="suffix"
                         >ལ</w>་དབང་བསྒྱུར། ཕྱིས་སངས་རྒྱས་<w type="suffix">ཀྱི</w>་བསྟན་པ་<w
