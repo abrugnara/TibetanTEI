@@ -93,7 +93,7 @@ strong {
 s {
   text-decoration: none !important;
 }
-w:hover {
+w[type="suffix"]:hover {
   color: var(--color-particle);
 }
 
