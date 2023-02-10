@@ -342,8 +342,8 @@ das ist das Ende einer möglichen Taxonomie -->
                             >མ་རུ</placeName><w type="suffix">འི</w>་ཡུལ་<w type="suffix"
                             >དུ</w>་སྐྱེས་པ་<persName xml:id="shriharsa" ref="shriharsa" role="king"
                             type="BUDA" key="???">རྒྱལ་བོ་ཤྲཱི་ཧརྴ</persName>་<w type="partikel"
-                            subtype="partikel_sprecher">ཞེས་</w><w pos="VMPP" type="VG6"
-                            subtype="tmdV" msd="SF1.,2.3.4.">བྱ་བ་</w><w type="suffix">ལས་</w><w
+                            subtype="partikel_sprecher">ཞེས་</w><w pos="VMPP" type="verb"
+                            subtype="VG6_tmdV" msd="SF1.,2.3.4.">བྱ་བ་</w><w type="suffix">ལས་</w><w
                             type="suffix">ཀྱི་</w>སྟོབས་ ཤིན་<w type="suffix">ཏུ་</w>ཆེ་བ་<w type="verb">བྱུང</w>་<w
                             type="partikel" subtype="semifinalpartikel">སྟེ་</w></s>ནུབ་ཕྱོགས་<w
                         type="suffix" subtype="kassuff">ཀྱི་</w>རྒྱལ་ཁམས་ཐམས་ཅད་<w type="suffix"
