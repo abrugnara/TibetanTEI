@@ -336,7 +336,7 @@ das ist das Ende einer möglichen Taxonomie -->
                             >གྱི་</w>སྐུ་ཚེ<w type="suffix" subtype="attrsuff">འི་</w>སྨད་ཙམ་<w
                             type="suffix" subtype="gensuff">གྱི་</w>དུས་<w type="suffix">ན</w>།
                             <persName xml:id="zab-mo" role="king" type="BUDA" key="???"
-                            >རྒྱལ་པོ་ཟབ་མོའི་ཕྱོགས</persName>་འདས་པའི་འོག་<w type="suffix"
+                            >རྒྱལ་པོ་ཟབ་མོ<w type="suffix">འི</w>་ཕྱོགས</persName>་འདས་པ<w type="suffix">འི</w>་འོག་<w type="suffix"
                             >ཏུ་</w>ནུབ་<lb/>ཕྱོགས་<placeName type="BUDA" key="???"
                             >མ་རུ</placeName><w type="suffix">འི</w>་ཡུལ་<w type="suffix"
                             >དུ</w>་སྐྱེས་པ་<persName xml:id="shriharsa" ref="shriharsa" role="king"
@@ -352,11 +352,11 @@ das ist das Ende einer möglichen Taxonomie -->
                         key="P1308">ཡོན་<lb/>ཏན་འོད</persName>་བླ་མར་བཀུར་བ་ཞིག་བྱུང། དུས་<w
                         type="suffix">དེ</w>་ཙམ་<w type="suffix">ན</w>་ཤར་ཕྱོགས་<w type="suffix"
                         >སུ</w>་རྒྱལ་བོ་<persName xml:id="vrikshatsandra" role="king" type="BUDA"
-                        key="???">བྲྀཀྵ་ཙནྡྲ</persName>འི་བུ་བརྒྱུད་ལ་རྒྱལ་པོ་<persName role="king"
+                        key="???">བྲྀཀྵ་ཙནྡྲ</persName><w type="suffix">འི</w>་བུ་བརྒྱུད་ལ་རྒྱལ་པོ་<persName role="king"
                         type="BUDA" key="???" xml:id="vigamatsandra_01">བི་ག་མ་ཙནྡྲ</persName>་<w
-                        type="partikel">དང</w>། དེའི་བུ་<persName xml:id="kamatsandra_01" role="son"
+                        type="partikel">དང</w>། དེ<w type="suffix">འི</w>་བུ་<persName xml:id="kamatsandra_01" role="son"
                         type="BUDA" key="???"
-                        >ཀཱ་མ་ཙནྡྲ</persName>་གཉིས་ཀྱིས་རྒྱལ་སྲིད་སྐྱོང་བའི་དུས་<w type="suffix"
+                        >ཀཱ་མ་ཙནྡྲ</persName>་གཉིས་<w type="suffix">ཀྱིས</w>་རྒྱལ་སྲིད་སྐྱོང་བ<w type="suffix">འི</w>་དུས་<w type="suffix"
                         >ཏེ</w>། <w type="Nomen" subtype="d.O.">རྒྱལ་པོ</w>་དེ་གཉིས་<lb/>
                 </p>
                 <p xml:lang="wylie">rgyal po</p>
