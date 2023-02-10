@@ -277,7 +277,7 @@ das ist das Ende einer möglichen Taxonomie -->
             </person>
         </listPerson>
         <listPlace>
-            <place xml:id="maru" type="village">
+            <place xml:id="ma-ru" type="village">
                 <placeName>མ་རུ་</placeName>
                 <idno type="URI">https://</idno>
             </place>
@@ -336,14 +336,14 @@ das ist das Ende einer möglichen Taxonomie -->
                             >གྱི་</w>སྐུ་ཚེ<w type="suffix" subtype="attrsuff">འི་</w>སྨད་ཙམ་<w
                             type="suffix" subtype="gensuff">གྱི་</w>དུས་<w type="suffix">ན</w>།
                             <persName xml:id="zab-mo" role="king" type="BUDA" key="???"
-                                >རྒྱལ་པོ་ཟབ་མོ<w type="suffix">འི</w>་ཕྱོགས</persName>་འདས་པ<w
+                                >རྒྱལ་པོ་ཟབ་མོའི་ཕྱོགས</persName>་འདས་པ<w
                             type="suffix">འི</w>་འོག་<w type="suffix"
-                            >ཏུ་</w>ནུབ་<lb/>ཕྱོགས་<placeName type="BUDA" key="???"
+                            >ཏུ་</w>ནུབ་<lb/>ཕྱོགས་<placeName xml:id="ma-ru" type="BUDA" key="???"
                             >མ་རུ</placeName><w type="suffix">འི</w>་ཡུལ་<w type="suffix"
                             >དུ</w>་སྐྱེས་པ་<persName xml:id="shriharsa" ref="shriharsa" role="king"
                             type="BUDA" key="???">རྒྱལ་བོ་ཤྲཱི་ཧརྴ</persName>་<w type="partikel"
-                            subtype="partikel_sprecher">ཞེས་</w><w pos="VMPP" type="VG6"
-                            subtype="tmdV" msd="SF1.,2.3.4.">བྱ་བ་</w><w type="suffix">ལས་</w><w
+                            subtype="partikel_sprecher">ཞེས་</w><w pos="VMPP" type="verb"
+                            subtype="VG6_tmdV" msd="SF1.,2.3.4.">བྱ་བ་</w><w type="suffix">ལས་</w><w
                             type="suffix">ཀྱི་</w>སྟོབས་ ཤིན་<w type="suffix">ཏུ་</w>ཆེ་བ་<w type="verb">བྱུང</w>་<w
                             type="partikel" subtype="semifinalpartikel">སྟེ་</w></s>ནུབ་ཕྱོགས་<w
                         type="suffix" subtype="kassuff">ཀྱི་</w>རྒྱལ་ཁམས་ཐམས་ཅད་<w type="suffix"
