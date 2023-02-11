@@ -21,7 +21,7 @@
   --color-title: #00ff00;
   --color-date: #ff00ff;
   --color-person: #00f;
-  --color-verb: #805300;
+  --color-verb: #faee11;
   --color-place: #ffa500;
   --color-particle: #f00;
 
@@ -97,10 +97,15 @@ w[type="suffix"]:hover {
   color: var(--color-particle);
 }
 
- /* Hover für partikel eingebaut */
+ /* Hover für partikel und andere eingebaut 230211 Anfang */
 w[type="partikel"]:hover {
   color: var(--color-particle);
 }
+
+w[type="verb"]:hover {
+  color: var(--color-verb);
+}
+/* Hover für partikel eingebaut 230211 Ende */
 code {
   font-family: var(--source);
 }
