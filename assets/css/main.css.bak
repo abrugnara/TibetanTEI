@@ -94,7 +94,7 @@ s {
   text-decoration: none !important;
 }
 w[type="suffix"]:hover {
-  color: var(--color-particle);
+  color: var(--color-verb);
 }
 
  /* Hover für partikel eingebaut */
