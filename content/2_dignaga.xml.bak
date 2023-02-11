@@ -338,17 +338,17 @@ das ist das Ende einer möglichen Taxonomie -->
                             <persName xml:id="zab-mo" role="king" type="BUDA" key="???"
                                 >རྒྱལ་པོ་ཟབ་མོ<w type="suffix">འི</w>་ཕྱོགས</persName>་འདས་པ<w
                             type="suffix">འི</w>་འོག་<w type="suffix"
-                            >ཏུ་</w>ནུབ་<lb/>ཕྱོགས་<placeName xml:id="ma-ru" type="BUDA" key="???"
+                            >ཏུ་</w>ནུབ་<lb/>ཕྱོགས་<placeName xml:id="ma_ru" type="BUDA" key="???"
                             >མ་རུ</placeName><w type="suffix">འི</w>་ཡུལ་<w type="suffix"
                             >དུ</w>་སྐྱེས་པ་<persName xml:id="shriharsa" ref="shriharsa" role="king"
                             type="BUDA" key="???">རྒྱལ་བོ་ཤྲཱི་ཧརྴ</persName>་<w type="partikel"
                             subtype="partikel_sprecher">ཞེས་</w><w pos="VMPP" type="verb"
                             subtype="VG6_tmdV" msd="SF1.,2.3.4.">བྱ་བ་</w><w type="suffix">ལས་</w><w
-                            type="suffix">ཀྱི་</w>སྟོབས་ ཤིན་<w type="suffix">ཏུ་</w>ཆེ་བ་<w type="verb">བྱུང</w>་<w
+                            type="suffix">ཀྱི་</w>སྟོབས་ཤིན་<w type="suffix">ཏུ་</w>ཆེ་བ་<w type="verb">བྱུང</w>་<w
                             type="partikel" subtype="semifinalpartikel">སྟེ་</w></s>ནུབ་ཕྱོགས་<w
                         type="suffix" subtype="kassuff">ཀྱི་</w>རྒྱལ་ཁམས་ཐམས་ཅད་<w type="suffix"
                         >ལ</w>་དབང་བསྒྱུར། ཕྱིས་སངས་རྒྱས་<w type="suffix">ཀྱི</w>་བསྟན་པ་<w
-                        type="sufix">ལ་</w><w type="suffix">དད</w>་པ་ཐོབ་<w type="partikel"
+                        ty<w type="suffix" subtype="dativ">ལ</w>་<w type="suffix">དད</w>་པ་ཐོབ་<w type="partikel"
                         >སྟེ</w>་སློབ་དཔོན་<persName xml:id="gunaprabha" role="teacher" type="BUDA"
                         key="P1308">ཡོན་<lb/>ཏན་འོད</persName>་བླ་མར་བཀུར་བ་ཞིག་བྱུང། དུས་<w
                         type="suffix">དེ</w>་ཙམ་<w type="suffix">ན</w>་ཤར་ཕྱོགས་<w type="suffix"
