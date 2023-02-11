@@ -98,7 +98,6 @@ w[type="suffix"]:hover {
 }
 
  /* Hover für partikel eingebaut */
-}
 w[type="partikel"]:hover {
   color: var(--color-particle);
 }
