@@ -330,13 +330,10 @@ das ist das Ende einer möglichen Taxonomie -->
                 <pb ed="A" n="65a" facs="../content/images/dignaga/taranatha_dignaga_Page_593.jpg"/>
                 <p>Beginn des Textes: Image 593, Page 65a: 5. Zeile Mitte</p>
                 <p xml:lang="bo">
-                    <s xml:id="p65a01"> ཿ<w type="nomen"><m xml:lang="de"
-                            >Lehrer</m>་སློབ་དཔོན</w>་<w type="attr"><m xml:lang="de"
-                            >groß</m>ཆེན་པོ</w>་<persName xml:id="vasubandhu_01"
+                    <s xml:id="p65a01"> ཿ <w type="N">སློབ་དཔོན</w>་<w type="attr">ཆེན་པོ</w>་<w type="NE"></w><persName xml:id="vasubandhu_01"
                             role="Mitbegründer der Yogacara Schule" type="BUDA" key="P6119"
                             subtype="nomen">དབྱིག་གཉེན</persName>་<w type="suffix"
-                            subtype="attrsuff">གྱི་</w><w type="nomen"><m xml:lang="de">Leben,
-                                Lebenszeit, -spanne, dauer</m>སྐུ་ཚེ</w><w type="suffix"
+                            subtype="attrsuff">གྱི་</w>སྐུ་ཚེ<w type="suffix"
                             subtype="attrsuff">འི་</w>སྨད་ཙམ་<w type="suffix" subtype="gensuff"
                             >གྱི་</w>དུས་<w type="suffix">ན</w>། <persName xml:id="zab-mo"
                             role="king" type="BUDA" key="???">རྒྱལ་པོ་ཟབ་མོ<w type="suffix"
