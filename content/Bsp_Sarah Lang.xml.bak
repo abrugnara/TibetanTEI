@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-model href="http://www.tei-c.org/release/xml/tei/custom/schema/relaxng/tei_all.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
+<?xml-model href="http://www.tei-c.org/release/xml/tei/custom/schema/relaxng/tei_all.rng" type="application/xml"
+	schematypens="http://purl.oclc.org/dsdl/schematron"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0" xmlns:dc="https://purl.org/dc/elements/1.1/">
+    <!-- rootElement -->
+    <teiHeader>
+        <fileDesc>
+            <!-- obligatorisch -->
+            <!--  bibliografische Beschreibung des Inhalts des Dokuments-->
+            <titleStmt>
+                <title>
+                    <!-- title of the resource -->
+                </title>
+            </titleStmt>
+            <publicationStmt>
+                <!--  Information über diedistribution der ressource  -->
+                <p> </p>
+            </publicationStmt>
+            <sourceDesc>
+                <p>
+                    <!--  Information über die Quelle woher die ressourcen stammen) -->
+                </p>
+            </sourceDesc>
+        </fileDesc>
+        <encodingDesc> </encodingDesc>
+        <!-- optional -->
+        <!-- Verbindung des elektronischen Dokuments mit der Quelle (d.h. Transkriptionsregeln usw.)   -->
+        <profileDesc> ... </profileDesc>
+        <!-- optional -->
+        <!--  beschreibt alle nicht bibliografischen aspekte des Textes (d.h. Erstellung, Sprachen) -->
+        <revisionDesc> ... </revisionDesc>
+        <!-- optional -->
+        <!--  Verfolgung von Änserungen im digitalen Dokument, Versionierung -->
+    </teiHeader>
+    <body>
+        <text> .. .</text>
+    </body>
+</TEI>

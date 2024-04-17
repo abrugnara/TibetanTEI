@@ -1,0 +1,430 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-model href="http://www.tei-c.org/release/xml/tei/custom/schema/relaxng/tei_all.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
+<?xml-model href="http://www.tei-c.org/release/xml/tei/custom/schema/relaxng/tei_all.rng" type="application/xml"
+	schematypens="http://purl.oclc.org/dsdl/schematron"?>
+<?xml-model href="http://www.stoa.org/epidoc/schema/latest/tei-epidoc.rng"
+schematypens="http://relaxng.org/ns/structure/1.0"?>
+<?xml-model href="http://www.stoa.org/epidoc/schema/latest/tei-epidoc.rng"
+schematypens="http://purl.oclc.org/dsdl/schematron"?>
+<TEI  xmlns="http://www.tei-c.org/ns/1.0" xmlns:dc="https://purl.org/dc/elements/1.1/">
+
+    <teiHeader>
+        <fileDesc>
+            <!-- obligatorisch -->
+            <!--  bibliografische Beschreibung des Inhalts des Dokuments-->
+            <titleStmt>
+                <!-- mandatory!  Titles, author and editor/s of the digital document;  wie bei Dublin;Original wird bei sourcDesc beschrieben; -->
+                <title xml:lang="bo">རྗེ་བཙུན་ཏཱ་ར་ནཱ་ཐའི་གསུང་འབུམ་</title>
+                <title xml:lang="de">rje btsun tA ra nA tha'i gsung 'bum: SoSe 2022
+                    Historiografische Berichte über bedeutende buddhistische Gelehrte (Dignāga
+                    (c.480–c.540))</title>
+                <author>
+                    <name xml:lang="bo">ཏཱ་ར་ནཱ་ཐ་</name>
+                </author>
+                <respStmt>
+                    <resp>Text input:</resp>
+                    <name>Albert Brugnara</name>
+                </respStmt>
+                <respStmt>
+                    <!-- Editing of the digital text (encoding, markup) -->
+                    <resp>TEI Encoding and Markup:</resp>
+                    <name>Übung "Erzählungen aus früheren Leben des Buddha" (2021WS), University of
+                        Vienna</name>
+                </respStmt>
+            </titleStmt>
+            <editionStmt>
+                <edition>
+                    <date>2021</date>
+                </edition>
+            </editionStmt>
+            <publicationStmt>
+                <!--  Information über diedistribution der ressource  -->
+                <distributor>Horst Lasic, Universität Wien, ISTB</distributor>
+                <!-- <address>
+               <addrLine>Print and Computing Services,</addrLine>
+               <addrLine>Leh,</addrLine>
+               <addrLine>UT Ladakh,</addrLine>
+               <addrLine>IN</addrLine>
+            </address>  -->
+                <availability>
+                    <p>This digital text is made available under a CC (Creative Commons) License
+                        Attribution Share-Alike, 4.0.</p>
+                    <licence target="https://creativecommons.org/licenses/by/4.0/">
+                        <p>This work is licensed under the Creative Commons Attribution 4.0 Unported
+                            Licence. To view a copy of the licence, visit
+                            https://creativecommons.org/licenses/by/4.0/ or send a letter to
+                            Creative Commons, 444 Castro Street, Suite 900, Mountain View,
+                            California, 94041, USA.</p>
+                        <p>Copyright c 2019ff by Albert Brugnara.</p>
+                        <p>Permission is hereby granted, free of charge, to any person obtaining a
+                            copy of this edition or includet software and associated documentation
+                            files (the "Software"), to deal in the Software without restriction,
+                            including without limitation the rights to use, copy, modify, merge,
+                            publish, distribute, sublicense, and/or sell copies of the Software, and
+                            to permit persons to whom the Software is furnished to do so, subject to
+                            the following conditions:</p>
+                        <p>The above copyright notice and this permission notice shall be included
+                            in all copies or substantial portions of the Software.</p>
+                        <p>THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS
+                            OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF
+                            MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT.
+                            IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY
+                            CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT,
+                            TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE
+                            SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.</p>
+                    </licence>
+                </availability>
+                <date from="2019" to="2025">2019-2025</date>
+            </publicationStmt>
+            <notesStmt>
+                <note>Brief notes on the text are in a supplementary file.</note>
+            </notesStmt>
+            <sourceDesc>
+                <!--  Information über die Quelle woher die ressourcen stammen) -->
+                <biblStruct>
+                    <monogr>
+                        <editor>unknown</editor>
+                        <title>boc kyi bcu phrag rig mdzod chen mo/_ dpal ldan sa skya pa'i gsung
+                            rab_</title>
+                        <imprint>
+                            <pubPlace>Ladakh</pubPlace>
+                            <publisher>Horst Lasic</publisher>
+                            <date>1774</date>
+                        </imprint>
+                    </monogr>
+                </biblStruct>
+            </sourceDesc>
+        </fileDesc>
+        <encodingDesc>
+            <!-- optional -->
+            <!-- Verbindung des elektronischen Dokuments mit der Quelle (d.h. Transkriptionsregeln usw.)   -->
+            <editorialDecl>
+                <p>Named entities of the text (i.e. persons, places, work titles, dates) are
+                    annotated and linked to online resources including the Buddhist Digital Archives
+                    (BUDA; https://library.bdrc.io//), the Sakya Research Centre (SRC;
+                    https://sakyaresearch.org/) and the Resources for Kanjur &amp; Tanjur Studies
+                    (rKTs; https://www.istb.univie.ac.at/kanjur). Non-canonical works are referred
+                    to by its Tohoku catalogue number (i.e. A catalogue of the Tohoku University
+                    collection of Tibetan works on Buddhism. Kanakura et al. (eds.). Sendai:
+                    Seminary of Indology, Tohoku University, 1953). Dates of persons are given
+                    according to the BUDA database.</p>
+                <correction status="high" method="silent">
+                    <!-- Status high: mittels Kollation; es gibt einen modernen Druck siehe Images -->
+                    <p>The following errors in the edition have been corrected: <list>
+                            <!-- Keine Korrektur in den ersten Pechas -->
+                            <item>see next version</item>
+                        </list>
+                    </p>
+                </correction>
+                <quotation marks="all">
+                    <p>All double quotation marks rendered with ", all single quotation marks with
+                        apostrophe'</p>
+                </quotation>
+                <hyphenation eol="none">
+                    <p>Hyphenated words that appear at the end of the line in this edition have been
+                        reformed like sa as a subskript</p>
+                </hyphenation>
+                <interpretation>
+                    <p>Persons are marked blue.</p>
+                    <p>Dates are marked pink.</p>
+                    <p>Places are marked orange.</p>
+                    <p>Worktitle are marked green.</p>
+                    <p>Italics are recorded Expression in original Language like for Sanskrit. </p>
+                </interpretation>
+            </editorialDecl>
+            <!-- Das ist der Beginn einer möglichen Taxonomie 
+           <classDecl>
+               <taxonomy>
+ <category xml:id="literature">
+  <catDesc>Literature</catDesc>
+  <category xml:id="poetry">
+   <catDesc>Poetry</catDesc>
+   <category xml:id="sonnet">
+    <catDesc>Sonnet</catDesc>
+    <category xml:id="shakesSonnet">
+     <catDesc>Shakespearean Sonnet</catDesc>
+    </category>
+    <category xml:id="petraSonnet">
+     <catDesc>Petrarchan Sonnet</catDesc>
+    </category>
+   </category>
+   <category xml:id="haiku">
+    <catDesc>Haiku</catDesc>
+   </category>
+  </category>
+  <category xml:id="drama">
+   <catDesc>Drama</catDesc>
+  </category>
+ </category>
+ <category xml:id="meter">
+  <catDesc>Metrical Categories</catDesc>
+  <category xml:id="feet">
+   <catDesc>Metrical Feet</catDesc>
+   <category xml:id="iambic">
+    <catDesc>Iambic</catDesc>
+   </category>
+   <category xml:id="trochaic">
+    <catDesc>trochaic</catDesc>
+   </category>
+  </category>
+  <category xml:id="feetNumber">
+   <catDesc>Number of feet</catDesc>
+   <category xml:id="pentameter">
+    <catDesc>>Pentameter</catDesc>
+   </category>
+   <category xml:id="tetrameter">
+    <catDesc>>Tetrameter</catDesc>
+   </category>
+  </category>
+ </category>
+</taxonomy>
+           </classDecl> 
+das ist das Ende einer möglichen Taxonomie -->
+        </encodingDesc>
+        <profileDesc>
+            <abstract resp="#LB">
+                <p>Good database design involves the acquisition and deployment of skills which have
+                    a wider relevance to the educational process. From a set of more or less
+                    instinctive rules of thumb a formal discipline or "methodology" of database
+                    design has evolved. Applying that methodology can be of great benefit to a very
+                    wide range of academic subjects: it requires fundamental skills of abstraction
+                    and generalisation and it provides a simple mechanism whereby complex ideas and
+                    information structures can be represented and manipulated, even without the use
+                    of a computer. </p>
+            </abstract>
+            <textClass>
+                <keywords>
+                    <term>Jatakas<note>Wiergeburtsgeschichten Buddha's</note></term>
+                </keywords>
+            </textClass>
+            <creation>
+                <date>1774</date>
+            </creation>
+            <langUsage>
+                <language ident="de">Deutsch</language>
+                <language ident="en">English</language>
+                <language ident="wylie">Tibetan (Wylie)</language>
+                <language ident="bo">Tibetan (Tibetan script)</language>
+                <language ident="sa">Sanskrit</language>
+            </langUsage>
+        </profileDesc>
+        <revisionDesc>
+            <change when="2022-01-22" who="#MSM">finished proofreading</change>
+            <change when="2022-06-30" who="#LB">finished proofreading</change>
+            <change notBefore="2021-07-04" who="#AB">finished data entry at end of term</change>
+            <change notAfter="2021-01-01" who="#AB">began data entry before New Year 2021</change>
+            <change when="2022-11-05" who="#AB">tagging Person, Place, Date</change>
+            <change when="2022-11-05" who="#AB">editoral declaration ergänzt</change>
+        </revisionDesc>
+    </teiHeader>
+    <standOff>
+        <listPerson>
+            <person xml:id="vasubandhu" role="teacher">
+                <persName xml:lang="bo">དབྱིག་གཉེན་</persName>
+                <idno type="URI"
+                    >https://library.bdrc.io/show/bdr:P6119?s=q%3D%2522%25E0%25BD%2591%25E0%25BD%2596%25E0%25BE%25B1%25E0%25BD%25B2%25E0%25BD%2582%25E0%25BC%258B%2522~1%26lg%3Dbo%26t%3DPerson%26n%3D1</idno>
+                <idno type="URI">https://de.wikipedia.org/wiki/Vasubandhu</idno>
+                <!--  CP:  das type finde ich nicht gut. das müsste man vesser normalisierne; mit rom und to kann man einen range definierne. -->
+                <birth from="0300" to="0400"/>
+                <birth type="4.Jhd_n.u.Z"/>
+                <death type="4.Jhd_n.u.Z"/>
+            </person>
+            <!-- CP: zweimal xml:lang ; es ist dann nicht mehr klar was in welcher sprache ist DEN NAMEN SOLLTE JEDER UNTER DER TRANSLITERATION UND DEM TIBETISCHEN SCRIPT FINDEN wichtig ist allerdings nur die xml:id -->
+            <person xml:lang="wylie" xml:id="zab-mo-i-phyogs">
+                <persName xml:lang="bo">ཟབ་མོའི་ཕྱོགས་</persName>
+                <!--CP: hier sind die type nid im element  ERLEDIGT -->
+                <idno type="URI">https://></idno>
+            </person>
+            <person xml:id="shrIharsha" role="king">
+                <persName xml:lang="bo">ཤྲཱི་ཧརྴ་</persName>
+                <idno type="URI">https://</idno>
+            </person>
+            <person xml:id="guṇaprabha">
+                <persName xml:lang="bo">ཡོན་ཏན་འོད་</persName>
+                <idno type="URI">https://</idno>
+            </person>
+            <person xml:id="sthiramati">
+                <persName xml:lang="bo">བློ་གྲོས་བརྟན་པ་</persName>
+                <!-- idno in idno ist nicht gut; elemente und attribute passen nicht VERGESSEN ZU LÖSCHEN ERLEDIGT -->
+                <idno type="URI">https://legacy.tbrc.org/#!rid=P4CZ16794</idno>
+            </person>
+            <person xml:id="vrikShatsandra">
+                <persName xml:lang="bo">བྲྀཀྵ་ཙནྡྲ་</persName>
+                <idno type="URI">https://</idno>
+            </person>
+            <person xml:id="vigamatsandra">
+                <persName xml:lang="bo">བི་ག་མ་ཙནྡྲ་</persName>
+                <idno type="URI">https://</idno>
+            </person>
+            <person xml:id="kamatsandra">
+                <persName xml:lang="bo">ཀཱ་མ་ཙནྡྲ་</persName>
+                <idno type="URI">https://</idno>
+            </person>
+            <person xml:id="mahAsammata">
+                <persName xml:lang="bo">མང་པོས་བཀུར་བ་</persName>
+                <idno type="URI">https://</idno>
+            </person>
+            <person xml:id="samgadAsa">
+                <persName xml:lang="bo">དགེ་འདུན་འབངས་</persName>
+                <idno type="URI">https://</idno>
+            </person>
+            <person xml:id="dharmadAsa">
+                <persName xml:lang="bo">ཆོས་འབང་</persName>
+                <idno type="URI">https://</idno>
+            </person>
+            <person xml:id="sangs_rgyas_bskyang">
+                <persName xml:lang="bo">སངས་རྒྱས་བསྐྱང་</persName>
+                <idno type="URI">https://</idno>
+            </person>
+            <person xml:id="darika">
+                <persName xml:lang="bo">ད་རི་ཀ་པ་</persName>
+                <idno type="URI">https://legacy.tbrc.org/#!rid=P4CZ15083</idno>
+            </person>
+            <person xml:id="dkon_mchog_gsum_gyi_abang">
+                <persName xml:lang="bo">དཀོན་མཆོག་གསུམ་གྱི་འབང་</persName>
+                <idno type="URI">https://legacy.tbrc.org/#!rid=P1943</idno>
+            </person>
+            <person xml:id="bhavya">
+                <persName xml:lang="bo">ལེགས་ལྡན་</persName>
+                <idno type="URI">https://legacy.tbrc.org/#!rid=P1701</idno>
+            </person>
+            <person xml:id="vimuktasena">
+                <persName xml:lang="bo">གྲོལ་སྡེ་</persName>
+                <idno type="URI">https://legacy.tbrc.org/#!rid=P4CZ15637</idno>
+            </person>
+            <person xml:id="dza-le-ru-he ">
+                <persName xml:lang="bo">ཛ་ལེ་རུ་ཧེ་</persName>
+                <idno type="URI">https://legacy.tbrc.org/#!rid=P4CZ15637</idno>
+            </person>
+            <person xml:id="nAgakesha">
+                <persName xml:lang="bo">ནཱ་གེ་ཤ་</persName>
+                <idno type="URI">https://</idno>
+            </person>
+            <person xml:id="lo-yi-pa">
+                <persName xml:lang="bo">ལོ་ཡི་པ་</persName>
+                <idno type="URI">https://</idno>
+            </person>
+            <person xml:id="deM-gi-pa">
+                <persName xml:lang="bo">ཌེཾ་གི་པ་</persName>
+                <idno type="URI">https://</idno>
+            </person>
+            <person xml:id="badrapalita">
+                <persName xml:lang="bo">བྷ་དྲ་པཱ་ལི་ཏ་</persName>
+                <idno type="URI">https://</idno>
+            </person>
+            <person xml:id="tsihawa">
+                <persName xml:lang="bo">ཙི་ཏཱ་ཝ་</persName>
+                <idno type="URI">https://</idno>
+            </person>
+            <person xml:id="dignAga">
+                <persName xml:lang="bo">ཕྱོགས་ཀྱི་གླང་པོ་</persName>
+                <idno type="URI">https://legacy.tbrc.org/#!rid=P6035</idno>
+            </person>
+        </listPerson>
+        <listPlace>
+            <place xml:id="ma-ru" type="village">
+                <placeName>མ་རུ་</placeName>
+                <idno type="URI">https://</idno>
+            </place>
+            <place xml:id="kache" type="region">
+                <placeName xml:lang="bo">ཁ་ཆེ་</placeName>
+                <idno type="URI">https://legacy.tbrc.org/#!rid=G2DB25458</idno>
+            </place>
+            <place xml:id="kache_i_yul" type="country">
+                <placeName xml:lang="bo">ཁ་ཆེའི་ཡུལ་</placeName>
+                <idno type="URI">https://</idno>
+            </place>
+            <place xml:id="otivisha" type="village">
+                <placeName xml:lang="bo">ཨོ་ཊི་བི་ཤ་</placeName>
+                <idno type="URI">https://</idno>
+            </place>
+            <place xml:id="Maulasthāna" type="village">
+                <placeName xml:lang="bo">མཽ་ལ་ཏ་ན་</placeName>
+                <idno type="URI">https://</idno>
+            </place>
+            <place xml:id="kho_rA_sa_na" type="village">
+                <placeName xml:lang="bo">ཁོ་རཱ་ས་ཎ་</placeName>
+                <idno type="URI">https://</idno>
+            </place>
+            <!-- CP: ist das ein Dorf in einem Dorf? weil zweimal village? SIND ZWEI UNTERSCHIEDLICHE ORTE ODER WÄRE ES HIER BESSER JEDEN PLACE MIT </PLACE> SEPARAT ABZUSCHLIESSEN? DANN WAR DAS EIN LOGISCHER FEHLER -->
+            <place xml:id="ma_la_wa" type="village">
+                <placeName xml:lang="bo">མ་ལ་ཝ་</placeName>
+                <idno type="URI">https://</idno>
+            </place>
+            <place xml:id="me_wa" type="village">
+                <placeName xml:lang="bo">མེ་ཝ་</placeName>
+                <idno type="URI">https://</idno>
+            </place>
+            <place xml:id="pi_tu_wa" type="village">
+                <placeName xml:lang="bo">པི་ཏུ་ཝ་</placeName>
+                <idno type="URI">https://</idno>
+            </place>
+            <place xml:id="bcom_brlag" type="village">
+                <placeName xml:lang="bo">བཅོམ་བརླག་</placeName>
+                <idno type="URI">https://</idno>
+            </place>
+            <place xml:id="singga_bakta" type="village">
+                <placeName xml:lang="bo">སིངྒ་བཀྟ་</placeName>
+                <idno type="URI">https://</idno>
+            </place>
+        </listPlace>
+    </standOff>
+    <text>
+        <body>
+            <div type="edition">
+                <pb ed="A" n="65a" facs="../content/images/dignaga/taranatha_dignaga_Page_593.jpg"/>
+                <p>Beginn des Textes: Image 593, Page 65a: 5. Zeile Mitte</p>
+                <p xml:lang="bo">
+                    <s xml:id="p65a01"> ཿ <w type="N">སློབ་དཔོན</w>་<w type="attr">ཆེན་པོ</w>་<w
+                            type="NE"/><persName xml:id="vasubandhu_01"
+                            role="Mitbegründer der Yogacara Schule" type="BUDA" key="P6119"
+                            subtype="nomen">དབྱིག་གཉེན</persName>་<w type="suffix"
+                            subtype="attrsuff">གྱི་</w>སྐུ་ཚེ<w type="suffix" subtype="attrsuff"
+                            >འི་</w>སྨད་ཙམ་<w type="suffix" subtype="gensuff">གྱི་</w>དུས་<w
+                            type="suffix">ན</w>། <persName xml:id="zab-mo" role="king" type="BUDA"
+                            key="???">རྒྱལ་པོ་ཟབ་མོ<w type="suffix">འི</w>་ཕྱོགས</persName>་འདས་པ<w
+                            type="suffix">འི</w>་འོག་<w type="suffix">ཏུ་</w><w lemma=""
+                            >ནུབ</w>་<lb/>ཕྱོགས་<placeName xml:id="ma_ru" type="BUDA"
+                            key="G2DB25458">མ་རུ</placeName><w type="suffix">འི</w>་ཡུལ་<w
+                            type="suffix">དུ</w>་སྐྱེས་པ་<persName xml:id="shriharsa"
+                            ref="shriharsa" role="king" type="BUDA" key="???"
+                            >རྒྱལ་བོ་ཤྲཱི་ཧརྴ</persName>་<w type="partikel"
+                            subtype="partikel_sprecher">ཞེས་</w><w lemma="machen" pos="VMPP"
+                            type="verb" subtype="VG6_tmdV" msd="SF1.,2.3.4.">བྱ་བ་</w><w
+                            type="suffix">ལས་</w><w type="suffix">ཀྱི་</w>སྟོབས་ཤིན་<w type="suffix"
+                            >ཏུ་</w>ཆེ་བ་<w type="verb">བྱུང</w>་<w type="partikel"
+                            subtype="semifinalpartikel">སྟེ་</w></s>ནུབ་ཕྱོགས་<w type="suffix"
+                        subtype="kassuff">ཀྱི་</w>རྒྱལ་ཁམས་ཐམས་ཅད་<w type="suffix"><w type="suffix"
+                            >ལ</w></w>་དབང་བསྒྱུར། ཕྱིས་སངས་རྒྱས་<w type="suffix">ཀྱི</w>་བསྟན་པ་<w
+                        type="suffix" subtype="dativ">ལ</w>་<w type="suffix">དད</w>་པ་ཐོབ་<w
+                        type="partikel">སྟེ</w>་སློབ་དཔོན་<persName xml:id="gunaprabha"
+                        role="teacher" type="BUDA" key="P1308"
+                    >ཡོན་<lb/>ཏན་འོད</persName>་བླ་མར་བཀུར་བ་ཞིག་བྱུང། དུས་<w type="suffix"
+                        >དེ</w>་ཙམ་<w type="suffix">ན</w>་ཤར་ཕྱོགས་<w type="suffix"
+                        >སུ</w>་རྒྱལ་བོ་<persName xml:id="vrikshatsandra" role="king" type="BUDA"
+                        key="???">བྲྀཀྵ་ཙནྡྲ</persName><w type="suffix"
+                        >འི</w>་བུ་བརྒྱུད་ལ་རྒྱལ་པོ་<persName role="king" type="BUDA" key="???"
+                        xml:id="vigamatsandra_01">བི་ག་མ་ཙནྡྲ</persName>་<w type="partikel">དང</w>།
+                        དེ<w type="suffix">འི</w>་བུ་<persName xml:id="kamatsandra_01" role="son"
+                        type="BUDA" key="???">ཀཱ་མ་ཙནྡྲ</persName>་གཉིས་<w type="suffix"
+                        >ཀྱིས</w>་རྒྱལ་སྲིད་སྐྱོང་བ<w type="suffix">འི</w>་<w type="nomen"
+                        subtype="d.O.">དུས</w>་<w type="suffix">ཏེ</w>། <w type="nomen"
+                        subtype="d.O.">རྒྱལ་པོ</w>་<w type="suffix">དེ</w>་གཉིས་<lb/>
+                </p>
+                <p xml:lang="wylie">rgyal po</p>
+                <p xml:lang="de"><s corresp="#p65a01">Als zur Zeit der zweiten Lebenshälfte des
+                        großen Lehrers Vasubandhu (dbyig gnyen) der König zab mo'i phyogs gestorben
+                        war und es wurde in der Westlichen Region in ma ru der sogenannte König (mit
+                        dem Namen) Śriharṣa geboren, der große Aktivitätskraft hat und der über die
+                        gesamten Königsreiche in westlicher Richtung herrschte. Später vertraute er
+                        der Buddhalehre und er erlangte Vertrauen</s> und war einer der den Lehrer
+                    Guṇaprabha als seinen Lehrer verehrte. Um dieselbe Zeit herrschte im Osten, aus
+                    der Nachkommenschaft des Königs Vṛikshatshandra, der König Vigamatchandra und
+                    dessen Sohn Kāmadshandra.</p>
+                <p xml:lang="en">When at the time of the second half of the life of the great
+                    teacher Vasubandhu (dbyig gnyen), the king zab mo'i phyogs had died.</p>
+            </div>
+
+        </body>
+    </text>
+</TEI>
