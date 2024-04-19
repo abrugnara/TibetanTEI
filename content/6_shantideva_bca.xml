@@ -1,0 +1,283 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<?xml-model href="http://www.tei-c.org/release/xml/tei/custom/schema/relaxng/tei_all.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
+<?xml-model href="http://www.tei-c.org/release/xml/tei/custom/schema/relaxng/tei_all.rng" type="application/xml" 
+	schematypens="http://purl.oclc.org/dsdl/schematron"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0" xmlns:dc="https://purl.org/dc/elements/1.1/">
+
+    <teiHeader>
+        <fileDesc>
+            <titleStmt>
+                <!-- mandatory!  Titles, author and editor/s of the digital document -->
+                <title xml:lang="bo">བྱང་ཆུབ་སེམས་དཔའི་སྤྱོད་པ་ལ་</title>
+                <title xml:lang="de">Das Eintreten in den Pfad der Bodhisattvas; spyod 'jug des
+                    Shantideva SoSe 2024 (Śāntideva (c.650–c.750))</title>
+                <author>
+                    <name xml:lang="bo">ཞི་བ་ལྷ།</name>
+                </author>
+                <respStmt>
+                    <resp>Text input:</resp>
+                    <name>Albert Brugnara</name>
+                </respStmt>
+                <respStmt>
+                    <!-- Editing of the digital text (encoding, markup) -->
+                    <resp>TEI Encoding and Markup:</resp>
+                    <name>Übung "Das Eintreten in den Pfad der Bodhisattvas: Das spyod 'jug des
+                        Santideva" (2024S), University of Vienna</name>
+                </respStmt>
+            </titleStmt>
+            <editionStmt>
+                <edition>
+                    <date>1982</date>
+                </edition>
+            </editionStmt>
+            <publicationStmt>
+                <distributor>Julian Schott, Universität Wien, ISTB</distributor>
+                <!-- <address>
+               <addrLine>Print and Computing Services,</addrLine>
+               <addrLine>Leh,</addrLine>
+               <addrLine>UT Ladakh,</addrLine>
+               <addrLine>IN</addrLine>
+            </address>  -->
+                <availability>
+                    <p>This digital text is made available under a CC (Creative Commons) License
+                        Attribution Share-Alike, 4.0.</p>
+                </availability>
+            </publicationStmt>
+            <notesStmt>
+                <note>Brief notes on the text are in a supplementary file.</note>
+            </notesStmt>
+            <sourceDesc>
+                <biblStruct>
+                    <monogr>
+                        <editor>zhi ba lha</editor>
+                        <title>byang chub sems dpa'i spyod pa la 'jug pa</title>
+                        <imprint>
+                            <pubPlace>Mysore Karnataka </pubPlace>
+                            <publisher>Sery Jey Libary&amp; computer Center Sra Jey Minastic
+                                University.</publisher>
+                            <date>2009</date>
+                        </imprint>
+                    </monogr>
+                </biblStruct>
+            </sourceDesc>
+        </fileDesc>
+        <encodingDesc>
+            <editorialDecl>
+                <p>Named entities of the text (i.e. persons, places, work titles, dates) are
+                    annotated and linked to online resources including the Buddhist Digital Archives
+                    (BUDA; https://library.bdrc.io//), the Sakya Research Centre (SRC;
+                    https://sakyaresearch.org/) and the Resources for Kanjur &amp; Tanjur Studies
+                    (rKTs; https://www.istb.univie.ac.at/kanjur). Non-canonical works are referred
+                    to by its Tohoku catalogue number (i.e. A catalogue of the Tohoku University
+                    collection of Tibetan works on Buddhism. Kanakura et al. (eds.). Sendai:
+                    Seminary of Indology, Tohoku University, 1953). Dates of persons are given
+                    according to the BUDA database.</p>
+                <correction status="high" method="silent">
+                    <!-- Status high: mittels Kollation; es gibt einen modernen Druck siehe Images -->
+                    <p>The following errors in the edition have been corrected: <list>
+                            <!-- Keine Korrektur in den ersten Pechas -->
+                            <item>see next version</item>
+                        </list>
+                    </p>
+                </correction>
+                <quotation marks="all">
+                    <p>All double quotation marks rendered with ", all single quotation marks with
+                        apostrophe'</p>
+                </quotation>
+                <hyphenation eol="none">
+                    <p>Hyphenated words that appear at the end of the line in this edition have been
+                        reformed like sa as a subskript</p>
+                </hyphenation>
+                <interpretation>
+                    <p>Persons are marked blue.</p>
+                    <p>Dates are marked pink.</p>
+                    <p>Places are marked orange.</p>
+                    <p>Worktitle are marked green.</p>
+                    <p>Italics are recorded Expression in original Language like for Sanskrit. </p>
+                </interpretation>
+            </editorialDecl>
+            <!-- Das ist der Beginn einer möglichen Taxonomie 
+           <classDecl>
+               <taxonomy>
+ <category xml:id="literature">
+  <catDesc>Literature</catDesc>
+  <category xml:id="poetry">
+   <catDesc>Poetry</catDesc>
+   <category xml:id="sonnet">
+    <catDesc>Sonnet</catDesc>
+    <category xml:id="shakesSonnet">
+     <catDesc>Shakespearean Sonnet</catDesc>
+    </category>
+    <category xml:id="petraSonnet">
+     <catDesc>Petrarchan Sonnet</catDesc>
+    </category>
+   </category>
+   <category xml:id="haiku">
+    <catDesc>Haiku</catDesc>
+   </category>
+  </category>
+  <category xml:id="drama">
+   <catDesc>Drama</catDesc>
+  </category>
+ </category>
+ <category xml:id="meter">
+  <catDesc>Metrical Categories</catDesc>
+  <category xml:id="feet">
+   <catDesc>Metrical Feet</catDesc>
+   <category xml:id="iambic">
+    <catDesc>Iambic</catDesc>
+   </category>
+   <category xml:id="trochaic">
+    <catDesc>trochaic</catDesc>
+   </category>
+  </category>
+  <category xml:id="feetNumber">
+   <catDesc>Number of feet</catDesc>
+   <category xml:id="pentameter">
+    <catDesc>>Pentameter</catDesc>
+   </category>
+   <category xml:id="tetrameter">
+    <catDesc>>Tetrameter</catDesc>
+   </category>
+  </category>
+ </category>
+</taxonomy>
+           </classDecl> 
+das ist das Ende einer möglichen Taxonomie -->
+        </encodingDesc>
+        <profileDesc>
+            <abstract resp="#LB">
+                <p>Good database design involves the acquisition and deployment of skills which have
+                    a wider relevance to the educational process. From a set of more or less
+                    instinctive rules of thumb a formal discipline or "methodology" of database
+                    design has evolved. Applying that methodology can be of great benefit to a very
+                    wide range of academic subjects: it requires fundamental skills of abstraction
+                    and generalisation and it provides a simple mechanism whereby complex ideas and
+                    information structures can be represented and manipulated, even without the use
+                    of a computer. </p>
+            </abstract>
+            <textClass>
+                <keywords>
+                    <term>Bodhisattvacaryāvatāra<note>Eintritt in das Verhalten der Söhne des
+                            Buddhas </note></term>
+                </keywords>
+            </textClass>
+            <creation>
+                <date>1774</date>
+            </creation>
+            <langUsage>
+                <language ident="de">Deutsch</language>
+                <language ident="en">English</language>
+                <language ident="wylie">Tibetan (Wylie)</language>
+                <language ident="bo">Tibetan (Tibetan script)</language>
+                <language ident="sa">Sanskrit</language>
+            </langUsage>
+        </profileDesc>
+        <revisionDesc>
+            <change when="2024-04-18" who="#AB">finished proofreading</change>
+            <change when="2022-06-30" who="#LB">finished proofreading</change>
+            <change notBefore="2024-07-04" who="#AB">finished data entry at end of term</change>
+            <change notAfter="2024-07-01" who="#AB">began data entry before New Year 2021</change>
+            <change when="2024-11-05" who="#AB">tagging Person, Place, Date</change>
+            <change when="2024-05-05" who="#AB">editoral declaration ergänzt</change>
+        </revisionDesc>
+    </teiHeader>
+    <standOff>
+        <listPerson>
+            <person xml:id="shantideva" role="Mönch und Poet">
+                <persName xml:lang="bo">ཞི་བ་ལྷ།་</persName>
+                <idno type="URI"
+                    >https://library.bdrc.io/show/bdr:P6161?s=q%3D%2522shantideva%2522%26lg%3Den%26t%3DPerson%26n%3D1</idno>
+                <idno type="URI">https://en.wikipedia.org/wiki/Shantideva</idno>
+                <birth from="0650" to="0750"/>
+                <birth type="7.Jhd_n.u.Z"/>
+                <death type="8.Jhd_n.u.Z"/>
+            </person>
+        </listPerson>
+        <!--  hier werden die im Text erwähnten Orte gelistet
+        <listPlace>
+            <place xml:id="ma-ru" type="village">
+                <placeName>མ་རུ་</placeName>
+                <idno type="URI">https://</idno>
+            </place>
+            <place xml:id="kache" type="region">
+                <placeName xml:lang="bo">ཁ་ཆེ་</placeName>
+                <idno type="URI">https://legacy.tbrc.org/#!rid=G2DB25458</idno>
+            </place>
+          </listPlace>
+-->
+    </standOff>
+    <text>
+        <body>
+            <div>
+                <pb ed="A" n="1" facs="../content/images/6_shantideva/shantideva_1.png"/>
+                <p>Beginn des Textes: Śāntideva "byang chub sems dpa'i spyod pa la 'jug pa" Folio 1;
+                    2. Zeile</p>
+<p>Fortsetzung 4. Stanza 3.Pada "....ma bgrubs na//.... la 'gyur// siehe Folio 2</p>
+                <p xml:lang="bo">
+                    <s xml:id="p1_01"> </s>
+                </p>
+                <p xml:lang="wylie">_slob dpon </p>
+                <p xml:lang="de"><s corresp="#1_01">Als zur </s>
+                </p>
+                <p xml:lang="en">When at </p>
+ <p xml:lang="bo">
+                    <s xml:id="p1_02"> </s>
+                </p>
+                <p xml:lang="wylie">_slob dpon </p>
+                <p xml:lang="de"><s corresp="#1_02">Als zur </s>
+                </p>
+                <p xml:lang="en">When at </p>
+ <p xml:lang="bo">
+                    <s xml:id="p1_03"> </s>
+                </p>
+                <p xml:lang="wylie">_slob dpon </p>
+                <p xml:lang="de"><s corresp="#1_03">Als zur </s>
+                </p>
+                <p xml:lang="en">When at </p>
+ <p xml:lang="bo">
+                    <s xml:id="p1_04"> </s>
+                </p>
+                <p xml:lang="wylie">_slob dpon </p>
+                <p xml:lang="de"><s corresp="#1_04">Als zur </s>
+                </p>
+                <p xml:lang="en">When at </p>
+            </div>
+            <div>
+                <pb ed="A" n="2" facs="../content/images/6_shantideva/shantideva_2.png"/>
+                <p>Beginn des Textes: Śāntideva "byang chub sems dpa'i spyod pa la 'jug pa" Folio 1;
+                    2. Zeile</p>
+<p>Fortsetzung 4. Stanza 3.Pada "....ma bgrubs na//.... la 'gyur// siehe Folio 2</p>
+                <p xml:lang="bo">
+                    <s xml:id="p2_01"> </s>
+                </p>
+                <p xml:lang="wylie">_slob dpon </p>
+                <p xml:lang="de"><s corresp="#2_01">Als zur </s>
+                </p>
+                <p xml:lang="en">When at </p>
+ <p xml:lang="bo">
+                    <s xml:id="p2_02"> </s>
+                </p>
+                <p xml:lang="wylie">_slob dpon </p>
+                <p xml:lang="de"><s corresp="#2_02">Als zur </s>
+                </p>
+                <p xml:lang="en">When at </p>
+ <p xml:lang="bo">
+                    <s xml:id="p2_03"> </s>
+                </p>
+                <p xml:lang="wylie">_slob dpon </p>
+                <p xml:lang="de"><s corresp="#2_03">Als zur </s>
+                </p>
+                <p xml:lang="en">When at </p>
+ <p xml:lang="bo">
+                    <s xml:id="p2_04"> </s>
+                </p>
+                <p xml:lang="wylie">_slob dpon </p>
+                <p xml:lang="de"><s corresp="#2_04">Als zur </s>
+                </p>
+                <p xml:lang="en">When at </p>
+            </div>
+
+        </body>
+    </text>
+</TEI>
