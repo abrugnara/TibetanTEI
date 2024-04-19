@@ -46,8 +46,8 @@ const texts = [
     { id: "2_dignaga", url: "content/2_dignaga.xml" },
     { id: "3", url: "content/3_ganden.xml" },
     { id: "4", url: "content/4_shrisena.xml" },
-    { id: "5", url: "content/4_klong_chen_ran_'byam.xml" },
-    { id: "6", url: "content/4_shantideva.xml" },
+    { id: "5", url: "content/5_klong_chen_ran_'byam.xml" },
+    { id: "6", url: "content/6_shantideva.xml" },
 ];
 ```
 
