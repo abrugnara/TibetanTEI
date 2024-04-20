@@ -39,6 +39,15 @@ Grundlegendes TEI-Markup für tibetische historische Texte (diplomatische Editio
 Neue Texte werden als XML im Ordner `content` abgelegt. Zu jedem Text wird ein Unterordner angelegt dessen Name im Idealfall dem des Dokuments gleicht. `content/mein_text`.
 
 Um den Text sichtbar zu machen, muss dieser noch registriert werden in `app/texts.js`. Dabei wird eine `id` und der relative `url` zum XML in eine Liste eingetragen. 
+Um den Text im Browser anzuzeigen ist die Datei texts.html mit TAG div anzupassen z.B.:
+'''HTML code
+<div class="text-item">
+            <a href="detail.html?id=1">
+              <h2><span lang="bo">འཕགས་པ་འཇམ་དཔལ་གཞོན་ནུར་གྱུར་པ་ལ་ཕྱག་འཚལ་ལོ།</span>Gampopa</h2>
+              <img src="content/images/1_gompopa/gompopa_page_1.jpeg" />
+              </a>
+          </div>
+'''
 
 ```javascript
 const texts = [
