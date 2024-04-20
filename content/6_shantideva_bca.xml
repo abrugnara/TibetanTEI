@@ -215,8 +215,12 @@ das ist das Ende einer möglichen Taxonomie -->
                     <s xml:id="p1_01"> Beginn des Textes: Śāntideva "byang chub sems dpa'i spyod pa
                         la 'jug pa" Folio 1; 2. Zeile <lb/>Fortsetzung 4. Stanza 3.Pada "....ma
                         bgrubs na//.... la 'gyur// siehe Folio 2<lb/>
-                        བདེ་གཤེགས་ཆོས་ཀྱི་སྐུ་མངའ་སྲས་བཅས་དང༌། །ཕྱག་འོས་ཀུན་ལའང་གུས་པར་ཕྱག་འཚལ་ཏེ།།
-                        བདེ་གཤེགས་སྲས་ཀྱི་སྡོམ་ལ་འཇུག་པ་ནི། །ལུང་བཞིན་མདོར་བསྡུས་ནས་ནི་བརྗོད་པར་བྱ།།
+                        བདེ་གཤེགས་ཆོས་ཀྱི་སྐུ་མངའ་སྲས་བཅས་དང༌།
+                        །ཕྱག་འོས་ཀུན་ལའང་གུས་པར་ཕྱག་འཚལ་ཏེ།།<lb/>
+                        བདེ་གཤེགས་སྲས་ཀྱི་སྡོམ་ལ་འཇུག་པ་ནི། །ལུང་བཞིན་མདོར་བསྡུས་ནས་ནི་བརྗོད་པར་བྱ།། </s>
+                    <s xml:id="p1_02">སྔོན་ཆད་མ་བྱུང་བ་ཡང་འདིར་བརྗོད་མེད།
+                        །སྡེབ་སྦྱོར་མཁས་པའང་བདག་ལ་ཡོད་མིན་ཏེ།།<lb/>
+                        དེ་ཕྱིར་གཞན་དོན་བསམ་པའང་བདག་ལ་མེད། །རང་གི་ཡིད་ལ་བསྒོམ་ཕྱིར་ངས་འདི་བརྩམས།།
                     </s>
                 </p>
                 <p xml:lang="wylie">bde gshegs chos kyi sku mnga' sras bcas dang /_/phyag 'os kun
@@ -233,9 +237,10 @@ das ist das Ende einer möglichen Taxonomie -->
                     Sons of the Sugata (the title of the work), in accordance with the scripture
                     [and] in brief. </p>
                 <p xml:lang="bo">
-                    <s xml:id="p1_02">སྔོན་ཆད་མ་བྱུང་བ་ཡང་འདིར་བརྗོད་མེད།
-                        །སྡེབ་སྦྱོར་མཁས་པའང་བདག་ལ་ཡོད་མིན་ཏེ།། དེ་ཕྱིར་གཞན་དོན་བསམ་པའང་བདག་ལ་མེད།
-                        །རང་གི་ཡིད་ལ་བསྒོམ་ཕྱིར་ངས་འདི་བརྩམས།། </s>
+                    <s xml:id="p1_05">སྔོན་ཆད་མ་བྱུང་བ་ཡང་འདིར་བརྗོད་མེད།
+                        །སྡེབ་སྦྱོར་མཁས་པའང་བདག་ལ་ཡོད་མིན་ཏེ།།<lb/>
+                        དེ་ཕྱིར་གཞན་དོན་བསམ་པའང་བདག་ལ་མེད། །རང་གི་ཡིད་ལ་བསྒོམ་ཕྱིར་ངས་འདི་བརྩམས།།
+                    </s>
                 </p>
                 <p xml:lang="wylie">sngon chad ma byung ba yang 'dir brjod med/_/sdeb sbyor mkhas
                     pa'ang bdag la yod min te// de phyir gzhan don bsam pa'ang bdag la med/_/rang gi
@@ -253,7 +258,7 @@ das ist das Ende einer möglichen Taxonomie -->
                     me in order to cultivate/train my own mind. </p>
                 <p xml:lang="bo">
                     <s xml:id="p1_03">དགེ་བ་བསྒོམ་ཕྱིར་བདག་གི་དད་པའི་ཤུགས།
-                        །འདི་དག་གིས་ཀྱང་རེ་ཞིག་འཕེལ་འགྱུར་ལ།། བདག་དང་སྐལ་བ་མཉམ་པ་གཞན་གྱིས་ཀྱང༌།
+                        །འདི་དག་གིས་ཀྱང་རེ་ཞིག་འཕེལ་འགྱུར་ལ།།<lb/> བདག་དང་སྐལ་བ་མཉམ་པ་གཞན་གྱིས་ཀྱང༌།
                         །ཅི་སྟེ་འདི་དག་མཐོང་ན་དོན་ཡོད་འགྱུར།། </s>
                 </p>
                 <p xml:lang="wylie">dge ba bsgom phyir bdag gi dad pa'i shugs/_/'di dag gis kyang re
@@ -269,7 +274,7 @@ das ist das Ende einer möglichen Taxonomie -->
                     fortune to myself view these, Some benefit might ensue. </p>
                 <p xml:lang="bo">
                     <s xml:id="p1_04">དལ་འབྱོར་འདི་ནི་རྙེད་པར་ཤིན་ཏུ་དཀའ།
-                        །སྐྱེས་བུའི་དོན་གྲུབ་ཐོབ་པར་འགྱུར་པ་ལ།། གལ་ཏེ་འདི་ལ་ཕན་པ་མ་བསྒྲུབས་ན།
+                        །སྐྱེས་བུའི་དོན་གྲུབ་ཐོབ་པར་འགྱུར་པ་ལ།།<lb/> གལ་ཏེ་འདི་ལ་ཕན་པ་མ་བསྒྲུབས་ན།
                         །ཕྱིས་འདི་ཡང་དག་འབྱོར་པར་ག་ལ་འགྱུར།། </s>
                 </p>
                 <p xml:lang="wylie"> dal 'byor 'di ni rnyed par shin tu dka'/_/skyes bu'i don grub
