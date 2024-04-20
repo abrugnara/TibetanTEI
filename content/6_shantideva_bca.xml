@@ -217,15 +217,22 @@ das ist das Ende einer möglichen Taxonomie -->
                         bgrubs na//.... la 'gyur// siehe Folio 2<lb/>
                         བདེ་གཤེགས་ཆོས་ཀྱི་སྐུ་མངའ་སྲས་བཅས་དང༌།
                         །ཕྱག་འོས་ཀུན་ལའང་གུས་པར་ཕྱག་འཚལ་ཏེ།།<lb/>
-                        བདེ་གཤེགས་སྲས་ཀྱི་སྡོམ་ལ་འཇུག་པ་ནི། །ལུང་བཞིན་མདོར་བསྡུས་ནས་ནི་བརྗོད་པར་བྱ།། </s>
+                        བདེ་གཤེགས་སྲས་ཀྱི་སྡོམ་ལ་འཇུག་པ་ནི།
+                        །ལུང་བཞིན་མདོར་བསྡུས་ནས་ནི་བརྗོད་པར་བྱ།།<lb/>
+                    </s>
                     <s xml:id="p1_02">སྔོན་ཆད་མ་བྱུང་བ་ཡང་འདིར་བརྗོད་མེད།
                         །སྡེབ་སྦྱོར་མཁས་པའང་བདག་ལ་ཡོད་མིན་ཏེ།།<lb/>
-                        དེ་ཕྱིར་གཞན་དོན་བསམ་པའང་བདག་ལ་མེད། །རང་གི་ཡིད་ལ་བསྒོམ་ཕྱིར་ངས་འདི་བརྩམས།།
+                        དེ་ཕྱིར་གཞན་དོན་བསམ་པའང་བདག་ལ་མེད།
+                        །རང་གི་ཡིད་ལ་བསྒོམ་ཕྱིར་ངས་འདི་བརྩམས།།<lb/>
+                    </s>
+                    <s xml:id="p1_03">དགེ་བ་བསྒོམ་ཕྱིར་བདག་གི་དད་པའི་ཤུགས།
+                        །འདི་དག་གིས་ཀྱང་རེ་ཞིག་འཕེལ་འགྱུར་ལ།།<lb/> བདག་དང་སྐལ་བ་མཉམ་པ་གཞན་གྱིས་ཀྱང༌།
+                        །ཅི་སྟེ་འདི་དག་མཐོང་ན་དོན་ཡོད་འགྱུར།།<lb/>
                     </s>
                 </p>
-                <p xml:lang="wylie">bde gshegs chos kyi sku mnga' sras bcas dang /_/phyag 'os kun
-                    la'ang gus par phyag 'tshal te// bde gshegs sras kyi sdom la 'jug pa ni/_/lung
-                    bzhin mdor bsdus nas ni brjod par bya// </p>
+                <p xml:lang="wylie"><lb/><lb/><lb/><lb/>bde gshegs chos kyi sku mnga' sras bcas dang
+                    /_/phyag 'os kun la'ang gus par phyag 'tshal te// bde gshegs sras kyi sdom la
+                    'jug pa ni/_/lung bzhin mdor bsdus nas ni brjod par bya// </p>
                 <p xml:lang="de"><s corresp="#1_01">[Ich] verneige mich respektvoll vor den Buddhas,
                         die den Dharmakay besitzen; zusammen mit den Söhnen (Bodhisattvas); und
                         allen die der Verehrung wert sind. Betreffend dem Eintritt in das
@@ -236,12 +243,6 @@ das ist das Ende einer möglichen Taxonomie -->
                     all worthy of respect, I will teach (kath) the Entrance into the Conduct of the
                     Sons of the Sugata (the title of the work), in accordance with the scripture
                     [and] in brief. </p>
-                <p xml:lang="bo">
-                    <s xml:id="p1_05">སྔོན་ཆད་མ་བྱུང་བ་ཡང་འདིར་བརྗོད་མེད།
-                        །སྡེབ་སྦྱོར་མཁས་པའང་བདག་ལ་ཡོད་མིན་ཏེ།།<lb/>
-                        དེ་ཕྱིར་གཞན་དོན་བསམ་པའང་བདག་ལ་མེད། །རང་གི་ཡིད་ལ་བསྒོམ་ཕྱིར་ངས་འདི་བརྩམས།།
-                    </s>
-                </p>
                 <p xml:lang="wylie">sngon chad ma byung ba yang 'dir brjod med/_/sdeb sbyor mkhas
                     pa'ang bdag la yod min te// de phyir gzhan don bsam pa'ang bdag la med/_/rang gi
                     yid la bsgom phyir ngas 'di brtsams// </p>
@@ -259,7 +260,12 @@ das ist das Ende einer möglichen Taxonomie -->
                 <p xml:lang="bo">
                     <s xml:id="p1_03">དགེ་བ་བསྒོམ་ཕྱིར་བདག་གི་དད་པའི་ཤུགས།
                         །འདི་དག་གིས་ཀྱང་རེ་ཞིག་འཕེལ་འགྱུར་ལ།།<lb/> བདག་དང་སྐལ་བ་མཉམ་པ་གཞན་གྱིས་ཀྱང༌།
-                        །ཅི་སྟེ་འདི་དག་མཐོང་ན་དོན་ཡོད་འགྱུར།། </s>
+                        །ཅི་སྟེ་འདི་དག་མཐོང་ན་དོན་ཡོད་འགྱུར།།<lb/>
+                    </s>
+                    <s xml:id="p1_04">དལ་འབྱོར་འདི་ནི་རྙེད་པར་ཤིན་ཏུ་དཀའ།
+                        །སྐྱེས་བུའི་དོན་གྲུབ་ཐོབ་པར་འགྱུར་པ་ལ།།<lb/> གལ་ཏེ་འདི་ལ་ཕན་པ་མ་བསྒྲུབས་ན།
+                        །ཕྱིས་འདི་ཡང་དག་འབྱོར་པར་ག་ལ་འགྱུར།།<lb/>
+                    </s>
                 </p>
                 <p xml:lang="wylie">dge ba bsgom phyir bdag gi dad pa'i shugs/_/'di dag gis kyang re
                     zhig 'phel 'gyur la// bdag dang skal ba mnyam pa gzhan gyis kyang /_/ci ste 'di
@@ -275,7 +281,8 @@ das ist das Ende einer möglichen Taxonomie -->
                 <p xml:lang="bo">
                     <s xml:id="p1_04">དལ་འབྱོར་འདི་ནི་རྙེད་པར་ཤིན་ཏུ་དཀའ།
                         །སྐྱེས་བུའི་དོན་གྲུབ་ཐོབ་པར་འགྱུར་པ་ལ།།<lb/> གལ་ཏེ་འདི་ལ་ཕན་པ་མ་བསྒྲུབས་ན།
-                        །ཕྱིས་འདི་ཡང་དག་འབྱོར་པར་ག་ལ་འགྱུར།། </s>
+                        །ཕྱིས་འདི་ཡང་དག་འབྱོར་པར་ག་ལ་འགྱུར།།<lb/>
+                    </s>
                 </p>
                 <p xml:lang="wylie"> dal 'byor 'di ni rnyed par shin tu dka'/_/skyes bu'i don grub
                     thob par 'gyur pa la// gal te 'di la phan pa ma bsgrubs na/_/phyis 'di yang dag
