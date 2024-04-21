@@ -219,7 +219,7 @@ das ist das Ende einer möglichen Taxonomie -->
                         །ཕྱག་འོས་ཀུན་ལའང་གུས་པར་ཕྱག་འཚལ་ཏེ།།<lb/>
                         བདེ་གཤེགས་སྲས་ཀྱི་སྡོམ་ལ་འཇུག་པ་ནི།
                         །ལུང་བཞིན་མདོར་བསྡུས་ནས་ནི་བརྗོད་པར་བྱ།།<lb/>
-                    </s><lb/><lb/>
+                    </s><lb/>
                     <s xml:id="p1_02">སྔོན་ཆད་མ་བྱུང་བ་ཡང་འདིར་བརྗོད་མེད།
                         །སྡེབ་སྦྱོར་མཁས་པའང་བདག་ལ་ཡོད་མིན་ཏེ།།<lb/>
                         དེ་ཕྱིར་གཞན་དོན་བསམ་པའང་བདག་ལ་མེད།
@@ -239,10 +239,20 @@ das ist das Ende einer möglichen Taxonomie -->
                     <lb/>
                     <lb/>
                     <l>
-                        <cl> bde gshegs chos kyi sku mnga' sras bcas dang //</cl><cl>phyag 'os kun
-                            la'ang gus par phyag 'tshal te// </cl></l><lb/><lb/>
-                    <l><cl>bde gshegs sras kyi sdom la 'jug pa ni/_/</cl><cl>lung bzhin mdor bsdus
-                            nas ni brjod par bya// </cl></l><lb/><lb/>
+                        <cl><phr><w type="noun"><w type="Subjekt">bde gshegs</w></w></phr>
+                            <phr><w type="noun"><w type="dO"> chos kyi sku</w>
+                                    <w type="verb"><w type="hon."><w type="Prädikat">
+                                        mnga'</w></w></w></w></phr>
+                            <w type="adv."> sras bcas dang</w> //</cl><cl><phr>phyag 'os</phr>
+                            <phr>kun la'ang <w type="adv.">gus pa</w><m type="konj.">r</m>
+                                <w type="verb"> phyag 'tshal</w><m type="semifinpart">
+                            te</m></phr>// </cl></l><lb/><lb/>
+                    <l><cl><phr><w type="noun"><w type="attr.">bde gshegs sras</w></w>
+                                <m type="attrsuff.">kyi </m><w type="noun"> sdom</w>
+                                <m type="la_don_suff."><m sameAs="lok">la</m></m>
+                                <w type="verb">'jug pa</w>
+                                <m type="focpart.">ni</m></phr>/_/</cl><cl><phr><w type="noun">lung</w> <w type="verglpart">bzhin</w> <w type="noun">mdor
+                                bsdus</w> <m type="pp">nas</m> <m type="focpart.">ni</m> <w type="verb">brjod pa</w> <m type="???">r</m> <w type="hiv"><m type="futur">bya</m></w></phr>// </cl></l><lb/><lb/>
                     <l>
                         <cl>sngon chad ma byung ba yang 'dir brjod med/_/</cl><cl>sdeb sbyor mkhas
                             pa'ang bdag la yod min te// </cl></l><lb/><lb/>
