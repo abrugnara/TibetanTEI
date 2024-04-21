@@ -192,8 +192,8 @@ das ist das Ende einer möglichen Taxonomie -->
                 <birth from="0650" to="0750"/>
                 <birth type="7.Jhd_n.u.Z"/>
                 <death type="8.Jhd_n.u.Z"/>
-                <persName xml:id="shantideva_01" role="Mönch und Poet" type="BUDA"
-                    key="P6161" subtype="nomen">དབྱིག་གཉེན</persName>
+                <persName xml:id="shantideva_01" role="Mönch und Poet" type="BUDA" key="P6161"
+                    subtype="nomen">དབྱིག་གཉེན</persName>
             </person>
         </listPerson>
         <!--  hier werden die im Text erwähnten Orte gelistet
@@ -219,17 +219,17 @@ das ist das Ende einer möglichen Taxonomie -->
                         bgrubs na//.... la 'gyur// siehe Folio 2<lb/>
                         <cl><phr><w type="noun"><w type="Subjekt">བདེ་གཤེགས</w></w></phr>
                             <phr><w type="noun"><w type="dO">་ཆོས་ཀྱི་སྐུ</w>
-                                    <w type="verb"><w type="hon."><w type="Prädikat">་མངའ</w></w></w></w></phr>
+                                    <w type="verb"><w type="hon."><w type="Prädikat"
+                                        >་མངའ</w></w></w></w></phr>
                             <w type="adv.">་སྲས་བཅས་དང</w>༌།།</cl><cl><phr>ཕྱག་འོས</phr>
                             <phr>་ཀུན་ལའང <w type="adv.">་གུས་པ</w><m type="konj.">ར་</m>
-                                <w type="verb"> ཕྱག་འཚལ</w><m type="semifinpart"></m><m type="semifinpart">
-                            ་ཏེ</m></phr>།།</cl><lb/><lb/>
+                                <w type="verb"> ཕྱག་འཚལ</w><m type="semifinpart"/><m
+                                    type="semifinpart"> ་ཏེ</m></phr>།།</cl><lb/><lb/>
                         <cl><phr><w type="noun"><w type="Subjekt">བདེ་གཤེགས་སྲས་</w></w>
                                 <m type="attrsuff.">ཀྱི་</m><w type="noun"> སྡོམ་</w>
                                 <m type="la_don_suff."><m sameAs="lok">ལ་</m></m>
                                 <w type="verb">འཇུག་པ</w>
-                                <m type="focpart.">་ནི</m></phr>།
-                        །</cl><cl><phr><w type="noun"
+                                <m type="focpart.">་ནི</m></phr>། །</cl><cl><phr><w type="noun"
                                     >ལུང</w>
                                 <w type="verglpart">་བཞིན</w>
                                 <w type="noun">་མདོར་བསྡུས་</w>
@@ -257,13 +257,9 @@ das ist das Ende einer möglichen Taxonomie -->
                     <lb/>
                     <lb/>
                     <lb/>
-                    <l>
-                        bde gshegs chos kyi sku mnga' sras bcas dang // phyag 'os</phr>
-                            <phr>kun la'ang <w type="adv.">gus pa</w><m type="konj.">r</m>
-                                <w type="verb"> phyag 'tshal</w><m type="semifinpart">
-                            te</m></phr>// </cl></l><lb/><lb/>
-                    <l><cl><phr><w type="noun"><w type="attr.">bde gshegs sras</w></w>
-                                <m type="attrsuff.">kyi </m><w type="noun"> sdom</w>
+                    <l> bde gshegs chos kyi sku mnga' sras bcas dang // phyag 'os kun la'ang gus par
+                        phyag 'tshal te// </l><lb/><lb/>
+                    <l>bde gshegs sras kyi sdom</w>
                                 <m type="la_don_suff."><m sameAs="lok">la</m></m>
                                 <w type="verb">'jug pa</w>
                                 <m type="focpart.">ni</m></phr>/_/</cl><cl><phr><w type="noun"
