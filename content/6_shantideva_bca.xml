@@ -192,6 +192,8 @@ das ist das Ende einer möglichen Taxonomie -->
                 <birth from="0650" to="0750"/>
                 <birth type="7.Jhd_n.u.Z"/>
                 <death type="8.Jhd_n.u.Z"/>
+                <persName xml:id="shantideva_01" role="Mönch und Poet" type="BUDA"
+                    key="P6161" subtype="nomen">zhi ba lha</persName>
             </person>
         </listPerson>
         <!--  hier werden die im Text erwähnten Orte gelistet
