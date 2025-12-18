@@ -34,7 +34,7 @@ Grundlegendes TEI-Markup für tibetische historische Texte (diplomatische Editio
     Suffixe / Partikel mit und ohne grammatikalischer Bedeutung
     Erklärungen
     
-### Neuen Text einpflegen
+### Neuen Text für neue Textzeugen einpflegen
 
 Neue Texte werden als XML im Ordner `content` abgelegt. Zu jedem Text wird ein Unterordner angelegt dessen Name im Idealfall dem des Dokuments gleicht. `content/mein_text`.
 
