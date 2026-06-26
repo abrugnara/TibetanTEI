@@ -113,7 +113,6 @@ content/DEFAULT_Neu.xml
 vocab_to_tei_web
 
 # Große Rohdaten / Archive (gehören nicht ins Repo) - 2026-06-26
-content/9_Vimalaprabha/*.tif
 content/images/9_Vimalaprabha/W23703-v15_img370-466.zip
 content/images/6_shantideva/Shantideva_W23703.zip
 content/standoff-plugin-1.0.0-SNAPSHOT/lib/*.jar
