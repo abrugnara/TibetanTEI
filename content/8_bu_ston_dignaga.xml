@@ -1,0 +1,353 @@
+<?xml version='1.0' encoding='utf-8'?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0">
+    <teiHeader>
+        <fileDesc>
+            <titleStmt>
+                <title xml:lang="bo"><!-- Buston Dignag --></title>
+                <title xml:lang="de"><!-- Buston Dignaga --></title>
+                <author>
+                    <name xml:lang="bo"><!-- Autor in u-chen --></name>
+                    <name xml:lang="bo-Latn"><!-- bu ston --></name>
+                </author>
+                <respStmt>
+                    <resp>Text input:</resp>
+                    <name xml:id="AB">Albert Brugnara</name>
+                </respStmt>
+            </titleStmt>
+            <editionStmt>
+                <edition>
+                    <date>2026</date>
+                </edition>
+            </editionStmt>
+            <publicationStmt>
+                <publisher>Institut für Südasien-, Tibet- und Buddhismuskunde, Universität
+                    Wien</publisher>
+                <distributor>Horst Lasic, Universität Wien</distributor>
+                <availability>
+                    <licence target="https://creativecommons.org/licenses/by-sa/4.0/"> CC BY-SA 4.0
+                        — Creative Commons Attribution Share-Alike 4.0 </licence>
+                </availability>
+            </publicationStmt>
+            <notesStmt>
+                <note><p><!-- Anmerkungen zum Text --></p></note>
+            </notesStmt>
+            <sourceDesc>
+                <listWit>
+                    <witness xml:id="A">
+                        <bibl>
+                            <!-- Vollständige bibliographische Angabe des Textzeugen A -->
+                        </bibl>
+                    </witness>
+                    <witness xml:id="B">
+                        <bibl>
+                            <!-- Vollständige bibliographische Angabe des Textzeugen B -->
+                        </bibl>
+                    </witness>
+                </listWit>
+            </sourceDesc>
+        </fileDesc>
+        <encodingDesc>
+            <editorialDecl>
+                <p>Named entities (Personen, Orte, Werktitel, Daten) sind annotiert und mit BUDA
+                    (https://library.bdrc.io/) und SRC (https://sakyaresearch.org/) verknüpft.</p>
+                <correction status="high" method="silent">
+                    <p>Korrekturen stillschweigend vorgenommen.</p>
+                </correction>
+                <quotation marks="all">
+                    <p>Doppelte Anführungszeichen mit „", einfache mit Apostroph.</p>
+                </quotation>
+                <hyphenation eol="none">
+                    <p>Silbentrennung am Zeilenende wurde aufgelöst.</p>
+                </hyphenation>
+                <interpretation>
+                    <p>Personen blau, Orte orange, Werktitel grün, Daten rosa markiert.
+                        Fremdsprachige Ausdrücke (Sanskrit) kursiv.</p>
+                </interpretation>
+            </editorialDecl>
+        </encodingDesc>
+        <profileDesc>
+            <abstract>
+                <p xml:lang="de"><!-- Kurzbeschreibung des Textes --></p>
+            </abstract>
+            <langUsage>
+                <language ident="bo">Tibetisch (u-chen)</language>
+                <language ident="bo-Latn">Tibetisch (Wylie-Transliteration)</language>
+                <language ident="de">Deutsch</language>
+                <language ident="en">Englisch</language>
+                <language ident="sa">Sanskrit</language>
+            </langUsage>
+        </profileDesc>
+        <revisionDesc>
+            <change when="2026-06-01" who="#AB">Erstanlage der Datei nach
+                TibetanTEI-Editionsrichtlinie v1.0</change>
+        </revisionDesc>
+    </teiHeader>
+
+    <standOff>
+        <listPerson>
+
+            <!-- ============================================================
+                 PERSONENREGISTER
+                 Jede Person erhält:
+                   - xml:id: Kleinbuchstaben ASCII, z. B. "vasubandhu"
+                   - <persName xml:lang="bo">: Name in u-chen
+                   - <persName xml:lang="bo-Latn">: Name in Wylie
+                   - <persName xml:lang="sa">: Sanskrit-Name (falls vorhanden)
+                   - <note type="role">: Rolle nach Editionsrichtlinie
+                   - <idno type="URI">: BUDA- oder SRC-URL
+                   - <birth>/<death>: Lebensdaten (optional)
+                 ============================================================ -->
+
+            <person xml:id="person_A">
+                <persName xml:lang="bo"><!-- Name in u-chen --></persName>
+                <persName xml:lang="bo-Latn"><!-- Name in Wylie --></persName>
+                <persName xml:lang="sa"><!-- Sanskrit-Name --></persName>
+                <birth when="0001"/>
+                <!-- oder: notBefore="0400" notAfter="0500" -->
+                <death when="0001"/>
+                <note type="role"
+                    ><!-- z. B. Autor / Lehrer / Schüler / König / Philosoph / noch zu erschließen --></note>
+                <idno type="URI">https://library.bdrc.io/show/bdr:<!-- KEY --></idno>
+            </person>
+
+            <person xml:id="person_B">
+                <persName xml:lang="bo"><!-- Name in u-chen --></persName>
+                <persName xml:lang="bo-Latn"><!-- Name in Wylie --></persName>
+                <note type="role">noch zu erschließen</note>
+                <idno type="URI"><!-- URL noch nicht ermittelt --></idno>
+            </person>
+
+        </listPerson>
+
+        <listPlace>
+
+            <!-- ============================================================
+                 ORTSREGISTER
+                 Jeder Ort erhält:
+                   - xml:id: z. B. "kashmir"
+                   - @type: "place", "region", "monastery", "city"
+                   - <placeName xml:lang="bo">: Name in u-chen
+                   - <idno type="URI">: BUDA- oder SRC-URL
+                 ============================================================ -->
+
+            <place xml:id="place_A" type="region">
+                <placeName xml:lang="bo"><!-- Ortsname in u-chen --></placeName>
+                <placeName xml:lang="sa"><!-- Sanskrit-Name --></placeName>
+                <idno type="URI"><!-- URL noch nicht ermittelt --></idno>
+            </place>
+
+            <place xml:id="place_placeholder">
+                <placeName xml:lang="de">Platzhalter — Ortsregister noch nicht
+                    erschlossen</placeName>
+                <note type="status">pending</note>
+            </place>
+
+        </listPlace>
+
+        <listBibl>
+
+            <!-- ============================================================
+                 WERKVERZEICHNIS
+                 Jedes Werk erhält:
+                   - xml:id: z. B. "bca"
+                   - <title xml:lang="bo">/<sa>/<de>: Titel in Sprachen
+                   - <author corresp="#xml:id">: Verweis auf Person
+                   - <idno type="URI">: BUDA-URL
+                 ============================================================ -->
+
+            <bibl xml:id="werk_A">
+                <title xml:lang="bo"><!-- Titel in u-chen --></title>
+                <title xml:lang="sa"><!-- Titel in Sanskrit --></title>
+                <title xml:lang="de"><!-- Titel auf Deutsch --></title>
+                <author corresp="#person_A"/>
+                <idno type="URI"><!-- URL noch nicht ermittelt --></idno>
+            </bibl>
+
+        </listBibl>
+
+        <fvLib n="vocab">
+
+            <!-- ============================================================
+                 VOKABELREGISTER — TEI-P5-konform als Feature Value Library
+                 Struktur:
+                   <fs xml:id="lex_[wylie_ohne_leerzeichen]" type="vocab">
+                     <f name="wylie">      <string>Belegform in Wylie</string></f>
+                     <f name="uchen">      <string>Belegform in u-chen</string></f>
+                     <f name="lemma_wylie"><string>Lemma in Wylie</string></f>
+                     <f name="lemma_uchen"><string>Lemma in u-chen</string></f>
+                     <f name="stem1">      <string>1. Stammform</string></f>
+                     <f name="stem2">      <string>2. Stammform</string></f>
+                     <f name="stem3">      <string>3. Stammform</string></f>
+                     <f name="stem4">      <string>4. Stammform</string></f>
+                     <f name="pos">        <string>POS-Tag</string></f>
+                     <f name="subc">       <string>tdV / tmdV / genitive / ...</string></f>
+                     <f name="def_de">     <string>Deutsche Definition</string></f>
+                     <f name="def_en">     <string>Englische Definition</string></f>
+                   </fs>
+
+                 Verweis im Text:
+                   <w xml:id="w01_01_001" pos="V.past" ana="#lex_byas_pa">བྱས</w>
+
+                 Hinweis: Partikeln (PART.*) werden nicht erfasst.
+                 ============================================================ -->
+
+            <fs xml:id="lex_BEISPIEL" type="vocab">
+                <f name="wylie">
+                    <string><!-- Belegform in Wylie --></string></f>
+                <f name="uchen">
+                    <string><!-- Belegform in u-chen --></string></f>
+                <f name="lemma_wylie"><string><!-- Lemma in Wylie --></string></f>
+                <f name="lemma_uchen"><string><!-- Lemma in u-chen --></string></f>
+                <!-- Stammformen nur bei Verben: -->
+                <f name="stem1">
+                    <string><!-- 1. SF --></string></f>
+                <f name="stem2">
+                    <string><!-- 2. SF --></string></f>
+                <f name="stem3">
+                    <string><!-- 3. SF --></string></f>
+                <f name="stem4">
+                    <string><!-- 4. SF --></string></f>
+                <f name="pos">
+                    <string><!-- z. B. V.past, N, N.prop, ADJ --></string></f>
+                <f name="subc">
+                    <string><!-- tdV / tmdV --></string></f>
+                <f name="def_de">
+                    <string><!-- Deutsche Definition --></string></f>
+                <f name="def_en">
+                    <string><!-- Englische Definition --></string></f>
+            </fs>
+
+        </fvLib>
+    </standOff>
+
+    <text>
+        <body>
+            <div>
+                <!-- ============================================================
+                     SEITENSTRUKTUR:
+                     - <pb>: Seitenumbruch, immer VOR dem <p>
+                       @ed: Textzeuge (A, B, ...)
+                       @n: Seitenbezeichnung (1, 2, 60a, 60b, ...)
+                       @facs: Pfad zum Faksimile-Bild
+                     - <p xml:lang="bo">: Tibetischer Text
+                     - <p xml:lang="de">: Deutsche Übersetzung
+                     ============================================================ -->
+                <pb ed="A" n="236" facs="../content/images/8_bu_ston_dignaga/buston_1.pdf"/>
+                <!-- facs: Pfad zum Faksimile anpassen, z. B.:
+                    ../content/images/[Ordner]/[Dateiname].jpeg -->
+
+                <p xml:lang="bo">
+                    <!-- ============================================================
+                         SATZBAUPLAN-ANNOTATION (nach Schwieger/Bialek):
+                         <s>   Satz
+                           <cl> Klausel (type: main / dependent / relative / quotative)
+                             <phr> Phrase mit syntaktischer Funktion:
+                               function="S:Erg"    Subjekt im Ergativ
+                               function="S:Abs"    Subjekt im Absolutiv
+                               function="dO:Abs"   Direktes Objekt im Absolutiv
+                               function="iO:PP"    Indirektes Objekt (Postpos.-Phrase)
+                               function="SPrae:Abs" Subjektprädikativ
+                               function="Praed:PP" Prädikat als Postpos.-Phrase
+                               function="AB:lok"   Adverbialbestimmung Lokal
+                               function="AB:temp"  Adverbialbestimmung Temporal
+                               function="AB:kaus"  Adverbialbestimmung Kausal
+                               function="AB:mod"   Adverbialbestimmung Modal
+                               function="AB:final" Adverbialbestimmung Final
+                               function="ThemaPart" Themapartikel (ni-Phrase)
+                               function="ZitPart"  Zitierpartikel-Phrase
+                               function="FinSuf"   Finalsuffix-Phrase
+                               function="Konj"     Konjunktionsphrase
+                               function="FokPart"  Fokuspartikel-Phrase
+                               function="PlPart"   Pluralpartikel-Phrase
+                               function="KSuf"     Kasussuffix-Phrase
+
+                         TSEG-REGEL:
+                           Der Tseg (་) steht als Textknoten ZWISCHEN den Tags,
+                           nicht innerhalb von <w>. Beispiel:
+                           <w>sloB dpon</w>་<w>chen po</w>་
+
+                           Ausnahmen:
+                           - Kein Tseg nach letztem Token vor | oder ||
+                           - Komposita enthalten den Tseg INNERHALB von <w>:
+                             <w>sloB dpon</w> (sloB-dpon = ein Token mit innerem Tseg)
+                           - Bei Named Entities steht der Tseg nach </w>
+                             aber innerhalb des Named-Entity-Tags:
+                             <persName ...><w>dbyig gnyen</w>་</persName>
+
+                         TOKEN-ANNOTATION (<w>):
+                           xml:id    Pflicht: w[Seite]_[Satz]_[Token], z. B. w01_01_001
+                           pos       Pflicht: POS-Tag (N, V.past, PART.case, ...)
+                           type      Wortklasse (noun, verb, particle, adjective, ...)
+                           subtype   Subkategorie (genitive, dative, personal_name, ...)
+                           function  Kasus-/Partikelfunktion (genitive, dative, ...)
+                           vclass    Verbklasse: VG1–VG6
+                           valency   Valenz: tdV (transitiv) / tmdV (intransitiv)
+                           sf        Stammform: 1.SF / 2.SF / 3.SF / 4.SF
+                           lemma     Grundform (bei Verbformen)
+
+                         BELEGSTELLEN (<note type="ref"> am <phr> oder <cl>):
+                           Schwieger:  §[Abschn.] (S. [Seitenzahl]): [Anfang Beispielsatz]
+                           Bialek Lek.: Lek. [Nr.], „[Überschrift]", Abschn. [a/b/c]: ...
+                           Bialek CTG: Bialek (CTG), „[Überschrift]": ...
+                           Bialek TB:  Bialek (TB), „[ÜBERSCHRIFT]": ...
+                         ============================================================ -->
+                    <!-- s01 དབྱིག་གཉེན་གྱི་སློབ་མ་ཚད་མ་རང་ལས་མཁས་པ་དཔལ་ལྡན་ཕྱོགས་ཀྱི་གླང་པོ་ནི། -->
+                    <s xml:id="s01_01">
+                        <cl type="main">
+                            <phr function="S:Erg">
+                                <!-- Nominale Phrase im Ergativ — Subjekt eines transitiven Verbs -->
+                                <w xml:id="w01_01_001" pos="N.prop" type="noun"
+                                    subtype="personal_name" corresp="#person_A"
+                                    ><!-- Token 1 (ohne Tseg) --></w>་<w xml:id="w01_01_002"
+                                    pos="PART.case" type="particle" subtype="agentive"
+                                    function="agentive"><!-- Kasuspartikel gyis/kyis/gis --></w>
+                                <note type="ref">Schwieger §79 (S. 52): rgyal pos</note>
+                            </phr>
+                            <phr function="dO:Abs">
+                                <!-- Nominale Phrase im Absolutiv — direktes Objekt -->
+                                <w xml:id="w01_01_003" pos="N" type="noun"
+                                    ><!-- Token 3 (ohne Tseg) --></w>་<w xml:id="w01_01_004"
+                                    pos="PART.case" type="particle" subtype="genitive"
+                                    function="genitive"><!-- Kasuspartikel kyi/gyi/gi --></w>
+                            </phr>
+                            <phr function="Praed:PP">
+                                <!-- Verbphrase — Prädikat -->
+                                <w ana="VG3 tdV 2.SF" xml:id="w01_01_005" pos="V.past" type="verb"
+                                    ><!-- Verbform --></w>
+                            </phr>
+                        </cl>
+                        <pc xml:id="pc01_01_01" type="shad">།</pc>
+                    </s>
+                    <!-- s02  -->
+                    <!-- s03  -->
+                    <!-- s04  -->
+                    <!-- s05  -->
+                    <!-- s06  -->
+                    <!-- s07  -->
+                    <!-- s08  -->
+                    <!-- s09  -->
+                    <!-- s10  -->
+                </p>
+
+                <p xml:lang="de">
+                    <!-- Dignāga — Vasubandhus Schüler und von Natur aus in der Erkenntnistheorie bewandert —
+                        empfing seine Ordination von einem Abt brahmanischer Herkunft, der der Mutter-und-Sohn-Schule angehörte, 
+                        und studierte mit großem Eifer die weltlichen Wissenschaften wie Grammatik und anderes. Dann bat er den Abt um eine 
+                        Unterweisung in der Meditationspraxis der Entsagung. Dieser erwiderte: „Meditiere über das Selbst, das — ausgehend von den fünf Aggregaten — 
+                        weder mit diesen identisch noch von ihnen verschieden ist!" Er meditierte, doch fand das Selbst nicht. Er fragte sich, ob er
+                        womöglich durch äußere und innere Verdunkelungen behindert sei. Daraufhin entzündete er in alle vier 
+                        Himmelsrichtungen große Fackeln, entblößte seinen Körper, öffnete weit die Augen und suchte das Selbst in allen zehn Richtungen — vergebens.  --></p>
+                <p xml:lang="en"
+                    ><!-- Dignāga — disciple of Vasubandhu and naturally gifted in the study of valid cognition —
+                        received ordination from an abbot of brahmin caste belonging to the Mother-and-Son school, 
+                        and diligently trained himself in the worldly sciences such as grammar and the like. 
+                        He then asked the abbot for oral instructions on the meditation of renunciation. 
+                        The abbot replied: "Meditate on the self that — beginning from the aggregates — 
+                        can be expressed as neither identical to them nor different from them!" 
+                        He meditated, but did not find the self. He wondered: "Could it be that I am veiled by outer and inner obscurations?" 
+                        Thinking thus, he lit great torches in the four cardinal directions, bared his body, 
+                        opened his eyes wide, and searched for the self in all ten directions — yet still did not find it.--></p>
+            </div>
+        </body>
+    </text>
+</TEI>

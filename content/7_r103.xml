@@ -1,0 +1,1114 @@
+<?xml version="1.0" encoding="UTF-8"?><TEI xmlns="http://www.tei-c.org/ns/1.0">
+  <teiHeader>
+     <fileDesc>
+      <titleStmt><!-- Titles and Transcription Data -->
+        <title xml:lang="bo">ཆོས་ཀྱི་རྗེ་ཐམས་ཅད་མཁྱེན་པ་རྡོ་རྗེ་གདན་པ་ཆེན་པོའི་རྣམ་པར་ཐར་པ་རིན་པོ་ཆེའི་འཕྲེང་པ། {བོད་ཡིག་གློག་རྡུལ་དཔེ་ཆ།}</title>
+        <title xml:lang="en">Hagiography of Gong dkar rDo rje gdan pa Kun dga' rnam rgyal (1432–1496), no. III {etext | Tibetan}</title>
+        <author><!-- Author with ID -->
+          <name xml:lang="bo">རྣམ་རྒྱལ་མགོན་པོ་དྲི་མེད་སྡེ།</name>
+        </author>
+        <respStmt>
+          <resp>Digital edition:</resp>
+          <name xml:id="src">ས་སྐྱ་ཞིབ་འཇུག་ཁང་།</name>
+        </respStmt>
+        <respStmt><!-- Textinput -->
+          <resp>Text input:</resp>
+          <name xml:id="ld">བློ་གསལ་དོན་གྲུབ།</name>
+        </respStmt>
+        <respStmt><!-- Text edition (Conversion, Page numbering, Outlines, etc.) -->
+          <resp>Editorial process:</resp>
+          <name xml:id="mf">Mathias Fermer</name>
+        </respStmt>
+      </titleStmt>
+      <editionStmt><!-- Version,Transliteration/Transcription, Status -->
+        <edition>Digital version 2.0 {Tibetan}; master xml (completed: 2012-11-07); revision in process, thematic TEI markup</edition>
+        <respStmt>
+          <resp>TEI Encoding:</resp>
+          <name ref="#src">ས་སྐྱ་ཞིབ་འཇུག་ཁང་།</name><!-- Sakya Research Centre -->
+          </respStmt>
+        <respStmt><!-- Text markup -->
+          <resp>TEI Markup:</resp>
+          <name xml:id="mf2">Mathias Fermer</name>
+        </respStmt>
+        <respStmt><!-- Text revision -->
+          <resp>Revisions/Corrections:</resp>
+          <name>-</name>
+        </respStmt>
+      </editionStmt>
+
+      <publicationStmt>
+        <distributor>
+          <ref target="http://www.sakyaresearch.org">Sakya Research Centre</ref>
+          <!-- if from external source file: <ref target="http://www...">name website/file (accessed: 2013-03-01)</ref> -->
+        </distributor>
+        <idno>r103</idno><!-- SRC ID -->
+        
+        <publisher>Sakya Research Centre</publisher>
+        <availability>
+          <licence target="https://creativecommons.org/licenses/by-sa/4.0/">
+            CC BY-SA 4.0 — Creative Commons Attribution Share-Alike 4.0
+          </licence>
+        </availability>
+      </publicationStmt>
+
+      <notesStmt>
+        <note><p>Keine weiteren Anmerkungen.</p></note>
+      </notesStmt>
+
+      <sourceDesc>
+        <listWit><!-- Page numbering -->
+          <witness xml:id="A">Manuscript<bibl>: <!-- Descriptive: Published/Modern Text Edition/Block Print Edition (YEAR) /Block print /Ms/Reprint -->
+              <title xml:lang="bo" key="449">ཆོས་ཀྱི་རྗེ་ཐམས་ཅད་མཁྱེན་པ་རྡོ་རྗེ་གདན་པ་ཆེན་པོའི་རྣམ་པར་ཐར་པ་རིན་པོ་ཆེའི་འཕྲེང་པ།</title>, <!-- Source with ID-->
+              <author xml:lang="bo">རྣམ་རྒྱལ་མགོན་པོ་དྲི་མེད་སྡེ།</author>. <!-- Author with ID-->
+              <edition xml:lang="bo">བྲིས་མ། དབུ་མེད། འབྲས་སྤུངས་དཔེ་མཛོད། དཔེ་ཨང། ཕྱི་ར་༤༤</edition>; <!-- If unpublished, e.g. བྲིས་མ་དབུ་མེད།; པེ་ཅིན། མི་རིགས་རིག་གནས་ཕོ་བྲང་གི་དཔེ་མཛོད། དཔེ་ཨང། ... -->
+              <biblScope unit="folios">ཤོག་གྲངས། ༡ན-༧བ</biblScope> <!-- e.g. Collected Works, vol. ma|16, pp. .... -->
+            </bibl>
+          </witness>
+        </listWit>
+      </sourceDesc>
+    </fileDesc>
+
+    <encodingDesc>
+      <projectDesc>
+        <p>Digitale Edition im Rahmen des TibetanTEI-Projekts, Universität Wien.</p>
+      </projectDesc>
+      <editorialDecl>
+        <normalization>
+          <p>Normalisierung nach TEI-P5-Standard.</p>
+        </normalization>
+        <correction>
+          <p>Korrekturen stillschweigend vorgenommen.</p>
+        </correction>
+      </editorialDecl>
+      <tagsDecl>
+    	    <rendition xml:id="b" n="teibp:bold" scheme="css">font-weight:bold;</rendition>
+     	   <rendition xml:id="i" n="teibp:italics" scheme="css">font-style:italic;</rendition>
+    	    <rendition xml:id="du" n="teibp:underline" scheme="css">text-decoration:underline;  text-decoration-style:dashed;</rendition>
+    	    <rendition xml:id="blue" scheme="css">color:blue;</rendition>
+    	    <rendition xml:id="green" scheme="css">color:green;</rendition>
+    	    <rendition xml:id="orange" scheme="css">color:orange;</rendition>
+   	     <namespace name="http://www.tei-c.org/ns/1.0">
+    	    <tagUsage gi="date" rend="#b"/>
+     	   <tagUsage gi="term" rend="#i"/>
+       	 <tagUsage gi="unclear" rend="#du"/>
+      	  <tagUsage gi="persName" rend="#blue"/>
+      	  <tagUsage gi="placeName" rend="#orange"/>
+      	  <tagUsage gi="title" rend="#green"/>
+      	  </namespace>
+      </tagsDecl>
+    </encodingDesc>
+
+    <profileDesc>
+      <langUsage>
+        <language ident="en">English</language>
+        <language ident="bo-Latn">Tibetan (Wylie-Transliteration)</language>
+        <language ident="bo">Tibetan (Tibetan script)</language>
+        <language ident="sa">Sanskrit</language>
+      </langUsage>
+    </profileDesc>
+
+    <revisionDesc>
+      <change when="2017-09-24" who="#mf">tagging completed: all teacher-student relations, events, entities</change>
+      <change when="2018-02-11" who="#mf">semantic markup: ids added/changed</change>
+      <change when="2020-01-09" who="#mf">slighly changes in markup regarding his disciples</change>
+      <change when="2021-10-03" who="#mf">customisation in header for TEI Boilerplate display</change>
+      <change when="2021-10-03" who="#mf">facs attribute added to pb-tags to point to images</change>
+      <change when="2021-10-03" who="#mf">type attribute added to Named Entities for linking to SRC database; type="multipe" removed</change>
+      <change when="2026-05-18">Rollen: "unbekannt" → "noch zu erschließen" für Konsistenz (Albert Brugnara)</change>
+      <change when="2026-05-16">TEI-P5-Bereinigung: tib→bo, wylie→bo-Latn, render→rend, div name→type, facs-Pfade, standOff (Albert Brugnara)</change>
+    </revisionDesc>
+  </teiHeader>
+  
+
+  <standOff>
+    <listPerson>
+      <person xml:id="src_p1">
+        <persName xml:lang="bo">རྒྱལ་ཤཱཀྱའི་དབང་པོ</persName>
+                <persName xml:lang="bo-Latn">rgyal shAkya'i dbang po</persName>
+        <note type="SRC_key">1</note>
+        <note type="role">noch zu erschließen</note>
+        <idno type="URI"><!-- URL noch nicht ermittelt --></idno>
+      </person>
+      <person xml:id="src_p16">
+        <persName xml:lang="bo">ཆོས་ཀྱི་རྗེ་ཐམས་ཅད་མཁྱེན་པ་རྡོ་རྗེ་གདན་པ་ཆེན་པོ</persName>
+                <persName xml:lang="bo-Latn">chos kyi rje thams cad mkhyen pa rdo rje gdan pa chen po</persName>
+        <note type="SRC_key">16</note>
+        <note type="role">Philosoph</note>
+        <idno type="URI">https://library.bdrc.io/show/bdr:P1419</idno>
+      </person>
+      <person xml:id="src_p30">
+        <persName xml:lang="bo">ཕ་བྲག་ཐོག་ཆོས་རྗེ</persName>
+                <persName xml:lang="bo-Latn">pha brag thog chos rje</persName>
+        <note type="SRC_key">30</note>
+        <note type="role">noch zu erschließen</note>
+        <idno type="URI"><!-- URL noch nicht ermittelt --></idno>
+      </person>
+      <person xml:id="src_p50">
+        <persName xml:lang="bo">ལོ་ཆེན་ཤེས་རིན</persName>
+                <persName xml:lang="bo-Latn">lo chen shes rin</persName>
+        <note type="SRC_key">50</note>
+        <note type="role">noch zu erschließen</note>
+        <idno type="URI"><!-- URL noch nicht ermittelt --></idno>
+      </person>
+      <person xml:id="src_p53">
+        <persName xml:lang="bo">རྗེ་བདག་ཆེན་བསོད་ནམས་རྒྱལ་མཚན</persName>
+                <persName xml:lang="bo-Latn">rje bdag chen bsod nams rgyal mtshan</persName>
+        <note type="SRC_key">53</note>
+        <note type="role">noch zu erschließen</note>
+        <idno type="URI"><!-- URL noch nicht ermittelt --></idno>
+      </person>
+      <person xml:id="src_p55">
+        <persName xml:lang="bo">སྐུ་མཆེད</persName>
+                <persName xml:lang="bo-Latn">sku mched</persName>
+        <note type="SRC_key">55</note>
+        <note type="role">noch zu erschließen</note>
+        <idno type="URI"><!-- URL noch nicht ermittelt --></idno>
+      </person>
+      <person xml:id="src_p91">
+        <persName xml:lang="bo">འཁོན་འཇམ་དབྱངས་དྲུག་པ་ཆོས་ཀྱི་རྗེ</persName>
+                <persName xml:lang="bo-Latn">'khon 'jam dbyangs drug pa chos kyi rje</persName>
+        <note type="SRC_key">91</note>
+        <note type="role">noch zu erschließen</note>
+        <idno type="URI"><!-- URL noch nicht ermittelt --></idno>
+      </person>
+      <person xml:id="src_p99">
+        <persName xml:lang="bo">རྗེ་པཎ་ཆེན་ནགས་ཀྱི་རིན་པོ་ཆེ</persName>
+                <persName xml:lang="bo-Latn">rje paN chen nags kyi rin po che</persName>
+        <note type="SRC_key">99</note>
+        <note type="role">noch zu erschließen</note>
+        <idno type="URI"><!-- URL noch nicht ermittelt --></idno>
+      </person>
+      <person xml:id="src_p116">
+        <persName xml:lang="bo">དཔལ་ཞྭ་ལུ་ལོ་ཙཱ་ཆེན་པོ</persName>
+                <persName xml:lang="bo-Latn">dpal zhwa lu lo tsA chen po</persName>
+        <note type="SRC_key">116</note>
+        <note type="role">noch zu erschließen</note>
+        <idno type="URI"><!-- URL noch nicht ermittelt --></idno>
+      </person>
+      <person xml:id="src_p117">
+        <persName xml:lang="bo">རྗེ་ཁུ་བོ་ཐུ་བཙུན་ཐམས་ཅད་མཁྱེན</persName>
+                <persName xml:lang="bo-Latn">rje khu bo thu btsun thams cad mkhyen</persName>
+        <note type="SRC_key">117</note>
+        <note type="role">noch zu erschließen</note>
+        <idno type="URI"><!-- URL noch nicht ermittelt --></idno>
+      </person>
+      <person xml:id="src_p129">
+        <persName xml:lang="bo">བོད་ཁྲིམས་ཀྱི་བདག་པོ་མི་ཡི་དབང</persName>
+                <persName xml:lang="bo-Latn">bod khrims kyi bdag po mi yi dbang</persName>
+        <note type="SRC_key">129</note>
+        <note type="role">noch zu erschließen</note>
+        <idno type="URI"><!-- URL noch nicht ermittelt --></idno>
+      </person>
+      <person xml:id="src_p130">
+        <persName xml:lang="bo">ཤར་བྱ་རྒྱལ་ཁྲི་དཔོན་ཆེན་པོ</persName>
+                <persName xml:lang="bo-Latn">shar bya rgyal khri dpon chen po</persName>
+        <note type="SRC_key">130</note>
+        <note type="role">noch zu erschließen</note>
+        <idno type="URI"><!-- URL noch nicht ermittelt --></idno>
+      </person>
+      <person xml:id="src_p139">
+        <persName xml:lang="bo">གཞུང་རབ་འབྱམས་བསྟན་བདག་རྫོང་དཀར་བ</persName>
+                <persName xml:lang="bo-Latn">gzhung rab 'byams bstan bdag rdzong dkar ba</persName>
+        <note type="SRC_key">139</note>
+        <note type="role">noch zu erschließen</note>
+        <idno type="URI"><!-- URL noch nicht ermittelt --></idno>
+      </person>
+      <person xml:id="src_p142">
+        <persName xml:lang="bo">ནུབ་ཁ་ཆེའི་པཎ་ཆེན</persName>
+                <persName xml:lang="bo-Latn">nub kha che'i paN chen</persName>
+        <note type="SRC_key">142</note>
+        <note type="role">noch zu erschließen</note>
+        <idno type="URI"><!-- URL noch nicht ermittelt --></idno>
+      </person>
+      <person xml:id="src_p148">
+        <persName xml:lang="bo">དཔལ་སྤྱན་སྔ་ཞྭ་དམར་ཅོད་པཎ་ཅན</persName>
+                <persName xml:lang="bo-Latn">dpal spyan snga zhwa dmar cod paN can</persName>
+        <note type="SRC_key">148</note>
+        <note type="role">noch zu erschließen</note>
+        <idno type="URI"><!-- URL noch nicht ermittelt --></idno>
+      </person>
+      <person xml:id="src_p158">
+        <persName xml:lang="bo">ཡུམ་བདེ་མ</persName>
+                <persName xml:lang="bo-Latn">yum bde ma</persName>
+        <note type="SRC_key">158</note>
+        <note type="role">noch zu erschließen</note>
+        <idno type="URI"><!-- URL noch nicht ermittelt --></idno>
+      </person>
+      <person xml:id="src_p278">
+        <persName xml:lang="bo">ལྷ་སྲོང་བཙན་སྒམ་པོ</persName>
+                <persName xml:lang="bo-Latn">lha srong btsan sgam po</persName>
+        <note type="SRC_key">278</note>
+        <note type="role">noch zu erschließen</note>
+        <idno type="URI"><!-- URL noch nicht ermittelt --></idno>
+      </person>
+      <person xml:id="src_p296">
+        <persName xml:lang="bo">གོང་མ་ཆེན་པོ</persName>
+                <persName xml:lang="bo-Latn">gong ma chen po</persName>
+        <note type="SRC_key">296</note>
+        <note type="role">noch zu erschließen</note>
+        <idno type="URI"><!-- URL noch nicht ermittelt --></idno>
+      </person>
+      <person xml:id="src_p375">
+        <persName xml:lang="bo">སློབ་དཔོན་པདྨ</persName>
+                <persName xml:lang="bo-Latn">slob dpon pad+ma</persName>
+        <note type="SRC_key">375</note>
+        <note type="role">noch zu erschließen</note>
+        <idno type="URI"><!-- URL noch nicht ermittelt --></idno>
+      </person>
+      <person xml:id="src_p385">
+        <persName xml:lang="bo">རྗེ་རྣལ་འབྱོར་དབང་ཕྱུག་བིརྦ་པ</persName>
+                <persName xml:lang="bo-Latn">rje rnal 'byor dbang phyug birba pa</persName>
+        <note type="SRC_key">385</note>
+        <note type="role">noch zu erschließen</note>
+        <idno type="URI"><!-- URL noch nicht ermittelt --></idno>
+      </person>
+      <person xml:id="src_p442">
+        <persName xml:lang="bo">དཔལ་ཐུ་མི་སམྦྷོ་ཊ</persName>
+                <persName xml:lang="bo-Latn">dpal thu mi sam+b+ho Ta</persName>
+        <note type="SRC_key">442</note>
+        <note type="role">noch zu erschließen</note>
+        <idno type="URI"><!-- URL noch nicht ermittelt --></idno>
+      </person>
+      <person xml:id="src_p498">
+        <persName xml:lang="bo">རྔོག་ལོ་ཙྪའི་གདན་ས་པཎ་ཌི་ཏ</persName>
+                <persName xml:lang="bo-Latn">rngog lo ts+tsha'i gdan sa paN Di ta</persName>
+        <note type="SRC_key">498</note>
+        <note type="role">noch zu erschließen</note>
+        <idno type="URI"><!-- URL noch nicht ermittelt --></idno>
+      </person>
+      <person xml:id="src_p511">
+        <persName xml:lang="bo">བདག</persName>
+                <persName xml:lang="bo-Latn">bdag</persName>
+        <note type="SRC_key">511</note>
+        <note type="role">Autor</note>
+        <idno type="URI">https://library.bdrc.io/show/bdr:P1344</idno>
+      </person>
+      <person xml:id="src_p514">
+        <persName xml:lang="bo">དབོན་ཡར་རྒྱབ་དཔོན་ཆེན་ཁུ་དབོན</persName>
+                <persName xml:lang="bo-Latn">dbon yar rgyab dpon chen khu dbon</persName>
+        <note type="SRC_key">514</note>
+        <note type="role">noch zu erschließen</note>
+        <idno type="URI"><!-- URL noch nicht ermittelt --></idno>
+      </person>
+      <person xml:id="src_p527">
+        <persName xml:lang="bo">རྗེ་ལོ་ཆེན་ཏེའུ་ར་ཆོས་རྗེ</persName>
+                <persName xml:lang="bo-Latn">rje lo chen te'u ra chos rje</persName>
+        <note type="SRC_key">527</note>
+        <note type="role">noch zu erschließen</note>
+        <idno type="URI"><!-- URL noch nicht ermittelt --></idno>
+      </person>
+      <person xml:id="src_p555">
+        <persName xml:lang="bo">དཔལ་ལྷ་དབང་ཀུན་དགའ</persName>
+                <persName xml:lang="bo-Latn">dpal lha dbang kun dga'</persName>
+        <note type="SRC_key">555</note>
+        <note type="role">noch zu erschließen</note>
+        <idno type="URI"><!-- URL noch nicht ermittelt --></idno>
+      </person>
+      <person xml:id="src_p580">
+        <persName xml:lang="bo">རྗེ་དུས་ཞབས</persName>
+                <persName xml:lang="bo-Latn">rje dus zhabs</persName>
+        <note type="SRC_key">580</note>
+        <note type="role">noch zu erschließen</note>
+        <idno type="URI"><!-- URL noch nicht ermittelt --></idno>
+      </person>
+      <person xml:id="src_p581">
+        <persName xml:lang="bo">རྡོ་རྗེ་སློབ་དཔོན་རིན་པོ་ཆེ</persName>
+                <persName xml:lang="bo-Latn">rdo rje slob dpon rin po che</persName>
+        <note type="SRC_key">581</note>
+        <note type="role">noch zu erschließen</note>
+        <idno type="URI"><!-- URL noch nicht ermittelt --></idno>
+      </person>
+      <person xml:id="src_p583">
+        <persName xml:lang="bo">བཀའ་འགྱུར་རོ་ཅོག་གི་བདག་པོ་མཆོག</persName>
+                <persName xml:lang="bo-Latn">bka' 'gyur ro cog gi bdag po mchog</persName>
+        <note type="SRC_key">583</note>
+        <note type="role">noch zu erschließen</note>
+        <idno type="URI"><!-- URL noch nicht ermittelt --></idno>
+      </person>
+      <person xml:id="src_p589">
+        <persName xml:lang="bo">ཕ་རས་ཆེན་དཔལ་འབྱོར་བཟང་པོ</persName>
+                <persName xml:lang="bo-Latn">pha ras chen dpal 'byor bzang po</persName>
+        <note type="SRC_key">589</note>
+        <note type="role">noch zu erschließen</note>
+        <idno type="URI"><!-- URL noch nicht ermittelt --></idno>
+      </person>
+      <person xml:id="src_p593">
+        <persName xml:lang="bo">དཔལ་ཀུན་བཟང་རོལ་པ</persName>
+                <persName xml:lang="bo-Latn">dpal kun bzang rol pa</persName>
+        <note type="SRC_key">593</note>
+        <note type="role">noch zu erschließen</note>
+        <idno type="URI"><!-- URL noch nicht ermittelt --></idno>
+      </person>
+      <person xml:id="src_p1019">
+        <persName xml:lang="bo">མཁན་བོ་དྷི་སཏྭ</persName>
+                <persName xml:lang="bo-Latn">mkhan bo d+hi satwa</persName>
+        <note type="SRC_key">1019</note>
+        <note type="role">noch zu erschließen</note>
+        <idno type="URI"><!-- URL noch nicht ermittelt --></idno>
+      </person>
+      <person xml:id="src_p1083">
+        <persName xml:lang="bo">དྲུང་ཆེན་རྡོ་རྗེ་ཚེ་བརྟན</persName>
+                <persName xml:lang="bo-Latn">drung chen rdo rje tshe brtan</persName>
+        <note type="SRC_key">1083</note>
+        <note type="role">noch zu erschließen</note>
+        <idno type="URI"><!-- URL noch nicht ermittelt --></idno>
+      </person>
+      <person xml:id="src_p1130">
+        <persName xml:lang="bo">དཔལ་ལོ་ཀོཏྟ་ར</persName>
+                <persName xml:lang="bo-Latn">dpal lo kot+ta ra</persName>
+        <note type="SRC_key">1130</note>
+        <note type="role">noch zu erschließen</note>
+        <idno type="URI"><!-- URL noch nicht ermittelt --></idno>
+      </person>
+      <person xml:id="src_p1398">
+        <persName xml:lang="bo">ཤར་པུ་ཁཾ་དགེ་སློང་འདུལ་བ་འཛིན</persName>
+                <persName xml:lang="bo-Latn">shar pu khaM dge slong 'dul ba 'dzin</persName>
+        <note type="SRC_key">1398</note>
+        <note type="role">noch zu erschließen</note>
+        <idno type="URI"><!-- URL noch nicht ermittelt --></idno>
+      </person>
+      <person xml:id="src_p1399">
+        <persName xml:lang="bo">དྷི་པཾ་ཀ་ར</persName>
+                <persName xml:lang="bo-Latn">d+hi paM ka ra</persName>
+        <note type="SRC_key">1399</note>
+        <note type="role">noch zu erschließen</note>
+        <idno type="URI"><!-- URL noch nicht ermittelt --></idno>
+      </person>
+      <person xml:id="src_p1400">
+        <persName xml:lang="bo">སྟོད་བོ་དོང་ལོ་ཙཱ</persName>
+                <persName xml:lang="bo-Latn">stod bo dong lo tsA</persName>
+        <note type="SRC_key">1400</note>
+        <note type="role">noch zu erschließen</note>
+        <idno type="URI"><!-- URL noch nicht ermittelt --></idno>
+      </person>
+      <person xml:id="src_p1401">
+        <persName xml:lang="bo">དོན་ཆོས་རྗེ</persName>
+                <persName xml:lang="bo-Latn">don chos rje</persName>
+        <note type="SRC_key">1401</note>
+        <note type="role">noch zu erschließen</note>
+        <idno type="URI"><!-- URL noch nicht ermittelt --></idno>
+      </person>
+      <person xml:id="src_unknown">
+        <persName xml:lang="de">Unbekannte Person (kein SRC-Key)</persName>
+        <note type="role">noch zu erschließen</note>
+        <idno type="URI"><!-- URL noch nicht ermittelt --></idno>
+      </person>
+    </listPerson>
+    <listPlace>
+      <place xml:id="src_g19">
+        <placeName xml:lang="bo">བོད</placeName>
+                <placeName xml:lang="bo-Latn">bod</placeName>
+        <note type="SRC_key">19</note>
+        <note type="status">pending</note>
+        <idno type="URI"><!-- URL noch nicht ermittelt --></idno>
+      </place>
+      <place xml:id="src_g21">
+        <placeName xml:lang="bo">ཤར་རྒྱ་ནག</placeName>
+                <placeName xml:lang="bo-Latn">shar rgya nag</placeName>
+        <note type="SRC_key">21</note>
+        <note type="status">pending</note>
+        <idno type="URI"><!-- URL noch nicht ermittelt --></idno>
+      </place>
+      <place xml:id="src_g22">
+        <placeName xml:lang="bo">གནས་འཕགས་ཡུལ</placeName>
+                <placeName xml:lang="bo-Latn">gnas 'phags yul</placeName>
+        <note type="SRC_key">22</note>
+        <note type="status">pending</note>
+        <idno type="URI"><!-- URL noch nicht ermittelt --></idno>
+      </place>
+      <place xml:id="src_g26">
+        <placeName xml:lang="bo">བོད་རྒྱལ་པོའི་ཕོ་བྲང་གཉིས་པ་</placeName>
+                <placeName xml:lang="bo-Latn">bod rgyal po'i pho brang gnyis pa</placeName>
+        <note type="SRC_key">26</note>
+        <note type="status">pending</note>
+        <idno type="URI"><!-- URL noch nicht ermittelt --></idno>
+      </place>
+      <place xml:id="src_g28">
+        <placeName xml:lang="bo">གཡོན་རུ་གྲྭ</placeName>
+                <placeName xml:lang="bo-Latn">g.yon ru grwa</placeName>
+        <note type="SRC_key">28</note>
+        <note type="status">pending</note>
+        <idno type="URI"><!-- URL noch nicht ermittelt --></idno>
+      </place>
+      <place xml:id="src_g31">
+        <placeName xml:lang="bo">སྟོད་གཙང་ཕྱོགས</placeName>
+                <placeName xml:lang="bo-Latn">stod gtsang phyogs</placeName>
+        <note type="SRC_key">31</note>
+        <note type="status">pending</note>
+        <idno type="URI"><!-- URL noch nicht ermittelt --></idno>
+      </place>
+      <place xml:id="src_g41">
+        <placeName xml:lang="bo">དཔལ་རྡོ་རྗེ་གདན་གྱི་ཆོས་སྡེ</placeName>
+                <placeName xml:lang="bo-Latn">dpal rdo rje gdan gyi chos sde</placeName>
+        <note type="SRC_key">41</note>
+        <note type="status">pending</note>
+        <idno type="URI"><!-- URL noch nicht ermittelt --></idno>
+      </place>
+      <place xml:id="src_g95">
+        <placeName xml:lang="bo">དཔལ་ས་སྐྱའི་གདན་ས</placeName>
+                <placeName xml:lang="bo-Latn">dpal sa skya'i gdan sa</placeName>
+        <note type="SRC_key">95</note>
+        <note type="status">pending</note>
+        <idno type="URI"><!-- URL noch nicht ermittelt --></idno>
+      </place>
+      <place xml:id="src_g119">
+        <placeName xml:lang="bo">དཔལ་ཞྭ་ལུ</placeName>
+                <placeName xml:lang="bo-Latn">dpal zhwa lu</placeName>
+        <note type="SRC_key">119</note>
+        <note type="status">pending</note>
+        <idno type="URI"><!-- URL noch nicht ermittelt --></idno>
+      </place>
+      <place xml:id="src_g299">
+        <placeName xml:lang="bo">དཔལ་ཡིད་བདེ་ཚལ་གྱི་དབེན་གནས</placeName>
+                <placeName xml:lang="bo-Latn">dpal yid bde tshal gyi dben gnas</placeName>
+        <note type="SRC_key">299</note>
+        <note type="status">pending</note>
+        <idno type="URI"><!-- URL noch nicht ermittelt --></idno>
+      </place>
+      <place xml:id="src_g321">
+        <placeName xml:lang="bo">ཡུལ་དབུས་གཙང</placeName>
+                <placeName xml:lang="bo-Latn">yul dbus gtsang</placeName>
+        <note type="SRC_key">321</note>
+        <note type="status">pending</note>
+        <idno type="URI"><!-- URL noch nicht ermittelt --></idno>
+      </place>
+      <place xml:id="src_g367">
+        <placeName xml:lang="bo">དཔལ་རྒྱལ་ཆེན་གླིང་གི་ཕོ་བྲང</placeName>
+                <placeName xml:lang="bo-Latn">dpal rgyal chen gling gi pho brang</placeName>
+        <note type="SRC_key">367</note>
+        <note type="status">pending</note>
+        <idno type="URI"><!-- URL noch nicht ermittelt --></idno>
+      </place>
+      <place xml:id="src_g370">
+        <placeName xml:lang="bo">ཡུལ་འཕྱིང་བར་རྟགས་རྩེ</placeName>
+                <placeName xml:lang="bo-Latn">yul 'phying bar rtags rtse</placeName>
+        <note type="SRC_key">370</note>
+        <note type="status">pending</note>
+        <idno type="URI"><!-- URL noch nicht ermittelt --></idno>
+      </place>
+      <place xml:id="src_g426">
+        <placeName xml:lang="bo">སྟོད་མངའ་རིས</placeName>
+                <placeName xml:lang="bo-Latn">stod mnga' ris</placeName>
+        <note type="SRC_key">426</note>
+        <note type="status">pending</note>
+        <idno type="URI"><!-- URL noch nicht ermittelt --></idno>
+      </place>
+      <place xml:id="src_g553">
+        <placeName xml:lang="bo">སྣར་ཐང</placeName>
+                <placeName xml:lang="bo-Latn">snar thang</placeName>
+        <note type="SRC_key">553</note>
+        <note type="status">pending</note>
+        <idno type="URI"><!-- URL noch nicht ermittelt --></idno>
+      </place>
+      <place xml:id="src_g668">
+        <placeName xml:lang="bo">དཔལ་ཁ་ཆེའི་པཎ་ཆེན་གདན་ས་བཞི</placeName>
+                <placeName xml:lang="bo-Latn">dpal kha che'i paN chen gdan sa bzhi</placeName>
+        <note type="SRC_key">668</note>
+        <note type="status">pending</note>
+        <idno type="URI"><!-- URL noch nicht ermittelt --></idno>
+      </place>
+      <place xml:id="src_g671">
+        <placeName xml:lang="bo">འཕགས་སྡེ</placeName>
+                <placeName xml:lang="bo-Latn">'phags sde</placeName>
+        <note type="SRC_key">671</note>
+        <note type="status">pending</note>
+        <idno type="URI"><!-- URL noch nicht ermittelt --></idno>
+      </place>
+      <place xml:id="src_g683">
+        <placeName xml:lang="bo">གནས་ཁའུ་སྐྱེས་ལྷས</placeName>
+                <placeName xml:lang="bo-Latn">gnas kha'u skyes lhas</placeName>
+        <note type="SRC_key">683</note>
+        <note type="status">pending</note>
+        <idno type="URI"><!-- URL noch nicht ermittelt --></idno>
+      </place>
+      <place xml:id="src_g684">
+        <placeName xml:lang="bo">ལ་སྟོད་ལྷོ་བྱང</placeName>
+                <placeName xml:lang="bo-Latn">la stod lho byang</placeName>
+        <note type="SRC_key">684</note>
+        <note type="status">pending</note>
+        <idno type="URI"><!-- URL noch nicht ermittelt --></idno>
+      </place>
+      <place xml:id="src_g685">
+        <placeName xml:lang="bo">བོད་ཆོལ་ཁ་གསུམ་གྱི་རྒྱལ་ཁམས</placeName>
+                <placeName xml:lang="bo-Latn">bod chol kha gsum gyi rgyal khams</placeName>
+        <note type="SRC_key">685</note>
+        <note type="status">pending</note>
+        <idno type="URI"><!-- URL noch nicht ermittelt --></idno>
+      </place>
+      <place xml:id="src_g688">
+        <placeName xml:lang="bo">འབྲི་ཁུང་བྱང་ཆུབ་གླིང་གི་གནས</placeName>
+                <placeName xml:lang="bo-Latn">'bri khung byang chub gling gi gnas</placeName>
+        <note type="SRC_key">688</note>
+        <note type="status">pending</note>
+        <idno type="URI"><!-- URL noch nicht ermittelt --></idno>
+      </place>
+    </listPlace>
+    <listBibl>
+      <bibl xml:id="src_w2121">
+        <title xml:lang="bo">ཆོས་ཀྱི་རྗེ་ཐམས་ཅད་མཁྱེན་པ་རྡོ་རྗེ་གདན་པ་ཆེན་པོའི་རྣམ་པར་ཐར་པ་རིན་པོ་ཆེའི་འཕྲེང་བ་</title>
+        <note type="SRC_key">2121</note>
+        <idno type="URI"><!-- URL noch nicht ermittelt --></idno>
+      </bibl>
+    </listBibl>
+  </standOff>
+
+<text>
+<body>
+<div type="family_lineage">
+<head type="title"><title type="SRC" key="2121" corresp="#src_w2121"><persName type="SRC" ana="full" key="16" corresp="#src_p16">ཆོས་ཀྱི་རྗེ་ཐམས་ཅད་མཁྱེན་པ་རྡོ་རྗེ་གདན་པ་ཆེན་པོ</persName>འི་རྣམ་པར་ཐར་པ་རིན་པོ་ཆེའི་འཕྲེང་བ་</title>ཞེས་བྱ་བ་བཞུགས།</head>
+<label type="supplied" xml:lang="en">Salutation</label>
+<label type="supplied" xml:lang="en">Author's declaration (rTsom pa'i dam bca')</label>
+<label type="supplied" xml:lang="en">Family Lineage</label>
+<p><pb ed="A" n="1a" facs="../content/images/r103/1a.jpg"/>
+<pb ed="A" n="1b" facs="../content/images/r103/1b.jpg"/>
+ཨོཾ་སྭསྟི་<app><lem wit="#A">སིདྷཾ</lem><rdg resp="#mf">སིདྡྷཾ</rdg></app>།
+<lg>
+<l>གནས་མི་འགྱུར་རྡོ་རྗེ་གདན་པོ་ན།།</l>
+<l>སྐྱབས་དུས་གསུམ་རྒྱལ་རྣམས་མཁྱེན་བརྩེའི་གཟུགས།།</l>
+<l>རྐྱེན་གཞན་སྣང་ཀུན་མཁྱེན་<persName type="SRC" ana="title" key="16" corresp="#src_p16">ཆོས་ཀྱི་རྗེ</persName>།།</l>
+<l><persName type="SRC" key="16" corresp="#src_p16">དཔལ་རྡོ་རྗེ་གདན་པ</persName>འི་ཞབས་ལ་འདུད།།</l>
+</lg>
+
+<lg>
+<l><persName type="SRC" ana="title" key="16" corresp="#src_p16">ཕ་ཐམས་ཅད་མཁྱེན་པ་ཆོས་ཀྱི་རྗེ</persName>།།</l>
+<l>དཔལ་རྡོ་རྗེ་འཆང་དབང་བླ་མར་ཤར།།</l>
+<l><persName type="SRC" ana="desc" key="16" corresp="#src_p16">མགོན་དེ</persName>་ཡི་རྣམ་ཐར་ནམ་མཁའི་ཁྱོན།</l>
+<l><persName type="SRC" ana="pron" key="16" corresp="#src_p16">ཁོང</persName>་རྒྱལ་བས་བརྗོད་མཐའ་མི་ཟད་པ།།</l>
+</lg>
+<lg>
+<l><persName type="SRC" ana="pron" key="511" corresp="#src_p511">བདག</persName>་ཚུར་མཐོང་བྱིས་པས་སྤོབས་མིན་ཡང༌།</l>
+<l><persName type="SRC" ana="pron" key="16" corresp="#src_p16">ཁྱེད</persName>་<persName type="SRC" ana="desc">དངོས་སློབ་ཆེ་བཙུན་ཕྲ་རགས་རྣམས</persName>།།</l>
+<l>ཐུགས་མི་འཕྲོག་དང་རྐྱེན་གསལ་འདེབས་དང༌།།</l>
+<l>གཞན་དད་ལྡན་ཚོགས་གཉིས་གསོག་པའི་ཕྱིར།།</l>
+</lg>
+<lg>
+<l><title type="SRC" ana="desc" key="2121" corresp="#src_w2121">གཏམ་སྙན་པའི་ངག་དབྱངས་མདོར་བསྡུས་འདི</title>།།</l>
+<l>སྙན་ཡངས་པའི་ལམ་དུ་མཆོད་པར་འབུལ།།</l>
+<l>དོན་ཐུགས་ལ་ཆོངས་ལ་གསོལ་བ་ཐོབ།།</l>
+<l>གནས་སྟོང་གསུམ་མི་འཇིག་འཇིག་རྟེན་ཁམས།།</l>
+</lg>
+<lg>
+<l>མགོན་བསྐལ་བཟང་སངས་རྒྱས་བརྒྱ་ཕྲག་བཅུས།།</l>
+<l>སྤྱིར་ཕྱག་མཚན་བཞེས་པའི་རྒྱལ་བའི་ཞིང༌།།</l>
+<l>དུས་བཟང་ངན་འཕེལ་འགྲིབ་རྟེན་འབྲེལ་ཅན།།</l>
+<l><placeName type="SRC" ana="desc">ཞིང་དེ</placeName>་ཡི་སྙིང་པོ་<placeName type="SRC" ana="desc">གླིང་བཞིའི་མཆོག</placeName>།</l>
+</lg>
+<lg>
+<l><placeName type="SRC" ana="desc">ལྷོ་འཛམ་བུ་གླིང་གི་ཡུལ་ཁམས་འདི</placeName>།།</l>
+<l>དགོས་སྙིགས་མ་ལྔ་བདོའི་རྩོད་དུས་ཉིད།།</l>
+<l><persName type="SRC" key="1" corresp="#src_p1">རྒྱལ་ཤཱཀྱའི་དབང་པོ</persName>ས་<persName type="SRC" ana="pron" key="511" corresp="#src_p511">བདག</persName>་གིར་བཞེས།།</l>
+<l>ལར་འདུལ་དཀའི་འཇིག་རྟེན་ཡོངས་སུ་འདུལ།།</l>
+</lg>
+<lg>
+<l>ཆོས་ལུང་རྟོགས་ཉི་མ་ཐང་ཀར་བདལ།།</l>
+<l><persName type="SRC" ana="desc">འཁོར་གདུལ་བྱ</persName>འི་རེ་བ་རྫོགས་པའི་རྗེས།།</l>
+<l>དབྱིངས་ཞི་བའི་ངང་དུ་མཉམ་པར་བཞག།</l>
+<l>ཆོས་བསྟན་པའི་འོད་མདངས་ཡུན་དུ་འབར།།</l><pb ed="A" n="2a" facs="../content/images/r103/2a.jpg"/>
+</lg>
+<lg>
+<l><placeName type="SRC" key="19" corresp="#src_g19">བོད</placeName>་བསྟན་པ་རྒྱས་པར་ལུང་ཡང་བསྟན།།</l>
+<l><persName type="SRC" ana="title" key="1" corresp="#src_p1">མགོན་ཐུབ་དབང</persName>་བསྟན་པའི་སྙིགས་མ་ཡི།།</l>
+<l>དུས་ལྔ་བརྒྱའི་ཐ་མའི་བསྟན་པ་ལ།།</l>
+<l>དཔལ་ཟས་གཙང་སྲས་པོའི་རྣམ་ཐར་ཅན།</l>
+</lg>
+<lg>
+<l><persName type="SRC" ana="pron" key="16" corresp="#src_p16">ཁོང</persName>་<persName type="SRC" ana="full" key="16" corresp="#src_p16">ཐུ་བཙུན་རྡོ་རྗེ་གདན་པ</persName>་དེ།།</l>
+<l>ལར་བསམས་ཤིང་ཞིང་འདིར་འདི་ལྟར་བྱོན།།</l>
+<l><placeName type="SRC" ana="full" key="19" corresp="#src_g19">བོད་སྤུ་རྒྱལ་གདོང་དམར་རྒྱལ་ཁམས</placeName>་སུ།།</l>
+<l>དཔལ་ཕྱག་ན་པད་མ་སྤྱན་རས་གཟིགས།།</l>
+</lg>
+
+<lg>
+<l>ཡུལ་མུན་པའི་གླིང་དུ་གློ་བུར་དུ།།</l>
+<l><persName type="SRC" ana="pron">ཁོང</persName>་བཙན་པོའི་རྒྱལ་པོར་མངོན་སྤྲུལ་པ།།</l>
+<l><persName type="SRC" key="278" corresp="#src_p278">ལྷ་སྲོང་བཙན་སྒམ་པོ</persName>་ཞེས་བྱ་བྱོན།།</l>
+<l>དཔལ་དམ་ཆོས་རིན་ཆེན་སྒྲོན་མེ་སྤར།།</l>
+</lg>
+<lg>
+<l>བྱང་མཐའ་ཁོབ་དུས་བཟང་དཔལ་ལ་སྦྱར།།</l>
+<l>ཁྲིམས་རྣམ་དག་དགེ་བཅུའི་བཀའ་རྟགས་བཏབ།།</l>
+<l>ཆོས་ཕྱི་ནང་གསང་བའི་བང་མཛོད་ཕྱེ།།</l>
+<l><persName type="SRC" ana="desc" key="278" corresp="#src_p278">རྒྱལ་དེ</persName>་ཡི་ནང་བློན་ཀུན་གྱི་གཙོ།།</l>
+</lg>
+<lg>
+<l>མགོན་འཇམ་པའི་དབྱངས་ཀྱི་རྣམ་འཕྲུལ་མཆོག།</l>
+<l>ཁོང་སྐད་གཉིས་སྨྲ་བའི་ལོ་ཙཱ་བ།།</l>
+<l><placeName type="SRC" key="19" corresp="#src_g19">བོད</placeName>་ལོང་བའི་མིག་གྱུར་ཐོག་མ་པ།།</l>
+<l><persName type="SRC" key="442" corresp="#src_p442">དཔལ་ཐུ་མི་སམྦྷོ་ཊ</persName>་ཞེས་པའི།།</l>
+<l><persName type="SRC" ana="desc" key="442" corresp="#src_p442">མགོན་ལོ་ཆེན་དེ</persName>་ཡི་སྲས་ཀྱི་གཙོ།།</l>
+<l><persName>ཐུ་མཧཱ་སཏྭ</persName>་ལ་སོགས་པ།།</l>
+<l>ལར་གྲུབ་བརྙེས་དུ་མའི་གདུང་བརྒྱུད་མཆོག།</l>
+</lg>
+<lg>
+<l>ཡུལ་ཡངས་པའི་རྒྱལ་ཁམས་དབང་བསྒྱུར་བའི།།</l>
+<l>མི་ཆེན་པོར་<placeName type="SRC" key="19,21,20">རྒྱ་ཧོར་བོད</placeName>་རྗེ་ཡི།།</l>
+<l>ལུང་ལག་རྟགས་འཛིན་པའི་རྒྱལ་རིགས་ཆེ།།</l>
+<l>ཤིང་ས་ལ་ལྟ་བུའི་རིགས་ལ་དགོངས།།</l>
+</lg></p>
+</div>
+
+<div>
+<head type="supplied" xml:lang="en">Birth at rGyal chen gling</head>
+<label type="supplied" xml:lang="en">Youth</label>
+<label type="supplied" xml:lang="en">Teachings from Byams pa gling pa</label>
+<label type="supplied" xml:lang="en">Teachings from Brag thog pa</label>
+<p><lg>
+<l>ཡུལ་རིག་པའི་འབྱུང་གནས་<placeName type="SRC" key="28" corresp="#src_g28">གཡོན་རུ་གྲྭ</placeName>།།</l>
+<l>ཟོང་འདོད་དགུ་ཚང་བའི་སྙིང་པོ་མཆོག།</l>
+<l><placeName type="SRC" ana="full" key="367" corresp="#src_g367">དཔལ་རྒྱལ་ཆེན་གླིང་གི་ཕོ་བྲང</placeName>་དུ།།</l>
+<l>སྔོན་དམ་པ་ཏོག་དཀར་ཇི་བཞིན་དུ།།</l><pb ed="A" n="2b" facs="../content/images/r103/2b.jpg"/>
+</lg>
+<lg>
+<l><persName type="SRC" key="158" corresp="#src_p158">ཡུམ་བདེ་མ</persName>འི་ལྷུམས་སུ་ཞུགས།།</l>
+<l>དུས་དེ་ནས་<persName type="SRC" key="158" corresp="#src_p158" ana="desc">ཡུམ</persName>་གྱི་མནལ་ལམ་དུ།།</l>
+<l>དཔའ་གོ་མཚོན་ཐོགས་ནས་དགྲ་དཔུང་བཅོམ།།</l>
+<l>ཉམས་བདེ་བས་སྐུ་ལ་ཁྱབ་པ་སོགས།།</l>
+</lg>
+<lg>
+<l>རྟགས་དགེ་མཚན་བསམ་མི་ཁྱབ་པ་བྱུང༌།།</l>
+<l>དུས་ཟླ་བཅུའི་རྟེན་འབྲེལ་ཚང་བའི་མཐར།།</l>
+<l><date when="1432">ཡོངས་གནམ་ལོ་ཆུ་ཕོ་བྱི་བ་ལོ</date>འི།།</l>
+<l>སྟོན་ཐ་ཆུང་སྨིན་དྲུག་ཟླ་བ་ཡི།།</l>
+</lg>
+<lg>
+<l>ཕྱོགས་གཉིས་པའི་རྒྱལ་བ་དང་པོའི་ཚེས།།</l>
+<l>ནམ་ཐོ་རངས་གཟའ་སྐར་ཕུན་ཚོགས་ལ།།</l>
+<l>རྒྱན་མཚན་དཔེས་སྤྲས་པའི་རྒྱལ་བའི་སྲས།།</l>
+<l>ཞལ་འཛུམ་འོད་འབར་བ་ཡོངས་སུ་བལྟམས།།</l>
+</lg>
+<lg>
+<l>སྟེང་གཙང་རིས་ལྷ་དང་གནས་གསུམ་གྱི།།</l>
+<l>དཔལ་དཔའ་བོ་མཁའ་འགྲོས་མཆོད་པ་ཕུལ།།</l>
+<l><placeName type="SRC" key="19" corresp="#src_g19">བོད</placeName>་མུན་པ་སེལ་བའི་སྣང་བ་ཤར།།</l>
+<l>ལྷ་ཕྱོགས་བཅུའི་སངས་རྒྱས་དབྱིངས་སུ་གྱེས།།</l>
+</lg>
+
+<lg>
+<l>དུས་དེ་ནས་བསྙེན་བཀུར་མ་མ་སོགས།།</l>
+<l><persName type="SRC" ana="pron" key="16" corresp="#src_p16">ཁོང</persName>་རྒྱལ་བུ་དོན་གྲུབ་བཞིན་དུ་བསྐྲུན།།</l>
+<l>འཕྲལ་གཞོན་ནུ་རོལ་རྩེད་རྣམ་གྲངས་ཀྱང༌།།</l>
+<l>ཆོས་ཐོས་བསམ་བསྒོམ་དང་འཆད་རྩོད་རྩོམ།།</l>
+</lg>
+<lg>
+<l>རྟེན་དཀོན་མཆོག་མཆོད་དང་བསྟོད་པ་སོགས།།</l>
+<l>དོན་རྣམ་པར་དཀར་བའི་ཕྱག་བཞེས་མཛད།།</l>
+<l>མགོན་ཡི་དམ་ལྷ་དང་ཆོས་སྐྱོང་སོགས།།</l>
+<l>འཕྲལ་དག་པའི་གཟིགས་སྣང་བསམ་ཡས་ཀྱང༌།།</l>
+</lg>
+<lg>
+<l>ཐུགས་བརླིང་བས་<persName type="SRC" ana="desc">མི་ཆེན་རྣམས</persName>་ཀྱིས་ཀྱང༌།།</l>
+<l>ལར་བུས་པར་འཛིན་པ་ཀུན་དང་བྲལ།།</l>
+
+<l>ཡོང་དེ་ནས་མི་རིང་དུས་དགེ་ལ།།</l>
+<l><persName type="SRC" ana="title" key="117" corresp="#src_p117">རྗེ་ཁུ་བོ་ཐུ་བཙུན་ཐམས་ཅད་མཁྱེན</persName>།།</l>
+<l><persName type="SRC" ana="title" key="117" corresp="#src_p117">དཔལ་བྱམས་པ་གླིང་པ་ཆེན་པོ</persName>་སོགས།།</l>
+<l><persName type="SRC" ana="pron" key="16" corresp="#src_p16">ཁོང</persName>་མཁས་གྲུབ་བླ་མ་ཚད་ལྡན་ལ།།</l><pb ed="A" n="3a" facs="../content/images/r103/3a.jpg"/>
+<l>ལམ་གསང་སྔགས་ཟབ་མོའི་དཀྱིལ་འཁོར་དུ།།</l>
+<l>དབང་ཡོངས་རྫོགས་རྗེས་གནང་དུ་མ་དང༌།།</l>
+<l>ལྷ་བསྙེན་བསྒྲུབ་སོགས་ཀྱི་བཀའ་ཆོས་གསན།།</l>
+</lg>
+<lg>
+<l>རིགས་མཐོ་བའི་གཞན་དབང་ལྟར་སྣང་གིས།།</l>
+<l>དུས་རེ་ཤིག་འཇིག་རྟེན་ཚུལ་སྒོ་བསྟུན།།</l>
+<l><persName type="SRC" ana="title" key="16" corresp="#src_p16">དཔལ་བྱ་ས་ཡར་རྒྱབ་དཔོན་ཆེན</persName>་ཞེས།།</l>
+<l>འཁོར་རྒྱལ་སྲིད་ཆོས་བཞིན་བརྩེ་བར་བསྐྱངས།།</l>
+</lg>
+<lg>
+<l><persName type="SRC" ana="desc">ཡུམ་རིགས་བཟང་བཙུན་མོ</persName>་ཁབ་ཏུ་བཞེས།།</l>
+<l><placeName type="SRC" ana="desc" key="26" corresp="#src_g26">བོད་རྒྱལ་པོའི་ཕོ་བྲང་གཉིས་པ་</placeName>ཡི།།</l>
+<l><placeName type="SRC" key="26" corresp="#src_g26">དཔལ་གོང་རི་དཀར་པོ</placeName>འི་རྒྱལ་ས་བསྐྱངས།།</l>
+<l>ལར་ཕྱི་ནང་མི་མཐུན་ཟིལ་གྱིས་མནན།།</l>
+<l>སྲིད་མངའ་རིས་རྒྱལ་ཁམས་ཆོས་ལ་སྦྱར།།</l>
+<l>སྲས་རིགས་གསུམ་མགོན་འདྲ་བསྐྲུན་པར་མཛད།།</l>
+</lg>
+
+<lg>
+<l>རྗེ་རྡོ་རྗེ་འཆང་དབང་མི་གཟུགས་ཅན།།</l>
+<l><persName type="SRC" ana="title" key="30" corresp="#src_p30">ཕ་བྲག་ཐོག་ཆོས་རྗེ</persName>འི་ཞབས་ལ་གཏུགས།།</l>
+<l>ལྷ་འཇམ་པའི་དབྱངས་ཀྱི་རྣམ་པར་འཕྲུལ།།</l>
+<l>དཔལ་ས་སྐྱའི་འཇམ་དབྱངས་བདུན་བརྒྱུད་ཀྱི།།</l>
+<l>བཀའ་བསྟན་པ་མ་ཚང་མེད་པ་ལ།།</l>
+<l>དོན་གཅིག་ཏུ་བརྣགས་པའི་ཐོས་བསམ་མཛད།།</l>
+</lg></p>
+</div>
+
+<div type="teachers">
+<head type="supplied" xml:lang="en">Ordination</head>
+<label type="supplied" xml:lang="en">Teachers</label>
+<p><lg>
+<l>ཆོས་མདོ་སྔགས་བཤད་སྒྲུབ་ཕྱག་ལེན་བསྐྱངས།།</l>
+<l>དུས་དེ་ནས་མི་རིང་གྱུར་པ་ན།།</l>
+<l>ཐུགས་ངེས་འབྱུང་རྣམ་དག་མངོན་གྱུར་ཅིང༌།།</l>
+<l>གཞི་བྱང་ཆུབ་སེམས་ཀྱིས་ཀུན་བླངས་ནས།།</l>
+</lg>
+<lg>
+<l><persName type="SRC" ana="title" key="1" corresp="#src_p1">སྐྱབས་ཐུབ་དབང</persName>་བསྟན་པའི་གོ་རིམ་བཞིན།།</l>
+<l>དཔལ་སོ་སོར་ཐར་པའི་སྡོམ་པ་རྣམས།།</l>
+<l><persName type="SRC" ana="title" key="117" corresp="#src_p117">རྗེ་ཐམས་ཅད་མཁྱེན་པ་བྱམས་གླིང་པ</persName>།།</l>
+<l><placeName type="SRC" ana="desc"><persName type="SRC" ana="title" key="142" corresp="#src_p142">ནུབ་ཁ་ཆེའི་པཎ་ཆེན</persName>་གདན་ས</placeName>་སོགས།།</l>
+<l>ལར་མཁས་བཙུན་མཁན་སློབ་ཕུན་ཚོགས་ལ།།</l>
+<l>ཆོས་འདུལ་བའི་གཞུང་བཞིན་ནོད་པར་མཛད།།</l>
+</lg>
+
+<lg>
+<l><persName type="SRC" ana="title" key="117" corresp="#src_p117">རྗེ་བྱམས་གླིང་ཐམས་ཅད་མཁྱེན་པ</persName>་དང༌།།</l><pb ed="A" n="3b" facs="../content/images/r103/3b.jpg"/>
+<l><persName type="SRC" ana="desc" key="30,54">ཕ་བྲག་ཐོག་ཆོས་རྗེ་ཁུ་དབོན</persName>་དང༌།།</l>
+<l><persName type="SRC" ana="title" key="99" corresp="#src_p99">རྗེ་པཎ་ཆེན་ནགས་ཀྱི་རིན་པོ་ཆེ</persName>།།</l>
+<l>ཆོས་གསང་སྔགས་རྒྱལ་མཚོའི་མཐར་སོན་པ།།</l>
+<l><persName type="SRC" ana="pron" key="16" corresp="#src_p16">ཁོང</persName>་<persName type="SRC" ana="title" key="581" corresp="#src_p581">རྡོ་རྗེ་སློབ་དཔོན་རིན་པོ་ཆེ</persName>།།</l>
+<l><persName type="SRC" key="581" corresp="#src_p581">དཔལ་ཡེ་ཤེས་རྒྱ་མཚོ</persName>འི་ཞལ་མངའ་དང༌།།</l>
+<l><persName type="SRC" ana="title" key="583" corresp="#src_p583">བཀའ་འགྱུར་རོ་ཅོག་གི་བདག་པོ་མཆོག</persName>།</l>
+<l><persName type="SRC" key="583" corresp="#src_p583">རྗེ་ཤཱཀྱ་རྒྱལ་མཚན་ཆེན་པོ</persName>་དང༌།།</l>
+<l><persName type="SRC" ana="title" key="498" corresp="#src_p498">རྔོག་ལོ་ཙྪའི་གདན་ས་པཎ་ཌི་ཏ</persName>།།</l>
+<l><persName type="SRC" ana="title" key="580" corresp="#src_p580">རྗེ་དུས་ཞབས</persName>་<persName type="SRC" ana="abbr" key="50" corresp="#src_p50">ལོ་ཆེན་ཤེས་རིན</persName>་ཞབས།།</l>
+<l><persName type="SRC" ana="title" key="139" corresp="#src_p139">གཞུང་རབ་འབྱམས་བསྟན་བདག་རྫོང་དཀར་བ</persName>།།</l>
+<l>ཡུམ་རྡོ་རྗེ་ཕག་མོའི་ཡབ་གཅིག་པོ།།</l>
+<l>ལྷ་བདེ་མཆོག་འཁོར་ལོ་གྲུབ་པའི་ཚུལ།།</l>
+<l><persName type="SRC" ana="full" key="589" corresp="#src_p589">ཕ་རས་ཆེན་དཔལ་འབྱོར་བཟང་པོ</persName>་དང༌།།</l>
+<l><persName type="SRC"  key="340,647">རྔོག་བྱང་ཆུབ་དཔལ་བ་ཁུ་དབོན</persName>་དང༌།།</l>
+<l>དུས་སྙིགས་མའི་རྒྱལ་བ་རྡོ་རྗེ་འཆང༌།།</l>
+<l><persName type="SRC" ana="full" key="148" corresp="#src_p148">དཔལ་སྤྱན་སྔ་ཞྭ་དམར་ཅོད་པཎ་ཅན</persName>།།</l>
+<l>རྗེ་མཆོག་གི་སྤྲུལ་སྐུ་རིན་པོ་ཆེ།།</l>
+<l><persName type="SRC" ana="full" key="593" corresp="#src_p593">དཔལ་ཀུན་བཟང་རོལ་པ</persName>་ལ་སོགས་པ།།</l>
+<l>ལར་མཁས་གྲུབ་བླ་མ་མང་དུ་བསྟེན།།</l>
+
+<l>ལར་སངས་རྒྱས་བསྟན་པ་མ་ཚང་མེད།།</l>
+<l>ཡོང་ཕྱི་ནང་ཆོས་ལ་ཐོས་བསམ་མཛད།།</l>
+<l><persName type="SRC" ana="pron" key="16" corresp="#src_p16">ཁོང</persName>་མཁས་པའི་གྲགས་པས་སྟོང་ཁམས་ཁྱབ།།</l>
+<l>སྐུ་བཙུན་པས་མཐོང་ན་མི་མཐུན་མེད།།</l>
+</lg></p>
+</div>
+
+<div type="founding_Gong_dkar_chos_sde">
+<head type="supplied" xml:lang="en">Founding of Gong dkar chos sde</head>
+<p><lg>
+<l>ཐུགས་བརྩེ་བས་ཀུན་ལ་བུ་བཞིན་བསྐྱོངས།།</l>
+<l>གསུང་ནུས་མཐུས་ལྷ་སྲིན་བྲན་དུ་འཁོལ།།</l>
+<l><persName type="SRC" ana="title" key="1" corresp="#src_p1">སྐྱབས་ཤཱཀྱ་དབང་པོ</persName>འི་བསྟན་པ་ལ།།</l>
+<l>ཆོས་མི་ནུབ་རྒྱལ་མཚན་བསྒྲེང་པའི་ཕྱིར།།</l>
+<l><placeName type="SRC" key="41" corresp="#src_g41">དཔལ་རྡོ་རྗེ་གདན་གྱི་ཆོས་སྡེ</placeName>་བཏབ།།</l>
+<l>རྟེན་བརྟེན་པར་བཅས་པའི་དཀྱིལ་འཁོར་ཆེ།།</l>
+<l><placeName type="SRC" key="19" corresp="#src_g19">བོད</placeName>་འགྲན་ཟླ་བྲལ་བའི་གཙུག་ལག་ཁང༌།།</l>
+<l>དཔལ་ཀུན་བཟང་མཆོད་སྤྲིན་བཅས་པ་བཞེངས།།</l>
+</lg>
+<lg>
+<l>ཡོང་མདོ་སྔགས་རིག་གནས་བཅས་པའི་ཆོས།།</l><pb ed="A" n="4a" facs="../content/images/r103/4a.jpg"/>
+<l>དོན་མ་ཚང་མེད་པར་འཛིན་མཛད་པའི།།</l>
+<l><persName type="SRC" ana="pron" key="16" corresp="#src_p16">ཁོང</persName>་བློ་གསལ་<persName type="SRC" ana="desc">དགེ་འདུན་སྟོང་ཕྲག</persName>་བསྡུས།།</l>
+<l>འཁོར་རྒྱ་མཚོ་ལྟ་བུའི་ཚོགས་པ་ལ།།</l>
+</lg>
+<lg>
+<l>ཆོས་ཕྱི་ནང་ལུང་རྟོགས་ཆར་ཆེན་ཕབ།།</l>
+<l><persName type="SRC" ana="pron" key="16" corresp="#src_p16">ཁོང</persName>་བསྐལ་བཟང་བྱང་ཆུབ་ལམ་དུ་བཅུག།</l>
+<l>ལྷོ་འཛམ་གླིང་མཁས་གྲུབ་སྡེ་ཡིས་ཁྱབ།།</l>
+<l>ཆོས་མདོ་སྔགས་ཕྱག་བཞེས་རྣམ་པར་དག།</l>
+</lg>
+<lg>
+<l><persName type="SRC" ana="desc" key="19,24,25,26,27">རྗེ་བརྩེ་བ་ཆེན་པོ་ཁུ་དབོན</persName>་གྱི།།</l>
+<l>ཐུགས་བཞེད་ཕུག་གྲུབ་མཐའ་ཇི་བཞིན་བསྟན།།</l>
+<l><persName type="SRC" ana="pron" key="16" corresp="#src_p16">ཁོང</persName>་མ་རྟོགས་ལོག་རྟོགས་ཕྱིན་ཅི་ལོག།</l>
+<l>ཕྱི་རྒོལ་ངན་མ་རུངས་ཆོས་བཞིན་བཏུལ།།</l>
+</lg></p>
+</div>
+
+<div type="at_Sakya_and_visions">
+<head type="supplied" xml:lang="en">Journey to gTsang</head>
+<label type="supplied" xml:lang="en">Visionary Experiences</label>
+<p><lg>
+<l><placeName type="SRC" ana="full" key="95" corresp="#src_g95">དཔལ་ས་སྐྱའི་གདན་ས</placeName>ར་ཕྱག་ཀྱང་བགྲོད།།</l>
+<l><placeName type="SRC" ana="desc" key="95" corresp="#src_g95">སྡེ་ཆེན་པོ་དེ</placeName>་ཡི་གདུང་བརྒྱུད་དང༌།།</l>
+<l><persName type="SRC" ana="pron" key="16" corresp="#src_p16">ཁོང</persName>་ལས་འཛིན་བླ་མ་མི་ཆེན་ཚོགས།།</l>
+<l>ཁྲོམ་ལྷ་མིར་བཅས་པས་དཔག་ཚད་བར།།</l>
+<l>སྟོན་མཆོད་སྤྲིན་བསུ་བའི་བཀོད་པ་ཕུལ།།</l>
+<l>ཞབས་སྤྱི་བོར་བླངས་ནས་བཀའ་བཞིན་བསྒྲུབས།།</l>
+</lg>
+<lg>
+<l>རྟེན་ཕྱི་ནང་གསང་གསུམ་སྤྱན་ལམ་ཕབ།།</l>
+<l><placeName type="SRC" ana="full" key="95" corresp="#src_g95">གནས་དེ</placeName>་ཡི་ལྷ་མི་ཐམས་ཅད་ལ།།</l>
+<l>ཡར་དཀོན་མཆོག་མཆོད་པའི་སྤྲིན་ཕུང་དང༌།།</l>
+<l>ཡུལ་གང་ལ་གང་བབ་ཟང་ཟིང་དང༌།།</l>
+</lg>
+<lg>
+<l>ཆོས་བདུད་རྩི་ལྟ་བུའི་དགའ་སྟོན་བསྩལ།།</l>
+<l>དཔལ་གུ་རུམ་བསེ་འབག་ནག་པོ་ལ།།</l>
+<l>འཕྲལ་མཆོད་གཏོར་བསྐང་གསོའི་རྒྱུན་གྱིས་མཆོད།།</l>
+<l>ཞལ་ཡང་ཡང་གཟིགས་ནས་ཆེད་དུ་བསྔགས།།</l>
+</lg>
+<lg>
+<l><placeName type="SRC" key="683" corresp="#src_g683">གནས་ཁའུ་སྐྱེས་ལྷས</placeName>་འཇལ་བའི་ཚེ།།</l>
+<l>ཆབ་ཁའུ་གཙང་པོས་བསུ་ཆང་ཕུལ།།</l>
+<l>རྟེན་ངོ་མཚར་བསམ་མི་ཁྱབ་པ་བྱུང༌།།</l>
+<l>མགོན་སྟོབས་འཕྲོག་ནག་པོ་དངོས་སུ་གཟིགས།།</l>
+<l>བཀའ་ཇི་བཞིན་བསྒྲུབ་པའི་སྲོག་སྙིང་ཕུལ།།</l><pb ed="A" n="4b" facs="../content/images/r103/4b.jpg"/>
+<l><placeName type="SRC" key="31" corresp="#src_g31">སྟོད་གཙང་ཕྱོགས</placeName>་མི་ཆེན་ཐམས་ཅད་ཀྱིས།།</l>
+<l>ཞབས་པད་མ་སྤྱིར་ཁུར་བཀའ་བཞིན་བསྒྲུབས།།</l>
+<l><placeName type="SRC" key="119" corresp="#src_g119">དཔལ་ཞྭ་ལུ</placeName>་<placeName type="SRC" key="553" corresp="#src_g553">སྣར་ཐང</placeName>་ལ་སོགས་པའི།།</l>
+<l>སྡེ་ཆེན་པོའི་ཚོགས་པས་མཆོད་བཀུར་ཕུལ།།</l>
+</lg>
+
+<lg>
+<l><persName type="SRC" ana="full" key="589" corresp="#src_p589">ཕ་རས་ཆེན་དཔལ་འབྱོར་བཟང་པོ</persName>་ལ།།</l>
+<l>ཁྲིད་ནེ་གུ་ཆོས་དྲུག་གསན་པའི་ཚེ།།</l>
+<l>ནུབ་བདེ་བ་ཅན་གྱི་ཞིང་ཁམས་གཤེགས།།</l>
+<l>མགོན་འོད་དཔག་མེད་ལ་བཀའ་ཆོས་གསན།།</l>
+</lg>
+<lg>
+<l>གནས་དེ་ན་རིན་ཆེན་སེང་གེའི་ཁྲི།།</l>
+<l>སྟོང་ལྷ་རྫས་གོས་ཀྱིས་བཀབ་པ་གཟིགས།།</l>
+<l>རྗེ་འོད་དཔག་མེད་ཀྱི་ཞལ་ནས་ཀྱང༌།།</l>
+<l>ཁྲི་འདི་ལ་<persName type="SRC" ana="pron" key="16" corresp="#src_p16">ཁྱོད་ཉིད</persName>་འབྱོན་རྒྱུ་ཡིན།།</l>
+<l>ཞེས་རྒྱལ་བའི་ལུང་བསྟན་ཚད་མ་ཐོབ།།</l>
+</lg>
+<lg>
+<l><placeName type="SRC" ana="full" key="299" corresp="#src_g299">དཔལ་ཡིད་བདེ་ཚལ་གྱི་དབེན་གནས</placeName>་སུ།།</l>
+<l><persName type="SRC" ana="full" key="385" corresp="#src_p385">རྗེ་རྣལ་འབྱོར་དབང་ཕྱུག་བིརྦ་པ</persName>།།</l>
+<l>ཞལ་དངོས་སུ་གཟིགས་ནས་དེ་ཀའི་མོད།།</l>
+<l>སྐུ་སྣང་བརྙན་རི་མོར་ཕྱག་བྲིས་བཏབ།།</l>
+</lg></p>
+</div>
+
+<div type="disciples">
+<head type="supplied" xml:lang="en">Disciples</head>
+<label type="supplied" xml:lang="en">Connection to China</label>
+<p><lg>
+<l><persName type="SRC" ana="full" key="16" corresp="#src_p16">ཕ་རྗེ་བཙུན་ཐམས་ཅད་མཁྱེན་པ</persName>་དེའི།།</l>
+<l>ལར་མཁས་བཙུན་སྙན་པས་ཀུན་ཁྱབ་སྟེ།།</l>
+<l>འཁོན་ས་སྐྱའི་གདུང་བརྒྱུད་དྲི་མ་མེད།།</l>
+<l><persName type="SRC" ana="full" key="53" corresp="#src_p53">རྗེ་བདག་ཆེན་བསོད་ནམས་རྒྱལ་མཚན</persName>་ཞབས།།</l>
+<l><persName type="SRC" ana="desc" key="55" corresp="#src_p55">སྐུ་མཆེད</persName>་བཅས་རྣམས་ཀྱིས་ཞབས་ལ་གཏུགས།།</l>
+<l>གསུང་དམ་པའི་ཆོས་ཀྱི་དགའ་སྟོན་བཞེས།།</l>
+</lg>
+<lg>
+<l><placeName type="SRC" key="19,30,31,183">བོད་གངས་ཅན་དབུས་གཙང་ཁམས་གསུམ</placeName>་དང༌།།</l>
+<l><placeName type="SRC" key="657,422">ཡུལ་ཀོང་མོན</placeName>་ས་མཐའི་བླ་མ་དང༌།།</l>
+<l><persName type="SRC" ana="pron" key="16" corresp="#src_p16">ཁོང</persName>་<persName type="SRC" ana="desc">མཁས་གྲུབ་དགེ་བའི་བཤེས་གཉེན་ཚོགས</persName>།།</l>
+<l>དབྱར་ཆར་སྤྲིན་མཁའ་ལ་འདུ་བ་ལྟར།།</l>
+<l>ཕྱོགས་རིས་མེད་གྲྭ་སློབ་རྒྱ་མཚོ་འདུས།།</l>
+<l>ཆོས་མདོ་སྔགས་བསྟན་པ་མ་ཚང་མེད།།</l>
+<l>རང་སོའི་བསམ་དབང་བཞིན་དུ་སྩལ།།</l>
+<l><placeName>ཡུལ་རྒྱ་གར་ཤར་ཕྱོགས</placeName>་པཎྜི་ཏ།།</l>
+<l><persName type="SRC" key="1130" corresp="#src_p1130">དཔལ་ལོ་ཀོཏྟ་ར</persName>་ཞེས་བྱ་དང༌།།</l><pb ed="A" n="5a" facs="../content/images/r103/5a.jpg"/>
+<l><persName type="SRC"  ana="title" key="1398" corresp="#src_p1398">ཤར་པུ་ཁཾ་དགེ་སློང་འདུལ་བ་འཛིན</persName>།།</l>
+<l><emph>ཁོང</emph>་<persName type="SRC" key="1398" corresp="#src_p1398">མཁས་པ་ཨ་ལངྐར</persName>་དང༌།།</l>
+<l>ཡོང་<persName type="SRC" key="1399" corresp="#src_p1399">དྷི་པཾ་ཀ་ར</persName>་ལ་སོགས་པ།།</l>
+<l><placeName type="SRC" key="22" corresp="#src_g22">གནས་འཕགས་ཡུལ</placeName>་མཁས་པའི་ཚོགས་རྣམས་ཀྱིས།།</l>
+<l>ཞབས་གཙུག་ཏུ་བསྟེན་ནས་གུས་པར་བསྟོད།།</l>
+<l><placeName type="SRC" ana="title" key="19" corresp="#src_g19">ལྗོངས་ཁ་བ་ཅན</placeName>་གྱི་མཁས་པའི་ཚོགས།།</l>
+<l>གཞུང་རབ་འབྱམས་སྨྲ་བའི་ཆོས་འཆད་དང༌།།</l>
+<l><placeName type="SRC" ana="desc" key="668" corresp="#src_g668"><persName type="SRC" ana="title" key="142" corresp="#src_p142">དཔལ་ཁ་ཆེའི་པཎ་ཆེན</persName>་གདན་ས་བཞི</placeName>།།</l>
+<l>ལག་<placeName type="SRC" key="671" corresp="#src_g671">འཕགས་སྡེ</placeName>ར་བཅས་པའི་གཙོ་འཁོར་སོགས།།</l>
+<l>ཡུལ་སོ་སོའི་སྡེ་དགོན་འཛིན་པ་ཡི།།</l>
+<l>ཆོས་འཇིག་རྟེན་ལས་སྣེ་ཆེ་རྣམས་ཀྱིས།།</l>
+<l><persName type="SRC" ana="title" key="16" corresp="#src_p16">ཕ་རྗེ་བཙུན</persName>་ཞབས་པད་སྤྱི་བོར་བླངས།།</l>
+<l>བཀའ་མདོ་སྔགས་ཆོས་འཁོར་དཔལ་ལ་སྦྱར།།</l>
+<l><persName type="SRC" ana="title" key="527" corresp="#src_p527">རྗེ་ལོ་ཆེན་ཏེའུ་ར་ཆོས་རྗེ</persName>་དང༌།།</l>
+<l>ཁོང་སྐད་གཉིས་སྨྲ་བ་འགྲན་བྲལ་བའི།།</l>
+<l><persName type="SRC" ana="title" key="1400" corresp="#src_p1400">སྟོད་བོ་དོང་ལོ་ཙཱ</persName>ར་གྲགས་པ་དང༌།།</l>
+<l><persName type="SRC" ana="title" key="116" corresp="#src_p116">དཔལ་ཞྭ་ལུ་ལོ་ཙཱ་ཆེན་པོ</persName>་སོགས།།</l>
+<l>ལར་<persName type="SRC" ana="desc">ཞུས་ཆེན་ལོ་ཙཱ་རྣམས</persName>་ཀྱིས་ཀྱང༌།།</l>
+<l>ཞབས་ཐོད་དུ་ཁུར་ནས་གསུང་བཅུད་བཞེས།།</l>
+<l><persName type="SRC" ana="title" key="593" corresp="#src_p593">ཕ་ཀུན་བཟང་རྩེ་པ</persName>་ལ་སོགས་པ།།</l>
+<l>ཆོས་ཕྱི་ནང་རྒྱ་མཚོར་དབང་འབྱོར་བའི།།</l>
+<l><persName type="SRC" ana="title" key="593" corresp="#src_p593">རྗེ</persName>་མཁྱེན་སྤྱན་མངའ་བ་མང་པོས་ཀྱང༌།།</l>
+<l>དབང་ཆོས་ལུང་གདམས་པ་རྒྱ་ཆེར་གསན།།</l>
+<l><persName type="SRC"  ana="title" key="1389,287,169">རྗེ་རྔོག་འབྲུག་རིན་པོ་ཆེ</persName>་ལ་སོགས།།</l>
+<l>དཔལ་བསྒྲུབ་རྒྱུད་བསྟན་པའི་བདག་པོ་རྣམས།།</l>
+<l><persName type="SRC" ana="title" key="16" corresp="#src_p16">ཕ་ཀུན་མཁྱེན</persName>་ཞབས་པད་གཙུག་གིས་བཏུགས།།</l>
+<l>ཆོས་ཟབ་དང་རྒྱ་ཆེའི་ལོངས་སྤྱོད་མཛོད།།</l>
+
+
+<l><persName type="SRC" ana="title"><placeName type="SRC" key="21" corresp="#src_g21">ཤར་རྒྱ་ནག</placeName>་སྟོང་འཁུན་རྒྱལ་པོ</persName>་ཡི།།</l>
+<l><persName type="SRC" ana="pron">ཁོང</persName>་བླ་ཡི་མཆོད་གནས་ཀུན་གྱི་གཙོ།།</l>
+<l><persName type="SRC" ana="desc"><persName type="SRC"  key="1401" corresp="#src_p1401">དོན་ཆོས་རྗེ</persName>འི་དབོན</persName>་དང་མི་ཆེན་སོགས།།</l>
+<l>ས་ལོ་བར་མང་པོའི་ལམ་ལ་བགྲོད།།</l>
+</lg>
+<lg>
+<l>ཇ་གོས་དར་མཆོད་སྤྲིན་ཡུལ་གྲུ་བསྐང༌།།</l><pb ed="A" n="5b" facs="../content/images/r103/5b.jpg"/>
+<l>ཞལ་མཐོང་བའི་མོད་ལ་དད་པ་ཐོབ།།</l>
+<l>གསུང་ཆོས་ཀྱི་འཁོར་ལོའི་སྒྲ་དབྱངས་ཐོས།།</l>
+<l><persName type="SRC" ana="title" key="16" corresp="#src_p16">རྗེ་བླ་མ</persName>་དེ་ཡི་རྣམ་ཐར་རྣམས།།</l>
+<l><persName type="SRC" ana="pron">ཁོང</persName>་<persName type="SRC" ana="title">གོང་མ་རྒྱལ་པོ</persName>འི་སྙན་དུ་གསོལ།།</l>
+<l><placeName type="SRC" key="21" corresp="#src_g21">ཡུལ་རྒྱལ་ནག</placeName>་སྐུ་ཡི་སྙན་པས་ཁྱབ།།</l>
+<l><placeName type="SRC" ana="desc" key="685" corresp="#src_g685">བོད་ཆོལ་ཁ་གསུམ་གྱི་རྒྱལ་ཁམས</placeName>་ན།།</l>
+<l><persName type="SRC" ana="desc"><placeName type="SRC" corresp="#src_unknown">དམག་ཁྲི་བསྐོར་བཅུ་གསུམ</placeName>་གྲགས་པའི་རྗེ</persName>།།</l>
+<l>དཔའ་རླངས་ཆེན་ལྷ་གཟིགས་འཁོར་ལོ་བསྒྱུར།།</l>
+<note place="bottom" type="gloss" resp="#mf">Which Phag mo gru pa ruler?</note>
+<l><persName type="SRC" ana="pron">ཁོང</persName>་<persName type="SRC" ana="title" key="296" corresp="#src_p296">གོང་མ་ཆེན་པོ</persName>ས་བསྙེན་བཀུར་མཛད།།</l>
+<l>སྐྱབས་སངས་རྒྱས་བསྟན་པའི་བདག་པོར་བསྔགས།།</l>
+</lg></p>
+
+<label type="supplied" xml:lang="en">lHa dbang kun dga' of Gongkar</label>
+<label type="supplied" xml:lang="en">Past Lives</label>
+<p><lg>
+<l>སྲས་ཆོས་ཀྱི་རྒྱལ་པོ་མཁྱེན་ཡངས་ཅན།།</l>
+<l><persName type="SRC" key="555" corresp="#src_p555">དཔལ་ལྷ་དབང་ཀུན་དགའ</persName>ི་ཞལ་སྔ་ནས།།</l>
+<l>བཀའི་གཙུག་གིས་<emph>རྒྱན</emph>་དུ་རྟག་པར་བཀོད།།</l>
+<l>ལྷ་རྡོ་རྗེ་འཆང་དུ་ཞལ་དངོས་གཟིགས།།</l>
+<l>གསུང་སྩལ་བའི་གནས་རྣམས་ཐོགས་མེད་བསྒྲུབས།།</l>
+<l><persName type="SRC" ana="title" key="16" corresp="#src_p16">རྗེ</persName>་ཁོང་གི་བསྟན་པའི་སྦྱིན་བདག་གཙོ།།</l>
+<l>ཐུགས་དགྱེས་པའི་བྱ་བས་ཉིན་མཚན་འདས།།</l>
+<l>ཐུགས་དགོངས་པ་རྫོགས་པའི་ཕྱག་བཞེས་བསྐྱངས།།</l>
+<l><persName type="SRC" ana="title" key="16" corresp="#src_p16">ཕ་བླ་མ</persName>་དེ་ཡི་བྱིན་བརླབས་ཞུགས།།</l>
+<l><persName type="SRC" ana="title" key="1019" corresp="#src_p1019">མཁན་བོ་དྷི་སཏྭ</persName>་དབོན་རིགས་ཆེ།།</l>
+<l><placeName type="SRC" key="370" corresp="#src_g370">ཡུལ་འཕྱིང་བར་རྟགས་རྩེ</placeName>འི་ས་སྐྱོང་མཆོག།</l>
+<l>ཞང་<persName type="SRC" ana="full" key="1083" corresp="#src_p1083">དྲུང་ཆེན་རྡོ་རྗེ་ཚེ་བརྟན</persName>་དྲུང༌།།</l>
+<l><persName type="SRC" ana="desc" key="514" corresp="#src_p514">དབོན་ཡར་རྒྱབ་དཔོན་ཆེན་ཁུ་དབོན</persName>་སོགས།།</l>
+<l><persName type="SRC" ana="title" key="296" corresp="#src_p296">དཔལ་མི་དབང་གོང་མ</persName>འི་<placeName type="SRC" ana="desc">བཀའ་བློན་གཙོ</placeName>།།</l>
+<l>མི་ཆེན་པོ་ཀུན་གྱི་བླ་མར་མཆོད།།</l>
+<l><persName type="SRC" ana="desc" key="129" corresp="#src_p129">བོད་ཁྲིམས་ཀྱི་བདག་པོ་མི་ཡི་དབང</persName>༌།།</l>
+<l><persName type="SRC" key="129" corresp="#src_p129">དཔལ་དོན་ཡོད་རྡོ་རྗེ</persName>འི་ཞལ་མངའ་ནས།།</l>
+<l>ཐུགས་གཏིང་ནས་དད་ཐོབ་རྣམ་པར་དཀར།།</l>
+<l>ཆོས་སྦྱིན་པའི་བདག་པོ་ཆེན་པོ་མཛད།།</l>
+<l><persName type="SRC" ana="desc" key="130" corresp="#src_p130">ཤར་བྱ་རྒྱལ་ཁྲི་དཔོན་ཆེན་པོ</persName>་ཡིས།།</l>
+<l>ནང་གསང་སྔགས་དབང་བཞིའི་ཆུ་རྒྱུན་མནོས།།</l>
+<l>དུས་ཡུན་གྱི་སྦྱིན་བདག་བཀའ་བཞིན་བསྒྲུབས།།</l><pb ed="A" n="6a" facs="../content/images/r103/6a.jpg"/>
+
+
+<note place="bottom" type="gloss" resp="#mf">Is he considered a reincarnation of Grags pa rgyal mtshan?</note>
+<l><placeName type="SRC" key="426" corresp="#src_g426">སྟོད་མངའ་རིས</placeName>་<placeName type="SRC" key="684" corresp="#src_g684">ལ་སྟོད་ལྷོ་བྱང</placeName>་དུ།།</l>
+<l><persName type="SRC" ana="full">དཔལ་རྗེ་བཙུན་གྲགས་པ་རྒྱལ་མཚན</persName>་གྱི།།</l>
+<l>སྐུ་སྤྲུལ་པ་ཡིན་ཞེས་ཀུན་ལ་གྲགས།།</l>
+<l><placeName>དབུས་རུ་བཞི་ས</placeName>་ཡི་སྙིང་པོ་ན།།</l>
+<l><persName type="SRC" ana="desc" key="91" corresp="#src_p91">འཁོན་འཇམ་དབྱངས་དྲུག་པ་ཆོས་ཀྱི་རྗེ</persName>།།</l>
+<l><persName type="SRC" ana="title" key="1019" corresp="#src_p1019">མཁན་བོ་དྷི་སཏྭ</persName>འི་སྐུ་ཡི་སྤྲུལ།།</l>
+<l><persName type="SRC" ana="title" key="16" corresp="#src_p16">རྗེ་དཔལ་ལྡན་བླ་མ</persName>་ཡིན་པར་གྲགས།།</l>
+
+<l>སྔོན་<persName type="SRC" ana="title" key="375" corresp="#src_p375">སློབ་དཔོན་པདྨ</persName>ས་ལུང་བསྟན་པ།།</l>
+<l>ཁོང་<persName>སྣ་རྣམ་རྡོ་རྗེ་བདུད་འཇོམས</persName>་དེ།།</l>
+<l><placeName type="SRC" key="321" corresp="#src_g321">ཡུལ་དབུས་གཙང</placeName>་མཚམས་སུ་རྒྱལ་སྲིད་བཟུང༌།།</l>
+<l>མཚན་ཀུན་དགའ་ཞེས་བྱ་མངའ་འབངས་རྣམས།།</l>
+<l>སྐྱབས་དམ་པའི་ཆོས་ལ་ལེགས་པར་སྦྱར།།</l>
+<l>བདག་པདྨའི་བསྟན་པ་འཛིན་ཞེས་གསུངས།།</l>
+</lg></p>
+</div>
+
+<div type="Passing_away_prayers">
+<head type="supplied" xml:lang="en">Passing away</head>
+<label type="supplied" xml:lang="en">Gong dkar Chos sde Community</label>
+<p><lg>
+
+<l>རྗེ་དེ་འདྲའི་<persName type="SRC" ana="title" key="16" corresp="#src_p16">བླ་མ་རིན་པོ་ཆེ</persName>།།</l>
+<l>ཐུགས་བཞེད་པའི་འཕྲིན་ལས་མཐར་སོན་ཏེ།།</l>
+<l><date  when="1496">ལོ་མེ་འབྲུག་དྲུག་བཅུ་རྩ་ལྔ</date>འི་ཐོག།</l>
+<l>ཞིང་གཞན་གྱི་གདུལ་བྱ་མངོན་གཟིགས་ནས།།</l>
+<l>གླིང་འདི་རུ་སྐུ་ཡི་བཀོད་པ་བསྡུས།།</l>
+<l>གནམ་དགུང་སྔོན་འཇའ་འོད་མཆོད་སྤྲིན་འཁྲིགས།།</l>
+</lg>
+<lg>
+<l>སྟེང་གནས་གསུམ་མཁའ་འགྲོའི་ཚོགས་རྣམས་དང༌།།</l>
+<l>བསྟན་མངོན་པར་དགའ་བའི་ལྷ་རྣམས་ཀྱིས།།</l>
+<l>གནས་སྟེང་འོག་མེ་ཏོག་ཆར་གྱིས་བཀང༌།།</l>
+<l>སྤོས་དྲི་ཞིམ་སྙན་པའི་རོལ་མོའི་སྒྲ།།</l>
+</lg>
+<lg>
+<l><placeName type="SRC" ana="desc">ཡུལ་སྟོད་སྨད</placeName>་ཁྱབ་པའི་མཆོད་སྤྲིན་ཕུལ།།</l>
+<l>ལར་ཕྱོགས་བཅུའི་དགེ་འདུན་འདུས་པ་དང༌།།</l>
+<l><persName type="SRC" ana="pron" key="16" corresp="#src_p16">ཁོང</persName>་དད་ལྡན་སྐྱེ་བོ་དཔག་མེད་འདུས།།</l>
+<l>བློ་བདག་འཛིན་དོར་བའི་མཆོད་པའི་ཚོགས།།</l>
+</lg>
+<lg>
+<l>ལུས་ལོངས་སྤྱོད་མ་ཚང་མེད་པས་མཆོད།།</l>
+<l>ཕྱག་བསྐོར་བ་གསོལ་འདེབས་གདུང་ཤུགས་ཀྱིས།།</l><pb ed="A" n="6b" facs="../content/images/r103/6b.jpg"/>
+<l>དུས་ཉིན་མཚན་འདས་པའི་མཆོད་བསྟོད་མཛད།།</l>
+<l>གདུང་རིལ་པོ་གཅིག་པའི་ཡིད་བཞིན་ནོར།།</l>
+</lg>
+<lg>
+<l><placeName type="SRC" ana="desc">ལྷོ་འཛམ་བུ་གླིང་གི་བསོད་ནམས་ཞིང</placeName>༌།།</l>
+<l>དགོས་གངས་ཅན་མཆོད་རྟེན་སྙིང་པོར་བཞུགས།།</l>
+<l><persName type="SRC" ana="title" key="16" corresp="#src_p16">ཕ་བླ་མ་ཐམས་ཅད་མཁྱེན་པ་དེ</persName>འི།།</l>
+<l>དོན་རྣམ་ཐར་མཛད་པ་ཕྲིན་ལས་སྒོ།།</l>
+</lg>
+<lg>
+<l>སྐྱབས་དུས་གསུམ་སངས་རྒྱས་ཀུན་དང་གཅིག།</l>
+<l>དུས་ད་ལན་ཕྱོགས་རེའི་གཞན་སྣང་ཙམ།།</l>
+<l><persName type="SRC" ana="desc">རང་སྐལ་མཚུངས་རྣམས</persName>་ལ་མངོན་དུ་མཛད།།</l>
+<l><persName type="SRC" ana="pron" key="16" corresp="#src_p16">ཁོང</persName>་ཐོགས་མེད་དང་པོའི་སངས་རྒྱས་གཙོ།།</l>
+</lg>
+<lg>
+<l>ད་མ་འོངས་འཁོར་བ་མ་སྟོངས་བར།།</l>
+<l><persName type="SRC" ana="pron" key="16" corresp="#src_p16">རྗེ་ཁོང</persName>་གི་བཞེད་དོན་རྣམ་པར་ཐར།།</l>
+<l>དུས་སྐད་ཅིག་བཏང་སྙོམས་མི་མངའ་བར།།</l>
+<l>འཕྲལ་མཛད་པའི་ཚུལ་སྒོ་བསམ་མི་ཁྱབ།།</l>
+<l>ཐུགས་མི་རྟོགས་དབྱིངས་ནས་ལྷུན་གྲུབ་འབྱུང༌།།</l>
+<l><persName type="SRC" ana="desc" key="16" corresp="#src_p16">རྗེ་དེ</persName>་ལྟ་བུའི་ཡིད་བཞིན་ནོར།།</l>
+</lg>
+<lg>
+<l>ཞལ་མཐོང་བ་དོན་ལྡན་རིན་པོ་ཆེ།།</l>
+<l>གསུང་ཐོས་པ་དོན་ལྡན་རིན་པོ་ཆེ།།</l>
+<l>ཐུགས་དྲན་པ་དོན་ལྡན་རིན་པོ་ཆེ།།</l>
+<l>སྐུ་རེག་པ་དོན་ལྡན་རིན་པོ་ཆེ།།</l>
+<l>བློ་གཏད་པ་དོན་ལྡན་རིན་པོ་ཆེ།།</l>
+<l>གང་མོས་པ་དོན་ལྡན་རིན་པོ་ཆེ།།</l>
+<l>སྤྱིར་འབྲེལ་ཚད་དོན་ལྡན་རིན་པོ་ཆེ།།</l>
+<l>སྐྱབས་སངས་རྒྱས་ཞལ་དངོས་རིན་པོ་ཆེ།།</l>
+<l>ལམ་དམ་ཆོས་འབྱུང་གནས་རིན་པོ་ཆེ།།</l>
+<l>གྲོགས་དགེ་འདུན་ཀུན་གཙོ་རིན་པོ་ཆེ།།</l>
+</lg>
+<lg>
+<l><persName type="SRC" ana="title" key="16" corresp="#src_p16">ཕ་བླ་མ་རྗེ་བཙུན་རིན་པོ་ཆེ</persName>།།</l>
+<l>དེང་གསོལ་འདེབས་<persName type="SRC" ana="desc">བུ་སློབ</persName>་དེང་འདུས་ཀྱི།།</l>
+<l>ངག་ང་རོའི་དབྱངས་ཀྱིས་རྒྱང་ནས་འབོད།།</l>
+<l>སྙན་ཡེ་ཤེས་ལམ་ཡང་གཏད་དུ་གསོལ།།</l>
+<l>ཡིད་གུས་པའི་གདུང་བས་གསོལ་བ་འདེབས།།</l>
+<l>ཐུགས་མཁྱེན་གཉིས་ཀློང་ནས་བྱིན་གྱིས་བརློབས།།</l>
+</lg>
+<lg>
+<l><persName type="SRC" ana="desc"><persName type="SRC" ana="pron" key="16" corresp="#src_p16">ཁྱེད</persName>་རྗེས་འཇུག་ཆེ་ཕྲ་ཐམས་ཅད</persName>་ལ།།</l><pb ed="A" n="7a" facs="../content/images/r103/7a.jpg"/>
+<l><persName type="SRC" ana="pron" key="16" corresp="#src_p16">ཕ་བླ་མ་ཁྱོད</persName>་ལས་སྐྱབས་གཞན་མེད།།</l>
+<l><persName type="SRC" ana="pron" key="16" corresp="#src_p16">རྗེ་ཁྱེད</persName>་ཀྱི་རྣམ་ཐར་རྒྱ་མཚོ་དང༌།།</l>
+<l>དབྱིངས་གཅིག་ཏུ་འདྲེས་པར་བྱིན་གྱིས་བརློབས།།</l>
+</lg>
+<lg>
+<l><persName type="SRC" ana="pron" key="16" corresp="#src_p16">མགོན་ཁྱེད</persName>་ཀྱི་བསྟན་པ་རིན་ཆེན་སྒྲོན།།</l>
+<l><placeName type="SRC" key="41" corresp="#src_g41">དཔལ་རྡོ་རྗེ་གདན་པོ</placeName>ར་རབ་འབར་ནས།།</l>
+<l>ཕྱོགས་མཐའ་མེད་གསལ་བའི་མདངས་འོད་ཀྱིས།།</l>
+<l>བདུད་ནག་ཕྱོགས་མུན་པ་མཐར་ཕྱུང་སྟེ།།</l>
+<l><persName type="SRC" ana="pron" key="16" corresp="#src_p16">རྗེ་ཁྱེད</persName>་ཀྱི་བཞེད་དགོངས་འགྲུབ་པ་དང༌།།</l>
+<l>ཁོང་བསྟན་པའི་སྦྱིན་བདག་ཆོས་ཀྱི་རྒྱལ།།</l>
+<l><persName type="SRC"  key="555" corresp="#src_p555">དཔལ་ལྷ་དབང་ཀུན་དགའ་ཁུ་དབོན</persName>་གྱི།།</l>
+<l>ཐུགས་བཞེད་དོན་འཕྲལ་ཡུན་ཕུན་སུམ་ཚོགས།།</l>
+<l>དོན་མ་ཚང་མེད་པར་བྱིན་གྱིས་བརློབས།།</l>
+</lg>
+<lg>
+
+<l><persName type="SRC" ana="pron" key="16" corresp="#src_p16">རྗེ་ཁྱེད</persName>་ཀྱི་བསྟན་འཛིན་དགེ་འདུན་ཚོགས།།</l>
+<l>བརྒྱན་བསླབ་པ་གསུམ་གྱི་རབ་མཛེས་ཤིང༌།།</l>
+<l>ནོར་ལུང་རྟོགས་ཆོས་ཀྱི་ཐུགས་རྒྱུད་བལྟམས།།</l>
+<l>འཕྲལ་ཐོས་བསམ་བསྒོམ་པས་དུས་འདའ་ཞིང༌།།</l>
+<l>ཆོས་འཆད་རྩོད་རྩོམ་པ་ལ་སོགས་པ།།</l>
+<l>ཁོང་མཁས་པའི་བྱ་བ་མཐར་ཕྱིན་ཏེ།།</l>
+<l>ཐུགས་གཅིག་ཏུ་མཐུན་པར་བྱིན་གྱིས་བརློབས།།</l>
+</lg>
+<lg>
+<l><persName type="SRC" ana="pron" key="16" corresp="#src_p16">ཕ་ཁྱེད</persName>་ཀྱི་ཚད་མེད་ཐུགས་རྗེ་ཡི།།</l>
+<l>གཞི་འཁོར་འདས་ཆོས་ལ་མ་ཁྱབ་མེད།།</l>
+<l>དོན་བདེན་པ་དེ་ཡི་བྱིན་སྟོབས་ཀྱིས།།</l>
+<l>མ་ནམ་མཁའ་མཉམ་པའི་སེམས་ཅན་རྣམས།།</l>
+<l>དཔལ་རྡོ་རྗེ་འཆང་གི་གོ་འཕང་མཆོག།</l>
+<l>དུས་མྱུར་དུ་འགྲུབ་པར་བྱིན་གྱིས་བརློབས།།</l>
+</lg></p>
+</div>
+
+<div type="colophon">
+<head type="supplied" xml:lang="en">Colophon</head>
+<p><lg>
+<l><title type="SRC" ana="desc" key="2121" corresp="#src_w2121"><persName type="SRC" ana="title" key="16" corresp="#src_p16">ཕ་བླ་མ</persName>འི་རྣམ་ཐར་ཕྱོགས་མཚོན་ཙམ</title>།།</l>
+<l>རྐྱེན་དད་པའི་གསལ་འདེབས་རིན་ཆེན་འཕྲེང༌།།</l>
+<l><persName type="SRC" ana="desc" key="16" corresp="#src_p16">རྗེ་དེ</persName>་ཡི་ཞལ་སློབ་ཐ་ཆུང་པ།།</l>
+<l><persName type="SRC" key="511" corresp="#src_p511">དཔལ་རྣམ་མགོན་དྲི་མེད་སྡེ</persName>་ཞེས་བྱ<note type="gloss">ས</note>།།</l>
+<l>བྱང་<placeName type="SRC" ana="full" key="688" corresp="#src_g688">འབྲི་ཁུང་བྱང་ཆུབ་གླིང་གི་གནས</placeName>།།</l>
+<l><emph>ཡིད</emph>་རྩེ་གཅིག་གུས་པར་དྲན་གྱུར་ནས།།</l><pb ed="A" n="7b" facs="../content/images/r103/7b.jpg"/>
+<l>ལག་ཐལ་མོ་སྙིང་ཁར་དངོས་སུ་སྦྱར།།</l>
+<l>ངག་གང་ཐོན་ཅ་ཅོ་སྨྲས་པ་ལ།།</l>
+<l><persName type="SRC" ana="title" key="16" corresp="#src_p16">ཕ་བླ་མ</persName>་འཁོར་བཅས་བརྩེ་བས་དགོངས།།</l>
+<l>དཔལ་ཚོགས་གཉིས་འགྲུབ་པའི་བཀྲ་ཤིས་ཤོག</l>
+</lg>
+ཅེས་<title type="SRC" ana="desc" key="2121" corresp="#src_w2121"><persName type="SRC" ana="full" key="16" corresp="#src_p16">ཆོས་ཀྱི་རྗེ་ཐུ་བཙུན་ཐམས་ཅད་མཁྱེན་པ་རྡོ་རྗེ་གདན་པ་ཆེན་པོ</persName>འི་རྣམ་པར་ཐར་པ་ཕྱོགས་མཚོན་ཙམ་འདི་ཉིད</title>་<persName type="SRC" ana="title" key="16" corresp="#src_p16">ཕ་བླ་མ</persName>་མཆོག་གི་ཞལ་སྔ་ལས་ཟབ་པ་དང་རྒྱ་ཆེ་བའི་ཆོས་ཀྱི་སྒོ་བརྒྱད་ཁྲི་བཞི་སྟོང་གི་བཀའ་དྲིན་ཐོབ་པའི་<persName type="SRC" ana="desc" key="511" corresp="#src_p511">རྡོ་རྗེའི་སློབ་བུ་ཐ་ཆུང</persName>༌། <persName type="SRC" ana="title" key="16" corresp="#src_p16">རྗེ་དེ་ཉིད</persName>་ཀྱི་ཆོ་འབྲང་གི་དབོན་རིགས་སུ་གཏོགས་པའི་<persName type="SRC" ana="full" key="511" corresp="#src_p511">འབྲི་ཁུང་མཁན་པོ་རྣམ་རྒྱལ་མགོན་དྲི་མེད་<note type="gloss">སྡེ</note></persName>་ཞེས་བྱ་བས་<placeName type="SRC" ana="full" key="688" corresp="#src_g688">འབྲི་སེ་བ་བྱང་ཆུབ་ཀྱི་གནས་ཀྱི་དབེན་ཁང་གླིང་ཁ</placeName>་ཞེས་བྱ་བར་
+<date when="1501">གནམ་ལོ་བྱ་ཤར་མ་ཐག་པའི་ཆོ་འཕྲུལ་ཆེན་པོ། རྟའི་ཟླ་བ་མངོན་པར་ངོམ་པའི་དཀར་པོའི་ཕྱོགས་ཀྱི་རྒྱལ་བ་དང་པོའི་ཚེས</date>་ཀྱི་ལང་ཚོ་གསར་དུ་རྒྱས་པ་ལ་ཀྱུས་གཅིག་ཏུ་སྦྱར་བ་ཕྱོགས་དུས་ཀུན་ཏུ་བཀྲ་ཤིས་བདེ་ལེགས་རྒྱས་པར་གྱུར་ཅིག།</p>
+</div>
+</body>
+<back>
+</back>
+</text>
+  
+</TEI>

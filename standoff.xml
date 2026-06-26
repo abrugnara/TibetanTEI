@@ -1,0 +1,621 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0" xml:id="standoff_global">
+  <teiHeader>
+    <fileDesc>
+      <titleStmt>
+        <title>TibetanTEI – Zentrales standOff</title>
+      </titleStmt>
+      <publicationStmt>
+        <p>TibetanTEI Digital Edition</p>
+      </publicationStmt>
+      <sourceDesc>
+        <p>Gemeinsamer standOff für alle Textzeugen des Korpus</p>
+      </sourceDesc>
+    </fileDesc>
+  </teiHeader>
+  <standOff><listPerson>
+            <person xml:id="vasubandhu">
+                <note type="role">Philosoph</note>
+                <persName xml:lang="bo">དབྱིག་གཉེན་</persName>
+                <persName xml:lang="bo-Latn">dbyig gnyen</persName>
+                <idno type="URI">https://library.bdrc.io/show/bdr:P6119?s=q%3D%2522%25E0%25BD%2591%25E0%25BD%2596%25E0%25BE%25B1%25E0%25BD%25B2%25E0%25BD%2582%25E0%25BC%258B%2522~1%26lg%3Dbo%26t%3DPerson%26n%3D1</idno>
+                <idno type="URI">https://de.wikipedia.org/wiki/Vasubandhu</idno>
+                <birth notBefore="0300" notAfter="0400">
+                    <note>4. Jhd. n. u. Z.</note>
+                </birth>
+                <death notBefore="0300" notAfter="0400">
+                    <note>4. Jhd. n. u. Z.</note>
+                </death>
+            </person>
+            <person xml:id="zab-mo-i-phyogs">
+                <persName xml:lang="bo">ཟབ་མོའི་ཕྱོགས་</persName>
+                <persName xml:lang="bo-Latn">zab mo'i phyogs</persName>
+                <idno type="URI"/>
+                <note type="role">König</note>
+            </person>
+            <person xml:id="sthiramati">
+                <persName xml:lang="bo">བློ་གྲོས་བརྟན་པ་</persName>
+                <persName xml:lang="bo-Latn">blo gros brtan pa</persName>
+                <idno type="URI">https://legacy.tbrc.org/#!rid=P4CZ16794</idno>
+                <note type="role">Philosoph</note>
+                <note type="role">Kommentator</note>
+            </person>
+            <person xml:id="vigamatsandra">
+                <persName xml:lang="bo">བི་ག་མ་ཙནྡྲ་</persName>
+                <persName xml:lang="bo-Latn">bi ga ma tsan+d+ra</persName>
+                <idno type="URI"><!-- URL noch nicht ermittelt --></idno>
+                <note type="role">König</note>
+            </person>
+            <person xml:id="kamatsandra">
+                <persName xml:lang="bo">ཀཱ་མ་ཙནྡྲ་</persName>
+                <persName xml:lang="bo-Latn">kA ma tsan+d+ra</persName>
+                <idno type="URI"><!-- URL noch nicht ermittelt --></idno>
+                <note type="role">noch zu erschließen</note>
+            </person>
+            <person xml:id="mahāsammata">
+                <persName xml:lang="bo">མང་པོས་བཀུར་བ་</persName>
+                <persName xml:lang="bo-Latn">mang pos bkur ba</persName>
+                <idno type="URI"><!-- URL noch nicht ermittelt --></idno>
+                <note type="role">König</note>
+
+            </person>
+            <person xml:id="sangs_rgyas_bskyang">
+                <persName xml:lang="bo">སངས་རྒྱས་བསྐྱང་</persName>
+                <persName xml:lang="bo-Latn">sangs rgyas bskyang</persName>
+                <idno type="URI"><!-- URL noch nicht ermittelt --></idno>
+                <note type="role">Mönch</note>
+            </person>
+            <person xml:id="darika">
+                <persName xml:lang="bo">ད་རི་ཀ་པ་</persName>
+                <persName xml:lang="bo-Latn">da ri ka pa</persName>
+                <idno type="URI">https://legacy.tbrc.org/#!rid=P4CZ15083</idno>
+                <note type="role">Mahāsiddha</note>
+            </person>
+            <person xml:id="bhavya">
+                <persName xml:lang="bo">ལེགས་ལྡན་འབྱེད་</persName>
+                <persName xml:lang="bo-Latn">legs ldan 'byed</persName>
+                <persName xml:lang="sa">Bhāvaviveka</persName>
+                <persName xml:lang="sa" type="alt">Bhāviveka</persName>
+                <idno type="URI">https://legacy.tbrc.org/#!rid=P1701</idno>
+                <note type="role">Philosoph</note>
+
+                <note type="role">Kommentator</note>
+            </person>
+            <person xml:id="vimuktasena">
+                <persName xml:lang="bo">རྣམ་གྲོལ་སྡེ་</persName>
+                <persName xml:lang="bo" type="honorific">འཕགས་པ་རྣམ་གྲོལ་སྡེ་</persName>
+                <persName xml:lang="bo-Latn">rnam grol sde</persName>
+                <persName xml:lang="sa">Ārya Vimuktasena</persName>
+                <idno type="URI">https://library.bdrc.io/show/bdr:P0RK660</idno>
+                <note type="role">Philosoph</note>
+                <note type="role">Kommentator</note>
+                <note type="role">Schüler</note>
+            </person>
+            <person xml:id="cītāvara">
+                <persName xml:lang="bo">ཙི་ཏཱ་ཝ་</persName>
+                <persName xml:lang="bo-Latn">tsi tA wa</persName>
+                <idno type="URI"><!-- URL noch nicht ermittelt --></idno>
+            </person>
+            <person xml:id="asanga">
+                <persName xml:lang="bo">ཐོགས་མེད་</persName>
+                <persName xml:lang="bo-Latn">thogs med</persName>
+                <idno type="URI">https://library.bdrc.io/show/bdr:P864</idno>
+                <note type="role">Philosoph</note>
+
+                <note type="role">Schüler</note>
+            </person>
+            <!-- PRÜFEN: bhadanta hat denselben tibetischen Namen wie bhavya (ལེགས་ལྡན་) — Verwechslung? -->
+            <person xml:id="bhadanta">
+                <persName xml:lang="bo">ལེགས་ལྡན་</persName>
+                <persName xml:lang="bo-Latn">legs ldan</persName>
+                <idno type="URI"><!-- URL noch nicht ermittelt --></idno>
+                <note type="role">Mönch</note>
+            </person>
+            <person xml:id="bhadrapalita">
+                <persName xml:lang="bo">བྷ་དྲ་པཱ་ལི་ཏ་</persName>
+                <persName xml:lang="bo-Latn">b+ha dra pA li ta</persName>
+                <idno type="URI"><!-- URL noch nicht ermittelt --></idno>
+                <note type="role">Kommentator</note>
+            </person>
+            <person xml:id="buddhapalita">
+                <persName xml:lang="bo">སངས་རྒྱས་འབངས་</persName>
+                <persName xml:lang="bo-Latn">sangs rgyas 'bangs</persName>
+                <idno type="URI">https://library.bdrc.io/show/bdr:P840</idno>
+                <note type="role">Philosoph</note>
+                <note type="role">Kommentator</note>
+            </person>
+            <person xml:id="dengipa">
+                <persName xml:lang="bo">ཌེཾ་གི་པ་</persName>
+                <persName xml:lang="bo-Latn">DeM gi pa</persName>
+                <idno type="URI"><!-- URL noch nicht ermittelt --></idno>
+                <note type="role">Mahāsiddha</note>
+            </person>
+            <person xml:id="dharmadasa">
+                <persName xml:lang="bo">ཆོས་འབང་</persName>
+                <persName xml:lang="bo-Latn">chos 'bang</persName>
+                <idno type="URI"><!-- in keiner Normdatenquelle nachweisbar (BDRC, rKTs, SRC) --></idno>
+                <note type="role">Mönch</note>
+                <note type="identification">Nicht in BUDA nachweisbar.
+                    In keiner Normdatenquelle nachweisbar (BDRC, rKTs, SRC).
+                    @key="N/A" im body bewusst gesetzt.</note>
+            </person>
+            <person xml:id="dignaga">
+                <persName xml:lang="bo">ཕྱོགས་ཀྱི་གླང་པོ་</persName>
+                <persName xml:lang="bo-Latn">phyogs kyi glang po</persName>
+                <idno type="URI"><!-- URL noch nicht ermittelt --></idno>
+                <note type="role">Logiker</note>
+                <note type="role">Lehrer</note>
+                <note type="role">Schüler</note>
+            </person>
+            <person xml:id="gunaprabha">
+                <persName xml:lang="bo">ཡོན་ཏན་འོད་</persName>
+                <persName xml:lang="bo-Latn">yon tan 'od</persName>
+                <idno type="URI"><!-- URL noch nicht ermittelt --></idno>
+                <note type="role">Lehrer</note>
+            </person>
+            <person xml:id="jaleruha">
+                <persName xml:lang="bo">ཛ་ལེ་རུ་ཧེ་</persName>
+                <persName xml:lang="bo-Latn">dza le ru he</persName>
+                <idno type="URI"><!-- URL noch nicht ermittelt --></idno>
+                <note type="role">Mahāsiddha</note>
+            </person>
+            <person xml:id="lavapa">
+                <persName xml:lang="bo">ལོ་ཡི་པ་</persName>
+                <persName xml:lang="bo-Latn">lo yi pa</persName>
+                <idno type="URI"><!-- URL noch nicht ermittelt --></idno>
+                <note type="role">Mahāsiddha</note>
+            </person>
+            <person xml:id="mashatara">
+                <persName xml:lang="bo">མ་ཥ་ཏཱ་ར་</persName>
+                <persName xml:lang="bo-Latn">ma Sha tA ra</persName>
+                <idno type="URI"><!-- URL noch nicht ermittelt --></idno>
+            </person>
+            <person xml:id="matangaraje">
+                <persName xml:lang="bo">མ་ཏངྒ་རཱ་ཛེ་</persName>
+                <persName xml:lang="bo-Latn">ma tang+ga rA dze</persName>
+                <idno type="URI"><!-- URL noch nicht ermittelt --></idno>
+                <note type="role">König</note>
+            </person>
+            <person xml:id="nagakesha">
+                <persName xml:lang="bo">ནཱ་ག་ཀེ་ཤ་</persName>
+                <persName xml:lang="bo-Latn">nA ga ke sha</persName>
+                <idno type="URI"><!-- URL noch nicht ermittelt --></idno>
+            </person>
+            <person xml:id="nagesha">
+                <persName xml:lang="bo">ནཱ་གེ་ཤ་</persName>
+                <persName xml:lang="bo-Latn">nA ge sha</persName>
+                <idno type="URI"><!-- URL noch nicht ermittelt --></idno>
+            </person>
+            <person xml:id="sanghadasa">
+                <persName xml:lang="bo">དགེ་འདུན་འབངས་</persName>
+                <persName xml:lang="bo-Latn">dge 'dun 'bangs</persName>
+                <idno type="URI"><!-- BUDA-Recherche ausstehend --></idno>
+                <note type="role">Mönch</note>
+                <note type="identification">BUDA-Recherche ausstehend.
+                    @key="???" im body als offenes ToDo gesetzt.</note>
+            </person>
+            <person xml:id="shriharsa">
+                <persName xml:lang="bo">རྒྱལ་པོ་ཤྲཱི་ཧརྴ་</persName>
+                <persName xml:lang="bo-Latn">rgyal po shrI har+sha</persName>
+                <idno type="URI"><!-- URL noch nicht ermittelt --></idno>
+                <note type="role">König</note>
+            </person>
+            <person xml:id="sthavira">
+                <persName xml:lang="bo">གནས་བརྟན་</persName>
+                <persName xml:lang="bo-Latn">gnas brtan</persName>
+                <idno type="URI"><!-- URL noch nicht ermittelt --></idno>
+                <note type="role">Mönch</note>
+                <note type="role">noch zu erschließen</note>
+            </person>
+            <person xml:id="tara">
+                <persName xml:lang="bo">སྒྲོལ་མ་</persName>
+                <persName xml:lang="bo-Latn">sgrol ma</persName>
+                <idno type="URI"><!-- URL noch nicht ermittelt --></idno>
+                <note type="role">Bodhisattva</note>
+            </person>
+            <person xml:id="triratnadasa">
+                <persName xml:lang="bo">དཀོན་མཆོག་གསུམ་གྱི་འབང་</persName>
+                <persName xml:lang="bo-Latn">dkon mchog gsum gyi 'bang</persName>
+                <idno type="URI"><!-- URL noch nicht ermittelt --></idno>
+                <note type="role">Mönch</note>
+            </person>
+            <person xml:id="veshtavala">
+                <persName xml:lang="bo">བེཥྟ་བཱ་ལ་</persName>
+                <persName xml:lang="bo-Latn">beSh+ta bA la</persName>
+                <idno type="URI"><!-- URL noch nicht ermittelt --></idno>
+            </person>
+            <person xml:id="vikramachandra">
+                <persName xml:lang="bo">བི་ཁ་མ་ཙནྡྲ་</persName>
+                <persName xml:lang="bo-Latn">bi kha ma tsan+d+ra</persName>
+                <idno type="URI"><!-- URL noch nicht ermittelt --></idno>
+                <note type="role">König</note>
+            </person>
+            <person xml:id="vrikshatsandra">
+                <persName xml:lang="bo">བྲྀཀྵ་ཙནྡྲ་</persName>
+                <persName xml:lang="bo-Latn">br-ik+Sha tsan+d+ra</persName>
+                <idno type="URI"><!-- URL noch nicht ermittelt --></idno>
+                <note type="role">König</note>
+            </person>
+            <person xml:id="zab-mo">
+                <persName xml:lang="bo">རྒྱལ་པོ་ཟབ་མོ་</persName>
+                <persName xml:lang="bo-Latn">rgyal po zab mo</persName>
+                <idno type="URI"><!-- URL noch nicht ermittelt --></idno>
+                <note type="role">König</note>
+            </person>
+        </listPerson>
+        <listPlace>
+            <place xml:id="agrapuri" type="place">
+                <placeName xml:lang="bo">ཨ་གྲ་པུ་རི་</placeName>
+                <placeName xml:lang="bo-Latn">a gra pu ri</placeName>
+                <idno type="URI"><!-- URL noch nicht ermittelt --></idno>
+            </place>
+            <place xml:id="dandakaranya" type="place">
+                <placeName xml:lang="bo">དནྚ་ཀ་ར་ནྱ་</placeName>
+                <placeName xml:lang="bo-Latn">dan+Ta ka ra n+ya</placeName>
+                <idno type="URI"><!-- URL noch nicht ermittelt --></idno>
+            </place>
+            <place xml:id="kashmir" type="region">
+                <placeName xml:lang="bo">ཁ་ཆེ་</placeName>
+                <placeName xml:lang="bo-Latn">kha che</placeName>
+                <placeName xml:lang="sa">Kaśmīra</placeName>
+                <idno type="URI">https://legacy.tbrc.org/#!rid=G2DB25458</idno>
+            </place>
+            <place xml:id="khorasana" type="place">
+                <placeName xml:lang="bo">ཁོ་རཱ་ས་ཎ་</placeName>
+                <placeName xml:lang="bo-Latn">kho rA sa Na</placeName>
+                <idno type="URI"><!-- URL noch nicht ermittelt --></idno>
+            </place>
+            <place xml:id="magadha" type="place">
+                <placeName xml:lang="bo">མ་ག་དྷཱ་</placeName>
+                <placeName xml:lang="bo-Latn">ma ga d+hA</placeName>
+                <idno type="URI"><!-- URL noch nicht ermittelt --></idno>
+            </place>
+            <place xml:id="malava" type="place">
+                <placeName xml:lang="bo">མ་ལ་ཝ་</placeName>
+                <placeName xml:lang="bo-Latn">ma la wa</placeName>
+                <idno type="URI"><!-- URL noch nicht ermittelt --></idno>
+            </place>
+            <place xml:id="maru" type="place">
+                <placeName xml:lang="bo">མ་རུ་</placeName>
+                <placeName xml:lang="bo-Latn">ma ru</placeName>
+                <idno type="URI"><!-- URL noch nicht ermittelt --></idno>
+            </place>
+            <place xml:id="mathura" type="place">
+                <placeName xml:lang="bo">བཅོམ་བརླག་</placeName>
+                <placeName xml:lang="bo-Latn">bcom brlag</placeName>
+                <idno type="URI"><!-- URL noch nicht ermittelt --></idno>
+            </place>
+            <place xml:id="maulatana" type="place">
+                <placeName xml:lang="bo">མཽ་ལ་ཏ་ན་</placeName>
+                <placeName xml:lang="bo-Latn">mau la ta na</placeName>
+                <idno type="URI"><!-- URL noch nicht ermittelt --></idno>
+            </place>
+            <place xml:id="mevara" type="place">
+                <placeName xml:lang="bo">མེ་ཝ་ར་</placeName>
+                <placeName xml:lang="bo-Latn">me wa ra</placeName>
+                <idno type="URI"><!-- URL noch nicht ermittelt --></idno>
+            </place>
+            <place xml:id="odivisa" type="place">
+                <placeName xml:lang="bo">ཨོ་ཊི་བི་ཤ་</placeName>
+                <placeName xml:lang="bo-Latn">o Ti bi sha</placeName>
+                <idno type="URI"><!-- URL noch nicht ermittelt --></idno>
+            </place>
+            <place xml:id="pituva" type="place">
+                <placeName xml:lang="bo">པི་ཏུ་ཝ་</placeName>
+                <placeName xml:lang="bo-Latn">pi tu wa</placeName>
+                <idno type="URI"><!-- URL noch nicht ermittelt --></idno>
+            </place>
+            <place xml:id="simhavakta" type="place">
+                <placeName xml:lang="bo">སིངྒ་བཀྟ་</placeName>
+                <placeName xml:lang="bo-Latn">sing+ga bak+ta</placeName>
+                <idno type="URI"><!-- URL noch nicht ermittelt --></idno>
+            </place>
+            <place xml:id="tsitavara" type="place">
+                <placeName xml:lang="bo">ཙི་ཏཱ་ཝ་ར་</placeName>
+                <placeName xml:lang="bo-Latn">tsi tA wa ra</placeName>
+                <idno type="URI"><!-- URL noch nicht ermittelt --></idno>
+            </place>
+        </listPlace>
+
+        <listOrg xml:id="listOrg_global">
+      <org xml:id="org_placeholder">
+        <orgName xml:lang="sa">Placeholder</orgName>
+      </org>
+    </listOrg><listBibl xml:id="listBibl_global">
+      <bibl xml:id="bibl_placeholder">
+        <title xml:lang="sa">Placeholder</title>
+      </bibl>
+    </listBibl><fvLib xml:id="fvLib_vocab" n="vocab">
+
+            <!-- ============================================================
+                 VOKABELREGISTER — TEI-P5-konform als Feature Value Library
+                 <w ana="#lex_..."> verweist auf xml:id der <fs>-Einträge.
+                 Feldordnung: uchen · wylie · lemma_wylie · lemma_uchen ·
+                   [allomorphs] · pos · [vg] · [tdv_tmdv] · [stem1–4] ·
+                   [funktion] · [satzbauplan] · [klasse] · [schwieger] ·
+                   [bialek] · [hinweis] · def_de · def_en
+                 Inkonsistenz-Protokoll (bereinigt 2026-06-01):
+                   • <string>-Wrapper in allen <f>-Elementen ergänzt
+                   • subc=tmdV bei Nomina (lex_slob_dpon, lex_sku_tshe) entfernt
+                   • pos=V.past → pos=V bei Verblemmata; subc → tdv_tmdv
+                   • lex_gyi (Duplikat) entfernt; def_de/def_en in lex_kyi_gen übernommen
+                   • allomorphe → allomorphs (einheitlich Englisch)
+                   • type="vocab" bei allen <fs>-Elementen ergänzt
+                   • xml:id auf <fvLib> gesetzt
+                   • Einrückung und Feldordnung vereinheitlicht
+                 ============================================================ -->
+
+            <!-- ── Nomina ── -->
+
+            <fs xml:id="lex_slob_dpon" type="vocab">
+                <f name="uchen"><string>སློབ་དཔོན་</string></f>
+                <f name="wylie"><string>slob dpon</string></f>
+                <f name="lemma_wylie"><string>slob dpon</string></f>
+                <f name="lemma_uchen"><string>སློབ་དཔོན་</string></f>
+                <f name="pos"><string>N</string></f>
+                <f name="def_de"><string>Ācārya, Lehrer, Meister (Ehrentitel)</string></f>
+                <f name="def_en"><string>ācārya, teacher, master (honorific title)</string></f>
+            </fs>
+
+            <fs xml:id="lex_sku_tshe" type="vocab">
+                <f name="uchen"><string>སྐུ་ཚེ་</string></f>
+                <f name="wylie"><string>sku tshe</string></f>
+                <f name="lemma_wylie"><string>sku tshe</string></f>
+                <f name="lemma_uchen"><string>སྐུ་ཚེ་</string></f>
+                <f name="pos"><string>N.hon</string></f>
+                <f name="def_de"><string>Leben (Honorific)</string></f>
+                <f name="def_en"><string>life (honorific)</string></f>
+            </fs>
+
+            <!-- ── Verben ── -->
+
+            <fs xml:id="lex_das_pa" type="vocab">
+                <f name="uchen"><string>འདས་པ་</string></f>
+                <f name="wylie"><string>'das pa</string></f>
+                <f name="lemma_wylie"><string>'da' ba</string></f>
+                <f name="lemma_uchen"><string>འདའ་བ་</string></f>
+                <f name="pos"><string>V</string></f>
+                <f name="vg"><string>[?]</string></f>
+                <f name="tdv_tmdv"><string>tmdV</string></f>
+                <f name="stem1"><string>'da'</string></f>
+                <f name="stem2"><string>'das</string></f>
+                <f name="stem3"><string>'da'</string></f>
+                <f name="stem4"><string>da</string></f>
+                <f name="def_de"><string>vergehen, verstreichen</string></f>
+                <f name="def_en"><string>to pass, to elapse</string></f>
+            </fs>
+
+            <fs xml:id="lex_byung" type="vocab">
+                <f name="uchen"><string>བྱུང་</string></f>
+                <f name="wylie"><string>byung</string></f>
+                <f name="lemma_wylie"><string>'byung ba</string></f>
+                <f name="lemma_uchen"><string>འབྱུང་བ་</string></f>
+                <f name="pos"><string>V</string></f>
+                <f name="vg"><string>[?]</string></f>
+                <f name="tdv_tmdv"><string>tmdV</string></f>
+                <f name="stem1"><string>'byung</string></f>
+                <f name="stem2"><string>byung</string></f>
+                <f name="stem3"><string>'byung</string></f>
+                <f name="stem4"><string>byung</string></f>
+                <f name="def_de"><string>entstehen, auftreten</string></f>
+                <f name="def_en"><string>to arise, to appear</string></f>
+            </fs>
+
+            <!-- ── Kasus-Partikeln ── -->
+
+            <fs xml:id="lex_kyi_gen" type="vocab">
+                <f name="uchen"><string>ཀྱི་</string></f>
+                <f name="wylie"><string>kyi</string></f>
+                <f name="lemma_wylie"><string>kyi / gyi / gi / 'i / yi</string></f>
+                <f name="lemma_uchen"><string>ཀྱི་</string></f>
+                <f name="allomorphs"><string>kyi gyi gi 'i yi</string></f>
+                <f name="pos"><string>PART.case</string></f>
+                <f name="funktion"><string>Genitiv</string></f>
+                <f name="satzbauplan"><string>S4 (obliques Objekt / Attribut)</string></f>
+                <f name="klasse"><string>Kasus-Partikel</string></f>
+                <f name="schwieger"><string>§6.2 S4; §5.7: Allomorphe kyi/gyi/gi nach Auslaut</string></f>
+                <f name="bialek"><string>Lek. 9</string></f>
+                <f name="def_de"><string>Genitivpartikel</string></f>
+                <f name="def_en"><string>genitive particle</string></f>
+            </fs>
+
+            <fs xml:id="lex_kyis_erg" type="vocab">
+                <f name="uchen"><string>ཀྱིས་</string></f>
+                <f name="wylie"><string>kyis</string></f>
+                <f name="lemma_wylie"><string>kyis / gyis / gis / 'is / yis</string></f>
+                <f name="lemma_uchen"><string>ཀྱིས་</string></f>
+                <f name="allomorphs"><string>kyis gyis gis 'is yis</string></f>
+                <f name="pos"><string>PART.case</string></f>
+                <f name="funktion"><string>Ergativ</string></f>
+                <f name="satzbauplan"><string>S1c (Subjekt kontrollierbarer Verben)</string></f>
+                <f name="klasse"><string>Kasus-Partikel</string></f>
+                <f name="schwieger"><string>§5.6.1.2; §6.2 S1c</string></f>
+                <f name="bialek"><string>Lek. 8; VG1, VG2</string></f>
+                <f name="def_de"><string>Ergativpartikel</string></f>
+                <f name="def_en"><string>ergative particle</string></f>
+            </fs>
+
+            <fs xml:id="lex_kyis_ins" type="vocab">
+                <f name="uchen"><string>ཀྱིས་</string></f>
+                <f name="wylie"><string>kyis</string></f>
+                <f name="lemma_wylie"><string>kyis / gyis / gis / 'is / yis</string></f>
+                <f name="lemma_uchen"><string>ཀྱིས་</string></f>
+                <f name="allomorphs"><string>kyis gyis gis 'is yis</string></f>
+                <f name="pos"><string>PART.case</string></f>
+                <f name="funktion"><string>Instrumental</string></f>
+                <f name="satzbauplan"><string>S5d (Instrumental- und Kausalbestimmung)</string></f>
+                <f name="klasse"><string>Kasus-Partikel</string></f>
+                <f name="schwieger"><string>§6.2 S5d</string></f>
+                <f name="bialek"><string>Lek. 8</string></f>
+                <f name="hinweis"><string>Formidentisch mit Ergativ; Unterscheidung durch Kontext</string></f>
+                <f name="def_de"><string>Instrumentalpartikel</string></f>
+                <f name="def_en"><string>instrumental particle</string></f>
+            </fs>
+
+            <fs xml:id="lex_la_lok" type="vocab">
+                <f name="uchen"><string>ལ་</string></f>
+                <f name="wylie"><string>la</string></f>
+                <f name="lemma_wylie"><string>la / ru / su / du / tu</string></f>
+                <f name="lemma_uchen"><string>ལ་</string></f>
+                <f name="allomorphs"><string>la ru su du tu</string></f>
+                <f name="pos"><string>PART.case</string></f>
+                <f name="funktion"><string>Lokativ / Direktiv / Dativ</string></f>
+                <f name="satzbauplan"><string>S3 (indirektes Objekt); S5a (Ortsbestimmung); S5b (Richtungsbestimmung)</string></f>
+                <f name="klasse"><string>Kasus-Partikel</string></f>
+                <f name="schwieger"><string>§6.2 S3, S5a, S5b</string></f>
+                <f name="bialek"><string>Lek. 8</string></f>
+                <f name="def_de"><string>Lokativ-/Dativpartikel</string></f>
+                <f name="def_en"><string>locative / dative / directional particle</string></f>
+            </fs>
+
+            <fs xml:id="lex_la_koor" type="vocab">
+                <f name="uchen"><string>ལ་</string></f>
+                <f name="wylie"><string>la</string></f>
+                <f name="lemma_wylie"><string>la</string></f>
+                <f name="lemma_uchen"><string>ལ་</string></f>
+                <f name="pos"><string>PART</string></f>
+                <f name="funktion"><string>koordinierend</string></f>
+                <f name="satzbauplan"><string>S5f (Komitativbestimmung / Koordination)</string></f>
+                <f name="klasse"><string>Konverb-Partikel</string></f>
+                <f name="schwieger"><string>§6.2 S5f; §5.7</string></f>
+                <f name="bialek"><string>Lek. 8</string></f>
+                <f name="hinweis"><string>Nach Verb: koordiniert zwei Verbalhandlungen (und, indem)</string></f>
+                <f name="def_de"><string>koordinierende Partikel nach Verb</string></f>
+                <f name="def_en"><string>coordinating particle after verb</string></f>
+            </fs>
+
+            <fs xml:id="lex_las_abl" type="vocab">
+                <f name="uchen"><string>ལས་</string></f>
+                <f name="wylie"><string>las</string></f>
+                <f name="lemma_wylie"><string>las / nas</string></f>
+                <f name="lemma_uchen"><string>ལས་</string></f>
+                <f name="allomorphs"><string>las nas</string></f>
+                <f name="pos"><string>PART.case</string></f>
+                <f name="funktion"><string>Ablativ / Herkunft / Material</string></f>
+                <f name="satzbauplan"><string>S5e (Herkunfts- und Materialbestimmung)</string></f>
+                <f name="klasse"><string>Kasus-Partikel</string></f>
+                <f name="schwieger"><string>§6.2 S5e</string></f>
+                <f name="bialek"><string>Lek. 8</string></f>
+                <f name="def_de"><string>Ablativpartikel</string></f>
+                <f name="def_en"><string>ablative particle</string></f>
+            </fs>
+
+            <fs xml:id="lex_na_lok" type="vocab">
+                <f name="uchen"><string>ན་</string></f>
+                <f name="wylie"><string>na</string></f>
+                <f name="lemma_wylie"><string>na</string></f>
+                <f name="lemma_uchen"><string>ན་</string></f>
+                <f name="pos"><string>PART</string></f>
+                <f name="funktion"><string>Lokativ / Konditional</string></f>
+                <f name="satzbauplan"><string>S5a (Ortsbestimmung); S5g (Adverbialsatz konditional)</string></f>
+                <f name="klasse"><string>Kasus-Partikel / Konverb-Partikel</string></f>
+                <f name="schwieger"><string>§6.2 S5a; §6.5.3</string></f>
+                <f name="bialek"><string>Lek. 8</string></f>
+                <f name="def_de"><string>Lokativ-/Konditionalpartikel</string></f>
+                <f name="def_en"><string>locative / conditional particle</string></f>
+            </fs>
+
+            <fs xml:id="lex_nas_abl" type="vocab">
+                <f name="uchen"><string>ནས་</string></f>
+                <f name="wylie"><string>nas</string></f>
+                <f name="lemma_wylie"><string>nas</string></f>
+                <f name="lemma_uchen"><string>ནས་</string></f>
+                <f name="pos"><string>PART</string></f>
+                <f name="funktion"><string>Ablativ / Temporal</string></f>
+                <f name="satzbauplan"><string>S5e (Herkunft); S5g (Adverbialsatz temporal)</string></f>
+                <f name="klasse"><string>Kasus-Partikel / Konverb-Partikel</string></f>
+                <f name="schwieger"><string>§6.2 S5e; §6.5.3</string></f>
+                <f name="bialek"><string>Lek. 8</string></f>
+                <f name="def_de"><string>Ablativ-/Temporalpartikel</string></f>
+                <f name="def_en"><string>ablative / temporal particle</string></f>
+            </fs>
+
+            <fs xml:id="lex_dang_kom" type="vocab">
+                <f name="uchen"><string>དང་</string></f>
+                <f name="wylie"><string>dang</string></f>
+                <f name="lemma_wylie"><string>dang</string></f>
+                <f name="lemma_uchen"><string>དང་</string></f>
+                <f name="pos"><string>PART</string></f>
+                <f name="funktion"><string>Komitativ / Konjunktion „und"</string></f>
+                <f name="satzbauplan"><string>S5f (Komitativbestimmung)</string></f>
+                <f name="klasse"><string>Kasus-Partikel</string></f>
+                <f name="schwieger"><string>§6.2 S5f</string></f>
+                <f name="bialek"><string>Lek. 8</string></f>
+                <f name="def_de"><string>Komitativ-/Konjunktionspartikel</string></f>
+                <f name="def_en"><string>comitative / conjunctive particle</string></f>
+            </fs>
+
+            <!-- ── Topik-Partikeln ── -->
+
+            <fs xml:id="lex_ni_top" type="vocab">
+                <f name="uchen"><string>ནི་</string></f>
+                <f name="wylie"><string>ni</string></f>
+                <f name="lemma_wylie"><string>ni</string></f>
+                <f name="lemma_uchen"><string>ནི་</string></f>
+                <f name="pos"><string>PART</string></f>
+                <f name="funktion"><string>Topikpartikel</string></f>
+                <f name="satzbauplan"><string>ThemaPart (Topikalisierung)</string></f>
+                <f name="klasse"><string>Topik-Partikel</string></f>
+                <f name="schwieger"><string>§6.3</string></f>
+                <f name="bialek"><string>Lek. 11</string></f>
+                <f name="def_de"><string>Topikpartikel</string></f>
+                <f name="def_en"><string>topic particle</string></f>
+            </fs>
+
+            <!-- ── Konverb-Partikeln ── -->
+
+            <fs xml:id="lex_ste_koor" type="vocab">
+                <f name="uchen"><string>སྟེ་</string></f>
+                <f name="wylie"><string>ste</string></f>
+                <f name="lemma_wylie"><string>ste / te / de</string></f>
+                <f name="lemma_uchen"><string>སྟེ་</string></f>
+                <f name="allomorphs"><string>ste te de</string></f>
+                <f name="pos"><string>PART</string></f>
+                <f name="funktion"><string>koordinierend / subordinierend / Konverb</string></f>
+                <f name="satzbauplan"><string>KSuf (Konverb-Suffix); S5g (Adverbialsatz)</string></f>
+                <f name="klasse"><string>Konverb-Partikel</string></f>
+                <f name="schwieger"><string>§5.7; §6.5.3</string></f>
+                <f name="bialek"><string>Lek. 8</string></f>
+                <f name="def_de"><string>koordinierende/subordinierende Konverb-Partikel</string></f>
+                <f name="def_en"><string>coordinating / subordinating converb particle</string></f>
+            </fs>
+
+            <!-- ── Fokus-Partikeln ── -->
+
+            <fs xml:id="lex_yang_konz" type="vocab">
+                <f name="uchen"><string>འང་</string></f>
+                <f name="wylie"><string>'ang</string></f>
+                <f name="lemma_wylie"><string>'ang / yang</string></f>
+                <f name="lemma_uchen"><string>འང་</string></f>
+                <f name="allomorphs"><string>'ang yang</string></f>
+                <f name="pos"><string>PART</string></f>
+                <f name="funktion"><string>Konzessiv / Additiv „auch", „sogar"</string></f>
+                <f name="satzbauplan"><string>FokPart (Fokuspartikel)</string></f>
+                <f name="klasse"><string>Fokus-Partikel</string></f>
+                <f name="schwieger"><string>§5.7; §6.5.3</string></f>
+                <f name="bialek"><string>Lek. 19</string></f>
+                <f name="def_de"><string>Konzessiv-/Additivpartikel</string></f>
+                <f name="def_en"><string>concessive / additive particle</string></f>
+            </fs>
+
+            <!-- ── Nominalisierungssuffixe ── -->
+
+            <fs xml:id="lex_pa_nom" type="vocab">
+                <f name="uchen"><string>པ་</string></f>
+                <f name="wylie"><string>pa</string></f>
+                <f name="lemma_wylie"><string>pa / ba</string></f>
+                <f name="lemma_uchen"><string>པ་</string></f>
+                <f name="allomorphs"><string>pa ba</string></f>
+                <f name="pos"><string>NSUF</string></f>
+                <f name="funktion"><string>Nominalisierung / deverbales Nomen</string></f>
+                <f name="satzbauplan"><string>FinSuf (Finalsuffix nominalisiert)</string></f>
+                <f name="klasse"><string>Nominalisierungssuffix</string></f>
+                <f name="schwieger"><string>§5.6.3; §6.5.2</string></f>
+                <f name="bialek"><string>Lek. 12</string></f>
+                <f name="def_de"><string>Nominalisierungssuffix</string></f>
+                <f name="def_en"><string>nominalizing suffix</string></f>
+            </fs>
+
+        </fvLib>
+        </standOff>
+</TEI>

@@ -1,0 +1,113 @@
+# System
+desktop.ini
+Thumbs.db
+.DS_Store
+
+# Git
+.git
+
+# Node
+node_modules/
+
+# Python
+__pycache__/
+*.pyc
+*.pyo
+
+# Backup
+*.bak
+
+# VSCode
+.vscode/
+
+# Ordner die nicht auf GitHub gehören
+static/
+tei_qa/
+neue_eintraege/
+
+# Arbeitsdateien / lokale Skripte
+cleanup_standoff.bat
+cleanup_standoff.py
+generate_static.py
+link_words.bat
+link_words.py
+link_words_report.txt
+run_qa.py
+start_server.bat
+start_server.bat - Shortcut.lnk
+start_server.bat_alt
+vocab_to_tei.bat
+vocab_to_tei.py
+fs_eintraege_20260622_061510.xml
+fs_eintraege_20260623_112505.xml
+fs_eintraege_dignaga_seg1-9.xml
+standoff_fs_eintraege_20260621_180805.xml
+
+# Vokabel-Arbeitsdateien
+__01_02Wortliste Neu.xlsx
+Dignaga_Vokabeln.docx
+Dignaga_Vokabeln.tsv
+Dignaga_Vokabeln.xlsx
+Dignaga_Vokabeln_strukturiert.docx
+Dignaga_Vokabeln_strukturiert.xlsx
+Dignaga_Vokabeln_tei_ready.tsv
+dignaga_neue_eintraege.xml
+dignaga_todo.txt
+todo_vocab.txt
+todo_bericht_dignaga_seg1-9.txt
+vocab_to_tei_web_fixed.zip
+Dignaga_Gesamtvokabular.xlsx
+
+# Textdateien / Rohdaten
+2_dignaga alle Lemmata annotiert 20260127.txt
+2_dignaga korrektur xml version=1.0 encoding=UTF-8.txt
+TEIBP.js_20260125.txt
+
+# Dokumentation (lokal)
+digitale_Editionsbeschreibung.docx
+Digitale Editionsbeschreibung.md
+Registereinträge_und_fvLib n.docx
+Tibetan_TEI_GitHub & Local Testing.docx
+TibetanTEI_GitHub_Lokal_Test_offline.docx
+TibetanTEI_Tägliche_Routine.docx
+pakete_referenz.docx
+
+# Markdown (lokal)
+TibetanTEI_GitHub_Anleitung_offline_Arbeiten.md
+TibetanTEI_Vocab_Pipeline.md
+vocab_to_tei_refactoring.md
+
+# Sonstiges
+tibetantei.xsl
+Contributed.md
+Contributed.md.bak
+uebungen_loesungen_Textanalyse_mit_NLTK_ec.ipynb
+
+# CSS (integriert in main.css)
+assets/css/search.css
+cleanup_report.txt
+anleitung_vocab_to_tei.md
+assets/app/SUCHFUNKTION_DOKUMENTATION.md
+assets/app/detail.js_bak
+content/2_dignaga.xsl
+content/0_DEFAULT_Neu.xml
+neue_einträge.xml
+# Temporäre Dateien (Tilde)
+~*
+
+# CSS
+assets/css/search.css
+
+# XML Arbeitsdateien
+neue_eintraege.xml
+content/unbekannt3.xml
+*.xml-bak
+
+# Verknüpfungen und alte Dateien
+start_server.bat-Shortcut.lnk
+TEIBP.js_abwärtskontabilität_20260125.txt
+
+# Ordner
+Vokabeln to standOff/
+content/DEFAULT_Neu.xml
+vocab_to_tei_web

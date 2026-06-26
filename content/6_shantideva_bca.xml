@@ -1,0 +1,363 @@
+<?xml version="1.0" encoding="UTF-8"?><TEI xmlns="http://www.tei-c.org/ns/1.0">
+
+    <teiHeader>
+        <fileDesc>
+            <titleStmt>
+                <!-- mandatory!  Titles, author and editor/s of the digital document -->
+                <title xml:lang="bo">བྱང་ཆུབ་སེམས་དཔའི་སྤྱོད་པ་ལ་</title>
+                <title xml:lang="de">Śāntideva — Bodhicaryāvatāra (Eintritt in das Verhalten der Bodhisattvas)</title>
+                <author>
+                    <name xml:lang="bo">ཞི་བ་ལྷ།</name>
+                </author>
+                <respStmt>
+                    <resp>Text input:</resp>
+                    <name>Albert Brugnara</name>
+                </respStmt>
+                <respStmt>
+                    <!-- Editing of the digital text (encoding, markup) -->
+                    <resp>TEI Encoding and Markup:</resp>
+                    <name>Übung "Das Eintreten in den Pfad der Bodhisattvas: Das spyod 'jug des
+                        Santideva" (2024S), University of Vienna</name>
+                </respStmt>
+            </titleStmt>
+            <editionStmt>
+                <edition>
+                    <date>1982</date>
+                </edition>
+            </editionStmt>
+            <publicationStmt>
+                <distributor>Julian Schott, Universität Wien, ISTB</distributor>
+                <!-- <address>
+               <addrLine>Print and Computing Services,</addrLine>
+               <addrLine>Leh,</addrLine>
+               <addrLine>UT Ladakh,</addrLine>
+               <addrLine>IN</addrLine>
+            </address>  -->
+                <availability>
+                    <licence target="https://creativecommons.org/licenses/by-sa/4.0/">
+                        CC BY-SA 4.0 — Creative Commons Attribution Share-Alike 4.0
+                    </licence>
+                </availability>
+            </publicationStmt>
+            <notesStmt>
+                <note>Brief notes on the text are in a supplementary file.</note>
+            </notesStmt>
+            <sourceDesc>
+                <biblStruct>
+                    <monogr>
+                        <editor>zhi ba lha</editor>
+                        <title>byang chub sems dpa'i spyod pa la 'jug pa</title>
+                        <imprint>
+                            <pubPlace>Mysore Karnataka </pubPlace>
+                            <publisher>Sery Jey Libary&amp; computer Center Sra Jey Minastic
+                                University.</publisher>
+                            <date>2009</date>
+                        </imprint>
+                    </monogr>
+                </biblStruct>
+            </sourceDesc>
+        </fileDesc>
+        <encodingDesc>
+            <editorialDecl>
+                <p>Named entities of the text (i.e. persons, places, work titles, dates) are
+                    annotated and linked to online resources including the Buddhist Digital Archives
+                    (BUDA; https://library.bdrc.io//), the Sakya Research Centre (SRC;
+                    https://sakyaresearch.org/) and the Resources for Kanjur &amp; Tanjur Studies
+                    (rKTs; https://www.istb.univie.ac.at/kanjur). Non-canonical works are referred
+                    to by its Tohoku catalogue number (i.e. A catalogue of the Tohoku University
+                    collection of Tibetan works on Buddhism. Kanakura et al. (eds.). Sendai:
+                    Seminary of Indology, Tohoku University, 1953). Dates of persons are given
+                    according to the BUDA database.</p>
+                <correction status="high" method="silent">
+                    <!-- Status high: mittels Kollation; es gibt einen modernen Druck siehe Images -->
+                    <p>The following errors in the edition have been corrected: <list>
+                            <!-- Keine Korrektur in den ersten Pechas -->
+                            <item>see next version</item>
+                        </list>
+                    </p>
+                </correction>
+                <quotation marks="all">
+                    <p>Double quotation marks rendered with typographic quotes, single with apostrophe.</p>
+                </quotation>
+                <hyphenation eol="none">
+                    <p>Hyphenated words at line endings have been reformed.</p>
+                </hyphenation>
+                <interpretation>
+                    <p>Persons blue, places orange, work titles green, dates pink, Sanskrit in italics.</p>
+                </interpretation>
+            </editorialDecl>
+            <!-- Das ist der Beginn einer möglichen Taxonomie 
+           <classDecl>
+               <taxonomy>
+ <category xml:id="literature">
+  <catDesc>Literature</catDesc>
+  <category xml:id="poetry">
+   <catDesc>Poetry</catDesc>
+   <category xml:id="sonnet">
+    <catDesc>Sonnet</catDesc>
+    <category xml:id="shakesSonnet">
+     <catDesc>Shakespearean Sonnet</catDesc>
+    </category>
+    <category xml:id="petraSonnet">
+     <catDesc>Petrarchan Sonnet</catDesc>
+    </category>
+   </category>
+   <category xml:id="haiku">
+    <catDesc>Haiku</catDesc>
+   </category>
+  </category>
+  <category xml:id="drama">
+   <catDesc>Drama</catDesc>
+  </category>
+ </category>
+ <category xml:id="meter">
+  <catDesc>Metrical Categories</catDesc>
+  <category xml:id="feet">
+   <catDesc>Metrical Feet</catDesc>
+   <category xml:id="iambic">
+    <catDesc>Iambic</catDesc>
+   </category>
+   <category xml:id="trochaic">
+    <catDesc>trochaic</catDesc>
+   </category>
+  </category>
+  <category xml:id="feetNumber">
+   <catDesc>Number of feet</catDesc>
+   <category xml:id="pentameter">
+    <catDesc>>Pentameter</catDesc>
+   </category>
+   <category xml:id="tetrameter">
+    <catDesc>>Tetrameter</catDesc>
+   </category>
+  </category>
+ </category>
+</taxonomy>
+           </classDecl> 
+das ist das Ende einer möglichen Taxonomie -->
+        </encodingDesc>
+        <profileDesc>
+            <abstract>
+                <p xml:lang="de">Digitale Edition des Bodhicaryāvatāra (བྱང་ཆུབ་སེམས་དཔའི་སྤྱོད་པ་ལ་འཇུག་པ་)
+                    von Śāntideva (c. 650–750 n. u. Z.), ediert nach der Vorlesung
+                    „Das Eintreten in den Pfad der Bodhisattvas" (2024S),
+                    Universität Wien, ISTB.</p>
+            </abstract>
+            <textClass>
+                <keywords>
+                    <term>Bodhisattvacaryāvatāra<note>Eintritt in das Verhalten der Söhne des
+                            Buddhas </note></term>
+                </keywords>
+            </textClass>
+            <creation>
+                <date>1774</date>
+            </creation>
+            <langUsage>
+                <language ident="de">Deutsch</language>
+                <language ident="en">English</language>
+                <language ident="bo-Latn">Tibetan (Wylie-Transliteration)</language>
+                <language ident="bo">Tibetan (Tibetan script)</language>
+                <language ident="sa">Sanskrit</language>
+            </langUsage>
+        </profileDesc>
+        <revisionDesc>
+            <change when="2024-04-18" who="#AB">finished proofreading</change>
+            <change when="2022-06-30" who="#LB">finished proofreading</change>
+            <change notBefore="2024-07-04" who="#AB">finished data entry at end of term</change>
+            <change notAfter="2024-07-01" who="#AB">began data entry before New Year 2021</change>
+            <change when="2024-11-05" who="#AB">tagging Person, Place, Date</change>
+            <change when="2024-05-05" who="#AB">editoral declaration ergänzt</change>
+                    <change when="2026-05-16">TEI-P5-Bereinigung: wylie→bo-Latn, standOff, listBibl, facs, birth-Konsolidierung (Albert Brugnara)</change>
+              <change when="2026-05-18">Rollen: note type="role" mit Platzhalter "noch zu erschließen" für alle Personen ohne Rolle ergänzt (Albert Brugnara)</change>
+      </revisionDesc>
+    </teiHeader>
+    <standOff>
+        <listPerson>
+            <person xml:id="shantideva">
+                <note type="role">Autor</note>
+                <persName xml:lang="bo">ཞི་བ་ལྷ།་</persName>
+                <persName xml:lang="bo-Latn">zhi ba lha/</persName>
+                <idno type="URI"
+                    >https://library.bdrc.io/show/bdr:P6161</idno>
+                <birth notBefore="0650" notAfter="0750">
+                    <note>7.Jhd_n.u.Z</note>
+                </birth>
+                <death>
+                    <note>8.Jhd_n.u.Z</note>
+                </death>
+                <persName xml:id="shantideva_01" role="Mönch und Poet" type="BUDA" key="P6161"
+                    subtype="nomen">དབྱིག་གཉེན</persName>
+            </person>
+        </listPerson>
+        <listPlace>
+      <place xml:id="place_placeholder">
+        <placeName xml:lang="de">Platzhalter — Ortsregister noch nicht erschlossen</placeName>
+        <note type="status">pending</note>
+      </place>
+    </listPlace>
+    <listBibl>
+      <bibl xml:id="bca">
+        <title xml:lang="bo">བྱང་ཆུབ་སེམས་དཔའི་སྤྱོད་པ་ལ་འཇུག་པ་</title>
+        <title xml:lang="sa">Bodhicaryāvatāra</title>
+        <title xml:lang="de">Eintritt in das Verhalten der Bodhisattvas</title>
+        <author corresp="#shantideva"/>
+        <idno type="URI">https://library.bdrc.io/show/bdr:W22084</idno>
+      </bibl>
+    </listBibl>
+    </standOff>
+    <text>
+        <body>
+        <div>
+                <pb ed="A" n="1" facs="../content/images/6_shantideva/shantideva_1.png"/>
+                <p xml:lang="bo">
+                    <s xml:id="p1_01"> Beginn des Textes: Śāntideva "byang chub sems dpa'i spyod pa
+                        la 'jug pa" Folio 1; 2. Zeile <lb/>Fortsetzung 4. Stanza 3.Pada "....ma
+                        bgrubs na//.... la 'gyur// siehe Folio 2<lb/>
+                        <cl><phr><w type="noun"><w type="Subjekt">བདེ་གཤེགས</w></w></phr>
+                            <phr><w type="noun"><w type="dO">་ཆོས་ཀྱི་སྐུ</w>
+                                    <w type="verb"><w type="hon."><w type="Prädikat"
+                                        >་མངའ</w></w></w></w></phr>
+                            <w type="adv.">་སྲས་བཅས་དང</w>༌།།</cl><cl><phr>ཕྱག་འོས</phr>
+                            <phr>་ཀུན་ལའང <w type="adv.">་གུས་པ</w><m type="konj.">ར་</m>
+                                <w type="verb"> ཕྱག་འཚལ</w><m type="semifinpart"/><m
+                                    type="semifinpart"> ་ཏེ</m></phr>།།</cl><lb/><lb/>
+                        <cl><phr><w type="noun"><w type="Subjekt">བདེ་གཤེགས་སྲས་</w></w>
+                                <m type="attrsuff.">ཀྱི་</m><w type="noun"> སྡོམ་</w>
+                                <m type="la_don_suff."><m sameAs="lok">ལ་</m></m>
+                                <w type="verb">འཇུག་པ</w>
+                                <m type="focpart.">་ནི</m></phr>། །</cl><cl><phr><w type="noun"
+                                    >ལུང</w>
+                                <w type="verglpart">་བཞིན</w>
+                                <w type="noun">་མདོར་བསྡུས་</w>
+                                <m type="pp">ནས</m>
+                                <m type="focpart.">་ནི་</m>
+                                <w type="verb">བརྗོད་པ</w>
+                                <m type="???">ར་</m>
+                                <w type="hiv"><m type="futur">བྱ</m></w></phr>།།</cl><lb/>
+                    </s><lb/>
+                    <s xml:id="p1_02">སྔོན་ཆད་མ་བྱུང་བ་ཡང་འདིར་བརྗོད་མེད།
+                        །སྡེབ་སྦྱོར་མཁས་པའང་བདག་ལ་ཡོད་མིན་ཏེ།།<lb/>
+                        དེ་ཕྱིར་གཞན་དོན་བསམ་པའང་བདག་ལ་མེད།
+                        །རང་གི་ཡིད་ལ་བསྒོམ་ཕྱིར་ངས་འདི་བརྩམས།།<lb/>
+                    </s><lb/>
+                    <s xml:id="p1_03">དགེ་བ་བསྒོམ་ཕྱིར་བདག་གི་དད་པའི་ཤུགས།
+                        །འདི་དག་གིས་ཀྱང་རེ་ཞིག་འཕེལ་འགྱུར་ལ།།<lb/> བདག་དང་སྐལ་བ་མཉམ་པ་གཞན་གྱིས་ཀྱང༌།
+                        །ཅི་སྟེ་འདི་དག་མཐོང་ན་དོན་ཡོད་འགྱུར།།<lb/>
+                    </s><lb/>
+                    <s xml:id="p1_04">དལ་འབྱོར་འདི་ནི་རྙེད་པར་ཤིན་ཏུ་དཀའ།
+                        །སྐྱེས་བུའི་དོན་གྲུབ་ཐོབ་པར་འགྱུར་པ་ལ།།<lb/> གལ་ཏེ་འདི་ལ་ཕན་པ་མ་བསྒྲུབས་ན།
+                        །ཕྱིས་འདི་ཡང་དག་འབྱོར་པར་ག་ལ་འགྱུར།།<lb/>
+                    </s>
+                </p>
+                <p xml:lang="bo-Latn">
+                    <lb/>
+                    <lb/>
+                    <lb/>
+                    <l> bde gshegs chos kyi sku mnga' sras bcas dang // phyag 'os kun la'ang gus par
+                        phyag 'tshal te// </l><lb/><lb/>
+                    <l>bde gshegs sras kyi sdom la 'jug pa ni /_/ lung bzhin mdor bsdus nas ni brjod
+                        par bya //</l><lb/><lb/>
+                    <l> sngon chad ma byung ba yang 'dir brjod med/_/sdeb sbyor mkhas pa'ang bdag la
+                        yod min te// </l><lb/><lb/>
+                    <l>de phyir gzhan don bsam pa'ang bdag la med/_/rang gi yid la bsgom phyir ngas
+                        'di brtsams// </l><lb/><lb/>
+                    <l> dge ba bsgom phyir bdag gi dad pa'i shugs// 'di dag gis kyang re zhig 'phel
+                        'gyur la// </l><lb/><lb/>
+                    <l>bdag dang skal ba mnyam pa gzhan gyis kyang //ci ste 'di dag mthong na don
+                        yod 'gyur// </l><lb/><lb/>
+                    <l> dal 'byor 'di ni rnyed par shin tu dka'/_/skyes bu'i don grub thob par 'gyur
+                        pa la//</l><lb/><lb/><lb/>
+                    <l>gal te 'di la phan pa ma bsgrubs na//phyis 'di yang dag 'byor par ga la
+                        'gyur//</l></p>
+
+                <p xml:lang="de"><s corresp="#1_01">[Ich] verneige mich respektvoll vor den Buddhas,
+                        die den Dharmakay besitzen; zusammen mit den Söhnen (Bodhisattvas); und
+                        allen die der Verehrung wert sind. Betreffend dem Eintritt in das
+                        Verhalten/Disziplin der Söhne. </s>
+                    <s corresp="#1_02">Was früher nicht hervorgebracht wurde, werde ich auch jetzt
+                        nicht verkünden, (Die Lehre existiert nicht die nicht schon früher
+                        entstanden ist) ich habe nicht das Wissen über die Poesie (verfassen von
+                        Texten/Abhandlungen), deshalb denke ich auch nicht anderen zu nützen (ich
+                        habe kein Interesse anderen zu nutzen); deswegen habe ich dies verfasst
+                        (geschrieben) um den eignen Geist zu kultivieren. </s>
+                    <s corresp="#1_03">Um zu beginnen [mit diesem Werk] soll die Kraft der Hingabe
+                        anwachsen (gesteigert werden) und / oder (la) ein anderer dessen natürlicher
+                        Disposition gleich ist wie meiner, diesen erblickt / erkennt, möge es zum
+                        Nutzen sein. </s>
+                    <s corresp="#1_04">In Bezug auf diese glücksverheißende Möglichkeit (ni) ist
+                        [folgendes zu sagen], es ist schwer [sie] zu erlangen, existiert als einer
+                        der erlangt/ verwirklicht wurde, zum Zwecke der Wesen, galt e: wenn in Bezug
+                        auf diese der Nutzen nicht errreicht wird, wie sollte später das Glück neu
+                        erlangt/ entstehen ('gyur) werden. </s>
+                </p>
+                <p xml:lang="en">
+                    <l>Having bowed down respectfully to the well-gone-ones, together with their
+                        sons (the bodhisattvas), who all possess the dharmakāya as well as (ca) to
+                        all worthy of respect, I will teach (kath) the Entrance into the Conduct of
+                        the Sons of the Sugata (the title of the work), in accordance with the
+                        scripture [and] in brief. </l><lb/><lb/>
+                    <l>Indeed, in this (the BCA) there is nothing (= not something) to be said anew,
+                        nor (= and not) do I have skill in composition. Precisely therefore, I have
+                        no thoughts about the benefit of others. This [text] has been composed by me
+                        in order to cultivate/train my own mind. </l><lb/><lb/>
+                    <l>To begin with (tāvat), by this, my energy of mental clarity (prasādavega)
+                        will increase to cultivate all that is good. Or if someone else with a
+                        compatible disposition like mine too may encounter (lit. “see”) this, then
+                        too this is useful. </l><lb/><lb/>
+                    <l>This coming about of a lucky moment (kṣaṇasaṃpad, in Tibetan “leisure and
+                        fortune”) which is so difficult to obtain has been obtained [by us reading
+                        the BCA] - It brings about the goal of human beings. </l></p>
+            </div>
+
+        <div>
+                <pb ed="A" n="2" facs="../content/images/6_shantideva/shantideva_2.png"/>
+                                                <p xml:lang="bo">
+                    <s xml:id="p2_01"> </s>
+                </p>
+                <p xml:lang="bo-Latn">_slob dpon </p>
+                <p xml:lang="de"><s corresp="#2_01">Als zur </s>
+                </p>
+                <p xml:lang="en">When at </p>
+                <p xml:lang="bo">
+                    <s xml:id="p2_02"> </s>
+                </p>
+                <p xml:lang="bo-Latn">_slob dpon </p>
+                <p xml:lang="de"><s corresp="#2_02">Als zur </s>
+                </p>
+                <p xml:lang="en">When at </p>
+                <p xml:lang="bo">
+                    <s xml:id="p2_03"> </s>
+                </p>
+                <p xml:lang="bo-Latn">_slob dpon </p>
+                <p xml:lang="de"><s corresp="#2_03">Als zur </s>
+                </p>
+                <p xml:lang="en">When at </p>
+                <p xml:lang="bo">
+                    <s xml:id="p2_04"> </s>
+                </p>
+                <p xml:lang="bo-Latn">_slob dpon </p>
+                <p xml:lang="de"><s corresp="#2_04">Als zur </s>
+                </p>
+                <p xml:lang="en">When at </p>
+            </div>
+
+        <div>
+            <pb ed="A" n="3" facs="../content/images/6_shantideva/shantideva_3.png"/>
+            <p xml:lang="bo"><!-- Platzhalter: Tibetischer Text noch nicht erfasst --></p>
+            <p xml:lang="de"><!-- Platzhalter: Deutsche Übersetzung noch nicht erfasst --></p>
+        </div>
+
+        <div>
+            <pb ed="A" n="4" facs="../content/images/6_shantideva/shantideva_4.png"/>
+            <p xml:lang="bo"><!-- Platzhalter: Tibetischer Text noch nicht erfasst --></p>
+            <p xml:lang="de"><!-- Platzhalter: Deutsche Übersetzung noch nicht erfasst --></p>
+        </div>
+
+        <div>
+            <pb ed="A" n="5" facs="../content/images/6_shantideva/shantideva_5.png"/>
+            <p xml:lang="bo"><!-- Platzhalter: Tibetischer Text noch nicht erfasst --></p>
+            <p xml:lang="de"><!-- Platzhalter: Deutsche Übersetzung noch nicht erfasst --></p>
+        </div>
+
+    </body>
+    </text>
+</TEI>

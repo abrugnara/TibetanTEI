@@ -1,0 +1,205 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0" xml:id="dummy_tibetantei">
+  <teiHeader>
+    <fileDesc>
+      <titleStmt>
+        <title>Vimalaprabha</title>
+        <author xml:id="Vimalaprabha">Tāranātha</author>
+      </titleStmt>
+      <publicationStmt>
+        <p>TibetanTEI Digital Edition</p>
+      </publicationStmt>
+      <sourceDesc>
+        <p>Strukturvorlage für alle Textzeugen des TibetanTEI-Korpus</p>
+      </sourceDesc>
+    </fileDesc>
+    <profileDesc>
+      <langUsage>
+        <language ident="bo">Tibetisch (u-chen)</language>
+        <language ident="bo-Latn">Tibetisch (Wylie-Transliteration)</language>
+        <language ident="sa">Sanskrit</language>
+        <language ident="sa-Latn">Sanskrit-IAST</language>
+        <language ident="de">Deutsch</language>
+        <language ident="en">Englisch</language>
+      </langUsage>
+    </profileDesc>
+  </teiHeader>
+
+  <!-- ════════════════════════════════════════════════════════════════════
+       ZENTRALER STANDOFF (extern)
+       Alle gemeinsamen Register (Personen, Orte, Vokabular) liegen in
+       standoff.xml im Repo-Root. Dieses Element verweist darauf via
+       @source (TEI-P5-konform).
+       Datei-spezifische Einträge kommen in die lokalen Listen unten.
+       ════════════════════════════════════════════════════════════════════ -->
+  <standOff source="standoff.xml">
+
+    <!-- Datei-spezifische Personen (nicht in standoff.xml)
+         Vorlage: Kommentar entfernen und ausfüllen -->
+    <!-- Datei-spezifische Personen: Vorlage auskommentiert,
+         xml:id und persName anpassen, Kommentar entfernen -->
+    <listPerson xml:id="listPerson_dummy_local">
+      <!-- Beispiel 1: BUDA-Key noch ausstehend (@key="???") -->
+      <person xml:id="person_bekannt">
+        <persName xml:lang="sa">Dignāga</persName>
+        <persName xml:lang="bo">ཕྱོགས་གླང་</persName>
+        <persName xml:lang="bo-Latn">phyogs kyi glang po</persName>
+        <idno type="URI">https://library.bdrc.io/show/bdr:P6119</idno>
+        <note type="role">Logiker</note>
+        <note type="identification">BUDA-Key P6119 verifiziert.</note>
+      </person>
+
+      <!-- Beispiel 2: BUDA-Key noch ausstehend (@key="???") -->
+      <person xml:id="person_offen">
+        <persName xml:lang="sa">Saṅghadāsa</persName>
+        <persName xml:lang="bo">དགེ་འདུན་འབངས་</persName>
+        <persName xml:lang="bo-Latn">dge 'dun 'bangs</persName>
+        <idno type="URI"><!-- BUDA-Recherche ausstehend --></idno>
+        <note type="role">Mönch</note>
+        <note type="identification">BUDA-Recherche ausstehend.
+            @key="???" im body als offenes ToDo gesetzt.</note>
+      </person>
+
+      <!-- Beispiel 3: Bewusst nicht nachweisbar (@key="N/A") -->
+      <person xml:id="person_nicht_nachweisbar">
+        <persName xml:lang="sa">Dharmadāsa</persName>
+        <persName xml:lang="bo">ཆོས་འབང་</persName>
+        <persName xml:lang="bo-Latn">chos 'bang</persName>
+        <idno type="URI"><!-- in keiner Normdatenquelle nachweisbar (BDRC, rKTs, SRC) --></idno>
+        <note type="role">Mönch</note>
+        <note type="identification">Nach eingehender Recherche in keiner Normdatenquelle
+            nachweisbar (BDRC, rKTs, SRC). @key="N/A" bewusst gesetzt.</note>
+      </person>
+    </listPerson>
+
+    <!-- Datei-spezifische Orte: Vorlage auskommentiert,
+         xml:id und placeName anpassen, Kommentar entfernen -->
+    <listPlace xml:id="listPlace_dummy_local">
+      <place xml:id="place_dummy_placeholder">
+        <placeName xml:lang="sa">Placeholder</placeName>
+        <placeName xml:lang="bo-Latn">dper brjod</placeName>
+      </place>
+    </listPlace>
+
+  </standOff>
+
+  <!-- ════════════════════════════════════════════════════════════════════
+       BODY
+       Struktur: <pb> → <p xml:lang="bo"> + <p xml:lang="bo-Latn">
+                         + <p xml:lang="de"> + <p xml:lang="en">
+       Pro Seite ein Viererblock. Sätze: <s xml:id="sXXXNN">.
+       Wörter:   <w xml:id="wXXXNN_MM" type="..." pos="..." ana="#lex_...">
+       Partikel: @ana verweist auf fvLib-Eintrag in standoff.xml.
+       ════════════════════════════════════════════════════════════════════ 
+  <text xml:lang="bo">
+    <body>
+
+       ── Seite 65a ──────────────────────────────────────────────── 
+      <pb n="65a" ed="Q" facs="facsimile/65a.jpg"/>
+
+       // Tibetischer Quelltext //      
+       <p xml:lang="bo" xml:id="p65a">
+        <s xml:id="s65a01" corresp="#s65a01_de #s65a01_en">
+          //Beispielsatz: slob dpon gyis chos bstan to //
+          // BUDA-Key bekannt: corresp="#person_bekannt" key="P6119" //
+          // BUDA-Key ausstehend: corresp="#person_offen" key="???" //
+          // Nicht nachweisbar: corresp="#person_nicht_nachweisbar" key="N/A" //
+          // slob dpon = Lehrer (Nomen, S1c:Erg) //
+          <w xml:id="w65a01_01" type="noun" pos="N" ana="#lex_slob_dpon">སློབ་</w>
+          <w xml:id="w65a01_02" type="noun" pos="N">དཔོན་</w>
+          // gyis = Ergativ-Marker (ana verweist auf fvLib in standoff.xml) //          
+          <w xml:id="w65a01_03" type="particle" pos="PART" ana="#lex_kyis_erg">གྱིས་</w>
+          // chos = Dharma (Nomen, S2:Abs direktes Objekt) //
+          <w xml:id="w65a01_04" type="noun" pos="N">ཆོས་</w>
+          // bstan = lehrte (Verb, VG1, 2.SF Perfekt) //
+          <w xml:id="w65a01_05" type="verb" pos="V.PERF">བསྟན་</w>
+          // to = Finalsuffix //
+          <w xml:id="w65a01_06" type="particle" pos="FSUF">ཏོ</w>
+        </s>
+
+         ── Annotationsbeispiele für BUDA-Keys ──────────────────── 
+Fall 1: Key bekannt        
+<s xml:id="s65a_bsp1" corresp="#s65a_bsp1_de #s65a_bsp1_en">
+          <persName type="BUDA" key="P6119" corresp="#person_bekannt">
+            <w xml:id="w65a_b01" type="noun" subtype="personal_name"
+               pos="N.prop">ཕྱོགས་གླང་</w>
+          </persName>
+        </s>
+
+         Fall 2: Key ausstehend → @key="???" als offenes ToDo 
+        <s xml:id="s65a_bsp2" corresp="#s65a_bsp2_de #s65a_bsp2_en">
+          <persName type="BUDA" key="???" corresp="#person_offen">
+            <w xml:id="w65a_b02" type="noun" subtype="personal_name"
+               pos="N.prop">དགེ་འདུན་འབངས་</w>
+          </persName>
+        </s>
+
+         Fall 3: Nicht nachweisbar → @key="N/A" bewusst gesetzt 
+        <s xml:id="s65a_bsp3" corresp="#s65a_bsp3_de #s65a_bsp3_en">
+          <persName type="BUDA" key="N/A" corresp="#person_nicht_nachweisbar"
+                    cert="low">
+            <w xml:id="w65a_b03" type="noun" subtype="personal_name"
+               pos="N.prop">ཆོས་འབང་</w>
+          </persName>
+        </s>
+
+        <s xml:id="s65a02" corresp="#s65a02_de #s65a02_en">
+    //Beispiel mit Lokativ: de nas dgon pa la phyin pa //
+           de nas = Ablativ/Temporal 
+          <w xml:id="w65a02_01" type="pronoun" pos="PRON">དེ་</w>
+          <w xml:id="w65a02_02" type="particle" pos="PART" ana="#lex_nas_abl">ནས་</w>
+           dgon pa = Kloster 
+          <w xml:id="w65a02_03" type="noun" pos="N">དགོན་</w>
+          <w xml:id="w65a02_04" type="noun" pos="N" ana="#lex_pa_nom">པ་</w>
+           la = Direktiv/Dativ           
+           <w xml:id="w65a02_05" type="particle" pos="PART" ana="#lex_la_lok">ལ་</w>
+           phyin = ging (Verb, VG3 intrans. kontrollierbar, 2.SF) 
+          <w xml:id="w65a02_06" type="verb" pos="V.PERF">ཕྱིན་</w>
+           pa = Nominalisierung 
+          <w xml:id="w65a02_07" type="particle" pos="NSUF" ana="#lex_pa_nom">པ་</w>
+        </s>
+      </p>
+
+       // Wylie-Transliteration // 
+      <p xml:lang="bo-Latn" xml:id="p65a_Latn" corresp="#p65a">
+        <s xml:id="s65a01_Latn">slob dpon gyis chos bstan to</s>
+        <s xml:id="s65a02_Latn">de nas dgon pa la phyin pa</s>
+      </p>
+
+       // Deutsche Übersetzung //
+      <p xml:lang="de" xml:id="p65a_de" corresp="#p65a">
+        <s xml:id="s65a01_de">Der Lehrmeister lehrte den Dharma.</s>
+        <s xml:id="s65a02_de">Dann ging er in das Kloster.</s>
+      </p>
+
+       // Englische Übersetzung //     
+      <p xml:lang="en" xml:id="p65a_en" corresp="#p65a">
+        <s xml:id="s65a01_en">The master taught the Dharma.</s>
+        <s xml:id="s65a02_en">Then he went to the monastery.</s>
+      </p>
+
+       ── Seite 65b (Leervorlage für weitere Seiten) ────────────── 
+      <pb n="65b" ed="Q" facs="facsimile/65b.jpg"/>
+
+      <p xml:lang="bo" xml:id="p65b">
+        <s xml:id="s65b01" corresp="#s65b01_de #s65b01_en">
+           // Tibetischen Text hier einfügen //
+        </s>
+      </p>
+
+      <p xml:lang="bo-Latn" xml:id="p65b_Latn" corresp="#p65b">
+        <s xml:id="s65b01_Latn">TODO</s>
+      </p>
+
+      <p xml:lang="de" xml:id="p65b_de" corresp="#p65b">
+        <s xml:id="s65b01_de">TODO</s>
+      </p>
+
+      <p xml:lang="en" xml:id="p65b_en" corresp="#p65b">
+        <s xml:id="s65b01_en">TODO</s> 
+
+      </p> 
+    </body>
+  </text> -->
+  
+</TEI>

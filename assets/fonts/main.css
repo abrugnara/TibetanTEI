@@ -1,0 +1,1014 @@
+/*
+ * TibetanTEI — main.css
+ * Haupt-Stylesheet (zusammengeführt aus ehem. main.css und search.css)
+ * Projekt: Brugnara - TibetanTEI
+ * Autor:   Albert Brugnara
+ *
+ * Erstellt: 2025-05-14T10:00:00+02:00
+ * Geändert: 2025-05-14T10:30:00+02:00
+ *
+ * Änderungshistorie:
+ *   2025-05-14  Zusammenführung von main.css und search.css zu main.css;
+ *               Fehlerbereinigung; Handke-Notizbuch-Ästhetik;
+ *               fehlende Klassen ergänzt (.logo, .column, .section,
+ *               .search-nav-btn, .match-count, .footer-menu, usw.)
+ *   2025-05-14  Umbenennung: style.css → main.css (auf Anforderung);
+ *               JS-Verzeichnis heißt jetzt assets/app/ statt assets/js/.
+ *
+ * Beschreibung:
+ *   Einheitliches Stylesheet für alle HTML-Seiten des TibetanTEI-Projekts.
+ *   Das visuelle Konzept orientiert sich an der digitalen Edition der
+ *   Peter-Handke-Notizbücher (ÖNB): zurückhaltende Typographie auf
+ *   papierartigem Hintergrund, zweispaltiges Leserpult-Layout, serifierte
+ *   Antiqua für den Lesetext.
+ */
+
+/* =========================================================
+   0. Web Fonts
+   ========================================================= */
+
+@font-face {
+  font-family: "PlayfairDisplay-Regular";
+  src: url("../fonts/PlayfairDisplay-Regular.woff2") format("woff2");
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Jomolhari";
+  src: url("../fonts/Jomolhari.woff2") format("woff2");
+  font-display: swap;
+}
+
+/* =========================================================
+   1. Design-Tokens (CSS Custom Properties)
+   ========================================================= */
+
+:root {
+  /* Layout */
+  --content-width: min(100%, 95%);
+  --header-height: 60px;
+
+  /* Farben – papierfarbig, dem Handke-Notebook nachempfunden */
+  --background:        #f5f0e8;   /* warmes Pergament */
+  --background-panel:  #faf7f2;   /* etwas heller für Panes */
+  --color:             #2a2318;   /* Tintenschwarz */
+  --color-muted:       #6b5e4a;   /* gedämpftes Braun */
+  --second:            #8B7355;   /* Akzent Ocker */
+  --second-light:      #d4c4a8;   /* heller Ocker für Borders */
+  --second-dark:       #5c4a2e;   /* dunklerer Ocker für Hover */
+
+  /* Registerfarben (Personen, Orte, Daten, Titel) */
+  --color-person:      #4a6fa5;   /* gedämpftes Blau */
+  --color-place:       #8a6914;   /* Goldgelb */
+  --color-date:        #7a3b6e;   /* Pflaume */
+  --color-title:       #3f6d11;   /* Waldgrün */
+
+  /* Typographie */
+  --font-serif: "PlayfairDisplay-Regular", Georgia, "Times New Roman", serif;
+  --font-tibetan: "Jomolhari", sans-serif;
+  --font-sans: system-ui, -apple-system, "Segoe UI", sans-serif;
+  --font-mono: "Courier New", Courier, monospace;
+
+  /* Abstände */
+  --space-xs:  4px;
+  --space-sm:  8px;
+  --space-md: 16px;
+  --space-lg: 24px;
+  --space-xl: 40px;
+
+  /* Übergänge */
+  --transition: 0.18s ease;
+}
+
+/* =========================================================
+   2. Basis-Reset & Body
+   ========================================================= */
+
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  background: var(--background);
+  font-family: var(--font-sans);
+  font-size: 15px;
+  line-height: 1.7;
+  color: var(--color);
+}
+
+/* Tibetische Schriftzeichen (u-chen) */
+.u-chen,
+[lang="bo"] {
+  font-family: var(--font-tibetan);
+  font-size: 1.1em;
+  line-height: 2;
+}
+
+/* =========================================================
+   3. Header & Navigation
+   ========================================================= */
+
+header {
+  position: sticky;
+  top: 0;
+  background: var(--background-panel);
+  border-bottom: 1px solid var(--second-light);
+  z-index: 2000;
+  padding: 0 var(--space-lg);
+  height: var(--header-height);
+}
+
+.header-content {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--space-lg);
+  height: 100%;
+  max-width: 1400px;
+  margin: 0 auto;
+}
+
+/* Logo-Bereich */
+.logo-link {
+  text-decoration: none;
+  color: inherit;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  gap: var(--space-sm);
+}
+
+.logo img {
+  height: 36px;
+  width: auto;
+}
+
+.site-title {
+  font-family: var(--font-serif);
+  font-size: 1.2rem;
+  font-weight: 400;
+  margin: 0;
+  color: var(--second-dark);
+  white-space: nowrap;
+  letter-spacing: 0.03em;
+}
+
+/* Logo mit Titel + Untertitel */
+.logo-text {
+  display: flex;
+  flex-direction: column;
+  line-height: 1.2;
+}
+
+.site-subtitle {
+  font-family: var(--font-sans);
+  font-size: 10px;
+  color: var(--color-muted);
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+/* Textname in der Seitennavigation */
+.text-title-label {
+  font-family: var(--font-serif);
+  font-size: 12px;
+  color: var(--second-dark);
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  max-width: 160px;
+}
+
+.page-of {
+  font-size: 13px;
+  color: var(--color-muted);
+  white-space: nowrap;
+}
+
+/* Ältere Seiten (index.html, impressum.html) */
+.page-title {
+  font-family: var(--font-serif);
+  font-size: 1.15rem;
+  font-weight: 400;
+  color: var(--second-dark);
+  text-decoration: none;
+  letter-spacing: 0.03em;
+}
+
+/* Menü-Links */
+.menu {
+  display: flex;
+  gap: var(--space-md);
+}
+
+.menu a {
+  color: var(--color-muted);
+  text-decoration: none;
+  font-size: 14px;
+  padding: 4px 0;
+  border-bottom: 1px solid transparent;
+  transition: color var(--transition), border-color var(--transition);
+}
+
+.menu a:hover,
+.menu a.active {
+  color: var(--second-dark);
+  border-bottom-color: var(--second);
+}
+
+/* GitHub-Badge */
+.badge a {
+  color: var(--color-muted);
+  transition: color var(--transition);
+}
+
+.badge a:hover {
+  color: var(--second-dark);
+}
+
+/* Seitennavigation (Seitenauswahl) */
+.page-navigation {
+  display: flex;
+  align-items: center;
+  gap: var(--space-sm);
+  font-size: 13px;
+  color: var(--color-muted);
+  white-space: nowrap;
+}
+
+.page-navigation select {
+  font-family: var(--font-serif);
+  font-size: 13px;
+  background: var(--background);
+  border: 1px solid var(--second-light);
+  color: var(--color);
+  padding: 2px var(--space-sm);
+  cursor: pointer;
+  border-radius: 2px;
+}
+
+/* =========================================================
+   4. Zweispaltiges Lesepult-Layout (detail.html)
+   ========================================================= */
+
+.reader {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+  gap: var(--space-lg);
+  padding: var(--space-lg);
+  align-items: start;
+  max-width: 1400px;
+  margin: 0 auto;
+  overflow: hidden;
+}
+
+/* Einzelne Spalte */
+.column {
+  min-width: 0; /* verhindert Überlauf bei langen Wörtern */
+}
+
+/* =========================================================
+   5. Tabs & Panes
+   ========================================================= */
+
+.tabs {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0;
+  border-bottom: 2px solid var(--second);
+  margin-bottom: 0;
+}
+
+.tab-button {
+  padding: 7px 12px;
+  cursor: pointer;
+  border: 1px solid var(--second-light);
+  border-bottom: none;
+  border-right: none;
+  background: var(--background);
+  color: var(--color-muted);
+  font-family: var(--font-sans);
+  font-size: 12px;
+  white-space: nowrap;
+  letter-spacing: 0.02em;
+  transition: background var(--transition), color var(--transition);
+  border-radius: 0;
+  position: relative;
+}
+
+.tab-button:last-child {
+  border-right: 1px solid var(--second-light);
+}
+
+.tab-button:hover {
+  background: var(--second-light);
+  color: var(--second-dark);
+}
+
+/* Aktiver Tab — deutlich hervorgehoben */
+.tab-button.active {
+  background: var(--background-panel);
+  color: var(--second-dark);
+  font-weight: 600;
+  border-top: 3px solid var(--second-dark);
+  border-bottom: 2px solid var(--background-panel);
+  margin-bottom: -2px;
+  padding-top: 5px;
+}
+
+/* Register-Tabs — visuell abgesetzt */
+.tab-register {
+  background: #ede8df;
+  border-left: 1px solid var(--second-light);
+  color: var(--color-muted);
+  font-style: italic;
+}
+
+.tab-register:hover {
+  background: var(--second-light);
+  color: var(--second-dark);
+}
+
+.tab-register.active {
+  background: var(--background-panel);
+  font-style: normal;
+}
+
+.pane {
+  display: none;
+  background: var(--background-panel);
+  padding: var(--space-md);
+  border: 1px solid var(--second-light);
+  border-top: none;
+  min-height: 200px;           /* Mindesth. damit leere Panes nicht kollabieren */
+  /* Serifierte Schrift für den Lesetext → Handke-Ästhetik */
+  font-family: var(--font-serif);
+  font-size: 15px;
+  line-height: 1.8;
+}
+
+.pane.active {
+  display: block;
+}
+
+/* Tibetischer Text-Pane */
+#tibetan-left,
+#tibetan-right {
+  font-family: var(--font-tibetan);
+  font-size: 1.1em;
+  line-height: 2.2;
+}
+
+/* Faksimile-Pane
+   - Kein schwarzer Hintergrund (war #1a1a1a — erzeugte schwarze Fläche
+     unter dem Bild wenn dieses kürzer als min-height war).
+   - overflow: auto statt hidden → Scrollrad funktioniert im Pane.
+   - Kein festes min-height auf .facsimile selbst; das Bild bestimmt die Höhe. */
+.facsimile {
+  padding: var(--space-sm);
+  overflow: auto;
+  background: var(--background);
+  cursor: zoom-in;
+  text-align: center;
+  height: 70vh;        /* feste Höhe → overflow:auto erzeugt Scrollbars beim Zoom */
+}
+
+/* Spezifischerer Selektor überschreibt .pane { min-height: 200px } zuverlässig */
+.pane.facsimile,
+.pane.facsimile.active {
+  min-height: 0;
+  height: 70vh;
+}
+
+/* Zoom-Zustand (per JS gesetzt wenn Bild vergrößert) */
+.facsimile.zoomed {
+  cursor: zoom-out;
+}
+
+.facsimile img {
+  display: block;
+  /* Breite/Höhe werden beim Zoom per JS gesetzt;
+     max-width darf das nicht blockieren */
+  max-width: 100%;
+  height: auto;
+  cursor: zoom-in;
+}
+
+.facsimile.zoomed img {
+  max-width: none;
+  cursor: grab;
+}
+
+/* Bedienungshinweis unter dem Faksimile-Bild */
+.facsimile-hint {
+  font-family: var(--font-sans);
+  font-size: 11px;
+  color: var(--color-muted);
+  text-align: center;
+  margin: var(--space-xs) 0 0;
+  padding: 0;
+  user-select: none;
+}
+
+/* =========================================================
+   6. XML-Ansicht
+   ========================================================= */
+
+.xml-content-wrapper {
+  background: #e8e4dc;
+  border: 1px solid var(--second-light);
+  padding: var(--space-md);
+  font-family: var(--font-mono);
+  white-space: pre-wrap;
+  font-size: 13px;
+  line-height: 1.6;
+  word-break: break-all;
+  color: #3a3020;
+}
+
+/* =========================================================
+   7. Register-Buttons
+   ========================================================= */
+
+.button {
+  display: inline-block;
+  margin: 2px;
+  padding: 4px 10px;
+  font-size: 12px;
+  cursor: pointer;
+  background: var(--background);
+  border: 1px solid var(--second);
+  color: var(--second-dark);
+  font-family: var(--font-sans);
+  transition: background var(--transition), color var(--transition);
+  border-radius: 0;
+}
+
+.button:hover {
+  background: var(--second-light);
+  color: var(--second-dark);
+}
+
+/* Listen in den Register-Panes */
+.pane ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.pane li {
+  padding: 4px 0;
+  border-bottom: 1px solid var(--second-light);
+  font-family: var(--font-serif);
+  font-size: 14px;
+  color: var(--second);
+  cursor: pointer;
+  transition: color var(--transition);
+}
+
+.pane li:hover {
+  color: var(--second-dark);
+}
+
+/* =========================================================
+   Register-Einträge (Personen / Orte)
+   ========================================================= */
+
+.reg-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+/* Einzelner Registereintrag */
+.reg-entry {
+  padding: var(--space-xs) 0;
+  border-bottom: 1px solid var(--second-light);
+  font-family: var(--font-serif);
+  font-size: 13px;
+}
+
+/* Eintrag ohne Vorkommen im Text → gedämpft */
+.reg-entry--absent {
+  opacity: 0.45;
+}
+
+/* Zeile mit Name und Häufigkeit */
+.reg-row {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: var(--space-sm);
+}
+
+/* Name */
+.reg-name {
+  flex: 1;
+  min-width: 0;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+/* Name als externer Link */
+a.reg-link {
+  text-decoration: none;
+  border-bottom: 1px dotted currentColor;
+  transition: opacity var(--transition);
+}
+
+a.reg-link:hover {
+  opacity: 0.75;
+}
+
+a.reg-link::after {
+  content: " ↗";
+  font-size: 0.75em;
+  opacity: 0.6;
+}
+
+/* Häufigkeitsanzeige */
+.reg-count {
+  font-size: 11px;
+  color: var(--color-muted);
+  white-space: nowrap;
+  font-family: var(--font-sans);
+  font-style: normal;
+}
+
+.reg-count.reg-absent {
+  color: var(--second-light);
+}
+
+/* Wylie-Transliteration unter dem Namen */
+.reg-wylie {
+  font-family: var(--font-sans);
+  font-size: 11px;
+  color: var(--color-muted);
+  font-style: italic;
+  margin-top: 1px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+/* Seitenlink-Bereich */
+.reg-pages {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 3px;
+  margin-top: 3px;
+}
+
+/* Einzelner Seitenlink-Button */
+.reg-page-btn {
+  font-family: var(--font-sans);
+  font-size: 10px;
+  padding: 1px 5px;
+  border: 1px solid var(--second-light);
+  background: var(--background);
+  color: var(--second-dark);
+  cursor: pointer;
+  border-radius: 2px;
+  transition: background var(--transition), border-color var(--transition);
+}
+
+.reg-page-btn:hover {
+  background: var(--second-light);
+  border-color: var(--second);
+}
+
+/* Leerer Zustand */
+.reg-empty {
+  color: var(--color-muted);
+  font-size: 13px;
+  font-family: var(--font-sans);
+  padding: var(--space-sm) 0;
+}
+
+/* =========================================================
+   8. Suchfeld & Suchergebnisse (ehem. search.css)
+   ========================================================= */
+
+/* Container um das Suchfeld */
+.search-container {
+  position: relative;
+  flex-grow: 1;
+  max-width: 480px;
+}
+
+/* Texteingabe */
+#searchInput {
+  width: 100%;
+  padding: 7px 110px 7px var(--space-md);
+  border: 1px solid var(--second-light);
+  border-radius: 2px;
+  background: var(--background);
+  color: var(--color);
+  font-family: var(--font-serif);
+  font-size: 14px;
+  transition: border-color var(--transition);
+}
+
+#searchInput:focus {
+  outline: none;
+  border-color: var(--second);
+}
+
+/* ×-Schaltfläche — liegt jetzt innerhalb von #searchControls,
+   daher keine absolute Positionierung mehr nötig.
+   Wird per JS zusammen mit #searchControls ein-/ausgeblendet. */
+.search-clear {
+  background: none;
+  border: none;
+  font-size: 18px;
+  line-height: 1;
+  cursor: pointer;
+  color: var(--second);
+  padding: 0 4px;
+  transition: color var(--transition);
+}
+
+.search-clear:hover {
+  color: var(--second-dark);
+}
+
+/* Treffer-Navigation: Zähler + ▲ ▼ + × — alle rechtsbündig im Eingabefeld */
+#searchControls {
+  display: none;               /* per JS auf flex gesetzt */
+  position: absolute;
+  right: 4px;
+  top: 50%;
+  transform: translateY(-50%);
+  align-items: center;
+  gap: 2px;
+  background: var(--background);
+  padding: 2px 2px 2px 4px;
+}
+
+/* Zähler "1/5" */
+.match-count {
+  font-size: 12px;
+  color: var(--color-muted);
+  min-width: 32px;
+  text-align: center;
+}
+
+/* Pfeil-Buttons ▲ ▼ */
+.search-nav-btn {
+  padding: 2px 6px;
+  font-size: 13px;
+  cursor: pointer;
+  background: var(--background);
+  border: 1px solid var(--second-light);
+  color: var(--second);
+  border-radius: 2px;
+  line-height: 1;
+  transition: background var(--transition), color var(--transition);
+}
+
+.search-nav-btn:hover {
+  background: var(--second-light);
+  color: var(--second-dark);
+}
+
+/* Dropdown-Ergebnisse */
+#searchResults {
+  display: none;               /* per JS eingeblendet */
+  position: absolute;
+  top: calc(100% + 4px);
+  left: 0;
+  right: 0;
+  background: #fffdf7;
+  border: 1px solid var(--second-light);
+  z-index: 1500;
+  max-height: 220px;
+  overflow-y: auto;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+  border-radius: 0 0 2px 2px;
+}
+
+/* Einzelnes Suchergebnis */
+.search-result {
+  padding: 8px var(--space-md);
+  border-bottom: 1px solid var(--second-light);
+  cursor: pointer;
+  font-size: 13px;
+  font-family: var(--font-serif);
+  color: var(--color);
+  transition: background var(--transition);
+}
+
+.search-result:last-child {
+  border-bottom: none;
+}
+
+.search-result:hover {
+  background: var(--second-light);
+}
+
+.search-result strong {
+  color: var(--second-dark);
+}
+
+/* Treffer-Hervorhebung im Text */
+.search-highlight {
+  background: #f0d080 !important;
+  color: var(--second-dark) !important;
+  font-weight: 500;
+  border-bottom: 1px solid #c8a040;
+}
+
+/* Tibetische Schrift in der Vorschau */
+.u-chen-search {
+  font-family: var(--font-tibetan);
+  font-size: 1.05em;
+}
+
+/* =========================================================
+   10. TEI-Annotationen — Farben im Lesetext
+       Personen, Orte, Daten werden farblich hervorgehoben.
+       Die Farben orientieren sich an den CSS-Variablen
+       --color-person, --color-place, --color-date.
+   ========================================================= */
+
+/* KRITISCH: Browser interpretiert TEI <s> (Satz) als HTML <s> (Durchstreichung).
+   text-decoration: none überschreibt das Browser-Default.
+   Betrifft: tibetischen Text (<s xml:id="...">) und deutschen Text (<s corresp="...">). */
+s {
+  text-decoration: none !important;
+  display: inline;
+}
+
+/* Personennamen */
+persname {
+  color: var(--color-person);
+  border-bottom: 1px dotted var(--color-person);
+  transition: background var(--transition), color var(--transition);
+}
+
+persname[key]:not([key="???"]) {
+  cursor: pointer;
+}
+
+persname:hover {
+  background: rgba(74, 111, 165, 0.1);
+}
+
+/* Ortsnamen */
+placename {
+  color: var(--color-place);
+  border-bottom: 1px dotted var(--color-place);
+  transition: background var(--transition), color var(--transition);
+}
+
+placename[key]:not([key="???"]) {
+  cursor: pointer;
+}
+
+placename:hover {
+  background: rgba(138, 105, 20, 0.1);
+}
+
+/* Werktitel */
+title {
+  color: var(--color-title);
+  border-bottom: 1px dotted var(--color-title);
+  transition: background var(--transition);
+}
+
+title:hover {
+  background: rgba(63, 109, 17, 0.1);
+}
+
+/* Datumsangaben */
+date {
+  color: var(--color-date);
+  border-bottom: 1px dotted var(--color-date);
+}
+
+/* Tooltip-ähnlicher Hinweis beim Hover auf verknüpfte Elemente */
+persname[title]:hover::after,
+placename[title]:hover::after,
+title[title]:hover::after {
+  content: " ↗";
+  font-size: 0.8em;
+  opacity: 0.7;
+}
+
+main {
+  max-width: 900px;
+  margin: var(--space-xl) auto;
+  padding: 0 var(--space-lg);
+}
+
+.section {
+  background: var(--background-panel);
+  border: 1px solid var(--second-light);
+  padding: var(--space-lg) var(--space-xl);
+}
+
+.section h1 {
+  font-family: var(--font-serif);
+  font-size: 1.7rem;
+  font-weight: 400;
+  margin-top: 0;
+  color: var(--second-dark);
+  border-bottom: 1px solid var(--second-light);
+  padding-bottom: var(--space-sm);
+  letter-spacing: 0.02em;
+}
+
+.section h3 {
+  font-family: var(--font-serif);
+  font-size: 1.1rem;
+  font-weight: 400;
+  color: var(--second-dark);
+  margin-top: var(--space-lg);
+}
+
+.section p {
+  font-family: var(--font-serif);
+  font-size: 15px;
+  line-height: 1.8;
+  color: var(--color);
+  margin: var(--space-sm) 0;
+}
+
+.section a {
+  color: var(--second);
+  text-decoration: underline;
+  text-underline-offset: 2px;
+}
+
+.section a:hover {
+  color: var(--second-dark);
+}
+
+.section img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+  border: 1px solid var(--second-light);
+  margin: var(--space-md) 0;
+}
+
+/* =========================================================
+   10. Footer
+   ========================================================= */
+
+footer {
+  border-top: 1px solid var(--second-light);
+  padding: var(--space-md) var(--space-lg);
+  margin-top: var(--space-xl);
+  background: var(--background-panel);
+}
+
+.footer-menu {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  max-width: 1400px;
+  margin: 0 auto;
+  font-size: 13px;
+}
+
+.footer-menu a {
+  color: var(--color-muted);
+  text-decoration: none;
+  transition: color var(--transition);
+}
+
+.footer-menu a:hover {
+  color: var(--second-dark);
+}
+
+/* =========================================================
+   11. Textzeugen-Galerie (texts.html)
+   ========================================================= */
+
+/*
+ * .text-list  — Raster der Textkarten
+ * .text-item  — Einzelne Karte mit Vorschaubild und Titel
+ *
+ * Orientiert sich an der Galerie-Ansicht der Handke-Edition:
+ * gleichmäßiges Raster, Bild oben, Titel darunter,
+ * dezenter Hover-Effekt.
+ */
+
+.text-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  gap: var(--space-lg);
+  margin-top: var(--space-lg);
+}
+
+.text-item {
+  background: var(--background-panel);
+  border: 1px solid var(--second-light);
+  transition: border-color var(--transition), box-shadow var(--transition);
+}
+
+.text-item:hover {
+  border-color: var(--second);
+  box-shadow: 0 2px 8px rgba(139, 115, 85, 0.15);
+}
+
+.text-item a {
+  display: block;
+  text-decoration: none;
+  color: inherit;
+  padding: var(--space-sm);
+}
+
+.text-item img {
+  width: 100%;
+  height: 180px;
+  object-fit: cover;
+  display: block;
+  border-bottom: 1px solid var(--second-light);
+  margin-bottom: var(--space-sm);
+  background: #e8e4dc; /* Platzhalter wenn Bild fehlt */
+}
+
+.text-item h2 {
+  font-family: var(--font-serif);
+  font-size: 0.95rem;
+  font-weight: 400;
+  margin: var(--space-xs) var(--space-xs) var(--space-sm);
+  color: var(--second-dark);
+  line-height: 1.5;
+}
+
+/* Tibetische Schrift im Kartentitel */
+.text-item h2 [lang="bo"] {
+  font-family: var(--font-tibetan);
+  font-size: 1.05em;
+  display: block;
+  margin-bottom: 2px;
+  color: var(--color);
+}
+
+/* =========================================================
+   12. Responsive Design
+   ========================================================= */
+
+/* Tablets (Hochformat) und schmale Fenster → eine Spalte */
+@media (max-width: 900px) {
+  .reader {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* Smartphones & schmale Fenster */
+@media (max-width: 700px) {
+  header {
+    height: auto;
+    padding: var(--space-sm) var(--space-md);
+  }
+
+  .header-content {
+    flex-wrap: wrap;
+    gap: var(--space-sm);
+    padding: var(--space-sm) 0;
+  }
+
+  .search-container {
+    max-width: 100%;
+    order: 3;
+    width: 100%;
+  }
+
+  .site-title {
+    font-size: 1rem;
+  }
+
+  .page-navigation {
+    font-size: 12px;
+  }
+
+  .tabs {
+    flex-wrap: wrap;
+  }
+
+  .tab-button {
+    font-size: 12px;
+    padding: 5px 10px;
+  }
+
+  .text-list {
+    grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+    gap: var(--space-md);
+  }
+
+  .text-item img {
+    height: 130px;
+  }
+
+  .section {
+    padding: var(--space-md);
+  }
+}
