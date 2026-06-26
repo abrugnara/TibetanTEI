@@ -114,24 +114,11 @@ vocab_to_tei_web
 
 # Große Rohdaten / Archive (gehören nicht ins Repo) - 2026-06-26
 content/9_Vimalaprabha/*.tif
-content/images/9_Vimalaprabha/*.tif
 content/images/9_Vimalaprabha/W23703-v15_img370-466.zip
 content/images/6_shantideva/Shantideva_W23703.zip
 content/standoff-plugin-1.0.0-SNAPSHOT/lib/*.jar
 content/20240229_102236 (002).pdf
 content/PXL_20240318_152512436.RAW-02.ORIGINAL.jpg
-content/csm_Kanjur-Lhasa-Vinaya.png
-content/images/csm_Kanjur-Lhasa-Vinaya.png
-content/images/shantideva_o1.png
-content/8_bu_ston_dignaga/buston_1.pdf
-content/8_bu_ston_dignaga/buston_2.pdf
-content/8_bu_ston_dignaga/buston_3.pdf
-content/8_bu_ston_dignaga/buston_4.pdf
-content/8_bu_ston_dignaga/buston_1_Page_1.jpg
-content/8_bu_ston_dignaga/buston_1_Page_1.png
-content/images/9_Vimalaprabha/buston_1_Page_1.png
-content/9_Vimalaprabha/buston_1_Page_1.png
-content/images/6_shantideva/shantideva_1.pdf
 content/mahavyutpatti.dila.tei.p5.xml
 content/mvyut-tei5.xml
 
