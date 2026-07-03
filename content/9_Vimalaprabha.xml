@@ -1,10 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<TEI xmlns="http://www.tei-c.org/ns/1.0" xml:id="dummy_tibetantei">
+<TEI
+  xmlns="http://www.tei-c.org/ns/1.0"
+  xml:id="dummy_tibetantei">
   <teiHeader>
     <fileDesc>
       <titleStmt>
         <title>Vimalaprabha</title>
-        <author xml:id="Vimalaprabha">Tāranātha</author>
+        <author
+          xml:id="Vimalaprabha">Tāranātha</author>
       </titleStmt>
       <publicationStmt>
         <p>TibetanTEI Digital Edition</p>
@@ -15,12 +18,18 @@
     </fileDesc>
     <profileDesc>
       <langUsage>
-        <language ident="bo">Tibetisch (u-chen)</language>
-        <language ident="bo-Latn">Tibetisch (Wylie-Transliteration)</language>
-        <language ident="sa">Sanskrit</language>
-        <language ident="sa-Latn">Sanskrit-IAST</language>
-        <language ident="de">Deutsch</language>
-        <language ident="en">Englisch</language>
+        <language
+          ident="bo">Tibetisch (u-chen)</language>
+        <language
+          ident="bo-Latn">Tibetisch (Wylie-Transliteration)</language>
+        <language
+          ident="sa">Sanskrit</language>
+        <language
+          ident="sa-Latn">Sanskrit-IAST</language>
+        <language
+          ident="de">Deutsch</language>
+        <language
+          ident="en">Englisch</language>
       </langUsage>
     </profileDesc>
   </teiHeader>
@@ -32,52 +41,79 @@
        @source (TEI-P5-konform).
        Datei-spezifische Einträge kommen in die lokalen Listen unten.
        ════════════════════════════════════════════════════════════════════ -->
-  <standOff source="standoff.xml">
+  <standOff
+    source="standoff.xml">
 
     <!-- Datei-spezifische Personen (nicht in standoff.xml)
          Vorlage: Kommentar entfernen und ausfüllen -->
     <!-- Datei-spezifische Personen: Vorlage auskommentiert,
          xml:id und persName anpassen, Kommentar entfernen -->
-    <listPerson xml:id="listPerson_dummy_local">
+    <listPerson
+      xml:id="listPerson_dummy_local">
       <!-- Beispiel 1: BUDA-Key noch ausstehend (@key="???") -->
-      <person xml:id="person_bekannt">
-        <persName xml:lang="sa">Dignāga</persName>
-        <persName xml:lang="bo">ཕྱོགས་གླང་</persName>
-        <persName xml:lang="bo-Latn">phyogs kyi glang po</persName>
-        <idno type="URI">https://library.bdrc.io/show/bdr:P6119</idno>
-        <note type="role">Logiker</note>
-        <note type="identification">BUDA-Key P6119 verifiziert.</note>
+      <person
+        xml:id="person_bekannt">
+        <persName
+          xml:lang="sa">Dignāga</persName>
+        <persName
+          xml:lang="bo">ཕྱོགས་གླང་</persName>
+        <persName
+          xml:lang="bo-Latn">phyogs kyi glang po</persName>
+        <idno
+          type="URI">https://library.bdrc.io/show/bdr:P6119</idno>
+        <note
+          type="role">Logiker</note>
+        <note
+          type="identification">BUDA-Key P6119 verifiziert.</note>
       </person>
 
       <!-- Beispiel 2: BUDA-Key noch ausstehend (@key="???") -->
-      <person xml:id="person_offen">
-        <persName xml:lang="sa">Saṅghadāsa</persName>
-        <persName xml:lang="bo">དགེ་འདུན་འབངས་</persName>
-        <persName xml:lang="bo-Latn">dge 'dun 'bangs</persName>
-        <idno type="URI"><!-- BUDA-Recherche ausstehend --></idno>
-        <note type="role">Mönch</note>
-        <note type="identification">BUDA-Recherche ausstehend.
-            @key="???" im body als offenes ToDo gesetzt.</note>
+      <person
+        xml:id="person_offen">
+        <persName
+          xml:lang="sa">Saṅghadāsa</persName>
+        <persName
+          xml:lang="bo">དགེ་འདུན་འབངས་</persName>
+        <persName
+          xml:lang="bo-Latn">dge 'dun 'bangs</persName>
+        <idno
+          type="URI"><!-- BUDA-Recherche ausstehend --></idno>
+        <note
+          type="role">Mönch</note>
+        <note
+          type="identification">BUDA-Recherche ausstehend. @key="???" im body als offenes ToDo
+          gesetzt.</note>
       </person>
 
       <!-- Beispiel 3: Bewusst nicht nachweisbar (@key="N/A") -->
-      <person xml:id="person_nicht_nachweisbar">
-        <persName xml:lang="sa">Dharmadāsa</persName>
-        <persName xml:lang="bo">ཆོས་འབང་</persName>
-        <persName xml:lang="bo-Latn">chos 'bang</persName>
-        <idno type="URI"><!-- in keiner Normdatenquelle nachweisbar (BDRC, rKTs, SRC) --></idno>
-        <note type="role">Mönch</note>
-        <note type="identification">Nach eingehender Recherche in keiner Normdatenquelle
-            nachweisbar (BDRC, rKTs, SRC). @key="N/A" bewusst gesetzt.</note>
+      <person
+        xml:id="person_nicht_nachweisbar">
+        <persName
+          xml:lang="sa">Dharmadāsa</persName>
+        <persName
+          xml:lang="bo">ཆོས་འབང་</persName>
+        <persName
+          xml:lang="bo-Latn">chos 'bang</persName>
+        <idno
+          type="URI"><!-- in keiner Normdatenquelle nachweisbar (BDRC, rKTs, SRC) --></idno>
+        <note
+          type="role">Mönch</note>
+        <note
+          type="identification">Nach eingehender Recherche in keiner Normdatenquelle nachweisbar
+          (BDRC, rKTs, SRC). @key="N/A" bewusst gesetzt.</note>
       </person>
     </listPerson>
 
     <!-- Datei-spezifische Orte: Vorlage auskommentiert,
          xml:id und placeName anpassen, Kommentar entfernen -->
-    <listPlace xml:id="listPlace_dummy_local">
-      <place xml:id="place_dummy_placeholder">
-        <placeName xml:lang="sa">Placeholder</placeName>
-        <placeName xml:lang="bo-Latn">dper brjod</placeName>
+    <listPlace
+      xml:id="listPlace_dummy_local">
+      <place
+        xml:id="place_dummy_placeholder">
+        <placeName
+          xml:lang="sa">Placeholder</placeName>
+        <placeName
+          xml:lang="bo-Latn">dper brjod</placeName>
       </place>
     </listPlace>
 
@@ -201,5 +237,1246 @@ Fall 1: Key bekannt
       </p> 
     </body>
   </text> -->
-  
+  <text>
+    <body>
+      <div>
+        <pb
+          ed="A"
+          n="65a"
+          facs="../content/images/2_dignaga/taranatha_dignaga_Page_593.jpg"/>
+        <p> 45Sigla NMAA (following Tribe 2016) A Bendall 1883: ms Add. 1708, Cambridge University
+          Library. https://cudl.lib.cam.ac.uk/view/MS-ADD-01708-00001/1 B NGMPP E 360/16 → start f.
+          36v1 F NGMPP A 133/12 Sigla NS ED NS, Ed. Davidson EM NS, Ed. Mukherji D sDe dge bKa’
+          ’gyur, T 360- DHa ’Jam dpal mtshan brjod → Dunhuang IOL Tib J 381 DHb ’Jam dpal mtshan
+          brjod → Dunhuang IOL Tib J 382 DHc ’Jam dpal mtshan brjod → Dunhuang Pelliot tib 99/2 N
+          rNying ma rgyud ’bum, vol. ba, folios 49r–59v. Thimpu: Dilgo Khyenste Rinpoche (BDRC
+          #W21518), 1975. Additional Witnesses H Gūḍhapadā, Hodgson 34, RAS Conventions:[kiṃcit]
+          marginal notes and other additions Application of sandhi, etc., following the punctuation
+          applied by me, has been silently standardized, i.e., an anusvāra (°ṃ) would be changed to
+          a “m” in the final position, °a iti would be dissolved into, e.g., °aḥ | iti (when
+          punctuation is applied), etc. ________________________________________ Edition and
+          Translation 6.0 [A30v6] adhunā dvitīyaṃ vairocanasya cakram ucyate | ta[F36v2]taś ca
+          [B22r] mañjuśrījñānasattvasya sarvatathāgatajñānakāyasya
+          vajradhātumahāmaṇḍaladevatāvinyāsakrameṇa māhā[A31r]tmyam udbhāvya ⌜idānīṃ
+          suviśuddhadharmadhātujñānasya mahāvairocanadvāreṇa sarvabhāvasvabhāvavyāptiṃ
+          pradarśayitukāmaḥ svavimokṣamukhena mohacaritānāṃ sattvānāṃ vinayanāya ⌝ svacakravinyāsam
+          āha || da ni gnyis pa rnam par snang mdzad kyi 'khor lo bshad de | de yang 'jam dpal ye
+          shes sems dpa' de bzhin gshegs pa thams cad kyi ye shes kyi sku rdo rje dbyings kyi dkyil
+          'khor chen po'i lha rnams bkod pa'i rim pas che ba'i bdag nyid bstan nas | da ni shin tu
+          rnam par dag pa chos kyi dbyings kyi ye shes rnam par snang mdzad chen po'i sgo nas dngos
+          po thams cad kyi rang bzhin khyad par bstan par 'dod pas rang gi rnam par thar pa'i sgo
+          nas gti mug la spyod pa'i sems can rnams gdul ba'i don du rang gi 'khor lo bkod pa gsungs
+          pa'o || Now the second wheel of Vairocana is explained: And therefore, after illustrating
+          the greatness of the Gnosis-being (jñānasattva) Mañjuśrī who has the gnosis-body of all
+          tathāgatas through the procedure of placement of the deities of the Vajradhātumahāmaṇḍala
+          [taught in the previous chapter], now [the Bhagavat] by means of his own liberation —
+          wishing to show the pervasion of his own nature with everything (sarvabhāvasvabhāvavyāpti)
+          by means of Mahāvairocana who has the gnosis of the perfectly pure dharmadhātu — teaches
+          the placement of the own wheel proper for instructing beings who act out of ignorance. ※ ※
+          ※ tatra ca vairocanasya mahāvairocanasya ca kiṃ nānākaraṇam iti na jñāyate tad ucyate |
+          svābhāvikarūpakāyanaiṣyandikāśrayaparāvṛtti lakṣaṇaś ca | akaniṣṭhadevarājabhuvane tatra
+          devanikāye copapannānāṃ bodhisattvānāṃ dharma sambhogapratyanubhavanārtham abhi
+          sambodhisamādhikrameṇa vaipākikaṃ kāyaṃ nivartya pariśuddhajñānapratibhāsalakṣaṇo
+          naiṣyandikaḥ kāyaḥ | tatraiva bhavane mahābodhisattvagaṇaparivṛto yaḥ pradarśito 'sau
+          bhagavān vairocanaḥ || de la yang rnam par snang mdzad dang rnam par snang mdzad chen po'i
+          khyad par du bya ba ji lta bu zhe na | de mi shes pas de gsungs pa | rang bzhin can gzugs
+          kyi sku'i rgyu mthun pa'i gnas su gyur pa'i mtshan nyid 'og min lha'i rgyal po'i gnas
+          [48b6] der | lha'i rigs su skyes pa'i byang chub sems dpa' rnams kyis chos kyi longs spyod
+          rdzogs pa so sor nyams su myong bar byed pa'i don du mngon par rdzogs par byang chub pa'i
+          ting nge 'dzin gyi rim pas rnam par smin pa'i skur gyur pa yongs su dag pa'i ye shes kyi
+          so sor snang ba'i mtshan nyid rgyu mthun pa'i sku ste | gnas de nyid na byang chub sems
+          dpa' sems dpa' chen po'i tshogs kyis bskor ba'i ston pa gang yin pa de ni bcom ldan 'das
+          rnam par snang mdzad do || In this regard, it is said that, asking for the difference
+          between Vairocana and Mahāvairocana, non is known and [Mahāvairocana] is characterized by
+          the restoration of the basis that relates to the natural outflow of physical body
+          (rūpakāyanaiṣandika) on account of its own nature. There, in the heaven of the kings of
+          gods in Akaniṣṭha, there is [Vairocana with] a body hat relates to the natural outflow
+          which is characterized by the splendor of perfectly pure knowledge, not anymore belonging
+          to the body of maturation (vaipākika) according to the series of concentrations on the
+          [four] clear realizations (abhisambodhi) in order to individually experience the
+          dharmakāya and the samboghakāya of the bodhisattvas who have risen among the assembly of
+          gods. Precisely in this realm, [i.e., in Akaniṣṭha], he who is taught to be surrounded by
+          an assembly of great bodhisattvas, this is the Bhagavat Vairocana. ※ ※ ※ ya[B22v]thoktaṃ
+          śrīguhyendutilakatantre – akaniṣṭhabhuvane ramye śuddhāvāsopari sthite || tatra buddhyanti
+          sambuddhā nirmitas tv iha budhyate || iti gāthā || mahāvairocanas tu jñānamayaḥ kāyaḥ
+          kleśajñeyāvaraṇātyantavinirmuktaḥ sarvabhāvasvabhāvapratibhā[A31v]sasaṃdarśanasamarthaḥ |
+          de ltar zla gsang thig le'i rgyud las gsungs pa – gnas gtsang ma rnams spangs pa'o || 'og
+          min gnas ni nyams dga' bar || rdzogs pa'i sangs rgyas de [49a] sangs rgyas || sprul pa po
+          ni 'dir sangs rgyas || zhes tshigs su bcad do || rnam par snang mdzad chen po ni ye shes
+          kyi rang bzhin gyi sku nyon mongs pa dang shes bya'i sgrib pa gnyis las shin tu rnam par
+          grol ba dngos po thams cad kyi rang bzhin du snang zhing ston par nus pa'o – Accordingly
+          is has been taught in the Glorious Guhyendutilakatantra – “Remaining atop the pure abodes
+          in the most enjoyable realm of Akaniṣṭha, there the perfect buddhas awake, but here (on
+          earth) [their] emanation is realized.” Thus is the verse. On the contrary, Mahāvairocana
+          is a body (kāya) consisting of gnosis, absolutely free from the [two kinds of]
+          obscurations, those of afflictions and those of objects of knowledge, capable to manifest
+          appearances pertaining to the nature of all things. ※ ※ ※ katham asau bhagavān
+          tattvasvarūpād eva sarvabhāvapradarśanasamartho bhavatīti | tathā coktaṃ
+          śrīvairocanābhisambhodhitantre – bhagavantas tathāgatā arhantaḥ samyaksaṃbuddhāḥ
+          sarvajñajñānaṃ prāpya tat sarvajñajñānaṃ sarvasattvebhyo vibhajya nānānayair
+          nānābhiprāyair nānopāyair dharmaṃ deśayanti sma || keṣāṃcic chrāvakayānanayam | keṣāṃcit
+          pratyekabuddhayānanayam | keṣāṃcin mahāyānanayam | keṣāṃcit pañcābhijñājñānanayam |
+          keṣāṃcid devopapattaye | keṣāṃcin manuṣyopapattaye | yāvan
+          mahoragayakṣarākṣasā[F37v]suragandharvagaruḍakinnarādyutpattaye dharmaṃ deśayanti sma ||
+          tatra kecit sattvā buddhavaineyikā buddharūpeṇa paśyanti [sma] || kecic chrāvakarūpeṇa |
+          kecit pratyekabuddharūpeṇa | kecid bodhisattvarūpeṇa | kecin maheśvararūpeṇa | kecid
+          brahmarūpeṇa | kecin nārāyaṇarūpeṇa paśyanti sma || kecid vaiśravaṇarūpeṇa yāvan
+          mahoragamanuṣyā[A32r]manuṣyarūpeṇa paśyanti sma || svakasvakair vacanodāharaṇanayair
+          vividheryāpathavyavasthitam | tac ca sarvajñajñānam ekarasam yad uta
+          tathāgatavinirmuktarasam || bcom ldan 'das de kho na nyid kyi rang bzhin de nyid las dngos
+          po thams cad ston par nus par ji ltar 'gyur zhe na | de ltar dpal rnam par snang mdzad
+          mngon par byang chub pa'i rgyud las gsungs te | bcom ldan 'das de bzhin gshegs pa dgra
+          bcom ba yang dag par rdzogs pa'i sangs rgyas rnams kyis thams cad mkhyen pa'i ye shes
+          brnyes nas thams cad mkhyen pa'i ye shes de sems can thams cad la rnam par phye ste |
+          tshul sna tshogs dang | bsam pa sna tshogs dang | thabs sna tshogs dag gis chos ston te |
+          kha cig la ni nyan thos kyi theg pa'i tshul | kha cig la ni rang sangs rgyas kyi theg pa'i
+          tshul | kha cig la ni theg pa chen po'i tshul | kha cig la ni mngon par shes pa lnga'i
+          tshul lo || kha cig la ni lhar skye bar bya ba dang | kha cig la ni mir skye bar bya ba
+          dang | ji srid du lto 'phye chen po dang | klu dang | gnod sbyin dang | srin po dang | dri
+          za dang | lha ma yin dang | nam mkha' lding dang | mi 'am cer skye bar bya ba'i bar du
+          chos ston to || de la sems can la la sangs rgyas kyis gdul bar bya ba rnams la sangs rgyas
+          kyi gzugs su mthong || la las ni nyan thos kyi gzugs su | la las ni rang sangs rgyas kyi
+          gzugs su | la las ni byang chub sems dpa'i gzugs su | la las ni dbang phyug chen po'i
+          gzugs su | la las ni tshangs pa'i gzugs su | la las ni sred med kyi bu'i gzugs su | la las
+          ni rnam thos kyi bu'i gzugs su || la las ni lto 'phye chen po dang mi dang mi ma yin pa'i
+          bar du mthong ste | rang rang gi tshig brjod pa'i tshul dang | spyod lam la rnam par gnas
+          pa ste | thams cad mkhyen pa'i ye shes de 'ang 'di ltar de bzhin gshegs pa'i rnam par grol
+          ba'i ror ro gcig pa'o || If one asks, “How does this Bhagavat, since his own nature is
+          reality, becomes capable of showing [the brightness of the nature proper to] all things?”
+          So it is taught, moreover, in the Glorious Vairocanābhisambodhitantra – “The Bhagavats,
+          Tathāgatas, Arhats, the completely and perfect Awakened Ones, having obtained the
+          gnosis/awareness of omniscience, are distributing this gnosis/awareness of omniscience to
+          all sentient beings [and] taught the dharma qua various ways, according to different
+          intentions [and] though manifold methods/means. For some they taught the way of the
+          vehicle of listeners, for some the way of the vehicle of solitary buddhas, for some the
+          way of the Great vehicle, for some the way of the vehicle of the gnosis/awareness of the
+          five supernatural powers, for some [they taught] a dharma for the sake of [those] being
+          born as a god, for some for the sake of [those] being born as a human, including [a
+          dharma] for the sake of [those] being born as a nāga, yakṣa, rākṣasa, asura, gandharva,
+          garuḍa or kiṃnara. Among them, some beings who will be converted by the Buddha saw [him]
+          in the form of a Buddha. Others saw him in the form of a śravaka, others in the form of a
+          pratyekabuddha, others in the form of a bodhisattva, others in the form of Maheśvara,
+          others in the form of Brahmā, others in the form of Nārāyaṇa (Viṣṇu). Others saw him in
+          the form of Vaiśravaṇa, down to [those who see him] in the form of great snakes, in human
+          and nonhuman form. [His dharma] has been established according to different modes of
+          being, with words, examples and systems that are individually appropriate. And that is the
+          gnosis of the omniscient ones being of a single flavor, which indeed is a flavor that is
+          the perfect liberation of the tathāgatas.” ※ ※ ※ mahāvairocano buddho mahāmaunī mahāmuniḥ
+          | 6.1ab (42ab) iti | ata āha – mahāvairocana iti | virocyate dīpyata iti virocanaḥ |
+          virocana eva vairocanaḥ svārthe vṛddhividhānāt | mahāṃś cāsau vairocanaś ca mahāvairocanaḥ
+          | buddha iti yathāvasthitasakalapadārthāvabodhanāt | [mahāmaunīti] kāyavākcittamaunayogān
+          maunam | mahac ca maunaṃ ca mahāmaunam | mahā[F38r]maunatvaṃ kutaḥ | satatasamāhitatvāt |
+          tathā cā[B23v]ha – satatasamāhitā hi buddhā bhagavanta iti vacanāt |
+          kāyādigatadauṣṭhulyābhāvāc ca | tad asyāstīti mahāmaunī | mahāntaś ca te munayaś ca
+          mahāmunayo vyāsavasiṣṭhavālmīkiprabhṛtayaḥ | tad vineyānāṃ tathārūpeṇa pratibhāsanāt
+          mahāmunir ity ucyate || [[mahāmantranayodbhūto mahāmantranayātmakaḥ || 6.1cd (42cd) iti
+          |]] ⌜mahāmantranayodbhūta iti | mantranayo vajramahāyānam | tasmān mantranayād udbhavatīti
+          mantranayodbhūtaḥ | mahāṃś cāsau mantranayodbhūtaś ca mahāmantranayodbhū[A32v]taḥ | tata
+          eva niṣpatteḥ | ata eva mahāmantranayātmaka iti | vajramahāyānasvabhāva ity arthaḥ | tataś
+          ca mahāvairocana ity evamādibhiś ca bhagavān mañjuśrīḥ śrīmatāṃ vara iti vācyaḥ || ⌝
+          [[sangs rgyas rnam par snang mdzad che | thub pa chen po thub chen ldan || 6.1ab (42ab)]]
+          zhes gsungs so || de'i phyir gsungs pa | sangs rgyas rnam par snang mdzad che || zhes pa
+          ni | ⌜de la sangs rgyas ni ji ltar gnas pa'i dngos po kun mkhyen pa'o ||⌝ rnam par snang
+          mdzad che ni rnam par gsal [49b] bas na rnam par snang mdzad de | rnam par snang ba kho
+          nar byed pas na rnam par snang mdzad do | rang gi don la 'phel bar byed pa'i phyir ro ||
+          chen po yang de yin la rnam par snang mdzad kyang de nyid yin pas rnam par snang mdzad che
+          zhes pa'o || thub pa chen po ni sku gsung thugs thub pa dang ldan pa ste | chen po yang de
+          yin la thub pa yang de nyid yin pas thub pa chen po'o || thub pa chen po zhes bya ba ji
+          ltar zhe na | rtag tu mnyam par gzhag pa nyid kyi phyir ro || de ltar yang gsungs pa –
+          sangs rgyas bcom ldan 'das rnams ni rtag tu mnyam par gzhag pa'o zhes pa'i tshig gi phyir
+          ro || lus la sogs par son pa'i gnas ngan len med pa'i phyir ro || de gang la yod pa de ni
+          thub chen ldan no || chen po yang de yin la thub pa yang de nyid yin pas thub chen te |
+          gnas 'jog dang | ri byi dang | grog mkhar la sogs pa drang srong rnams yin no || des 'dul
+          ba rnams la de lta bu'i gzugs su so sor snang ba'i phyir na thub pa chen po zhes gsungs so
+          || “Buddha, Mahāvairocana, With great silence, Great Sage” 6.1ab (42ab) Therefore, he
+          teaches “mahāvairocana” [who is called] Virocana since he shines, i.e., illuminates;
+          Virocana is nothing but Vairocana, because of the application of vṛddhi towards the actual
+          meaning; He is Mahāvairocana as he is both great and Vairocana (mahāvairocana is
+          karmadhāraya). [Next he teaches] “Buddha” [who is called thus] because of his realization
+          of all things that exist according [to their nature]. [Next he teaches] “Mahāmaunī” [who
+          is called thus] because of his union with the silence of body, speech, mind; He is With
+          Great Silence as he is great and with silence (karmadhāraya analysis). [If asking] “How
+          [is he] in the state of great silence?” [The answer is] because he is constantly
+          concentrated. And thus it is taught according to scriptural saying (iti vacanāt): “The
+          Exalted ones, the Buddhas, are constantly concentrated.” And [he is also With Great
+          Silence] because of the absence of bad tendencies situated in his body and so on;
+          therefore he is With Great Silence. [Similarly] Vyāsa (who organized the Vedas and
+          composed the Mahābhārata), Vasiṣṭha (who composed the 7th cycle of the Ṛgveda), Vālmīki
+          (who composed the Rāmāyaṇa) and so on are With Great Silence as they are are great and
+          with silence (karmadhāraya). Therefore, since he appears to those who are to be trained
+          thus looking [i.e., as the Silent One], he is called “Mahāmuni” (Great Silent One). “The
+          Great one arisen from the mantra-method, with the nature of the great mantra-method” (6.1
+          cd) [The compound] “mahāmantranayodbhūta” [means]: “The mantra-method is the great vehicle
+          of (i.e., according to) the vajra[-path]. Therefore, what arises from the mantra-method
+          (pañcamī-tatpuruṣa) is called “arisen from the mantra-method.” And he who is great and has
+          arisen from the mantra-method (karmadhāraya) is the Great One arisen from mantra-method.
+          Since he emerges from just this, precisely therefore he is called “mahāmantranayātmakaḥ”
+          (with / having the nature of the great mantra-method); the meaning of which is that his
+          own state of being (svabhāva) is the great vehicle of the vajra. And thus the Bhagavat
+          Mañjuśrī, the glorious and most excellent one is called “Mahāvairocana” in this way and so
+          forth. And therefore with these and other epithets the Bhagavān Mañjuśrī must be defined
+          as the best among the excellent. ※ ※ ※ daśapāramitāprāpto daśapāramitāśrayaḥ |
+          daśapāramitāśuddhir daśapāramitānayaḥ || 6.2 (43) pha rol phyin bcu thob pa ste || pha rol
+          phyin pa bcu la gnas || pha rol phyin bcu dag pa ste || pha rol phyin pa bcu yi tshul ||
+          He obtained the ten perfections and is the foundation/basis of the ten perfections. He is
+          the purity of the ten perfections and has the method of the ten perfections. iti || tatra
+          pāramitānāṃ prāptyāśrayaśuddhimārgamukhena darśayann āha daśapāramitāprāpta iti | tatra
+          pāramitā daśeti | tathā coktaṃ madhyāntavibhāge – dānaṃ śīlaṃ kṣamā vīryaṃ dhyānaṃ prajñā
+          upāyatā | praṇidhānaṃ balaṃ jñānam etāḥ pāramitā daśa || iti || tatra dānaṃ trividham |
+          dharmadānam āmiṣadānaṃ maitrīdānaṃ ca || śīlaṃ trividham | samvaraśīlaṃ
+          kuśaladharmasaṃgrāhakaśīlaṃ sattvārthakriyāśīlaṃ ca || kṣāntiḥ trividhā |
+          dharmanidhyānakṣāntir duḥkhādhivāsanākṣāntiḥ parāpakāramarṣaṇākṣāntiś ca || vīryaṃ
+          trividham | sannāhavīryaṃ prayogavīryaṃ parini[A33r]ṣṭhāvīryaṃ ca || dhyānaṃ trividham |
+          doṣāpakarṣakaṃ vaihārikaṃ vaibhūtikaṃ ca || prajñā trividhā | śrutamayī cintāmayī
+          bhāvanāmayī || upāyas trividhaḥ | svadoṣāpakarṣaṇaḥ sattvāvatārakaḥ kṣiprābhisambodhakaś
+          ca || praṇidhis trividhaḥ | svasambhāraprābandhikaḥ sattvārthānubandhiko
+          buddhakṣetrapariśodhanaś ca || balaṃ trividham | karmavyāvartakaṃ kleśāpakarṣakaṃ
+          māraparapravādivyāvartanaṃ ca || jñānaṃ trividham | avikalpakaṃ vikalpasamatāvabodhakaṃ
+          sarvopāyāparokṣaṃ ca || ete dānādayaḥ sambodhicittaparipūrakāḥ sarvasattveṣu
+          maitryāśrayaparibhāvitāḥ pāramitānāmadheyaṃ labhante || zhes pa ni | de la pha rol tu
+          phyin pa rnams thob pa'i bsam pa rnam par dag pa'i lam rnams kyi sgo nas bstan pa gsungs
+          pa | pha rol phyin bcu thob pa ste || zhes pa de la yang pha rol tu phyin pa rnams ston pa
+          ni 'di ltar dbus dang mtha' rnam par 'byed pa las gsungs pa || sbyin dang tshul khrims
+          bzod brtson 'grus || bsam gtan dang [50a] ni shes rab thabs || smon lam stobs dang ye shes
+          dang || 'di dag pha rol phyin bcur 'dod || ces so || de la sbyin pa rnam pa gsum ste ||
+          zang zing gi sbyin pa dang | skyabs kyi sbyin pa dang | chos kyi sbyin pa'o || tshul
+          khrims la rnam pa gsum ste | sdom pa'i tshul khrims dang | dge ba'i chos sdud pa'i tshul
+          khrims dang | sems can gyi don byed pa'i tshul khrims so || bzod pa la rnam pa gsum ste |
+          sdug bsngal dang du len pa'i bzod pa dang | gzhan gyi gnod pa byed pa la ji mi snyam pa'i
+          bzod pa dang | chos la nges par sems pa'i bzod pa'o || brtson 'grus la rnam pa gsum ste |
+          go cha'i brtson 'grus dang | sbyor ba'i brtson 'grus dang | yongs su mthar phyin pa'i
+          brtson 'grus so || bsam gtan la rnam pa gsum ste | nyes pa spong ba dang | rnam par gnas
+          pa can dang | dbang sbyor ba can no || shes rab la rnam pa gsum ste | thos pa las byung ba
+          dang | bsams pa las byung ba dang | bsgoms pa las byung ba'o || thams la rnam pa gsum ste
+          | rang gi skyon spong ba dang | sems can 'jug par byed pa dang | myur du mngon par rdzogs
+          par byang chub ba'o || smon lam la rnam pa gsum ste | rang gi tshogs dang 'brel pa can
+          dang | sems can gyi don dang rjes su 'brel pa can dang | sangs rgyas kyi zhing yongs su
+          sbyong ba'o || stobs la rnam pa gsum ste | las ldog par byed pa dang | nyon mongs pa spong
+          bar byed pa dang | bdud dang pha rol rgol ba ldog par byed pa'o || ye shes la rnam pa gsum
+          ste | rnam par mi rtog pa dang | rnam par rtog pa mnyam pa nyid du khong du chud pa dang |
+          thabs thams cad las lkog tu ma gyur pa'o || sbyin pa la sogs pa de dag rdzogs pa'i byang
+          chub kyi sems yongs su rdzogs par byed pa dang | sems can thams cad la byams pa'i bsam pa
+          yongs su bsgoms pas na pha rol tu phyin pa'i ming tho ba'o || In this regard, he [next]
+          teaches [the stanza beginning with] “He obtained the ten perfections” in order to show the
+          perfections by means of attainment (6.2a), the foundation (6.2b), the purification (6.2c)
+          and the path (6.2d). In this context, the perfections are ten. And accordingly, it is
+          taught in the Madhyāntavibhāga – “(1) Generosity, (2) good conduct, (3) patience, (4)
+          heroic effort, (5) meditation, (6) insight, (7) means, (8) firm intention, (9) spiritual
+          strength and (10) gnosis, these are the ten perfections.” Regarding that, (1) generosity
+          is threefold: the gift of dharma, the gift of nourishment (food, etc.) and the gift of
+          friendship. (2) Good conduct is threefold: the conduct of vows, the conduct of taking up a
+          wholesome dharma and the conduct of acting for the sake of living beings. (3) Patience is
+          threefold: the patience of profound reflection on the dharma, the patience of enduring
+          suffering and the patience of forgiving/forbearance the evil of others. (4) Heroic effort
+          is threefold: the energy of preparation, the energy of undertaking action and the energy
+          of reaching the limit. (5) Meditation is threefold: Turning away from faults, enjoying and
+          succeeding. (6) Insight is threefold: Resulting from study, resulting from reflection and
+          resulting from cultivation. (7) The means are threefold: Turning away from one’s own
+          faults, attending to living beings and direct realization. (8) Firm intention is
+          threefold: That which relies one’s own accumulations, that which relies on the aims of
+          living beings and that which is the purification of the Buddha-fields. (9) Spiritual
+          strength is threefold: Stopping karman, lowering afflictions and confronting the Māra and
+          false teachers. (10) Gnosis is threefold: Non-conceptual, realizing the similarity of
+          concepts and having all means in sight. These, generosity and the rest, they perfectly
+          complete prefect bodhicitta and perfectly bring about the foundation of benevolence
+          towards all living beings, have received the name “perfections.” ※ ※ ※ tāḥ punar laukikyo
+          lokottarāś ca || tatrānivāritātmādyupalambhāḥ laukikyaḥ pāramitāḥ | lokottarāś ca
+          skandhādiṣv anātmādyadhimokṣapravṛttās tattvādhigamapravṛttā[A33v]ś ca || ata evāha
+          madhyamakāvatāre candrakīrtiḥ – deyapratigrāhakadātṛśūnyaṃ lokottarā pāramiteti dānaṃ |
+          nirucyate tatra ca jātasaṅgaṃ sā laukikī pāramiteti diṣṭam || [iti>] |
+          śrutacintābhāvanāmayajñānodayakrameṇa sarvākārajñatādhigamaprakarṣaparyantam etīti
+          ⌜vigṛhya kvipi [1] sarvāpahārilope [2] anityam āgamānuśāsanam ity atuki [3] tatpuruṣe kṛti
+          bahulam ity aluki karmavibhakteḥ kṛte pāramir iti bhavati [4] tadbhāvaḥ pāramitā [5]⌝ |
+          dānasya pāramitā dānapāramitā | evaṃ śīlādiṣv api yojyam || tataś ca praviṣṭabhūmikānāṃ
+          bodhisattvānāṃ trikoṭipariśuddhilakṣaṇaṃ yad dānaṃ tad dānapāramitā || yat tu
+          pṛthagjanānāṃ dānaṃ tad dānam eva pāramitā trikoṭipariśuddhajñānavirahāt | tataś ca
+          dānādīnāṃ pāramitānāṃ prajñāpāramitaiva cakṣur veditavyā || ata evāha madhyamakāvatāre
+          candrakīrtiḥ – ekena puṃsākṣimatā yatheṣṭaṃ deśaṃ sa[A34r]masto ’ndhagaṇaḥ sukhena |
+          ākṛṣyate tadvad ihākṣihīnān ādāya dhīr yāti guṇāṃ jinatvam | iti | tad evaṃbhūtā
+          daśapāramitāḥ prāpto 'dhigato yo bhagavān sa tathoktaḥ || de rnams kyang 'jig rten dang
+          'jig rten las 'das pa ste | de la bdag la sogs pa dmigs pa ma spangs pa ni 'jig rten pa'i
+          pha rol tu phyin pa'o || 'jig rten [f. 50v] las 'das pa yang phung po la sogs pa la bdag
+          med pa la sogs par mos pas 'jug pa dang | de kho na nyid rtogs pas 'jug pa ste | de nyid
+          dbu ma la 'jug pa las zla ba grags pas gsungs pa | sbyin dang len pa sbyin pa pos stong pa
+          || sbyin pa 'jig rten las 'das pha rol phyin || de la gang na gzhin (?) pa skyes gyur pa
+          || 'jig rten pa yi pha rol phyin par bstan || zhes so || thos pa dang | bsam pa dang |
+          bsgom pa'i dngos po las ye shes 'byung ba'i rim pas rnam pa thams cad mkhyen pa'i rtogs pa
+          rab kyi mthar phyin pa ni pha rol gyi don yin la | phyin pa'i don ni de'i ngo bo ste |
+          dngos po'i rkyen yin no || de bzhin du sbyin pa nyid la pha rol tu phyin pa'o || de ltar
+          tshul khrims la sogs pa la yang sbyar bar bya'o || de'i phyir yangs la gnas pa'i byang
+          chub sems dpa' rnams kyi 'khor gsum yongs su dag pa'i mtshan nyid kyi sbyin pa gang yin
+          pa'i sbyin pa de ni sbyin pa'i pha rol tu phyin pa'o || gang so so'i skye bo rnams kyi
+          sbyin pa ni sbyin pa kho na'o || pha rol tu phyin pa ni ma yin te || 'khor gsum yongs su
+          dag pa'i shes rab dang bral ba'i phyir ro || de'i phyir na yang shes rab kyi pha rol tu
+          phyin pa ni sbyin pa la sogs pa'i pha rol tu phyin pa rnams kyi mig kho nar shes par bya'o
+          || de nyid kyi phyir na dbu ma la 'jug pa las zla ba grags pas gsungs pa | mig ldan skyes
+          bu gcig gis ji ltar 'dod pa'i sar || long ba'i tshogs rnams thams cad bde bar khrid par
+          'gyur || de bzhin du ni de la dmigs bu med pa rnams || blo yis bzung nas yon tan rgyal ba
+          nyid du 'gro || zhes so || de lta bur gyur ba'i pha rol tu phyin pa bcu thob pa ste/ de
+          ltar rtogs par gyur pa'i bcom ldan 'das de la 'di skad ces bshad do || These
+          [perfections], moreover, are worldly and supramundane. Regarding them, the worldly
+          perfections for which the reliance (view) of self and so on has not stopped. Here, the
+          worldly perfections are those by which the observation of the self and so on are not
+          abandoned. But the supramundane [perfections] are brought about/engaged through the firm
+          conviction of the absence of self and so on, with regard to the aggregates and so on, and
+          they are brought about through the understanding of reality. Just that taught Candrakīrti
+          in the Madhyamakāvatāra: “Void of gift, recipient, and giver, such generosity is called a
+          supramundane perfection. What is called combination born from these three (i.e., that is
+          not void of them), that is taught a worldly perfection.” One proceeds with the sequence of
+          the arising of gnosis suffused with study, reflection and cultivation to the highest
+          degree and limit of knowledge and realization of all aspects. Having analyzed it thus,
+          [the word pāramitā is grammatically derived as follows]: 1) First we apply the rule “kvip”
+          to derive a verbal noun in compound, 2) then we perform the erase of this formation’s
+          unwanted grammatical traces, 3) then because of the rule “that application of infixes is
+          in some cases options”, the “tuk” rule which would require to add a “t” to short verbal
+          roots is not applied in this case, the 4) because of the rule “that in tatpuruṣa compounds
+          with kṛt affixes as the last member case termination may be retained” we form an “aluk”
+          compound in which the case termination of its first member is optionally retained, which,
+          in this case, in a second (accusative) case, and 5) because the word expresses “the state
+          of one or something” we add and subtract suffix “tā” to derive the word “pamam-i-tā,”
+          which means “the state of one or that reaching the limit.” The dānapāramitā is the “state
+          of going to the limit of generosity”, so it should be applied also to śīla and the rest.
+          And therefore, the generosity of the bodhisattvas by whom the [bodhisattva-]levels have be
+          entered, which is characterized by the complete purification of the three extremes [of
+          gift, recipient, and giver], that is the “state of going to the limit of generosity”. But
+          that which is the generosity of normal people, that is “a generosity that itself is a
+          state of going to the limit” because they are lacking the gnosis the complete purification
+          of the three extremes [of gift, recipient, and giver]. And therefore, only the perfection
+          of insight should be known as the “eye” among the perfections of generosity and so on.
+          Just that Candrakīrti taught in the Madhyamakāvatāra: [Just as] a bunch of blind is led
+          easily towards a certain place by a single person with eyes according to that one’s will,
+          similarly, an insightful person, [despite] having been born a person without sight in this
+          life, goes to the qualities that are the state of a victorious one. Thus, who obtained,
+          that is to say, realized the the ten perfections which are in this way, that one is, as
+          thus-stated, the “bhagavat.” ※ ※ ※ [daśapāramitāśraya iti |] tatrāśraya ādhāraḥ | tāsām
+          eva daśānāṃ pāramitānām ādhārarūpatvāt tadādheyatvāc ca | tad etad uktaṃ bhavati |
+          anyonyādhārādheyasaṃbandhāt pratītyasamutpādārthaḥ sūcito bhavatīti || daśapāramitāśuddhir
+          iti | trikoṭipariśuddhatvād deyadāyakapratigrāhakānupalabdhir āsāṃ pāramitānām iti ||
+          daśapāramitānaya iti | daśaiva pāramitānayo mārga upāyo yasyāsau tathoktaḥ || pha rol
+          phyin pa bcu la gnas || zhes pa | de la gnas ni rten yin te | pha rol tu phyin pa bcu po
+          de dag nyid rten gyi ngo bo nyid kyi phyir ro || de dag brten pa yin pa'i phyir te | des
+          ni 'di skad gsungs bar 'gyur te | rten dang brten pa phan tshun 'brel pa yin pa'i phyir
+          rten cing 'brel par 'byung ba'i don du bstan par 'gyur ro || pha rol phyin bcu dag pa ste
+          || zhes pa ni 'khor gsum [F.51.r] yongs su dag pa'i phyir te | sbyin pa'i rdzas dang |
+          sbyin pa'i bdag po dang | len pa po mi dmigs pas pha rol tu phyin pa bcu dag pa zhes bya'o
+          || pha rol phyin pa bcu yi tshul || zhes pa ni pha rol tu phyin pa bcu kho na'i tshul dang
+          | lam dang thabs gang gi yin pa de la de skad gsungs so || [Next he teaches] “the
+          foundation of the ten perfections”: Regarding that [compound], “āśraya” (foundation/basis)
+          means support/vessel. And precisely since he is the support of these ten perfection
+          (ṣaṣthī-tatpuruṣa) and supported by them, thus the following is said: Because of the
+          mutual connection of support and supported, the meaning of dependent arising is indicated.
+          [Next he teaches] “the purity of the ten perfections”: Due to the perfect purification of
+          the three extremes there is the non-perception of what is to be given, the giver and the
+          one who receives these perfections. [Next he teaches] “the method of the ten perfections”:
+          He who has (ṣaṣṭhī-bahuvrhi) the method, namely, the path and means, of the perfection
+          that are precisely ten, that is the thus-stated one [the bhagavat]. ※ ※ ※ tāḥ punar
+          bhūmiṣu yojyāḥ | tad yathā pramuditāyāṃ bhuvi dānapāramitā ’tiriktatarā bhavati |
+          vimalāyāṃ śīlapāramitā | prabhākaryāṃ kṣāntipāramitā | arciṣmatyāṃ vīryapāramitā |
+          sudurjayāyāṃ dhyānapāramitā | abhimukhyāṃ prajñāpāramitā | dūraṅgamāyām upāyapāramitā |
+          a[A34v]calāyāṃ praṇidhipāramitā | sādhumatyāṃ balapāramitā | dharmameghāyāṃ
+          jñānapāramiteti || de rnams kyang sa la sbyor ba 'di lta ste | sa rab tu dga' ba la sbyin
+          pa'i pha rol tu phyin pa shas che bar 'gyur ba dang | dri ma med pa la tshul khrims kyi
+          pha rol tu phyin pa dang | 'od byed pa la bzod pa'i pha rol tu phyin pa dang | 'od 'phro
+          ba can la brtson 'grus kyi pha rol tu phyin pa dang | sbyang dka' ba la bsam gtan gyi pha
+          rol tu phyin pa dang | mngon du gyur pa la shes rab kyi pha rol tu phyin pa dang | ring du
+          song ba la thabs kyi pha rol tu phyin pa dang | mi g.yo ba la smon lam gyi pha rol tu
+          phyin pa dang | legs pa'i blo gros la stobs kyi pha rol tu phyin pa dang | chos kyi sprin
+          la ye shes kyi pha rol tu phyin pa'o zhes so || Also, these [perfections] should be
+          connected to the [bodhisattva-]levels: On the level [called] (1) “delighted” is the
+          dānapāramitā which is the strongest. On (2) “stainless” it is the śīlapāramitā, on (3)
+          “shining” it is the kṣāntipāramitā, on (4) “radiant” it is the vīryapāramitā, on (5) “hard
+          to be won” it is the dhyānapāramitā, on (6) “directly in front” it is the prajñāpāramitā,
+          on (7) “going far” it is the upāyapāramitā, on (8) “immovable” it is the praṇidhipāramitā,
+          on (9) “excellent thought” it is the balapāramitā, and on (10) “dharma-cloud” it is the
+          jñānapāramitā. ※ ※ ※ tatraitā bhūmayo dharmanairātmyamaitryadhigamāviśeṣe 'pi
+          dānapāramitādiviśuddhyadhiṣṭhānato viśeṣākhyāṃ pratilabhante || audāryaṃ tu
+          praṇidhānabalād āsām anantam asādhāraṇaṃ ca sarvaśrāvakādibhir iti || tatra bhūmir iti
+          jñānasyāvasthā [bhūmir] gocara iti yāvat | tatra bodhyadhigamaviśeṣād
+          uttarottarajñānapratiṣṭhāyogena tattajjñānaguṇādhārayogena ca bhūmaya ity ucyante ||
+          sarvatra sattvadhātoḥ sāmānyalakṣaṇatvād yato dharmadhātuvinirmukto na kaścid dharmo
+          'stīti tata ātmasamatāṃ pratilabhante | nairātmyāviśeṣād ekam api jñānaṃ daśety ucyate
+          ’vasthāviśeṣāt || ata āha || de ltar sa 'di rnams la chos la bdag med pa dang | byams pa'i
+          rtogs pa khyad par can med kyang sbyin pa la sogs pa'i pha rol tu phyin pa rnam par dag
+          pas lhag par byin gyis brlabs pas khyad par so sor thob bo || nyan thos la sogs pa thams
+          cad che ba ni smon lam gyi stobs kyis de rnams las mtha' yas pa thun mong ma yin par gyur
+          pa yin no || de la sa zhes pa ni ye shes kyi gnas skabs te spyod yul zhes pa'i bar du'o ||
+          de la rtogs shing khong du chud pa'i khyad par las gong ma gong ma'i ye shes la rab tu
+          gnas pa'i sbyong bas ye shes de dang yon tan gyi rten gyi sbyor bas kyang zhes gsungs so
+          || thams cad du sems can gyi khams kyi spyi'i mtshan nyid kyi phyir te | gang gi phyir |
+          chos kyi dbyings las ma gtogs pa || 'di ltar chos yod ma yin te || zhes so || de bas bdag
+          nyid dang mnyam pa nyid du 'thob ste | bdag med pa la khyad par med pa'i phyir ro || ’di'i
+          gnas skabs kyi khyad par gyis ye shes gcig la'ang bcu zhes gsungs so || de nyid gsungs pa
+          | Here, the [bodhisattva-]levels, even though there is no difference regarding the
+          realization of the non-self of phenomena and loving kindness, have [each] received a
+          particular name due to the power of purity of the perfections beginning with generosity.
+          But, from the power of aspiration [performed], there is a nobility of these [perfections]
+          that is infinite and uncommon for all the “auditized” and the rest. In this regard “level”
+          means a sphere of activity that is the establishment of gnosis, such is the explanation.
+          In this regard, the levels are taught based on the distinction of understanding and
+          realization, because of being established in always increasing gnoses and because of being
+          the support of the qualities of the respective gnoses. For, because the realm of living
+          beings is always generically characterized, there is no dharma whatsoever disconnected
+          from the dharmadhātu, therefore, since there is no distinction in what is lacking a self,
+          [all levels] obtain sameness in nature. Because there is no distinction in the
+          establishment [of gnosis], although the gnosis [in all levels is in nature] one, ten
+          [levels and corresponding gnoses] are taught. Therefore, he teaches: ※ ※ ※ daśabhūmīśvaro
+          nātho daśabhūmipratiṣṭhitaḥ | 6.3 ab (44ab) sa bcu'i dbang phyug mgon po ste || sa bcu la
+          ni rab tu gnas || He is the protector and ruler of the ten stages, he is firmly present in
+          the ten stages. iti || daśānāṃ pramuditādīnāṃ bhūmīnām īśvaro 'dhipatir ity arthaḥ | sa
+          yasyāṃ yasyāṃ bhūmau dānādipāra[A35r]mitādīnāṃ vaśitvalābhān nātha ity ukte || tāsv eva
+          daśabhūmiṣu pratiṣṭhānād [daśabhūmi] pratiṣṭhita iti || zhes pa ni rab tu [f. 51v] dga' ba
+          la sogs pa'i sa bcu'i dbang phyug ste | bdag po zhes pa'i don to || de nyid sa gang dang
+          gang du sbyin pa la sogs pa'i pha rol tu phyin pa la dbang thob pa'i phyir na mgon po zhes
+          gsungs so || sa bcu de dag nyid la so sor gnas pa'i phyir na | sa bcu la ni gnas pa po
+          zhes gsungs so || “Lord” [means] ruler, and “of the ten stages,” (ṣaṣthī-tatpuruṣa) are
+          those beginning with “delighted”, this is the meaning. He is called “protector” (nātha)
+          since he obtained lordship over the ten perfections of generosity, etc. in respect to each
+          of the corresponding stages. Since he is firmly established in precisely these ten stages
+          (saptamī-tatpuruṣa), he is “present in the ten stages.”</p>
+
+        <p>※ ※ ※ </p>
+
+        <p> daśa jñānāni | dharmajñānam | anvayajñānam | paracittajñānam | saṃvṛtijñānam |
+          duḥkhajñānam | samudayajñānam | nirodhajñānam | mārgajñānam> | kṣayajñānam |
+          anutpādajñānaṃ ceti || shes bcu rnam dag ces pa ni shes pa bcu'i rnam grangs ni chos shes
+          pa dang | rjes su rtogs pa'i shes pa dang | pha rol gyi sems shes pa dang | kun rdzob shes
+          pa dang | sdug bsngal shes pa dang | kun 'byung ba shes pa dang | 'gog pa shes pa dang |
+          lam shes pa dang | zad pa shes pa dang | mi skye ba shes pa'o || The ten knowledges are:
+          (1) knowledge of dharmas, (2) knowledge of connection, (3) knowledge of others’ thoughts,
+          (4) knowledge of the conventional, (5) knowledge of suffering, (6) knowledge of the origin
+          [of suffering], (7) knowledge of the cessation [of suffering], (8) knowledge of the path
+          [that leads to the cessation of suffering], (9) knowledge of destruction, and (10)
+          knowledge of non-arising. ※ ※ ※ [tatra] dharmajñānaṃ katamat | kāmapratisaṃyukteṣu
+          saṃskāreṣu yad anāsravaṃ jñānam | kāmapratisaṃyuktānāṃ saṃskārāṇāṃ hetau yad anāsravaṃ
+          jñānam | kāmapratisaṃyuktānāṃ saṃskārāṇāṃ nirodhe yad anāsravaṃ jñānam |
+          kāmapratisaṃyuktānāṃ saṃskārāṇāṃ [prahāṇāya] mārge yad anāsravaṃ jñānam | api ca
+          dharmajñāne dharmajñānabhūmau ca yad anāsravaṃ jñānam idam ucyate dharmajñānam || de la
+          chos shes pa gang zhe na | 'dod pa'i khams dang mtshungs bar ldan pa'i 'du byed rnams la
+          gang zag pa med pa'i shes pa gang yin pa dang | 'dod pa'i khams dang mtshungs par ldan
+          pa'i 'du byed kyi rgyu la gang zag pa med pa'i shes pa dang | 'dod pa'i khams dang
+          mtshungs par ldan pa'i 'du byed rnams kyi 'gog pa la gang zag pa med pa'i shes pa dang |
+          'dod pa'i khams dang mtshungs par ldan pa'i 'du byed rnams 'joms pa'i don du lam la gang
+          zag pa med pa'i shes pa rnams so || yang chos kyi shes pa dang | chos kyi shes pa'i sa la
+          gang zag pa med pa'i shes pa de nyid chos shes pa zhes brjod do || In regard to them, what
+          is the (1) knowledge of dharmas? Knowledge which is without outflows regarding mental
+          processes/karmic formations (in the second sense of the word as 2nd member of the twelve
+          links) connected to desire; knowledge which is without outflows regarding the cause of
+          processes/formations connected to desire; knowledge which is without outflows regarding
+          the cessation of processes/formations connected to desire; knowledge which is without
+          outflows regarding the path for extinguishing processes/formations connected to desire;
+          and also the knowledge which is without outflows regarding the knowledge of dharmas and
+          the stage of knowledge of dharmas, that is called “knowledge of dharmas.” ※ ※ ※
+          anvayajñānaṃ katamat | rūpārūpyapratisaṃyukteṣu saṃskāreṣu yad anāsravaṃ jñānam |
+          rūpārūpyapratisaṃyuktānāṃ saṃskārāṇāṃ hetau yad anāsravaṃ jñānam |
+          rūpārūpyapratisaṃyuktānāṃ saṃskārāṇāṃ nirodhe yad anāsravaṃ jñānam |
+          rūpārūpyapratisaṃyuktānāṃ saṃskārāṇāṃ prahāṇāya mārge [A35v] yad anāsravaṃ jñānam | api ca
+          khalv anvayajñāne ’nvayajñānabhūmau ca yad anāsravaṃ jñānam idam ucyate 'nvayajñānam ||
+          rjes su rtogs pa'i shes pa gang zhe na na | gzugs dang gzugs med pa'i khams dang mtshungs
+          par ldan pa'i 'du byed rnams la gang zag pa med pa'i shes pa dang | gzugs dang gzugs med
+          pa'i khams dang mtshungs par ldan pa'i 'du byed rnams kyi rgyu la gang zag pa med pa'i
+          shes pa dang | gzugs dang gzugs med pa'i khams dang mtshungs par ldan pa'i 'du byed rnams
+          kyi 'gog pa la zag pa med pa'i shes pa rnams dang | gzugs dang gzugs med pa'i khams dang
+          mtshungs par ldan pa'i 'du byed rnams 'joms pa'i don du lam la gang zag pa med pa'i shes
+          pa rnams dang | yang rjes su rtogs pa'i shes pa dang | rjes su rtogs pa'i shes pa'i la zag
+          pa med pa'i shes pa zhes gsungs pa de nyid rjes su rtogs pa shes pa'o || What is the (2)
+          knowledge of connection? Knowledge which is without outflows regarding
+          processes/formations connected to form and formless; knowledge which is without outflows
+          regarding the cause of processes/formations connected to the form and formless; knowledge
+          which is without outflows regarding the cessation of processes/formations connected to the
+          form and formless; knowledge which is without outflows regarding the path for
+          extinguishing processes/formations connected to the form and formless; and indeed also the
+          knowledge which is without outflows regarding the knowledge of conformity and the stage of
+          knowledge of conformity, that is called “knowledge of connection.” ※ ※ ※ paracittajñānaṃ
+          katamat | yaj jñānaṃ bhāvanāmayaṃ bhāvanāphalaṃ bhāvanāmārgasya pratilabdham avihīnam |
+          yena jñānena kāmāvacarān rūpāvacarān samavahitān saṃmukhībhūtān pareṣāṃ cittacaitasikān
+          dharmān jānāti | ekatyāṃś cānāsravān dharmān idam ucyate paracittajñānam || pha rol gyi
+          sems shes pa gang zhe na | sgom pa'i rang [f. 52r] bzhin gyi shes pa gang yin pa'i bsgoms
+          pa'i 'bras bu bsgom pas bgrod par bya ba so sor thob cing ’brel ba'i shes pa gang gis 'dod
+          pa na spyod pa dang | gzugs na spyod pa rnams kyi mnyam par gzhag pa mngon du gyur pa ste
+          | pha rol rnams kyi sems dang sems las byung ba'i chos rnams shes pa sde tshan gcig tu
+          byas te | zag pa med pa'i chos 'di ni pha rol gyi sems shes pa'o || What is the (3)
+          knowledge of others’ thoughts? Knowledge which is suffused with cultivation, the fruit of
+          cultivation, and which has obtained path of cultivation, viz. is entirely full. By which
+          knowledge [the yogin] knows the spheres of desire, the spheres of form [and] the complete
+          absorptions as directly actualised, the dharmas that are minds and mental factors of
+          others and each and every dharma without outflows, that is called “ knowledge of others’
+          thoughts.” ※ ※ ※ saṃvṛtijñānaṃ katamat | sāsravā prajñā || kun rdzob shes pa gang zhe na |
+          zag pa dang bcas pa shes pa'o || What is the (4) knowledge of the conventional? It is the
+          insight that [still] has outflows. duḥkhajñānaṃ katamat | pañcopādānaskandhān anityato
+          duḥkhataḥ śūnyato ’nātmataś ca manasikurvato yad anāsravaṃ jñānam idam ucyate duḥkhajñānam
+          || sdug bsngal shes pa gang zhe na | nye bar len pa'i phung po lnga la mi rtag pa nyid
+          dang | sdug bsngal ba nyid dang | stong pa nyid dang | bdag med pa nyid yid la byed pa'i
+          gang zag pa med pa'i shes pa 'di ni sdug bsngal shes pa'o || What is the (5) knowledge of
+          suffering? Knowledge which is without outflows of [a yogin] who pays attention to the five
+          aggregates as constituting the self based on impermanence, suffering, their being empty
+          and the absence of an own nature, this is called “the knowledge of suffering.”
+          samudayajñānaṃ katamat | sāsravaṃ hetuṃ hetutaḥ samudayataḥ prabhavataḥ pratyayataś ca
+          manasikurvato yad anāsravaṃ jñānam | tat samudayajñānam || kun 'byung ba shes pa gang zhe
+          na | zag pa dang bcas pa'i rgyu la rgyu dang | kun 'byung ba dang | rab tu skye ba dang |
+          rkyen rnams su yid la byed pas gang zag pa med pa'i shes pa gang yin pa de ni kun 'byung
+          shes pa'o || What is the (6) knowledge of the origin [of suffering]? Knowledge which is
+          without outflows of [a yogin] who pays attention to the cause [of suffering] endowed with
+          outflow based on the cause, the origin, the appearance and additional conditions, this is
+          the “knowledge of origin.” nirodhajñānaṃ katamat | nirodhaṃ nirodhataḥ śāntataḥ praṇītato
+          niḥsaraṇataś ca manasikurvato yad anāsravaṃ jñānam idam ucyate nirodha[A36r]jñānam || 'gog
+          pa shes pa gang zhe na | 'gog pa la 'gog pa dang | zhi ba dang | gya nom pa dang | nges
+          par 'byung ba rnams yid la byed pa gang zag pa med pa'i shes pa zhes gsungs p a de ni 'gog
+          pa shes pa'o || What is the (7) knowledge of the cessation [of suffering]? Knowledge which
+          is without outflows of [a yogin] who pays attention to cessation based on cessation,
+          pacification, based on what is auspicious and based on emancipation, this is called the
+          “knowledge of the cessation.” mārgajñānaṃ katamat | mārgaṃ mārgato nyāyataḥ pratipattito
+          nairyāṇikataś ca manasikurvato yad anāsravaṃ jñānam idam ucyate mārgajñānam || lam shes pa
+          gang zhe na | lam la lam dang | rig pa dang | sgrub pa dang | nges par 'byin pa rnams su
+          yid la byed pas gang zag pa med pa'i shes pa zhes gang gsungs pa de ni lam shes pa'o ||
+          What is the (8) knowledge of the path [that leads to the cessation of suffering]?
+          Knowledge which is without outflows of [a yogin] who pays attention to path based on the
+          path, proper judgment, accomplishment and deliverance, this is called the “knowledge of
+          the path [that leads to the cessation of suffering].” ※ ※ ※ kṣayajñānaṃ katamat | duḥkhaṃ
+          me parijñātam iti jānāti | samudayo me prahīṇaḥ | nirodhaḥ sākṣātkṛtaḥ | mārgo me bhāvita
+          iti na punar bhāvayitavya iti jānāti | tad upādāya jñānaṃ darśaṇaṃ vidyā bodhiḥ prajñāloko
+          'bhisamayaḥ | idam ucyate kṣayajñānam || zad pa shes pa gang zhe na | bdag gis sdug bsngal
+          yongs su shes so zhes pa dang | bdag gis kun 'byung spangs so || bdag gis 'gog pa mngon du
+          byas so || bdag gis lam bsgoms zin pas slar bsgom du med do zhes shes pa de nyid nye bar
+          gzung ba'i shes pa dang | mthong ba dang | rig pa dang | rtogs pa dang | shes rab kyi
+          snang ba dang | mngon par rtogs pa de gsungs pa ni zad pa shes pa'o || What is the (9)
+          knowledge of destruction? [A yogin] who knows “I perfectly know suffering,” and who knows
+          “I have abandoned [its] origin, I see [its] cessation clearly, and I have cultivated the
+          path and it need not be cultivated again,” and relying on that, [the yogin has] knowledge,
+          seeing, wisdom, awakening, the light of insight and clear understanding, this is called
+          the “knowledge of destruction.” anutpādajñānaṃ katamat | duḥkhaṃ me parijñātaṃ na punaḥ
+          parijñeyam iti jānāti | samudayaḥ prahāṇo na punaḥ prahātavyaḥ | nirodhaḥ sākṣātkṛto na
+          punaḥ sākṣātkartavyaḥ | mārgo me bhāvito na punar bhāvayitavya iti jānāti | tad upādāya
+          jñānaṃ darśaṇaṃ vidyā bodhiḥ prajñāloko 'bhisamaya idam ucyate 'nutpādajñānam ity || mi
+          skye ba shes pa gang zhe na | bdag gis sdug bsngal yongs su shes so || yang yongs su shes
+          par byar med do zhes pa dang | kun 'byung rab tu spangs so || yang spang du med padang |
+          'gog pa mngon du byas so || yang mngon du byar med pa dang | lam bsgoms so || yang bsgom
+          par byar med do || [f. 52v] zhes shes pa de nye bar gzung ste | shes pa dang | mthong ba
+          dang | rig pa dang | rtogs pa dang | shes rab kyi snang ba dang | mngon par rtogs pa 'di
+          ni mi skye ba'i shes pa'o || de nyid gsungs pa | What is the (10) knowledge of
+          non-arising? [A yogin] who knows “I perfectly know suffering and I do not need recognise
+          it again” and who knows “I have abandoned [its] origin and it need not be abandoned
+          again,” [who knowns] “I see [its] cessation clearly and it need not be actualised again,”
+          and [who knowns] “I have cultivated the path and it need not be cultivated again,” and
+          relying on that, [the yogin has] knowledge, seeing, wisdom, awakening, the light of
+          insight and clear understanding, this is called the “knowledge of non-arising.” There it
+          is taught [the following line]: ※ ※ ※ ata āha | daśajñānaviśuddhātmā daśajñānaviśuddhadhṛk
+          || 6.3 cd (44cd) shes bcu rnam dag bdag nyid can || shes bcu rnam dag 'chang ba po ||
+          Having a nature purified through the ten knowledges, he holds the pure ten knowledges. iti
+          || tataś ca ebhir daśajñānair viśuddha ātmā svabhā[A36v]vo yasya sa daśajñānaviśuddhātmā
+          bhagavān | teṣām eva daśānāṃ jñānānāṃ viśuddhiṃ prakṛtiprabhāsvaraṃ jñānaṃ dhārayatīti
+          daśajñānaviśuddhadhṛk sarvanimittāpagamāt || tathā coktaṃ madhyāntavibhāge –
+          ekahetutvabhoktṛtvakartṛtvavaśavartiṣu | ādhipatyārthanityārtha kleśaśuddhāśraye ’pi ca |
+          yogitvāmuktamuktatve ātmadarśanam eṣu hi || eṣa daśavidha ātmagrāhaḥ skandhādiṣu
+          pravartate || yad utaikatvagrāhaḥ | hetutvagrāhaḥ | bhoktṛtvagrāhaḥ | kartṛtvagrāhaḥ |
+          svatantratvagrāhaḥ | adhipatitvagrāhaḥ | nityatvagrāhaḥ | saṃkliṣṭavyavadānatvagrāhaḥ |
+          yogitvagrāhaḥ | [amukta] muktatvagrāhaś ceti || zhes so || de bas na shes pa bcu po de dag
+          gis rnam par dag pa'i bdag nyid kyi rang bzhin dang gang ldan pa'i bcom ldan 'das de ni |
+          shes bcu rnam dag bdag nyid can || zhes so || shes pa bcu po de rnams kyi rnam par dag pa
+          rang bzhin gyis 'od gsal ba'i ye shes 'dzin pas na | shes bcu rnam dag 'chang ba po ||
+          zhes pa ste mtshan ma thams cad dang bral ba'i phyir ro || rnam pa bcu zhes pa ni 'di ltar
+          dbus dang mtha' rnam par 'byed pa las gsungs pa | gcig dang rgyu dang za ba dang || byed
+          pa dang ni dbang bsgyur dang || bdag po don dang rtag pa dang || nyon mongs pa dang dag
+          pa'i gnas || rnal 'byor can dang ma grol grol || 'di dag la ni bdag tu lta || zhes so ||
+          rnam pa bcu po ni 'di rnams bdag tu 'dzin pas phung po la sogs pa la rab tu 'jug pa 'di
+          lta ste | gcig pur 'dzin pa dang | rgyur 'dzin pa dang | za bar 'dzin pa dang | byed par
+          'dzin pa dang | rang dbang du 'dzin pa dang | bdag por 'dzin pa dang | rtag par 'dzin pa
+          dang | kun nas nyon mongs pa dang | rnam par byang bar 'dzin pa dang | rnal 'byor can du
+          'dzin pa dang | ma grol ba grol bar 'dzin pa'o || And therefore, he whose nature, that is
+          to say, own state of being, has been purified through these ten knowledges, is the
+          Bhagavat “having a nature pure through the ten knowledges.” And he holds the purity,
+          namely, gnosis that is luminous by nature, of just these ten knowledges, thus, because all
+          characteristics vanished, he “holds the pure ten knowledges.” Similarly, it also has been
+          taught in the Madhyāntavibhāga: It is precisely in relation to these things that the view
+          of a self [is established]: individuality, being a cause, being en experiences, being an
+          agent, being in control, being [endowed with] the notion of supremacy, being [endowed
+          with] the notion of permanence, being a basis free from afflictions, being a yogi, and the
+          being liberated from not being liberated. This tenfold apprehension of the self [as
+          existent] is set in motion in relation to the aggregates and so forth. These are: (1) the
+          apprehension of individuality, (2) the apprehension of being a cause, (3) the apprehension
+          of being an experiences, (4) the apprehension of being an agent, (5) the apprehension of
+          being independent, (6) the apprehension of being sovereign, (7) the apprehension of
+          permanence, (8) the apprehension of being entirely purified from afflictions, (9) the
+          apprehension of being a yogin, and (10) the apprehension of being liberated from not being
+          liberated. ※ ※ ※ [[daśākāro daśārthārtho munīndro daśabalo vibhuḥ | 6.4 ab (45ab) rnam pa
+          bcu po don bcu'i don || thub dbang stobs bcu khyab pa'i bdag || With ten aspects and the
+          pursuit of ten benefits, he is mighty among ascetics, pervading lord with ten powers.]]
+          ata āha | daśākāra iti | ākriyate vikṣipyate samādher ebhiś cittaṃ skandhādiṣv ity ākārā
+          daśātmagrāhāḥ || ata evoktaṃ dignāgapādaiḥ saṃgrahe — daśabhiś cittavikṣepaiś cittaṃ
+          vikṣiptam anyataḥ | yogyaṃ bhavati bālānāṃ nādvayajñānasādhane || iti || tasmād ete
+          daśākārā ātmagrāhā yasyāsau bha[A37r]gavān tathoktaḥ | kimartham iti cet |
+          sarvavipakṣākāreṇāpi pratibhāsanāt || tatpratipakṣabhūtā daśārthās tatraiva paṭhyante —
+          mūlalakṣaṇatattvaṃ ca aviparyāsalakṣaṇam | phalahetumayaṃ tattvaṃ sūkṣmāudārikam eva ca ||
+          prasiddhaṃ śuddhiviṣayaṃ saṃgrāhyaṃ bhedalakṣaṇam | kauśalyatattvaṃ daśadhā
+          ātmadṛṣṭivipakṣataḥ || iti | de'i phyir gsungs pa | rnam pa bcu po zhes gsungs so | de
+          rnams ting nge 'dzin gyi sems phung po la sogs pa la kun du rnam par g.yeng bar byed pa'i
+          rnam pa bdag tu 'dzin pa bcu'o || de nyid kyi phyir na don bsdus pa las phyogs kyi glang
+          po'i zhabs kyis gsungs pa | rnam par g.yeng ba'i sems bcu yis || sems g.yeng rnams kyis
+          gzhan yin na || gnyis med ye shes bsgrub pa la || byis pa rnams ni skal mi ldan || zhes so
+          || de'i phyir bdag tu 'dzin pa rnam pa bcu po de gang gi yin pa'i bcom ldan 'das te | de
+          ltar gsungs so || ci'i phyir zhe na | mi mthun pa'i phyogs kyi rnam pa thams cad kyis so
+          sor [f. 53r] snang ba'i phyir ro || don bcu zhes pa ni | de'i gnyen po'i don bcu yang de
+          nyid la brjod de | rtsa ba'i mtshan nyid de kho na || phyin ci ma log mtshan nyid dang ||
+          'bras bu rgyu yi de kho na || phra ba dang ni rags pa dang || grags dang rnam par dag yul
+          dang || bsdu dang dbye ba'i mtshan nyid dang || mkhas de kho na rnam bcu ste || bdag tu
+          lta ba'i gnyen po'o || bya ba 'di dag go || Therefore it was taught “ten aspects”: By
+          these, the mind of concentration is attracted to the aggregates and so on, which means
+          distracted, thus are the ten aspects of grasping for the self. And precisely therefore it
+          was taught by the venerable Dignāga in the Saṃgraha: A mind[state] which is directed
+          elsewhere by the ten mental distractions is agreeable for childish people [but] not in
+          view of the realization of non-dual gnosis. Therefore, he who possesses these ten aspects
+          grasping for the self is the thus-taught bhagavat. If one inquires “Why is that?” [The
+          answer is] because of manifesting [himself] also through the entire set of opposite
+          aspects. The ten notions that are the remedies for these [ten aspects of grasping] are to
+          be recited precisely in this regard: There is a fundamental principle (tattva) of the root
+          and of characteristics, the characteristic without error, a fundamental principle
+          consisting of fruit and cause, and one that is subtle and one that is gross. One that is
+          established, the sphere of purity, one that is put together, one that is characterized by
+          division [and] the fundamental principle of skillfulness, that is the tenfold [principle]
+          that remedies the [wrong] view of the self. ※ ※ ※ ity evaṃ daśavidhaṃ tattvam || yad uta
+          mūlatattvam | lakṣaṇatattvam | aviparyāsatattvam | phalahetutattvam |
+          audārikasūkṣmatattvam | prasiddhatattvam | viśuddhigocaratattvam | saṃgrāhakatattvam |
+          bhedatattvam | kauśalyatattvaṃ ca || tat punar daśavidhaṃ daśavidhātmagrāhapratipakṣeṇa
+          veditavyam iti || de kho na rnam pa bcu ste | 'di lta ste | rtsa ba'i de kho na nyid dang
+          | mtshan nyid kyi de kho na nyid dang | phyin ci ma log pa'i de kho na nyid dang | 'bras
+          bu dang rgyu'i de kho na nyid dang | rags pa dang phra ba'i de kho na nyid dang | grags
+          pa'i de kho na dang | rnam par dag pa'i spyod yul gyi de kho na dang | bsdu ba'i de kho na
+          dang | dbye ba'i de kho na dang | mkhas pa'i de kho na dang | rnam pa bcu po de dag bdag
+          tu 'dzin pa rnam pa bcu'i gnyen por rig par bya'o || And the tenfold fundamental principle
+          [of remedy for the view of self] is as follows: There are (1) the principle of the
+          foundation, (2) the principle of the characteristic, (3) the principle without error, (4)
+          the principle of result and cause, (5) the principle of the subtle and gross, (6) the
+          principle of what is established, (7) the principle of the sphere of purity, (8) the
+          principle of what is collected, (9) the principle of division and (10) the principle of
+          skillfulness. And that [last item], is again to be known as the tenfold [fundamental
+          principle] as counteracting the tenfold grasping of a self.
+          ________________________________________ Excursion from the Madhyāntavibhāgabhāṣya chapter
+          three (tattvapariccheda) on “daśavidhaṃ tattvam”: tattvam adhikṛtyāha — mūlalakṣaṇatattvam
+          aviparyāsalakṣaṇam | phalahetumayaṃ tattvaṃ sūkṣmaudārikam eva ca ||3.1|| prasiddhaṃ
+          śuddhiviṣayaṃ saṃgrāhyaṃ bhedalakṣaṇam | kauśalyatattvaṃ daśadhā ātmadṛṣṭivipakṣataḥ
+          ||3.2|| ity etad daśavidhaṃ tattvaṃ yad uta mūlatattvaṃ lakṣaṇatattvam aviparyāsatattvaṃ
+          phalahetutattvam audārikasūkṣmatattvaṃ prasiddhatattvaṃ viśuddhigocaratattvaṃ
+          saṃgrahatattvaṃ prabhedatattvaṃ kauśalyatattvaṃ ca | tat (= kauśalyatattva) punar
+          daśavidhaṃ daśavidhātmagrāhapratipakṣeṇa veditavyam | tad yathā skandhakauśalyaṃ
+          dhātukauśalyam āyatanakauśalyaṃ pratītyasamutpādakauśalyaṃ sthānāsthānakauśalyam
+          indriyakauśalyam adhvakauśalyaṃ satyakauśalyaṃ yānakauśalyaṃ saṃskṛtāsaṃskṛtakauśalyaṃ ca
+          || (And that [latter one] is again tenfold and should be understood as the counteragent to
+          the ten kinds of self-grasping, namely, skill in the aggregates, skill in the elements,
+          skill in the sense-fields, skill in dependent origination, skill in the possible and the
+          impossible, skill in the sense faculties, skill in the times, skill in the [four] truths,
+          skill in the vehicles and skill in the conditioned and the unconditioned.) (1) tatra
+          mūlatattvam — svabhāvaḥ trividhas (a) parikalpitaḥ (b) paratantraḥ (c) pariniṣpannaś ca |
+          tatrānyatattvavyavasthāpanāt | kim atra svabhāvatraye tattvam iṣyate | ((a) the imaginary,
+          (b) the other-dependent and (c) the perfected because other fundamental principles are
+          arranged in relation to that [threefold nature]. Why is reality considered in regard to
+          the[se] three natures?) (a) asac ca nityaṃ (b) sac cāpy atattvataḥ | (c) sadasat tattvataś
+          ceti svabhāvatraya iṣyate ||3.3|| (“(a) Always non-existent, (b) existent but not truly,
+          and (c) existent and non-existent in reality,” is considered the three natures.) (a)
+          parikalpitalakṣaṇaṃ nityam asad ity etat parikalpitasvabhāve tattvam aviparītatvāt | (b)
+          paratantralakṣaṇaṃ sac ca na ca tattvato bhrāntatvād ity etat paratantrasvabhāve tattvam |
+          (c) pariniṣpannalakṣaṇaṃ sadasat tattvataś cety etat pariniṣpannasvabhāve tattvam |
+          (Reality in regard to the imagined nature, due to not being erroneous, that is “(a)
+          characterised as imagined which always non-existent;” (b) Reality in regard to the
+          other-dependent that is “(b) characterised as other-dependent which is existent but non
+          really, due to being mistaken;” [and] Reality in regard to the perfected, that is “(c)
+          characterised as perfected which is existent and non-existent in reality.”) (2)
+          lakṣaṇatattvaṃ katamat — samāropāpavādasya (a) dharmapudgalayor iha | (b) grāhyagrāhakayoś
+          cāpi (c) bhāvābhāve ca darśanam ||3.4|| yajjñānān na pravarteta tad dhi tattvasya lakṣaṇam
+          | (A view of imposition/imputation and denial, regarding (a) dharmas and the individual,
+          (b) object and subject, [and] (c) what exists and what not, may not come about because of
+          the knowledge of which, that indeed is the characteristic of reality.) (a)
+          pudgaladharmayoḥ samāropāpavādadarśanaṃ yasya jñānān na pravartate | tat
+          parikalpitasvabhāve tattvalakṣaṇam | (b) grāhyagrāhakayoḥ samāropāpavādadarśanaṃ yasya
+          jñānān na pravartate | tat paratantrasvabhāve tattvalakṣaṇam | (c)
+          bhāvābhāvasamāropāpavādadarśanaṃ yasya jñānān na pravartate | tat pariniṣpannasvabhāve
+          tattvalakṣaṇam | etan mūlatattve lakṣaṇam aviparītaṃ lakṣaṇatattvam ity ucyate | ((a) A
+          view of imposition/imputation and denial regarding dharmas and the individual may not come
+          about because of the knowledge of which, that is the characteristic of reality regarding
+          the imagined nature. (b) A view of imposition/imputation and denial regarding object and
+          subject may not come about because of the knowledge of which, that is the characteristic
+          of reality regarding the other-dependent nature. (c) A view of imposition/imputation and
+          denial regarding what exists and what not may not come about because of the knowledge of
+          which, that is the characteristic of reality regarding the perfected nature. That is what
+          is called the non-erroneous reality of characteristic in regard to the reality of the
+          foundation.) (3) aviparyāsatattvaṃ nityādiviparyāsapratipakṣeṇānityaduḥkhaśūnyānātmatā
+          mūlatattve yathākramaṃ | kathaṃ ca tatrānityāditā veditavyā | (The reality without error
+          which is (a) impermanent, (b) suffering, (c) empty and (d) without self [acts] as the
+          counteragent of errors of “permanence” etc. regarding the reality of the foundation,
+          respectively. How is the state of impermanence etc. to be understood?) asadartho hy
+          anityārtha utpādavyayalakṣaṇaḥ ||3.5|| samalāmalabhāvena mūlatattve yathākramam | (Indeed,
+          (a) an impermanent object is (a1) an object that doesn’t exist (a2) characterized by
+          arising and passing qua (a3) its nature of being stained and stainless in relation to the
+          reality of the foundation, respectively.) trayo hi svabhāvā mūlatattvam | teṣu yathākramam
+          asadartho hy anityārtha utpādavyayārthaḥ samalāmalārthaś ca | (For, the three natures are
+          the reality of the foundation; regarding these, an impermanent object is indeed (a1) an
+          object that doesn’t exist, (a2) an object that arises and ceases, and (a3) an object that
+          is stained and stainless.) duḥkham ādānalakṣmākhyaṃ sambandhenāparaṃ matam ||3.6|| ((b)
+          Suffering is called (b1) appropriating and (b2) having marks, [and] also thought of (b3)
+          on account of connection.) mūlatattve yathākramaṃ duḥkham upādānataḥ
+          pudgaladharmābhiniveśopādānāt | lakṣaṇataḥ triduḥkhatālakṣaṇatvāt | sambandhataś ca
+          duḥkhasambandhāt | tatraiva mūlatattve yathākramaṃ veditavyam | (Suffering, regarding the
+          reality of the foundation, is, respectively (b1) due to appropriating, namely,
+          appropriating based on the fixation of the individual and dharmas, (b2) due having marks,
+          namely, due to having the marks of the threefold suffering, and (b3) due to the
+          connection, namely, the connection to suffering. Precisely regarding that is [suffering]
+          to be understood regarding the reality of the foundation, respectively.) abhāvaś cāpy
+          atadbhāvaḥ prakṛtiḥ śūnyatā matā | (And emptiness is thought of as (c1) non-existent, (c2)
+          non being the state of that, and (c3) natural condition.) parikalpitalakṣaṇaṃ na kenacit
+          prakāreṇāstīty abhāva evāsya śūnyatā | paratantralakṣaṇaṃ tathā nāsti yathā parikalpyate
+          na tu sarvathā nāstīti tasyātadbhāvaḥ śūnyatā | pariniṣpannalakṣaṇaṃ śūnyatāsvabhāvam
+          eveti prakṛtir evāsya śūnyatā || (What has the characteristic of being imagined does not
+          exist in any way, thus it is (c1) nothing but the non-existence of that, that is
+          emptiness. Like the characteristic of the other-dependent does not exist in the manner it
+          is imagined, [it], however, does not not exist in every way, thus it is (c2) non being the
+          state of that, that is emptiness. What has the characteristic of being perfected is
+          nothing but the essence of emptiness, thus the (c3) natural condition of it, that is
+          emptiness.) alakṣaṇaṃ ca nairātmyaṃ tadvilakṣaṇam eva ca ||3.7|| svalakṣaṇaṃ ca nirdiṣṭam
+          (And lacking a self is taught as (d1) without characteristic, as indeed (d2) different in
+          characteristic from that [which is imagined] and as (d3) the own characteristic.)
+          parikalpitasya svabhāvasya lakṣaṇam eva nāstīty alakṣaṇam evāsya nairātmyam |
+          paratantrasyāsti lakṣaṇaṃ na tu yathā parikalpyata iti tadvilakṣaṇam asya lakṣaṇaṃ
+          nairātmyam | pariniṣpannaḥ tu svabhāvo nairātmyam eveti svalakṣaṇaṃ evāsya nairātmyam iti
+          | trividhe mūlatattve trividhānityatā paridīpitā — asadarthānityatotpādabhaṅgānityatā
+          samalanirmalānityatā ca | trividhā duḥkhatā — upādānaduḥkhatā lakṣaṇaduḥkhatā
+          sambandhaduḥkhatā ca | trividhā śūnyatā — abhāvaśūnyatātadbhāvaśūnyatā svabhāvaśūnyatā ca
+          | trividhaṃ nairātmyam — alakṣaṇanairātmyaṃ vilakṣaṇanairātmyaṃ svalakṣaṇanairātmyam | (A
+          characteristic of an imagined nature does indeed not exist, thus its lacking a self is
+          (d1) is without characteristic. The characteristic of the other-dependent exists, but not
+          in the way it is imagined, thus its characteristic of lacking a self is (d2) different in
+          characteristic from that [which is imagined]. The perfected nature, however, is simply
+          lacking a self, thus its very lacking of a self is the (d3) own characteristic. [To
+          summarize:] The threefold nature of impermanence has been taught in relation to the
+          threefold reality of the foundation as (a1) an object that doesn’t exist, (a2) an object
+          that arises and ceases, and (a3) an object that is stained and stainless; the threefold
+          nature of suffering [has been taught in relation to the threefold reality of the
+          foundation] as (b1) the nature of suffering of appropriation, (b2) the nature of suffering
+          that has marks, [and] (b3) the nature of suffering based on connection; the threefold
+          emptiness [has been taught in relation to the threefold reality of the foundation] as (c1)
+          non-existent emptiness, (c2) the emptiness non being the state of that, and (c3) natural
+          emptiness ; and the threefold lacking of a self [has been taught in relation to the
+          threefold reality of the foundation] as (d1) the lacking of a self without characteristic,
+          (d2) the lacking of a self different in characteristic from that [which is imagined], and
+          (d3) the lacking of a self that is the own characteristic.) (4) phalahetumayaṃ tattvaṃ
+          tatraiva mūlatattve duḥkhasamudayanirodhamārgasatyatvam | kathaṃ trividhaṃ mūlatattvaṃ
+          duḥkhādisatyatvam | yataḥ tad anityādilakṣaṇam | (The reality consisting of result and
+          cause, in relation to that very reality of the foundation, is the [fourfold] truth of (a)
+          suffering, (b) [its] origin, (c) [its] cessation, and (d) the path. How then is the
+          [fourfold] truth of suffering, etc. the threefold reality of the foundation? For it [truth
+          of suffering] is that characterised by impermanence, etc.) duḥkhasatyam ato matam |
+          (Therefore, it is thought of as the truth of suffering.) trividhena samudayārthena
+          samudayasatyam | trividhaḥ samudayārthaḥ | (The [second] truth of origination [is
+          understood] through the threefold notion of origination. The threefold notion of
+          origination is:) vāsanātha samutthānam avisaṃyoga eva ca ||3.8|| ((a) Latent impressions,
+          (b) activity, and (c) non-separation.) (a) vāsanāsamudayaḥ
+          parikalpitasvabhāvābhiniveśavāsanā | (b) samutthānasamudayaḥ karmakleśāḥ | (c)
+          avisaṃyogasamudayaḥ tathatāyā āvaraṇāvisaṃyogaḥ | ((a) Origination of a latent impressions
+          is a latent impression that is attached to fixated on the imagined nature. (b) Origination
+          as increasing activity gives rise is karman and afflictions. (c) Origination as
+          non-separation is the non-separation of obscurations from thusness.) trividhena nirodhena
+          nirodhasatyam | trividho nirodhaḥ || (The [third] truth of cessation [is understood]
+          through the threefold cessation. The threefold cessation is:) svabhāvadvayanotpattir
+          malaśāntidvayaṃ matam | (Non-arising (b) of the dual (a) by nature is thought of as (c)
+          the dual pacification of stains.) (a) svabhāvānutpattir (b) grāhyagrāhakayor anutpattir
+          (c) malaśāntidvayaṃ ca pratisaṃkhyānirodhatathatākhyam ity eṣa trividho nirodho yad uta |
+          svabhāvanirodho dvayanirodhaḥ prakṛtinirodhaś ca | mārgasatyaṃ trividhe mūlatattve kathaṃ
+          vyavasthāpyate || ((a) Non-arising by nature, (b) non-arising of object and subject, and
+          (c) the dual pacification of stains are called the cessation through critical analysis and
+          thusness. These are the three kinds of cessation, which are: (a) Cessation by nature, (b)
+          cessation of the dual and (c) cessation by the natural conditions. How is the [fourth]
+          truth of the path respectively to be arranged in relation to the threefold reality of the
+          foundation?) parijñāyāṃ prahāṇe ca prāptisākṣātkṛtāv ayam ||3.9|| mārgasatyaṃ samākhyātam
+          (This [fourth] truth of the path has been explained in relation to (a) clear
+          comprehension, (b) renunciation, and (c) actualization of attainment.) parikalpitasya
+          parijñāne | paratantrasya parijñāne prahāṇe ca | pariniṣpannasya parijñāne
+          prāptisākṣātkaraṇe ca | evam atra parijñāprahāṇasākṣātkriyāyāṃ mārgasatyavyavasthānam iti
+          veditavyam || (Regarding (a) the clear comprehension of the imagined [nature], (b) the
+          clear comprehension and renunciation of the other-dependent [nature], and (c) the clear
+          comprehension and clear realization of attainment of the perfected [nature]. Thus, the
+          arrangement of the truth of the path should be understood here in relation to (a) clear
+          comprehension, (b) renunciation, and (c) realization.) (5) audārikasūkṣmatattvaṃ punaḥ
+          saṃvṛtiparamārthasatyam | tan mūlatattve kathaṃ veditavyam | (The principle of what is
+          gross and subtle, moreover [denotes] the truth of the conventional and the absolute[,
+          respectively]. How should it be understood in relation to the reality of the foundation?)
+          prajñaptipratipattitaḥ | tathodbhāvanodāram (In this way, the gross [should be understood]
+          qua (a) declaration, (b) acknowledgment, and (c) announcement.) trividhā hi saṃvṛtiḥ
+          prajñaptisaṃvṛtiḥ pratipattisaṃvṛtir udbhāvanāsaṃvṛtiś ca | tayā saṃvṛtisatyatvaṃ
+          mūlatattve yathākramaṃ veditavyam | (For the conventional [truth] is threefold: (a)
+          conventional by declaration, (b) conventional as acknowledgment, and (c) conventional as
+          arising. Through these [three], the conventional truth should be known in relation to [the
+          threefold] reality of the foundation.) paramārthaṃ tu ekataḥ || 3.10|| (The ultimate
+          [truth], however, [should be understood] because of a single.) paramārthasatyam ekasmāt
+          pariniṣpannād eva svabhāvād veditavyam | sa punaḥ kathaṃ paramārthaḥ | (The absolute truth
+          is to be understood on account of a single, namely, due only to the perfected nature. But
+          how is that the absolute?) arthaprāptiprapattyā hi paramārthaḥ tridhā mataḥ | (For the
+          absolute is considered as threefold by way of (a) object, (b) attainment and (c) practice.
+          ) arthaparamārthaḥ tathatā paramasya jñānasyārtha iti kṛtvā | prāptiparamārtho nirvāṇaṃ
+          paramo 'rtha iti kṛtvā | pratipattiparamārtho mārgaḥ paramo 'syārtha iti kṛtvā | katham
+          asaṃskṛtaṃ ca saṃskṛtaṃ ca pariniṣpannaḥ svabhāva ucyate || ((a) The absolute as an object
+          is thusness, considering that it is the object of the highest awareness. (b) The absolute
+          as attainment is nirvāṇa, considering that it is the highest purpose. (c) The absolute as
+          practice is the path, considering that it is the purpose of it. How can both the
+          unconditioned and the conditioned be taught as the perfected nature?)
+          nirvikārāviparyāsapariniṣpattito dvayam ||3.11|| (The two [are considered] by means of
+          unchanging perfection free from being erroneous.) asaṃskṛtam avikārapariniṣpattyā
+          pariniṣpannam | saṃskṛtaṃ mārgasatyasaṃgṛhītam aviparyāsapariniṣpattyā punar jñeyavastuny
+          aviparyāsāt | (The unconditioned is perfected by means of unchanging perfection [and] the
+          conditioned, which is collected in the truth of the path, [is perfected] by means of
+          perfection free from being erroneous, because of the absence of error in regard to thing
+          to be known.) (6) prasiddhatattvaṃ mūlatattve kathaṃ vyavasthāpyate | dvividhaṃ hi
+          prasiddhatattvam | lokaprasiddhaṃ yuktiprasiddhaṃ ca | tatra — (How is the reality of what
+          is established to be arranged in respect to the reality of the foundation. The reality of
+          what is established is twofold: (a) that which is established in the world [i.e., by
+          worldly convention] and (b) that which is established through reasoning. In this respect:)
+          (a) lokaprasiddham ekasmāt (That which is established in the world results from one.)
+          parikalpitasvabhāvāt | yasmin vastuni saṃketasaṃstavānupraviṣṭayā buddhyā sarveṣāṃ
+          laukikānāṃ darśanatulyatā bhavati | pṛthivy eveyaṃ nāgnī rūpam evedaṃ na śabda ity evamādi
+          | (It results from the imagined nature; within which there is a similarity of perspective
+          of all worldly beings insofar as their intellects enter into familiarity with conventional
+          symbols in regard to entities, which are in this way and so forth: “this is definitely
+          earth and not fire, and this is definitely form and not sound”.) (b) trayād
+          yuktiprasiddhakam | (That which is established through reasoning results from three.) yat
+          satāṃ yuktārthapaṇḍitānāṃ tārkikāṇāṃ pramāṇatrayaṃ niśrityopapattisādhanayuktyā prasiddhaṃ
+          vastu | (Based upon the three forms of valid reasoning of the wise, those learned in
+          argumentation, and the dialecticians, an entity is established through reasoning, the
+          means to establish logical proof.) (7) viśuddhigocaratattvaṃ dvividhaṃ
+          kleśāvaraṇaviśuddhijñānagocaraṃ jñeyāvaraṇaviśuddhijñānagocaraṃ ca | tad etat — (The
+          reality of the sphere of purity is twofold: (a) the sphere of awareness for the
+          purification of the obscuration that are afflictions and (b) the sphere of gnosis for the
+          purification of the obscuration that of objects of knowledge. This [reality] is:)
+          viśuddhigocaraṃ dvedhā ekasmād eva kīrtitam ||3.12|| (The sphere of purity is known as
+          twofold because of just one.) pariniṣpannād eva svabhāvān na hy anyasvabhāvo
+          viśuddhijñānadvayagocaro bhavati | (It results from the perfected nature alone for the
+          other natures do not become the sphere of the two awarenesses of purity.) (8) kathaṃ
+          trividhe mūlatattve saṃgrahatattvaṃ veditavyam | (How should the reality of what is
+          collected be understood in relation to the threefold reality of the foundation?)
+          nimittasya vikalpasya nāmnaś ca dvayasaṃgrahaḥ | (The collection of the sign, the concepts
+          and name is from two.) yathāyogaṃ pañca vastūny ārabhya nimittavikalpayoḥ paratantreṇa
+          saṃgraho nāmnaḥ parikalpitena | (Beginning with the five categories, according to which is
+          appropriate, there is the collection (1) of signs and (2) concepts in accordance with the
+          other-dependent [nature and the collection] (3) of name in accordance with the imagined
+          [nature].) samyagjñānasattvasya ekenaiva ca saṃgrahaḥ ||3.13|| (There is the collection of
+          correct awareness and true essence by means of just one.) tathatāsamyagjñānayoḥ
+          pariniṣpannena svabhāvena saṃgrahaḥ | (The collection (4) of thusness and (5) correct
+          awareness is on account of the perfected nature.) (9) prabhedatattvaṃ mūlatattve kathaṃ
+          veditavyam | saptavidhaṃ prabhedatattvaṃ pravṛttitattvaṃ lakṣaṇatattvaṃ vijñaptitattvaṃ
+          saṃniveśatattvaṃ mithyāpratipattitattvaṃ viśuddhitattvaṃ samyapratipattitattvaṃ ca | yaiva
+          ca saṃdhinirmocanasūtre saptavidhā tathatā nirdiṣṭā | tatra — (How is the reality of
+          division arranged in respect to the reality of the foundation? The reality of division os
+          sevenfold: (a) the reality of activity, (b) the reality of characteristic, (c) the reality
+          of representation, (d) the reality of proper entering, (e) the reality of wrong practice,
+          (f) the reality of purification, and (g) the reality of correct practice. And these seven
+          have been explained in the Saṃdhinirmocanasūtra as the sevenfold thusness. In this
+          regard:) pravṛttitattvaṃ dvividham ((a) The reality of activity is twofold.) mūlatattvaṃ
+          veditavyam | parikalpitaparatantralakṣaṇam | yathā pravṛttitattvaṃ tathā — (The reality of
+          the foundation should be understood as being characterized by the imagined and
+          other-dependent [natures]. Just as is the reality of activity, similarly it is:)
+          saṃniveśakupannatā | (Proper entering and wrong practice. )
+          saṃniveśamithyāpratipattitattve ’pi tathaiva dvividhaṃ mūlatattvam | (The two realities of
+          activity as (a1 = d) proper entering and (a2 = e) wrong practice should be also understood
+          precisely in the sam way as comprising two [of the three] kinds of the reality of the
+          foundation.) ekaṃ lakṣaṇavijñaptiśuddhisamyakprapannatā ||3.14|| (One is [consisting of]
+          (b) the characteristic, (c) the representation, (f) purification, and (g) correct
+          practice.) lakṣaṇatattvādīni catvāry ekaṃ mūlatattvaṃ pariniṣpannalakṣaṇam | (The four
+          realities beginning with that of the characteristic (b,c,f,g) [belong] to just one reality
+          of the foundation, [namely] that characterized as the perfected [nature].) (10)
+          kauśalyatattvaṃ darśanapratipakṣeṇety uktam | katham eṣu skandhādiṣu daśavidham
+          ātmadarśanam | (The reality of skillfulness is said as the counteragent to wrong views.
+          What are the tenfold false views concerning the self in regard to the aggregates etc.?)
+          ________________________________________ ※ ※ ※ ata āha | daśārthārtha iti || tatraiṣāṃ
+          daśānāṃ kauśalyārthānāṃ tatpratipakṣodayabhūtānām arthatattvam arthyate ’ty arthaḥ |
+          paramārthasvabhāvatvāt | atas teṣāṃ daśārthānām arthair daśa kauśalyatattvam
+          ātmadṛṣṭipratipakṣato veditavyam iti || tatraiva vistareṇoktam iha tu granthavistarabhayān
+          na vivakṣitam | tataś ca kim uktaṃ bhavati | sarvavipakṣa[A37v]pratipakṣasvabhāvena sa eva
+          bhagavān veditavya iti || de'i phyir gsungs pa | don bcu'i don zhes so || de la mkhas pa'i
+          don bcu po 'di rnams de'i gnyen po'i phyogs 'byung bar 'gyur ba'i don gyi de kho na ste |
+          don du gnyer bar bya bas don te | dam pa'i rang bzhin gyi phyir ro || de'i phyir bcu po de
+          dag gi don bcu po ni mkhas pa'i de kho na nyid de | bdag tu lta ba'i gnyen por rig par
+          bya'o || rgyas par de nyid du gsungs so || 'dir gzhung mangs su dogs nas ma bris so ||
+          rnam pa bcu po don bcu'i don || zhes pa des ji skad gsungs par 'gyur zhe na | mi mthun
+          pa'i phyogs dang gnyen po'i phyogs thams cad kyi rang bzhin du bcom ldan 'das de nyid rig
+          par bya'o zhes pa'i don to || Just therefore he taught “the pursuit of ten purposes”: In
+          this regard, since its nature is the ultimate purpose, the principle of the purpose of
+          these ten purposes of skillfulness that are the source of remedy of that [tenfold grasping
+          of the self] is what is to be strived for, this is the meaning. Therefore, the tenfold
+          principle of skillfulness is to be known as the remedy for the view of the self, through
+          the pursuit of these ten purposes. In view of just this, here (in this commentary),
+          however, there is no intention of an extensive explanation out of fear of the text’s
+          proliferation. So what then amounts to being said? Just that is the bhagavat who should be
+          realized qua [his] nature that is all adversaries and [their] antidote. ※ ※ ※
+          tatrāviparītapratītyasamutpādopadeśataḥ saṃbhāvitāśeṣapuṇyajñānasaṃbhāraiśvaryasamṛddher
+          niruttarasya śāstuḥ śrāvakapratyekabuddhamunīnām adhipater munīndratvaṃ sudurlabham iti |
+          ata āha || munīndra iti || ata evoktam ācāryanāgārjunapādaiḥ — [gang gis skye dang 'jig pa
+          dag || 'di yi tshul gyis rab spangs pa ||] deest Skt. namas tasmai munīndrāya
+          pratītyotpādavādine || ityādi || daśa tathāgatabalāni | tadyathā sthānāsthānajñānabalam |
+          karmavipākajñānabalam | nānādhātujñānabalam | nānādhimuktijñānabalam |
+          indriyaparāmarśajñānabalam | nānāsamādhisamāpattijñānabalam |
+          sarvatragāminīpratipajjñānabalam | cyutyupapattijñānabalam | pūrvanivāsānusmṛtijñānabalam
+          | āsravakṣayajñānabalam iti || idaṃ ca daśajñānabalaṃ bhagavatsvabhāvasya
+          balaviśeṣaprabhāvitatvāt | avikalpasamatayā sthānādiprapañcādhigamād ity ata āha ||
+          daśabala iti | tāni ca daśa tathāgatabalāni vidyante yasya sa tathoktaḥ | ata eva [A38r]
+          vibhur iti | māhātmyaṃ sthiracalasarvabhāvasvabhāvatvāt | thub dbang zhes pa ni | de la
+          phyin ci ma log par rten cing 'brel par 'byung ba'i don nye bar ston cing | bsod nams dang
+          ye shes kyi tshogs ma lus par bsags pa'i dbang phyug yang dag par 'phen pa bla na med pa'i
+          ston pa | nyan thos dang rang sangs rgyas kyi thub pa rnams kyi bdag po ni thub pa'i dbang
+          po de nyid de | rnyed par dka' ba'i phyir ro || de'i phyir gsungs pa | thub dbang zhes so
+          || de nyid kyi phyir na 'phags pa klu sgrub snying po'i zhal snga nas kyis gsungs pa |
+          gang gis skye dang 'jig pa dag || 'di yi [f. 53v] tshul gyis rab spangs pa || rten cing
+          'brel 'byung gsungs pa yi || thub dbang de la phyag 'tshal te || zhes so || stobs bcu zhes
+          pa ni | de la de bzhin gshegs pa'i stobs bcu rnams ni 'di lta ste | gnas dang gnas ma yin
+          pa mkhyen pa'i stobs dang | dbang po mchog dang mchog ma yin pa mkhyen pa'i stobs dang |
+          khams sna tshogs mkhyen pa'i stobs dang | ting nge 'dzin dang snyoms par 'jug pa sna chogs
+          mkhyen pa'i stobs dang | kun nas nyon mongs pa dang rnam par byang ba mkhyen pa'i stobs
+          dang | las kyi rnam par smin pa mkhyen pa'i stobs dang | thams cad du 'gro ba'i lam mkhyen
+          pa'i stobs dang | sngon gyi gnas rjes su dran pa mkhyen pa'i stobs dang | 'chi 'pho dang
+          skye ba mkhyen pa'i stobs dang | zag pa zad pa mkhyen pa'i stobs te | de ni ye shes kyi
+          stobs rnam pa bcu po 'di yang bcom ldan 'das kyis mthu stobs kyi khyad par rab tu bsgoms
+          pa'i phyir dang | rtog pa med pa mnyam pa nyid kyis gnas la sogs pa'i spros pa thugs su
+          chud pa'i phyir ro || de'i phyir gsungs pa | stobs bcu zhes pa ste | de bzhin gshegs pa'i
+          stobs bcu po de dag thams cad dang gang ldan pa de ni de skad ces gsungs so || de nyid kyi
+          phyir na khyab bdag ni bdag nyid chen po ste | g.yo ba dang mi g.yo ba thams cad kyi dngos
+          po'i rang bzhin nyid kyi phyir ro || Given this, through the correct instruction of
+          dependent origination and since the success of lordship through the accumulations of merit
+          and wisdom without remainder has been brought about, there is the rare state of the lord
+          of sages, of the unequaled teacher, master of śrāvakas, pratyekabuddhas and sages, and
+          therefore thus he teaches “Munīndra.” Just therefore it has been taught by the venerable
+          teacher Nāgārjuna: “To him, who is free from the two, birth and cessation in that manner,
+          to the lord of sages and teacher of dependent origination, we pay homage.” The ten powers
+          of a tathāgata are just like this: (1) the power of knowledge of what is possible and what
+          is impossible, (2) the power of knowledge about the ripening of karman, (3) the power of
+          knowledge about the various elements, (4) the power of knowledge about the various
+          beliefs/inclinations of beings, (5) the power of knowledge that is distinguishing the
+          capacities [of beings], (6) the power of knowledge about the various concentrations and
+          absorptions, (7) the power of knowledge about the paths leading everywhere [i.e., to all
+          destinations of rebirth], (8) the power of knowledge about the death and birth [of
+          beings], (9) the power of knowledge of remembering previous lives, and (10) the power of
+          knowledge of defilements that were destroyed. And this is the tenfold power of knowledge
+          because the nature of the bhagavat gave rise to the distinct powers and because of
+          realizing “what is possible” and so forth [i.e., the ten powers] as mental elaborations by
+          means of their nonconceptual sameness. Thus, for this reasons, [the bhagavat] taught
+          “having ten powers”: And he who is known to have these ten powers of a tathāgata, is the
+          thus-taught [bhagavat] (ṣaṣthī-bahuvrīhi). And precisely therefore, [he is also] the
+          “lord”: A majestic state because of the nature that is the essence of everything
+          stationary and moving. ※ ※ ※ [[aśeṣaviśvārthakaro daśākāravaśī mahān || 6.4 cd (45 cd) kun
+          gyi don ni ma lus byed || rnam bcu dbang ldan che ba po || Accomplishing the benefit for
+          the entire world, he is great with mastery of the ten aspects.]] aśeṣaviśvārthakara iti |
+          aśeṣasya niravaśeṣasya viśvasya kṛtsnasya jagato ’rtho ’śeṣaviśvārthaḥ | taṃ kartuṃ śīlaṃ
+          yasyāsāv aśeṣaviśvārthakaro bhagavān || kun gyi don ni ma lus byed ces pa ni | ma lus
+          shing lus pa med pa'i 'gro ba'i don byed pa ni | kun gyi don ni ma lus byed ces so || de
+          byed pa'i tshul dang gang ldan pa de ni | kun gyi don ni ma lus byed ces pa ste | bcom
+          ldan 'das so || “Accomplishing the benefit for the entire whole”: Entire [means] without
+          remainder, whole [means] the entire world, [and] the benefit for (ṣaṣthī-tatpuruṣa) is
+          [when all put together] “the benefit for the entire whole;” [and] to create that
+          (dvitīyā-tatpuruṣa) is the repeated habit (ṣaṣṭī-bahuvrīhi) of him who is bhagavat
+          accomplishing the benefit of the entire whole. daśākāravaśī mahān iti | tatra daśākārā
+          daśa vaśitāḥ | tadyathā āyurvaśitā | karmavaśitā | pariṣkāravaśitā | adhimuktivaśitā |
+          praṇidhivaśitā | ṛddhivaśitā | upapattivaśitā | dharmavaśitā | cittavaśitā | jñānavaśiteti
+          || tān daśākārān vaśitālakṣaṇān dharmān vaśe vartayituṃ śīlaṃ yasyāsau daśākāravaśī | ataś
+          ca sarvavaśitādharmaprāptatvād eva mahān ity ucyate || rnam bcu dbang ldan che ba po ||
+          zhes pa ni | de la rnam bcu ni dbang bcu'o || 'di lta ste | tshol dbang ba dang | las la
+          dbang ba dang | yo byad la dbang ba dang | mos pa la dbang ba dang | smon lam la dbang ba
+          dang | rdzu 'phrul la dbang ba dang | skye ba la dbang ba dang | chos la dbang ba dang |
+          sems la dbang ba dang | ye shes la dbang ba zhes so || dbang ba rnam pa bcu po de dag gi
+          mtshan nyid chos rnams la dbang du gyur pa'i tshul dang gang ldan pa de ni rnam bcu dbang
+          [f. 54r ldan te | de'i phyir yang thams cad la dbang ba'i chos brnyes pa'i phyir che ba po
+          zhes gsungs so || “The greatest with mastery of the ten aspects”: Regarding that, just
+          that are the ten aspects that are the ten masteries: (1) the mastery of long life, (2) the
+          mastery of karman, (3) the mastery of utensils/necessities, (4) the mastery of conviction,
+          (5) the mastery of resolve, (6) the mastery of magical abilities, (7) the mastery of
+          rebirth, (8) the mastery of dharmas, (9) the mastery of mind, and (10) the mastery of
+          cognition. Being in control of these domains, the ten aspects characterized by mastery
+          (dvitīyā-tatpuruṣa), which means he whose repeated habit is to display [these] ()
+          (bahuvrīhi), that the one who has mastery of the ten aspects. And on account of that,
+          precisely because of his state in which there is mastery of the acquired domains, he is
+          called “great.” ※ ※ ※ [[anādhir niṣprapañcātmā śuddhātmā tathatātmakaḥ | 6.5 ab (46 ab)
+          thog ma med pa spros med bdag || de bzhin nyid bdag dag pa'i bdag || Beginningless, with a
+          nature without mental elaboration, of pure nature, with suchness as his nature.]] anādir
+          iti | na vidyate ādir utpattir yasyāsāv anādiḥ || utpādābhāvād vināśo nāstīty arthād
+          gamyate || apratiṣṭhita [nirvāṇa] ñānalābhād ādinidhane naṣṭa ity arthaḥ || thog ma med pa
+          zhes pa ni | thog ma ste skye ba med pa gang yin pa de ni thog ma med pa'o || skye ba med
+          pa'i phyir na 'jig pa'ang med par don gyi shugs las shes par bya'o || mi gnas pa'i mya
+          ngan las 'das pa'i ye shes thob pa'i phyir thog ma dang tha ma bcom pa zhes pa'i don to ||
+          “Beginningless”: Who is without a beginning (bahuvrīhi), i.e., an origin, that one is
+          beginningless. Due to the absence of production, there neither is cessation, thus it is
+          actually to be realized. Because he obtained the gnosis of the Nirvāṇa beyond location, he
+          destroyed the beginning and end, thus is the meaning. niṣprapañcātmeti | prapañcāḥ
+          skandhadhātvāyatanagrāhyagrāhakalakṣaṇā dharmās teṣām ātmā svarūpam | nirgataḥ [A38v]
+          prapañcātmā yasmād asau niṣprapañcātmā | spros med bdag ces pa ni | spros pa ni phung po
+          dang khams dang skye mched dang | gzung 'dzin gyi mtshan nyid kyi chos de rnams kyi bdag
+          nyid de rang gi ngo bo dang bral ba ni | gang gi phyir 'di spros pa med pa'i bdag nyid yin
+          pa | “Nature without mental elaboration”: mental elaborations are phenomena that have as
+          their characteristics of / that are perceived through object and subject in regard to
+          aggregates, elements and spheres of activity. Whose nature, ,i.e., natural state, of these
+          (pañcamī-tatpuruṣa) is one from whom the mental elaborations have vanished
+          (pañcamī-bahuvrīhi), is the one whose nature is without mental elaborations. ata eva
+          śuddhātmeti | āgantukamalāpagamāt || na punar asya svabhāvānyathātvam | ata eva
+          tathatātmaka iti || tatra tathatā | ananyathātvena tathatā | nityaṃ tathaiveti kṛtvā |
+          saivātmā svabhāvo yasya sa tathatātmakaḥ śūnyatāsvabhāva ity arthaḥ || de nyid kyi phyir
+          na | de bzhin nyid bdag [dag] ces pa ni | [...] de la de bzhin nyid ni gzhan du mi 'gyur
+          bas na de bzhin nyid kyi don to || rtag pa dang de bzhin nyid ces bya bar byas pas na de
+          bzhin nyid kyi bdag nyid de rang bzhin gang yin pa de ni de bzhin nyid bdag ste | stong pa
+          nyid kyi rang bzhin zhes pa'i don to || And precisely therefore [he taught] “of pure
+          nature”: because adventitious stains are vanished, his nature is free from alteration
+          (bahuvrīhi). Just therefore [he has] “suchness as his nature”; suchness in regard to that,
+          suchness unalterable. Understanding it as nothing but permanent, he whose nature, that is,
+          natural state, is just that (karmadhāraya), is the one with suchness as his nature
+          (ṣaṣthī-bahuvrīhi), [meaning] whose natural state is emptiness, thus is the meaning. ※ ※ ※
+          [[bhūtavādī yathāvādī tathākārī ananyavāk || 6.5 cd (46 cd)| yang dag smra zhing tshig
+          gzhan med || ji skad smra ba de bzhin byed || Teaching the truths, speaking as is and
+          acting alike, his speech is not otherwise.]] bhūtavādīti | tatra bhūtāni caturāryasatyāni
+          | [tāni] duḥkhasamudayanirodhamārgākhyam | tāni vadituṃ gadituṃ śīlaṃ yasya sa tathā ||
+          athavā gambhīrapratītyasamutpādārthair bhūtārthaḥ | taṃ vaditum iti pūrvavat || ata
+          evoktam āryanāgārjunapādaiḥ — nāpaneyam ataḥ kiṃcit prakṣeptavyaṃ na kiṃcana | draṣṭavyaṃ
+          bhūtato bhūtaṃ bhūtadarśī vimucyate || iti | yathāvādī tathākārīti | yathaiva sarvadharmāḥ
+          śūnyā anātmāno māyāsvapnamarīcigandharvanagarodakacandropamā iti vadati | tathaiva
+          manasikaraṇād yathāvādī tathākārīty ucyate || ata eva ananyavāg iti | satyavāk
+          sarvasattvānāṃ yathāgotratayāviparī[A39r]tadharmacakrapravarttanatvāt | bden par smra
+          zhing zhes pa ni | de la bden pa ni 'phags pa'i bden pa bzhi'o || de rnams smra bar byed
+          pa'i tshul dang gang ldan pa de la de skad ces bya'o || yang na rten cing 'brel par 'byung
+          ba zab mo'i don ni bden pa'i don to || de smra bar byed pa ni gong ma dang 'dra'o || de
+          nyid 'phags pa klu sgrub snying po'i zhabs kyis gsungs pa | 'di la bsal ba ci yang med ||
+          gzhag par bya ba ci yang med || yang dag nyid la yang dag lta || yang dag mthong na rnam
+          par gro[l] || zhes so || tshig mi 'gyur zhes pa ni sems can thams cad la rigs ji lta ba
+          bzhin du phyin ci ma log pa'i chos kyi 'khor lo bskor ba'i phyir ro ||misplaced
+          repetition, to be disgeraded ji skad smras pa de bzhin byed || ces pa ni | ji ltar chos
+          thams cad stong pa dang | bdag med pa dang | sgyu ma dang | rmi lam dang | smig rgyu dang
+          | dri za'i grong khyer dang | chu zla lta bu zhes ston cing de bzhin du yid la'ang byed
+          pa'i phyir na | ji skad smras pa de bzhin byed || ces gsungs so || de nyid kyi phyir tshig
+          mi 'gyur zhes te | bden pa'i tshig gis sems can thams cad [f. 54v] la rigs ji lta ba bzhin
+          du phyin ci ma log pa'i chos kyi 'khor lo bskor ba nyid kyi phyir ro || “Teaching the
+          truth”: Here, [“truth” is] the four truths of the noble ones—called suffering, cause,
+          cessation and path. He whose repeated habit it is (ṣaṣthī-bahuvrīhi) to teach, i.e., to
+          utter these (dvitīyā-tatpuruṣa), is so called. Or else, the meaning of truth is the
+          meaning of profound interdependent origination; this he teachers, thus it was previously
+          explained. Just therefore it has been taught by the venerable master Nāgārjuna: Nothing
+          whatsoever is to be removed, [and] nothing whatsoever is to be added. Truth is to be
+          realized in accordance with truth [and so] the seer of truth is totally liberated.
+          “Speaking as is and acting alike”: He teaches just as is, i.e., that all dharmas are empty
+          and without a self similar to illusions, dreams, mirages, the city of Gandharvas, or [a
+          reflection] of the moon in water [and he acts] just alike because he is engaging mentally,
+          thus he is called “speaking as is and acting alike.” Precisely therefore “his speech is
+          not otherwise”: his speech is true because he is, unerringly, setting in motion the the
+          dharma-wheel for all living beings in accordance with [their] respective conditions
+          (gotratā). ※ ※ ※ [[advayo ’dvayavādī ca bhūtakoṭivyavasthitaḥ | 6.6 ab (47ab) gnyis su med
+          dang gnyis med smra || yang dag mtha' la rnam par gnas || Non-dual but speaking the dual,
+          he is present at the pinnacle of truth.]] advaya iti | dvayasya grāhyagrāhakasyābhāvaḥ |
+          tasyābhāvasya bhāvo 'dvaya ucyate | bhagavān paramārthato 'dvayo 'pi saṃvṛtyādvayavādī ca
+          || bhūtakoṭivyavasthita iti | aviparyāsārthena bhūtakoṭiḥ | viparyāsasyāvastutvāt | tasyāṃ
+          bhūtakoṭyāṃ vyavasthitaḥ | tatsvabhāvāvyatirekatvāt || gnyis med ces pa ni gzung 'dzin
+          gnyis med pa ste | de'i med pa'i dngos po ni gnyis med ces gsungs te | de ni bcom ldan
+          'das de nyid do || don dam par gnyis med na yang kun rdzob tu gnyis su [med par] ston pa'o
+          zhes so || yang dag mtha' la rnam par gnas | zhes pa ni phyin ci ma log pa'i don gyis yang
+          dag mtha' ste | phyin ci log gi gzhi med pa'i phyir ro || yang dag pa'i mtha' de la rnam
+          par gnas pa de ni de'i rang bzhin dang dbyer med pa'i phyir ro || “Non-dual”: The
+          nonexistence of both, i.e., of object and subject, is the state of the nonexistence of
+          that [and that] is called non dual. The bhagavat, non-dual in the ultimate sense, also
+          speaks about the non-dual on the relative level. “Present at the pinnacle of truth”: The
+          pinnacle of truth inasmuch as the meaning is not mistaken because of the state in which
+          error may not exist. He is present in that pinnacle of truth (saptamī-tatpuruṣa) because
+          his state is not different from its nature. ※ ※ ※ [[nairātmyasiṃhanirnādī
+          kutīrthyamṛgabhīkaraḥ || 6.6 cd (47cd) bdag med seng ge'i sgra dang ldan || mu stegs ri
+          dags ngan 'jigs byed || With the lion’s roar of lacking a self, he frightens the deer
+          following the contemned path.]] nairātmyasiṃhanirnādīti || tatra trividhaṃ nairātmyam |
+          alakṣaṇanairātmyaṃ vilakṣaṇanairātmyaṃ svalakṣaṇanairātmyaṃ ca || nairātmyatritayam eva
+          siṃho nairātmyasiṃhaḥ | sarvatrācchambhitatvāt siṃha iva siṃhaḥ | tasya nairātmyasiṃhasya
+          nirnādaḥ sa yasyāstīty asau nairātmyasiṃhanirnādīty ucyate || bdag med seng ge'i sgra dang
+          ldan || zhes pa ni | de la bdag med pa ni rnam pa gsum ste | mtshan nyid med pas bdag med
+          pa dang | mi mthun pa'i mtshan nyid kyis bdag med pa dang | rang gi mtshan nyid kyis bdag
+          med pa'o || bdag med pa gsum po de nyid seng ge bas na | bdag med seng ge ste | kun la
+          nyam ming ba nyid kyi phyir seng ge dang 'dra bas seng ge ste | bdag med pa'i seng ge'i
+          sgra ni bdag med seng ge'i sgra'o de dang gang ldan pa de bdag med seng ge'i sgra dang
+          ldan zhes gsungs so || “The lion’s roar of lacking a self”: Here, the absence of a self is
+          threefold: lacking a self that is without characteristic, lacking a self different in
+          characteristic from that [which is without characteristic], and lacking a self as the own
+          characteristic. Precisely this threefold absence of a self is the lion (karmadhāraya).
+          Because he [i.e., Mañjuśrī,] is never afraid, the [word] “lion” [in the compound “lion of
+          lacking a self,” means] “like a lion” (upamānottarapadakarmadhāraya). He who possesses the
+          roar of this lion lacking a self, is the one being called “With the lion’s roar of lacking
+          a self.” kutīrthyamṛgabhīkara iti | nirvāṇasarasy avataraṇārtho mārgas tīrtham | tena
+          vyavaharantīti tīrthyāḥ | kutsitāś ca te tīrthyāś ca kutīrthyāḥ | ata eva mṛgā
+          nairātmyasiṃhanādabhīrutvāt | bhiyaṃ kartuṃ śīlaṃ yasyeti bhīkaraḥ | kutīrthyamṛgānāṃ
+          bhīkaraḥ | tathā coktaṃ — śūnyatāsiṃ[A39v]hanādena trāsitāḥ sarvavādinaḥ | yatra yatra
+          viśanty ete tatra tatraiva śūnyatāḥ || iti || mu stegs ri dgas ngan 'jigs byed || ces pa
+          ni mya ngan las 'das pa'i rgya mtshor 'jug pa'i don gyis lam ni mu dang stegs te | des na
+          mu yang yin la mu stegs kyang yin pas mu stegs ngan pa'o || de nyid kyi phyir na ri dgas
+          te | bdag med pa'i seng ge'i sgras 'jigs pa'i phyir ro || 'jigs par byed pa'i tshul gang
+          yin pa de ni 'jigs par byed pa ste | mu stegs ri dgas ngan pa rnams 'jigs par byed pa ni
+          mu stegs te ri drags ngan pa 'jigs byed do || de ltar gsungs pa | g stong ba nyid kyi yi
+          ge sgras || rgol ba thams cad skrag par 'gyur || gang dang gang la 'jug na yang || de dang
+          de la stong pa nyid || ces so || “He frightens the deer following the contemned path”: “a
+          place to cross over” (i.e., parth of pilgrimage; tīrtha) denotes a path that has as its
+          goal the descending into the lake of nirvāṇa. Those who are applying that [path] are
+          called “belonging the path” (i.e., pilgrim; tīrthya). But those belonging to the path and
+          are contemned are “belonging to the contemned path” (kutīrthya). For precisely this reason
+          they are [called] deer, because they are afraid of the lion’s roar of lacking a self.
+          Frightening means he whose repeated habit it is (ṣaṣṭī-bahuvrīhi) to cause fear. Causing
+          gear for/among the deer following the contemned path. And accordingly is it taught:
+          “Adherents of all [views] are terrified by lion’s roar of emptiness. Wherever they go,
+          everywhere is only emptiness.” ※ ※ ※ [[sarvatrago ’moghagatis tathāgatamanojavaḥ | jino
+          jitārir vijayī cakravartī mahābalaḥ || 6.7 (48) kun tu 'gro ba'i don yod bgrod || de bzhin
+          gshegs pa'i yid ltar mgyogs || rgyal ba dgra rgyal rnam par rgyal[1.1] || 'khor los sgyur
+          ba stobs po che || sarvatraga iti | tadadhiṣṭhānaprabhavatattvajñānavat sarvatrago
+          nirmāṇakāyas tathāprajñaptaḥ || athavā sarvatraga iti pañca sarvatragāḥ | tatra mahatī
+          bhūmir eṣām iti mahābhūmikāye sarvatra cetasi bhavanti | te ca tāvat
+          sparśamanaskāravedanāsaṃjñācetanātmakā dharmāḥ | te vidyante yasyāsau sa sarvatraga iti ||
+          kun du 'gro ba zhes pa ni byin rlabs las byung ba'i shes pa bzhin du kun du 'gro bas na
+          sprul pa'i sku ste | de ltar bdag brtags pa'i phyir ro || yang na kun du 'gro ba ni lnga
+          kun 'gro ba ste | de la 'di rnams ni sa chen po zhes bya ste/ sa chen po'i ris thams cad
+          kyi sems las byung bar gyur pa ste | de la yang re zhig reg pa dang | yid la byed pa dang
+          | tshor [f. 55r] ba dang | 'du shes dang | sems pa'i bdag nyid kyi chos rnams so || de
+          rnams dang gang ldan pa de ni kun du 'gro ba zhes so || “Going everywhere”: Like the
+          awareness of reality that has the being empowered by this [reality as its] origin, “going
+          everywhere” [expresses] the body of emanation thus-conceived. Or else, “going everywhere”
+          [means] the five kinds of “going everywhere.” In respect to that, called “the great level
+          of these” is their arising everywhere in the mind in the sphere of the great level. And
+          just these are properties consisting of touch, mental activity, feeling, perception and
+          consciousness. He who possesses knowledge of these, that one is called “going everywhere.”
+          amoghagatir iti | amoghā abandhyā gatir gamanaṃ yasyāsāv amoghagatiḥ || tathāgatamanojava
+          iti ekakṣaṇenaivāmeyalokadhātvatikramaṇāt || jina iti jitā hy anenākuśalā dharmā iti jina
+          ucyate || jitārir iti | arayaḥ kleśāḥ jitā hy aneneti jitāriḥ | tataś ca vijayīti vijayo
+          'syāstīti vijayī || don yod stabs zhes pa ni don yod ni bcings pa med pa'o || stabs ni
+          'gro ba ste | de dang gang ldan pa de ni don yod stabs so || de bzhin gshegs pa'i yid ltar
+          mgyogs zhes pa ni skad cig ma gcig kho nas gzhal du med pa'i 'jig rten gyi khams kun du
+          'gro ba'i phyir ro || rgyal ba zhes pa ni mi dge ba'i chos rnams las 'dis rgyal ba'i phyir
+          na rgyal ba zhes gsungs so || rnam rgyal zhes pa ni rnam par rgyal ba dang ldan pa yin pas
+          na rnam rgyal lo || dgra las rgyal zhes pa ni dgra ni nyon mongs pa rnams so || 'dis de
+          las rgyal ba'i phyir na dgra las rgyal lo || cakravartīti | cakravartinaś catvāraḥ
+          paṭhyante abhidharme || teṣāṃ ca samutpattiḥ kadā | kiṃcakriṇaḥ | kiṃ yugapad utpannāḥ |
+          kiṃyāyina ity ata āha vasuban[A40r]dhuḥ — cakravartisamutpattir nādho 'śītisahasrakāt |
+          suvarṇarūpyatāmrāyaś cakriṇas te 'dharakramāt || ekadvitricaturdvīpā na ca dvau saha
+          buddhavat | pratyudyānasvayaṃyānakalahāstrajito 'vadhāḥ || iti || tadākāreṇa pratibhāsanāc
+          cakravartī || athavā śrīsamvaro[2.1]ktaḥ | cakravartīrūpatvāc cakravartī | ata eva
+          mahābala ｢iti | mahānti ca tāni balāni ceti mahābalāni caturaṅgāni | tāni vidyante yasya
+          sa mahābala ity ucyate｣ || 'khor los sgyur ba zhes pa ni chos mngon pa las 'khor los sgyur
+          ba bzhi zhes brjod do || de rnams kyi yang 'byung ba'i dus ni gang 'khor lo ni ji lta bu
+          dang ldan | cig car 'byung ngam | ji lta bu'i 'gro ba yin zhe na | de'i phyir dbyig gnyen
+          zhabs kyis gsungs pa | 'khor los sgyur ba 'byung ba ni || stong phrag brgyad cu las mi
+          'phyi || gsi(e)r dngul zangs lcags 'khor lo can || de dag gling gcig gling gnyis dang ||
+          gsum dang bzhi lam rim pa bzhin || phas bsu rang 'gro g.yul bshams dang || mtshon brtsams
+          pas rgyal gnod pa med || lhan cig gnyis min sangs rgyas bzhin || zhes so || de'i tshul
+          gyis so sor snang ba'i[3.1] 'khor los sgyur ba'o || yang na dpal bde mchog gi rgyud las
+          gsungs pa | 'khor los sgyur ba'i gzugs nyid kyi phyir na 'khor los sgyur ba'o || de nyid
+          kyi phyir stobs po che zhes pa ste | chen po yang de yin la stobs kyang de yin pas stobs
+          chen ni dpung gi tshogs yan lag bzhi'o || de dang gang ldan pa de stobs po che zhes gsungs
+          so || gaṇamukhyo gaṇācāryo gaṇeśo gaṇapatir vaśī | 6.8ab (49ab) tshogs kyi slob dpon
+          tshogs kyi gtso || tshogs rje tshogs bdag dbang dang ldan || iti || tatra gaṇamukhya iti
+          gaṇāḥ śrāvakagaṇās teṣāṃ mukhyaḥ pradhāna ity arthaḥ | gaṇācārya iti gaṇāḥ
+          pratyekabuddhagaṇās teṣām aviparītopadeśadānād ācāryo mañjuśrīr eva || gaṇeśa iti gaṇā
+          bodhisattvagaṇās teṣām īśo gaṇeśaḥ || gaṇapatir iti gaṇās tathāgatasamūhās teṣāṃ patiḥ
+          svāmī bodhicittasvabhāvatvāt | ata eva vaśī | tattatsvabhāvasaṃdarśanatayā
+          sarvarūpaprakāśakatvāt || zhes pa ni | de la ｢tshogs ni nyan thos kyi tshogs so || de
+          rnams kyi mchog ni tshogs kyi mchog ste gtso bo zhes pa'i don to｣ || tshogs kyi slob dpon
+          ni tshogs ni rang rgyal gyi tshogs so || de rnams kyi phyin ci ma log pa'i man ngag ston
+          [f. 55v] pa'i phyir na slob dpon te 'jam dpal nyid do || tshogs rje zhes pa la tshogs ni
+          byang chub sems dpa'i tshogs te | de rnams kyi rje bo ni tshogs rje'o || tshogs bdag ces
+          pa ni | tshogs ni de bzhin gshegs pa'i tshogs so || de rnams kyi bdag po ni rje bo ste |
+          byang chub kyi sems kyi rang bzhin nyid kyi phyir ro || de nyid kyi phyir na dbang ldan te
+          | de dang de'i rang bzhin yang dag par bstan pa nyid kyis thams cad kyi rang bzhin bstan
+          pa'i phyir ro || mahānubhāvo dhaureyo 'nanyaneyo mahānayaḥ || 6.8cd (49cd) mthu chen gces
+          pa 'dzin pa ste || tshul chen gzhan gyis 'dren pa min || He is almighty and bears the
+          burden with a great method and not influenced by others. iti || tatra mahānubhāva iti |
+          anubhāvo māhātmyaṃ mahāṃś cāsāv anubhāvaś ca mahānubhāvaḥ | dhaureya i[A40v]ti |
+          dharmadhuri sādhuḥ | dhaureyaḥ || ananyaneya iti | na anyaneyo 'nanyaneyo
+          gambhīradharmādhimuktitvāt | tathā cādhimuktipradhānyaṃ hi svasiddhāntāt parapravādibhir
+          apahartuṃ na śakyata ity asāv ananyaneya iti || mahāṃś cāsau nayaś ca mahānayaḥ | mahopāya
+          ity arthaḥ || ces pa ni | de la mthu chen zhes pa ni || [mthu ni] che ba'i bdag nyid do ||
+          che ba yang de yin la mthu yang de nyid yin pas mthu chen no || gces pa 'dzin zhes pa ni
+          ｢gces pa ni legs pa'i chos 'dzin pa'o ||｣ ｢tshul chen ni chen po yang de yin la tshul yang
+          de nyid yin pas tshul chen te | thabs chen zhes pa'i don to || gzhan gyi dring mi 'jog pa
+          ni gzhan gyi dring mi 'jog pa ste | chos zab mo la mos pa nyid kyi phyir ro || de ltar
+          yang mos pa gtso bo yin pa'i phyir rang gi grub pa'i mtha' las rgol ba gzhan rnams kyis
+          dbrog par mi nus pas de ni gzhan gyi dring mi 'jog pa'o ||｣ ※ ※ ※ vāgīśo vākpatir vāgmī
+          vācaspatir anantagīḥ | 6.9ab (50ab) tshig rje tshig bdag smra mkhas pa || tshig la dbang
+          ba tshig mtha' yas || iti || tatra vāgīśa iti | vācām [4.1]īśo vāgīśaḥ |
+          arthapratisaṃvillābhāt || vākpatir iti vācāṃ patir vākpatiḥ svāmīty arthaḥ |
+          niruktipratisaṃvillābhāt || vāgmīti pravaktā dharmapratisaṃvillābhāt || vācaspatir iti
+          pratibhānapratisaṃvillābhāt | sādhumatyāṃ bhūmau catuṣpratisaṃvillābhād dharmabhāṇaka ity
+          ucyate || ata evāha | anantagīr iti | anantā gīr vāg yasyāsau anantagīḥ | sarvabhāṣābhiḥ
+          sarvasattvānāṃ yathābhavyatayā dharmacakrapravartakatvāt || zhes pa ni | de la tshig rje
+          ni tshig rnams kyi rje bo ni tshig rje ste | don so so yang dag par rig pa thob pa'i phyir
+          ro || tshig bdag ni tshig kun gyi gtso bo zhes pa'i don to || nges pa'i tshig so so yang
+          dag par rig pa thob pa'i phyir ro || smra mkhas pa ni chos so so yang dag par rig pa thob
+          pa'i phyir ro || tshig la dbang ba ni spobs pa so so yang dag par rig pa thob pa'i phyir
+          ro || sa legs pa'i blo gros la so so yang dag par rig pa bzhi thob pas na chos brjod par
+          mkhas pa zhes bya'o zhes gsungs so || de nyid kyi phyir tshig mtha' yas zhes gsungs so ||
+          mtha' yas pa'i tshig [gi dag] dang ldan pa de ni tshig mtha' yas te | skad thams cad kyis
+          sems can thams cad la ji ltar skal pa dang ldan pa nyid du chos kyi 'khor lo bskor ba nyid
+          kyi phyir ro || ※ ※ ※ satyavāk satyavādī ca catuḥsatyopadeśakaḥ || 6.9 cd (50cd) tshig
+          bden bden par smra ba dang || bden pa bzhi ni ston pa po || iti || tatra satyavāg iti |
+          dve satye yad uta saṃvṛtisatyaṃ paramārthasatyaṃ [A41r] ca | tatra saṃvṛtis tridhā |
+          prajñaptisaṃvṛtiḥ pratipattisaṃvṛtir udbhāvanāsaṃvṛtiś ca tayā saṃvṛtisatyaṃ ||
+          paramārthasatyaṃ tu ekasmāt pariniṣpannād veditavyaṃ | sa punaḥ paramārthas trividhaḥ |
+          arthaparamārthaḥ prāptiparamārthaḥ pratipattiparamārthaś ca | tatrārthaparamārthas tathatā
+          paramasya jñānasyārtha iti kṛtvā || prāptiparamārtho nirvāṇaṃ paramo 'rtha iti kṛtvā ||
+          pratipattiparamārtho mārgaḥ paramo 'syārtha iti kṛtvā || tad etat satyadvayam āśritya
+          yasya vāk pravartate sa satyavāg iti bhaṇyate || de la tshig bden pa ni bden pa gnyis te |
+          'di ltar kun rdzob kyis [f. 56r] bden pa dang don dam pa'i bden pa'o || de la kun rdzob la
+          rnam pa gsum ste | brtags pa'i kun rdzob dang shes pa'i kun rdzob dang brjod pa'i kun
+          rdzob ste | de rnams kyi bden pa'o || don dam pa'i bden pa ni gcig pu yongs su grub pa las
+          rig par bya'o || de yang don dam pa rnam pa gsum ste | don dam pa dang thob pa don dam pa
+          dang sgrub pa don dam pa'o || de la don don dam pa ni de bzhin nyid de | dam pa'i ye shes
+          kyi don zhes bya bas so || thob pa don dam pa ni mya ngan las 'das pa ste | dam pa'i don
+          zhes bya bas so || sgrub pa don dam pa ni lam ste | 'di don dam pa zhes bya bas so || bden
+          pa de gnyis la brten nas 'jug pa'i tshig de ni bden pa'i tshig ces gsungs so || tathā
+          coktaṃ mūlamadhyamake āryanāgārjunapādaiḥ — dve satye samupāśritya buddhānāṃ dharmadeśanā
+          | lokasaṃvṛtisatyaṃ ca satyaṃ ca paramārthataḥ || ye 'nayor na vijānanti vibhāgaṃ satyayor
+          dvayoḥ | te dharmaṃ na vijānanti gambhīre buddhaśāsane || de ltar yang dbu ma'i rtsa ba
+          las 'phags pa klu sgrub zhabs kyis gsungs pa | sangs rgyas rnams kyis chos bstan pa ||
+          bden pa gnyis la yang dag brten || 'jig rten kun rdzob bden pa dang || dam pa'i don gyi
+          bden pa'o || gang dag bden pa de gnyis kyi || rnam dbye rnam par mi shes pa || de yis
+          sangs rgyas bstan pa yi || zab mo'i de nyid rnam mi shes || iti || tataś ca satyavādīti |
+          satyaṃ bhūtaṃ śūnyatāsvabhāvam evaṃ vadituṃ śīlaṃ yasya sa tathā | catuḥsatyopadeśaka iti
+          | sakalajñe[A41v]yābhisaṃkṣepalakṣaṇāni catvāri satyāni | duḥkhasatyaṃ skandhādau
+          viparyāsalakṣaṇam āryāṇāṃ pratikūlatvāt || samudayasatyaṃ samāsato yathoktaṃ duḥkham eva
+          avidyāyāḥ saṃskārādipratyayatvena jātyādiduḥkhahetutvāt || nirodhasatyaṃ sarvadharmāṇāṃ
+          yathārthaṃ parikalpānutpādalakṣaṇatvāt bhagavān mohapratipakṣabhūtaḥ | tadadhigamaṃ ca
+          mārgasatyaṃ | saṃbodhiparipūraṇato maitrīprabhavas tyāgādis teṣāṃ deśakaḥ
+          catuḥsatyopadeśakaḥ || zhes so || de yang bden par smra ba ste zhes pa ni bden pa ni yang
+          dag pa stong pa nyid kyi rang bzhin no || de ltar smra ba'i tshul dang gang ldan pa de ni
+          bden par smra pa ste zhes pa'o || bden pa bzhi ni ston pa po || zhes pa ni | de la bden pa
+          ni shes bya kun mdor bsdus pa'i mtshan nyid rnams te bden pa bzhi'o || sdug bsngal gyi
+          bden pa ni phung po la sogs pa la phyin ci log pa'i mtshan nyid de | 'phags pa dang mi
+          mthun pa'i phyir ro || kun 'byung ba'i bden pa ni mdor bsdu na ji skad gsungs pa'i sdug
+          bsngal nyid ma rig pa'i rkyen gyis 'du byed la sogs pa'i rkyen nyid kyis bden pa ste |
+          sdug bsngal gyi rgyu nyid kyi phyir ro || 'gog pa'i bden pa ni ji lta ji ltar brtags pa'i
+          chos thams cad ji ltar skye ba med pa'i mtshan nyid kyi phyir bcom ldan 'das so || gti mug
+          gi mi mthun pa'i phyogs kyi gnyen por gyur pa de rtogs pa yang lam gyi bden pa ste |
+          rdzogs pa'i byang chub yongs su rdzogs par byed pa byams pa'i mthus gtong ba la sogs pa
+          ste | [f. 56v] de rnams ston pa ni bden pa bzhi ston pa po'o || ※ ※ ※ nānāniryāṇaniryāto
+          mahābhūtaikakāraṇaḥ || 6.10cd (51cd) nges 'byung sna tshogs nges 'byung ba || 'byung ba
+          chen po rgyu gcig pa || iti || tatra nānāniryāṇaniryāta iti | nānāniryāṇāni
+          śrāvakādinirvāṇāni tair niścayena yāto niryātaḥ | yadyadvaineyānāṃ sattvānāṃ
+          cittasantāneṣu tattadrūpeṇa pratibhāsanāt | zhes pa ni | de la | nges 'byung sna tshogs
+          las byung ba || zhes pa la nges 'byung sna tshogs ni nyan thos la sogs pa'i mya ngan las
+          'das pa'o || de rnams kyis nges par 'byung bas na nges 'byung ste | gang zhig gdul bya'i
+          sems can rnams kyi sems kyi rgyud la de'i gzugs su 'byung ba so sor snang ba nyid kyi
+          phyir ro || mahābhūtaikakāraṇa iti | tatra bhū[B29v]tāni catvāri pṛthivyādīni | nanu
+          cākāśasyāpi mahābhūtatvāt pañca ma[F48v]hābhūtāni kathaṃ catvārīti ucyate | mahānti ca
+          tāni bhavanti ceti mahābhūtāni | vipulākāśaviṣayadeśam ākramya avasthānān mahattvam eṣām |
+          pṛthivīdhātvādīnāṃ sādhāraṇāsādhāraṇakarmaviśeṣajatvāc ca bhūtatvaṃ | ato 'syākāśasya
+          mahattvaṃ sarvarūpotpattyavakāśadānān na tu bhūtatvam | asaṃskṛtatvād yato bhāvanārthe
+          bhūḥ | ato na mahābhūtam ākāśam | tasmāc catvāry eva mahābhūtāni | teṣāṃ caturṇāṃ
+          mahābhūtānām eko 'dvitīyaḥ kāraṇaṃ hetur yaḥ sa tathoktaḥ || 'byung ba chen po rgyu gcig
+          po || zhes pa ni | de la 'byung ba ni sa la sogs pa bzhi'o || nam mkha' yang 'byung ba
+          chen po nyid kyi phyir na 'byung ba chen po lnga yin pa las bzhi zhes gsungs pa ci'i phyir
+          zhe na | de rnams ni chen po yang yin la 'byung ba yang yin pas 'byung ba chen po ste |
+          nam mkha'i yul dang phyogs la rgyas par mnan nas gnas pa'i phyir na sa'i khams la sogs pa
+          chen po nyid do || yang sa'i khams [f. 57r] la sogs pa bzhi po de rnams ni thun mong ma
+          yin pa'i las kyi khyad par las 'byung ba nyid kyi phyir na 'byung ba nyid do || de bas nam
+          mkha' ni chen po nyid du yod de | gzugs thams cad skye ba'i go 'byed pa nyid kyi phyir ro
+          || 'byung ba nyid ni ma yin te | 'dus ma byas pa nyid kyi phyir dang | gang gi phyir
+          'byung ba'i don ni dngos po'i don yin pas na | de'i phyir nam mkha' ni 'byung ba chen po
+          ma yin no || de'i phyir na 'byung ba chen po ni bzhi kho na'o || 'byung ba chen po bzhi po
+          de dag ni rgyu ste byed rgyu gcig bu gnyis su med pa gang yin pa de ni de la de ltar
+          gsungs so || ※ ※ ※ arhan kṣīṇāsravo bhikṣur vītarāgo jitendriyaḥ | 6.11ab (52ab) dge slong
+          dgra bcom zag pa zad || 'dod chags bral ba dbang po thul || He is the bhikṣu, and the
+          arhat who exhausted the defilements, he is free from passion and controls his senses. iti
+          || [tatra] bhikṣur iti | tathā cābhidharme catvāro bhikṣavaḥ paṭhyante || yaduta
+          saṃjñābhikṣuḥ bhikṣaṇaśīlo bhikṣuḥ jñaptibhikṣuḥ paramārthabhikṣuś ca | teṣāṃ caturṇām
+          ayaṃ paramārthabhikṣuḥ | bhinnakleśatvāt sarvamārair abhedyatvāc ca || zhes pa ni | de la
+          dge slong ni chos mngon pa las dge slong bzhi brjod de | 'di lta ste ming gi dge slong
+          dang | slong ba'i dge slong dang | bcas pa'i dge slong dang | don dam pa'i dge slong ngo |
+          bzhi po de rnams las 'di ni don dam pa'i dge slong ste | nyon mongs pa dang bral ba nyid
+          kyi phyir dang | bdud thams cad kyis mi phyed pa'i phyir ro ||</p>
+      </div>
+    </body>
+  </text>
 </TEI>
