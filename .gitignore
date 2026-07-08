@@ -42,6 +42,8 @@ fs_eintraege_20260622_061510.xml
 fs_eintraege_20260623_112505.xml
 fs_eintraege_dignaga_seg1-9.xml
 standoff_fs_eintraege_20260621_180805.xml
+nocache_server.py
+start_server.ps1
 
 # Vokabel-Arbeitsdateien
 __01_02Wortliste Neu.xlsx
@@ -57,6 +59,8 @@ todo_vocab.txt
 todo_bericht_dignaga_seg1-9.txt
 vocab_to_tei_web_fixed.zip
 Dignaga_Gesamtvokabular.xlsx
+0__dummy_dignaga.xml
+2_dignaga_beispiel_note_65a.xml
 
 # Textdateien / Rohdaten
 2_dignaga alle Lemmata annotiert 20260127.txt

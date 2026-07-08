@@ -690,6 +690,100 @@ span.tei-s.parallel-active {
   margin-right: 4px;
 }
 
+/* Inline-Fußnoten (<note> im body) — 2026-07-08 */
+.tei-note-marker {
+  position: relative; /* Positionierungs-Kontext für Popup UND Hochstellung */
+  cursor: pointer;
+  color: var(--second-dark, var(--color-muted));
+  font-weight: 700;
+  font-family: var(--font-sans);
+  border-radius: 3px;
+  transition: background 0.15s;
+  /* Hochstellung deutlich verstärkt — die vorherige, dezente Version
+     (top: -0.5em) ging gegen die visuell dichte Tibetan-Schrift optisch
+     unter. Jetzt zusätzlich mit eigenem Hintergrund-Pill, damit die
+     Notiz auch bei kleiner Anzeigegröße eindeutig als Marker erkennbar
+     ist, nicht nur über Größe/Position. — 2026-07-08 */
+  top: -0.9em;
+  vertical-align: baseline;
+  font-size: 0.55em;
+  padding: 1px 3px;
+  background: rgba(139, 115, 85, 0.18);
+  box-shadow: 0 0 0 1px rgba(139, 115, 85, 0.35);
+}
+.tei-note-marker:hover,
+.tei-note-marker:focus {
+  background: rgba(139, 115, 85, 0.32);
+  outline: none;
+}
+.tei-note-marker.footnote-active {
+  background: rgba(139, 115, 85, 0.42);
+}
+/* Farbliche Unterscheidung nach Notiztyp — 2026-07-08
+   editorial: gedämpftes Braun (Standard, wie bisher)
+   critical:  Pflaume (--color-date) — hebt textkritische Apparat-Notizen ab,
+              passend zum †-Symbol das im JS für diesen Typ erzeugt wird */
+.tei-note-marker[data-type="critical"] {
+  color: var(--color-date);
+  background: rgba(122, 59, 110, 0.14);
+  box-shadow: 0 0 0 1px rgba(122, 59, 110, 0.35);
+}
+.tei-note-marker[data-type="critical"]:hover,
+.tei-note-marker[data-type="critical"]:focus {
+  background: rgba(122, 59, 110, 0.28);
+}
+.tei-note-marker[data-type="critical"].footnote-active {
+  background: rgba(122, 59, 110, 0.4);
+}
+/* Echtes schwebendes Popup (Option 1) — schiebt den Text NICHT nach unten weg,
+   sondern legt sich als frei positionierte Box über den nachfolgenden Text.
+   Positionierungs-Anker ist .tei-note-marker (position: relative oben). — 2026-07-08 */
+.footnote-tooltip {
+  position: absolute;
+  top: 1.5em;
+  left: 0;
+  z-index: 60;
+  display: block;
+  width: max-content;
+  max-width: 300px;
+  padding: 8px 12px;
+  background: var(--background-panel);
+  border: 1px solid rgba(0,0,0,0.08);
+  border-left: 3px solid var(--second);
+  border-radius: 0 4px 4px 0;
+  font-family: var(--font-sans);
+  font-size: 13px;
+  line-height: 1.6;
+  font-weight: normal;
+  color: var(--color);
+  box-shadow: 0 2px 10px rgba(0,0,0,0.15);
+  white-space: normal;
+}
+/* Rand-Kollision: Ziffer sitzt weit rechts im Pane, Popup würde über den
+   Viewport-Rand hinauslaufen — stattdessen rechtsbündig an der Ziffer
+   ausrichten (Akzentrand spiegeln, damit es optisch konsistent bleibt). — 2026-07-08 */
+.footnote-tooltip.footnote-tooltip--left {
+  left: auto;
+  right: 0;
+  border-left: 1px solid rgba(0,0,0,0.08);
+  border-right: 3px solid var(--second);
+  border-radius: 4px 0 0 4px;
+}
+.footnote-tooltip.footnote-tooltip--left[data-type="critical"] {
+  border-right-color: var(--color-date);
+}
+.footnote-tooltip[data-type="critical"] {
+  border-left-color: var(--color-date);
+}
+.footnote-type {
+  font-weight: 600;
+  color: var(--second-dark);
+  margin-right: 4px;
+}
+.footnote-type[data-type="critical"] {
+  color: var(--color-date);
+}
+
 /* TEI <s>-Elemente: HTML <s> bedeutet Strikethrough — zurücksetzen — 2026-05-19 */
 .pane s {
   text-decoration: none;

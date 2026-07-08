@@ -27,6 +27,11 @@
  *               Suchzähler: input/change/keyup Events.
  *   2026-05-21  Vokabelregister: buildVocabList(), highlightWord().
  *               projectData.vocab, interp-Loading. Vok.-Tab.
+ *   2026-07-08  Inline-Fußnoten: <note> im body (statt standOff) wird beim
+ *               Rendern zu <sup class="tei-note-marker"> umgewandelt.
+ *               attachFootnotes() zeigt Notiztext per Klick als Tooltip,
+ *               analog zu attachParallelText(). Sprachunabhängig (bo/de/en/
+ *               sa-Latn). Ohne <note> im Text: keine Änderung am Verhalten.
  *
  * Beschreibung:
  *   Kernlogik der Detail-Ansicht:
@@ -930,10 +935,39 @@ function renderPage(pageNum, query = "") {
          * NACH Tag-Entfernung anwenden damit _gnyen nach <br/> auch erfasst wird */
         const formattedClean = formatted;
 
+        /* Inline-Fußnoten: <note place="foot" n="N" type="T" target="...">Text</note>
+         * → hochgestellte Ziffer/Symbol mit data-note (Tooltip-Text). MUSS vor
+         * der <s>/<w>-Verarbeitung laufen, sonst würde der Notiztext wie
+         * normaler Fließtext behandelt bzw. wie ein <w> fehlinterpretiert.
+         * Gilt sprachunabhängig (bo, de, en, sa-Latn, ...), da Notizen an
+         * jeder Textstelle inline sitzen können.
+         * Visuelle Unterscheidung nach @type — 2026-07-08:
+         *   editorial → schlichte Ziffer (Standard-Notiz zur Textkonstitution)
+         *   critical  → Kreuz-Symbol † + Ziffer (klassischer Apparat-Marker
+         *               für Lesart-Varianten, textkritisch hervorgehoben)
+         *   sonst/note → Ziffer wie editorial (Fallback)
+         * Farbliche Unterscheidung erfolgt zusätzlich per CSS über
+         * [data-type="..."] (siehe main.css).
+         * Kommt in einem Text kein <note> vor: Regex matcht nichts, String
+         * bleibt unverändert — kein Sonderfall nötig. */
+        const noteGlyphs = { critical: '†' };
+        const noteRegex = /<note\b([^>]*)>([\s\S]*?)<\/note>/g;
+        const formattedNotes = formattedClean.replace(noteRegex, (match, attrs, inner) => {
+            const nAttr    = (attrs.match(/\bn="([^"]*)"/)    || [, ''])[1];
+            const typeAttr = (attrs.match(/\btype="([^"]*)"/) || [, 'note'])[1];
+            /* Notiztext ist reiner Kommentartext — evtl. verschachtelte Tags entfernen */
+            const noteText = inner.replace(/<[^>]+>/g, ' ').replace(/\s+/g, ' ').trim();
+            const escaped  = escapeHtml(noteText).replace(/"/g, '&quot;');
+            const prefix   = noteGlyphs[typeAttr] || '';
+            const label    = `${prefix}${nAttr || '*'}`;
+            return `<sup class="tei-note-marker" data-type="${typeAttr}" ` +
+                   `data-note="${escaped}" tabindex="0">${label}</sup>`;
+        });
+
         /* TEI <s>-Tags → <span> damit HTML-<s> das OpenType-Shaping
          * des Tibetan-Fonts nicht unterbricht — 2026-05-19
          * Einfachste Lösung: öffnende und schließende Tags direkt ersetzen */
-        const formatted2 = formattedClean
+        const formatted2 = formattedNotes
             /* <s ... xml:id="X" ... corresp="Y" ...> → <span class="tei-s" data-sid="X" data-corresp="Y"> */
             .replace(/<s\b[^>]*\bxml:id="([^"]+)"[^>]*\bcorresp="([^"]+)"[^>]*>/g,
                 (_, id, corresp) => `<span class="tei-s" data-sid="${id}" data-corresp="${corresp}">`)
@@ -1058,6 +1092,7 @@ function renderPage(pageNum, query = "") {
     updateRegisters(page);
     attachInteractivity();
     attachParallelText(page);
+    attachFootnotes();
 }
 
 /**
@@ -1135,6 +1170,106 @@ function attachParallelText(page) {
             document.querySelectorAll('.parallel-tooltip').forEach(t => t.remove());
             document.querySelectorAll('span.tei-s.parallel-active').forEach(s => {
                 s.classList.remove('parallel-active');
+            });
+        });
+    });
+}
+
+/**
+ * Macht inline-Fußnoten klickbar (<note> wurde beim Rendern bereits zu
+ * <sup class="tei-note-marker" data-note="..."> umgewandelt, siehe
+ * renderPage()). Klick/Enter/Space zeigt den vollen Notiztext in einem
+ * Tooltip direkt unter der Ziffer — analog zu attachParallelText().
+ * Bleibt bei jedem erneuten renderPage()-Aufruf idempotent (data-bound-Flag).
+ * Kommen keine Notizen im Text vor: querySelectorAll findet nichts,
+ * forEach läuft einfach nicht — kein Fehlerfall. — 2026-07-08
+ */
+function attachFootnotes() {
+    const typeLabels = {
+        editorial: 'Editorisch',
+        critical:  'Kritischer Apparat',
+        note:      'Notiz'
+    };
+
+    document.querySelectorAll('.tei-note-marker').forEach(marker => {
+        if (marker.dataset.bound === 'true') return; /* Mehrfachbindung vermeiden */
+        marker.dataset.bound = 'true';
+
+        const showTooltip = (e) => {
+            e.stopPropagation();
+
+            /* Bereits offenes Tooltip an dieser Ziffer? Nichts tun (Hover+Klick
+             * sollen sich nicht gegenseitig neu aufbauen). */
+            if (marker.querySelector('.footnote-tooltip')) return;
+
+            /* Vorheriges Fußnoten-Tooltip entfernen */
+            document.querySelectorAll('.footnote-tooltip').forEach(t => t.remove());
+            document.querySelectorAll('.tei-note-marker.footnote-active').forEach(m => {
+                m.classList.remove('footnote-active');
+            });
+
+            marker.classList.add('footnote-active');
+
+            const label = typeLabels[marker.dataset.type] || 'Notiz';
+            const tooltip = document.createElement('span');
+            tooltip.className = 'footnote-tooltip';
+            tooltip.dataset.type = marker.dataset.type;
+            tooltip.innerHTML =
+                `<span class="footnote-type" data-type="${marker.dataset.type}">${label}:</span> ${marker.dataset.note}`;
+
+            /* Als Kind der Ziffer einfügen (nicht "afterend") — dadurch positioniert
+             * sich das absolut positionierte Popup relativ zur Ziffer selbst und
+             * schwebt darüber, statt den nachfolgenden Zeilenfluss zu verschieben. */
+            marker.appendChild(tooltip);
+
+            /* Rand-Kollision prüfen: steht die Ziffer weit rechts, würde das
+             * Popup (das per default links an der Ziffer ausgerichtet ist)
+             * über den Viewport-Rand hinauslaufen. In dem Fall auf
+             * rechtsbündige Ausrichtung umschalten. — 2026-07-08 */
+            /* Gegen den rechten Rand der EIGENEN Spalte prüfen, nicht gegen
+             * das ganze Browserfenster — bei zweispaltigem Layout (linke/
+             * rechte Textzeugen-Spalte) würde sonst ein Popup in der linken
+             * Spalte einfach in die rechte Spalte hineinlaufen, ohne dass
+             * das als Kollision erkannt wird. — 2026-07-08 */
+            const containingPane = marker.closest('.pane') || document.documentElement;
+            const paneRect = containingPane.getBoundingClientRect();
+            const rect = tooltip.getBoundingClientRect();
+            if (rect.right > paneRect.right) {
+                tooltip.classList.add('footnote-tooltip--left');
+            }
+        };
+
+        const hideTooltip = () => {
+            const existing = marker.querySelector('.footnote-tooltip');
+            if (existing) existing.remove();
+            marker.classList.remove('footnote-active');
+        };
+
+        /* Desktop: Hover zeigt/versteckt das Popup direkt.
+         * Touch/Tastatur haben kein Hover — dafür bleibt Klick/Enter/Space
+         * als Fallback erhalten (Tap togglet dann über den Klick-Handler). */
+        marker.addEventListener('mouseenter', showTooltip);
+        marker.addEventListener('mouseleave', hideTooltip);
+
+        marker.addEventListener('click', showTooltip);
+        marker.addEventListener('keydown', (e) => {
+            if (e.key === 'Enter' || e.key === ' ') {
+                e.preventDefault();
+                showTooltip(e);
+            }
+        });
+    });
+
+    /* Klick irgendwo im Pane (außerhalb einer Ziffer) entfernt das Tooltip.
+     * Auf alle Sprach-Panes angewendet, nicht nur "bo", da Notizen auch
+     * z. B. in sa-Latn-Segmenten sitzen können. */
+    document.querySelectorAll('.pane').forEach(pane => {
+        if (pane.dataset.footnoteOutsideBound === 'true') return;
+        pane.dataset.footnoteOutsideBound = 'true';
+        pane.addEventListener('click', () => {
+            document.querySelectorAll('.footnote-tooltip').forEach(t => t.remove());
+            document.querySelectorAll('.tei-note-marker.footnote-active').forEach(m => {
+                m.classList.remove('footnote-active');
             });
         });
     });
