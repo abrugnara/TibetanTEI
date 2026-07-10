@@ -4,7 +4,7 @@
  * Autor:   Albert Brugnara
  *
  * Erstellt: 2025-05-14T10:00:00+02:00
- * Geändert: 2026-05-21T00:00:00+02:00
+ * Geändert: 2026-07-09T00:00:00+02:00
  *
  * Pfad: assets/app/detail.js
  *
@@ -29,9 +29,22 @@
  *               projectData.vocab, interp-Loading. Vok.-Tab.
  *   2026-07-08  Inline-Fußnoten: <note> im body (statt standOff) wird beim
  *               Rendern zu <sup class="tei-note-marker"> umgewandelt.
- *               attachFootnotes() zeigt Notiztext per Klick als Tooltip,
- *               analog zu attachParallelText(). Sprachunabhängig (bo/de/en/
- *               sa-Latn). Ohne <note> im Text: keine Änderung am Verhalten.
+ *               attachFootnotes() zeigt Notiztext als Popup (Hover +
+ *               Klick/Enter/Space), analog zu attachParallelText().
+ *               Sprachunabhängig (bo/de/en/sa-Latn). Ohne <note> im Text:
+ *               keine Änderung am Verhalten. Typ-Unterscheidung: editorial
+ *               = Ziffer, critical = †-Ziffer, je eigene Akzentfarbe.
+ *               Popup schwebt (position:absolute an der Ziffer) statt den
+ *               Zeilenfluss zu verschieben. Rand-Kollision: Popup klappt
+ *               auf .footnote-tooltip--left um, wenn es über den rechten
+ *               Rand der EIGENEN Spalte (nicht des ganzen Fensters) hinausragt
+ *               — wichtig wegen der zweispaltigen Textzeugen-Ansicht.
+ *   2026-07-09  Legende: <span class="wtype-legende-note"> neben den
+ *               Verb/Partikel/Vok.-Checkboxen erklärt die Notiz-Marker
+ *               (kein Toggle, nur Demo-Anzeige). pointer-events:none und
+ *               top:0 auf .wtype-legende .tei-note-marker verhindern
+ *               leere Tooltip-Klicks und neutralisieren den
+ *               Hochstellungs-Offset in der Legenden-Zeile.
  *
  * Beschreibung:
  *   Kernlogik der Detail-Ansicht:
@@ -115,6 +128,21 @@
             text-underline-offset: 2px;
             font-size: 0.85rem;
         }
+        /* Legenden-Erklärung für die Notiz-Marker (kein Toggle, nur Demo) —
+           2026-07-09: pointer-events:none verhindert, dass attachFootnotes()
+           hier ein leeres Tooltip öffnet (Demo-Elemente haben kein
+           data-note); top:0 neutralisiert den Hochstellungs-Offset, damit
+           die Ziffer nicht aus der Legenden-Zeile herausragt. */
+        .wtype-legende-note {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.3rem;
+        }
+        .wtype-legende .tei-note-marker {
+            pointer-events: none;
+            cursor: default;
+            top: 0;
+        }
     `;
 
 
@@ -177,6 +205,13 @@ function wtypeAktualisieren() {
 
 /** @type {ProjectData} */
 let projectData = { pages: [], listPerson: [], listPlaces: [], listRoles: {}, occurrences: {}, vocab: [] };
+
+/* Deep-Link zu einer Notiz per stabiler @n-ID: ?note=<wert> — 2026-07-09.
+ * noteIndex bildet n-Wert → Seiten-n ab (siehe buildNoteIndex()).
+ * initialNoteJumpConsumed verhindert, dass der URL-Parameter bei jedem
+ * Text-Wechsel erneut ausgewertet wird — nur beim allerersten Laden. */
+let noteIndex = {};
+let initialNoteJumpConsumed = false;
 
 /** Aktuell geladener Texteintrag aus texts.js */
 let currentEntry = null;
@@ -388,12 +423,12 @@ function loadText(id) {
     projectData.occurrences = {};
     projectData.vocab       = [];
 
-    const entry = typeof texts !== "undefined" ? texts.find(t => t.id === id) : null;
+    const entry = typeof texts !== "undefined" ? texts.find(t => t.id === id || t.slug === id) : null;
     if (!entry) {
         console.warn(`TibetanTEI: Kein Texteintrag für ID "${id}" gefunden.`);
         return;
     }
-    currentEntry = (typeof texts !== 'undefined') ? (texts.find(t => t.id === id) || null) : null;
+    currentEntry = (typeof texts !== 'undefined') ? (texts.find(t => t.id === id || t.slug === id) || null) : null;
     /* Wenn manuell gewechselt: Ursprungs-Eintrag zurücksetzen */
     if (window.tibetanTEIOriginalEntry &&
         window.tibetanTEIOriginalEntry.id === id) {
@@ -601,6 +636,16 @@ function afterStandOff(xmlDoc) {
                 throw new Error("Kein <body>-Element gefunden.");
             }
 
+            /* Durchgehende Notiz-Nummerierung übers ganze Dokument — 2026-07-09.
+             * KORRIGIERT: muss hier in afterStandOff() stehen, nicht in
+             * loadText() — afterStandOff() ist eine eigenständige Top-Level-
+             * Funktion (wird nur AUS loadText() heraus aufgerufen, ist aber
+             * nicht darin verschachtelt), hatte also keinen Zugriff auf eine
+             * dort deklarierte Variable (→ ReferenceError: noteRunningTotal
+             * is not defined). Hier, direkt im Scope der Schleife, die
+             * projectData.pages aufbaut, ist es der richtige Ort. */
+            let noteRunningTotal = 0;
+
             Array.from(bodyEl.children).forEach(div => {
                 if (div.localName !== "div") return;
 
@@ -622,11 +667,22 @@ function afterStandOff(xmlDoc) {
                 const rawFacs = (pb.getAttribute("facs") || "").trim();
                 const facs    = rawFacs.startsWith('../content/') ? rawFacs.slice(3) : rawFacs;
 
+                /* Notiz-Offset für diese Seite: Anzahl der <note>-Elemente
+                 * auf ALLEN vorherigen Seiten dieses Dokuments. Wird in
+                 * renderPage() als Startwert des Zählers verwendet, damit
+                 * die Nummerierung übers ganze Dokument durchläuft statt
+                 * pro Seite neu bei 1 zu beginnen. — 2026-07-09 */
+                const pageXmlRaw   = xmlInnerHTML(div);
+                const noteOffset   = noteRunningTotal;
+                const notesOnPage  = (pageXmlRaw.match(/<note\b/g) || []).length;
+                noteRunningTotal  += notesOnPage;
+
                 projectData.pages.push({
                     n:            (pb.getAttribute("n") || "").toString().trim(),
                     facsimile:    facs,
                     translations: trans,
-                    xmlRaw:       xmlInnerHTML(div)
+                    xmlRaw:       pageXmlRaw,
+                    noteOffset:   noteOffset
                 });
 
                 /* --- Vorkommen zählen — namespace-sicher — 2026-05-29 --- */
@@ -789,6 +845,16 @@ function initializeUI() {
 
     setupSearch();
 
+    /* noteIndex neu aufbauen für dieses Dokument: n-Wert (@n aus dem XML) →
+     * Seiten-n (Folio-Bezeichnung, z. B. "65a"), fürs Deep-Linking. — 2026-07-09 */
+    noteIndex = {};
+    projectData.pages.forEach(p => {
+        const matches = p.xmlRaw.matchAll(/<note\b[^>]*\bn="([^"]*)"/g);
+        for (const m of matches) {
+            if (m[1]) noteIndex[m[1]] = p.n;
+        }
+    });
+
     /* pendingNavigation: nach Text-Switch zur gewünschten Seite springen */
     if (window.tibetanTEIPendingNav) {
         const nav = window.tibetanTEIPendingNav;
@@ -796,9 +862,125 @@ function initializeUI() {
         const sel = el('selectPage');
         if (sel) sel.value = nav.n;
         renderPage(nav.n, nav.query);
+        /* Treffer lag (auch) in einer Notiz → nach Textwechsel ebenfalls
+         * hinscrollen und blinken lassen — 2026-07-09 */
+        if (nav.matchedNoteIds && nav.matchedNoteIds.length) {
+            switchAllPanesToTibetan();
+            let first = null;
+            nav.matchedNoteIds.forEach(id => {
+                const marker = document.querySelector(`[data-n="${CSS.escape(id)}"]`);
+                if (!marker) return;
+                if (!first) first = marker;
+                flashNoteMarker(marker);
+            });
+            if (first) {
+                first.scrollIntoView({ behavior: 'smooth', block: 'center' });
+                first.click();
+            }
+        }
+    } else if (!initialNoteJumpConsumed && jumpToNoteFromUrl()) {
+        initialNoteJumpConsumed = true;
     } else if (projectData.pages.length > 0) {
         renderPage(projectData.pages[0].n);
     }
+}
+
+/**
+ * Liest ?note=<n-Wert> aus der URL und springt, falls vorhanden und
+ * gefunden, zur richtigen Seite; scrollt zur Ziffer und öffnet ihr Popup.
+ * Nutzt @n (stabile ID, siehe data-n am <sup>), NICHT die sichtbare
+ * (durchgehende) Nummer, da die sich bei Bearbeitung verschieben kann.
+ * Gibt true zurück, wenn ein Sprung ausgeführt wurde (auch wenn die ID
+ * nicht gefunden wurde — der Parameter gilt dann als "verbraucht", damit
+ * nicht trotzdem zusätzlich noch die Standardseite geladen wird UND ein
+ * Fehler in der Konsole verwirrt). — 2026-07-09
+ */
+/**
+ * Wandelt ein einfaches Joker-Muster (nur "*" als Platzhalter für "eine
+ * beliebige Zeichenfolge") in einen RegExp um. Alle anderen Regex-
+ * Sonderzeichen werden escaped, damit z. B. Punkte im n-Wert nicht
+ * versehentlich als Regex-Metazeichen interpretiert werden. — 2026-07-09
+ */
+function wildcardToRegex(pattern) {
+    const escaped = pattern.replace(/[.+^${}()|[\]\\]/g, '\\$&');
+    return new RegExp('^' + escaped.split('*').join('.*') + '$');
+}
+
+/**
+ * Schaltet BEIDE Spalten (panes-container links + rechts) auf den
+ * Tibetan-Tab um — Notiz-Marker gibt es nur in den Text-Panes (bo/de/en/...),
+ * nicht im Faksimile- oder XML-Tab. Ohne das würde man nach einem
+ * Notiz-Deep-Link auf einer Ansicht landen, in der gar kein Marker sichtbar
+ * ist (z. B. wenn zuvor "Faks." aktiv war). — 2026-07-09
+ */
+function switchAllPanesToTibetan() {
+    document.querySelectorAll('.panes-container').forEach(container => {
+        const boPane = [...container.querySelectorAll('.pane')]
+            .find(p => p.id && (p.id.startsWith('bo-') || p.id.startsWith('tib')));
+        if (!boPane) return;
+        container.querySelectorAll('.pane').forEach(p => p.classList.remove('active'));
+        boPane.classList.add('active');
+        const tabsGroup = container.previousElementSibling;
+        if (tabsGroup) {
+            tabsGroup.querySelectorAll('.tab-button').forEach(b => b.classList.remove('active'));
+            const boBtn = [...tabsGroup.querySelectorAll('.tab-button')]
+                .find(b => b.dataset.pane === boPane.id ||
+                           b.textContent.trim().toLowerCase().includes('tibetan'));
+            if (boBtn) boBtn.classList.add('active');
+        }
+    });
+}
+
+function jumpToNoteFromUrl() {
+    const params = new URLSearchParams(window.location.search);
+    const noteParam = params.get('note');
+    if (!noteParam) return false;
+
+    /* Joker-Suche: enthält der Parameter "*", wird gegen alle bekannten
+     * n-Werte gematcht statt exakt nachgeschlagen. Treffer werden in
+     * Dokumentreihenfolge sortiert (Reihenfolge von projectData.pages);
+     * gesprungen wird zur Seite des ERSTEN Treffers, dort werden aber
+     * ALLE auf dieser Seite passenden Marker kurz hervorgehoben. */
+    const isWildcard = noteParam.includes('*');
+    let matchingIds = [];
+
+    if (isWildcard) {
+        const re = wildcardToRegex(noteParam);
+        matchingIds = Object.keys(noteIndex).filter(id => re.test(id));
+        const pageOrder = projectData.pages.map(p => p.n);
+        matchingIds.sort((a, b) =>
+            pageOrder.indexOf(noteIndex[a]) - pageOrder.indexOf(noteIndex[b]));
+    } else if (noteIndex[noteParam]) {
+        matchingIds = [noteParam];
+    }
+
+    if (matchingIds.length === 0) {
+        console.warn(`TibetanTEI: Notiz mit n="${noteParam}" nicht gefunden.`);
+        if (projectData.pages.length > 0) renderPage(projectData.pages[0].n);
+        return true;
+    }
+
+    const pageNum = noteIndex[matchingIds[0]];
+    const sel = el('selectPage');
+    if (sel) sel.value = pageNum;
+    renderPage(pageNum);
+    switchAllPanesToTibetan();
+
+    /* renderPage() baut die Panes synchron auf (innerHTML), daher ist das
+     * Element direkt danach schon im DOM vorhanden — kein Timeout nötig. */
+    let firstMarker = null;
+    matchingIds.forEach((id, i) => {
+        if (noteIndex[id] !== pageNum) return; /* nur Treffer auf dieser Seite */
+        const marker = document.querySelector(`[data-n="${CSS.escape(id)}"]`);
+        if (!marker) return;
+        if (i === 0 || !firstMarker) firstMarker = firstMarker || marker;
+        flashNoteMarker(marker); /* siehe gemeinsamer Helper weiter unten — 2026-07-09 */
+    });
+    if (firstMarker) {
+        firstMarker.scrollIntoView({ behavior: 'smooth', block: 'center' });
+        firstMarker.click(); /* öffnet das Popup über den bestehenden Klick-Handler */
+    }
+    return true;
 }
 
 /* =========================================================
@@ -840,6 +1022,13 @@ function fillPane(pane, html, lang) {
             '<label><input type="checkbox" class="wtype-cb-vok"' +
             (typeof wtypeVokAn !== 'undefined' && wtypeVokAn ? ' checked' : '') +
             '> <span class="vok-demo">ཆོས་</span> Vok.</label>' +
+            /* Notiz-Marker haben keinen Toggle (immer sichtbar) — nur
+               erklärendes Legenden-Element, kein <input>. — 2026-07-09 */
+            '<span class="wtype-legende-note">' +
+            '<sup class="tei-note-marker" data-type="editorial">1</sup>' +
+            ' Anmerkung ' +
+            '<sup class="tei-note-marker" data-type="critical">†2</sup>' +
+            ' krit. Apparat</span>' +
             '</div>');
 
         /* Event-Handler für neue Checkboxen */
@@ -927,6 +1116,17 @@ function renderPage(pageNum, query = "") {
         });
     });
 
+    /* Automatische Fortlaufnummer für Notiz-Marker — 2026-07-09.
+     * Startet NICHT bei 0, sondern beim vorausberechneten noteOffset dieser
+     * Seite (siehe loadText()) — dadurch läuft die Nummerierung durchgehend
+     * übers ganze Dokument, auch wenn man direkt zu einer Seite springt statt
+     * sie sequentiell durchzublättern. Wird über ALLE Sprachen dieser Seite
+     * hinweg gezählt (eine Notiz sitzt i.d.R. nur in einer Sprachversion,
+     * meist "bo"); zählt in Dokumentreihenfolge hoch, unabhängig vom
+     * @n-Attribut im XML (das jetzt frei für stabile Querverweis-IDs ist —
+     * siehe data-n am erzeugten <sup>, unten). */
+    let noteCounter = page.noteOffset || 0;
+
     page.translations.forEach(tr => {
         /* Zeilenumbrüche: <lb .../> → <br /> */
         const formatted = tr.text.replace(/<lb\s[^>]*\/>/gi, "<br />");
@@ -949,18 +1149,30 @@ function renderPage(pageNum, query = "") {
          * Farbliche Unterscheidung erfolgt zusätzlich per CSS über
          * [data-type="..."] (siehe main.css).
          * Kommt in einem Text kein <note> vor: Regex matcht nichts, String
-         * bleibt unverändert — kein Sonderfall nötig. */
+         * bleibt unverändert — kein Sonderfall nötig.
+         * Nummerierung — 2026-07-09: automatisch über noteCounter (siehe
+         * oben, vor der translations.forEach-Schleife deklariert), durchgehend
+         * über das GANZE Dokument (nicht pro Seite neu bei 1), dank
+         * page.noteOffset. @n im XML wird davon komplett entkoppelt: falls
+         * gesetzt, landet er unverändert als data-n am <sup> — als stabile,
+         * über die Zeit gleichbleibende Referenz-ID für Querverweise (z. B.
+         * in Sekundärliteratur oder eigenen Notizen), die sich NICHT
+         * verschiebt, wenn später anderswo im Dokument Notizen eingefügt
+         * oder gelöscht werden und sich dadurch die sichtbaren Nummern
+         * verschieben. Ist @n nicht gesetzt, bleibt data-n leer. */
         const noteGlyphs = { critical: '†' };
         const noteRegex = /<note\b([^>]*)>([\s\S]*?)<\/note>/g;
         const formattedNotes = formattedClean.replace(noteRegex, (match, attrs, inner) => {
-            const nAttr    = (attrs.match(/\bn="([^"]*)"/)    || [, ''])[1];
             const typeAttr = (attrs.match(/\btype="([^"]*)"/) || [, 'note'])[1];
+            const nAttr    = (attrs.match(/\bn="([^"]*)"/)     || [, ''])[1];
             /* Notiztext ist reiner Kommentartext — evtl. verschachtelte Tags entfernen */
             const noteText = inner.replace(/<[^>]+>/g, ' ').replace(/\s+/g, ' ').trim();
             const escaped  = escapeHtml(noteText).replace(/"/g, '&quot;');
             const prefix   = noteGlyphs[typeAttr] || '';
-            const label    = `${prefix}${nAttr || '*'}`;
-            return `<sup class="tei-note-marker" data-type="${typeAttr}" ` +
+            noteCounter += 1;
+            const label    = `${prefix}${noteCounter}`;
+            const nAttrOut = nAttr ? ` data-n="${escapeHtml(nAttr).replace(/"/g, '&quot;')}"` : '';
+            return `<sup class="tei-note-marker" data-type="${typeAttr}"${nAttrOut} ` +
                    `data-note="${escaped}" tabindex="0">${label}</sup>`;
         });
 
@@ -1222,21 +1434,37 @@ function attachFootnotes() {
              * schwebt darüber, statt den nachfolgenden Zeilenfluss zu verschieben. */
             marker.appendChild(tooltip);
 
-            /* Rand-Kollision prüfen: steht die Ziffer weit rechts, würde das
-             * Popup (das per default links an der Ziffer ausgerichtet ist)
-             * über den Viewport-Rand hinauslaufen. In dem Fall auf
-             * rechtsbündige Ausrichtung umschalten. — 2026-07-08 */
-            /* Gegen den rechten Rand der EIGENEN Spalte prüfen, nicht gegen
-             * das ganze Browserfenster — bei zweispaltigem Layout (linke/
-             * rechte Textzeugen-Spalte) würde sonst ein Popup in der linken
-             * Spalte einfach in die rechte Spalte hineinlaufen, ohne dass
-             * das als Kollision erkannt wird. — 2026-07-08 */
+            /* Rand-Kollision — 2026-07-09, pixelgenaues Klemmen statt binärem
+             * Umklappen: Das vorherige Umschalten auf .footnote-tooltip--left
+             * löste zwar die Kollision rechts, konnte das Popup aber selbst
+             * über den LINKEN Rand hinauslaufen lassen (v.a. in der schmalen
+             * Zwei-Spalten-Ansicht, wo wenig Platz ist). Stattdessen wird die
+             * Position jetzt in beide Richtungen gegen den Rand der EIGENEN
+             * Spalte geklemmt (marker.closest('.pane') — nicht das ganze
+             * Browserfenster, da links/rechts zwei unabhängige Spalten sind). */
             const containingPane = marker.closest('.pane') || document.documentElement;
-            const paneRect = containingPane.getBoundingClientRect();
-            const rect = tooltip.getBoundingClientRect();
-            if (rect.right > paneRect.right) {
-                tooltip.classList.add('footnote-tooltip--left');
+            const paneRect   = containingPane.getBoundingClientRect();
+            const markerRect = marker.getBoundingClientRect();
+            const tipRect    = tooltip.getBoundingClientRect(); // aktuell noch bei left:0 gemessen
+            const margin     = 8; // Sicherheitsabstand zum Spaltenrand
+
+            let desiredLeft = markerRect.left; // Standard: an der Ziffer ausgerichtet
+
+            /* Zu weit rechts? Nach links schieben. */
+            const overflowRight = (desiredLeft + tipRect.width) - (paneRect.right - margin);
+            if (overflowRight > 0) {
+                desiredLeft -= overflowRight;
             }
+            /* Aber nie weiter links als der linke Rand der eigenen Spalte. */
+            const minLeft = paneRect.left + margin;
+            if (desiredLeft < minLeft) {
+                desiredLeft = minLeft;
+            }
+
+            /* In eine Position relativ zur Ziffer umrechnen, da das Popup
+             * position:absolute relativ zu ihr (position:relative) ist. */
+            tooltip.style.left  = `${desiredLeft - markerRect.left}px`;
+            tooltip.style.right = 'auto';
         };
 
         const hideTooltip = () => {
@@ -1350,7 +1578,7 @@ window.alleErgebnisPanel_navigiere = function(idx) {
     const m     = searchMatches[idx];
     const aktId = currentEntry?.id || texts[0]?.id;
     if (m.entry && m.entry.id !== aktId) {
-        window.tibetanTEIPendingNav = { n: m.n, query: m.query };
+        window.tibetanTEIPendingNav = { n: m.n, query: m.query, matchedNoteIds: m.matchedNoteIds };
         const selTxt = el('selectText');
         if (selTxt) {
             selTxt.value = m.entry.id;
@@ -1362,6 +1590,22 @@ window.alleErgebnisPanel_navigiere = function(idx) {
         const sel = el('selectPage');
         if (sel) sel.value = m.n;
         renderPage(m.n, m.query);
+        /* Treffer lag (auch) in einer Notiz → hinscrollen, blinken lassen
+         * — 2026-07-09 */
+        if (m.matchedNoteIds && m.matchedNoteIds.length) {
+            switchAllPanesToTibetan();
+            let first = null;
+            m.matchedNoteIds.forEach(id => {
+                const marker = document.querySelector(`[data-n="${CSS.escape(id)}"]`);
+                if (!marker) return;
+                if (!first) first = marker;
+                flashNoteMarker(marker);
+            });
+            if (first) {
+                first.scrollIntoView({ behavior: 'smooth', block: 'center' });
+                first.click();
+            }
+        }
     }
     updateMatchDisplay();
 };
@@ -1434,10 +1678,12 @@ function suchteInPage(p, q) {
     const qLower    = q.toLowerCase();
     try {
         if (isTibetan) {
-            const qEsc = q.replace(/[.*+?^${}()|[\]\\]/g, '\\$&').replace(/་+$/, '');
+            /* Joker-Unterstützung ("*") für Konsistenz mit der normalen
+             * Suche — siehe buildWildcardAwarePattern(). — 2026-07-09 */
+            const qEsc = buildWildcardAwarePattern(q).replace(/་+$/, '');
             return new RegExp(qEsc, 'g').test(searchIn);
         } else {
-            const qEsc = qLower.replace(/[.*+?^${}()|[\]\\]/g, '\\$&').replace(/ /g, '\\s+');
+            const qEsc = buildWildcardAwarePattern(qLower).replace(/ /g, '\\s+');
             return new RegExp(qEsc, 'gi').test(searchIn.toLowerCase());
         }
     } catch(e) {
@@ -1452,7 +1698,7 @@ async function sucheAlleTextzeugen(q, resultsEl, ladestatus) {
 
     /* Aktuellen Textzeugen aus projectData.pages (bereits im RAM) */
     const aktEntry = (typeof currentEntry !== 'undefined' && currentEntry)
-                   || texts.find(t => t.id === el('selectText')?.value)
+                   || texts.find(t => t.id === el('selectText')?.value || t.slug === el('selectText')?.value)
                    || texts[0];
 
     for (const entry of texts) {
@@ -1472,7 +1718,8 @@ async function sucheAlleTextzeugen(q, resultsEl, ladestatus) {
                     snippet:  getSnippet(p.xmlRaw.replace(/<[^>]+>/g, ''), q),
                     textId:   entry.id,
                     textName: entry.name,
-                    entry:    entry
+                    entry:    entry,
+                    matchedNoteIds: findMatchingNoteIdsOnPage(p.xmlRaw, q)
                 });
             }
         });
@@ -1517,6 +1764,75 @@ async function sucheAlleTextzeugen(q, resultsEl, ladestatus) {
 
 /* pendingNavigation: nach Text-Switch zu Seite springen */
 window.tibetanTEIPendingNav = null;
+
+/**
+ * Baut ein Such-Regex-Muster aus einer Eingabe. Enthält die Eingabe "*",
+ * wird das als Platzhalter (beliebige Zeichenfolge) interpretiert; alle
+ * anderen Regex-Sonderzeichen werden weiterhin escaped. OHNE "*" verhält
+ * sich das exakt wie die bisherige Escaping-Logik — rein additiv, keine
+ * Verhaltensänderung für normale (nicht-Joker-)Suchanfragen. Betrifft nur
+ * die Muster-Erzeugung selbst; der Rest der Suchlogik (Snippet, Ergebnis-
+ * Liste, "Alle Textzeugen"-Suche, etc.) bleibt komplett unangetastet.
+ * — 2026-07-09
+ */
+function buildWildcardAwarePattern(str) {
+    if (!str.includes('*')) {
+        /* Unverändert: identische Escaping-Regel wie vorher. */
+        return str.replace(/[.*+?^${}()|[\]\\]/g, '\\$&');
+    }
+    /* Bei "*" im Suchbegriff: an den Sternchen aufsplitten, jedes Teilstück
+     * escapen (aber NICHT den Stern selbst, der ist ja schon draußen),
+     * dann mit ".*" wieder zusammensetzen. */
+    return str.split('*')
+        .map(part => part.replace(/[.+?^${}()|[\]\\]/g, '\\$&'))
+        .join('.*');
+}
+
+/**
+ * Prüft, welche Notizen (n-Werte) auf einer Seite konkret zur Suchanfrage
+ * passen — damit Suchergebnisse, deren Treffer in einer Notiz liegt, extra
+ * markiert werden können. Nutzt dieselbe Joker-Logik wie die normale Suche.
+ * — 2026-07-09
+ */
+function findMatchingNoteIdsOnPage(xmlRaw, query) {
+    const isTibetan = /[\u0F00-\u0FFF]/.test(query);
+    let re;
+    try {
+        if (isTibetan) {
+            const qEsc = buildWildcardAwarePattern(query).replace(/་+$/, '');
+            re = new RegExp(qEsc);
+        } else {
+            const qEsc = buildWildcardAwarePattern(query.toLowerCase()).replace(/ /g, '\\s+');
+            re = new RegExp(qEsc, 'i');
+        }
+    } catch (e) {
+        return [];
+    }
+
+    const ids = [];
+    const noteMatches = xmlRaw.matchAll(/<note\b([^>]*)>([\s\S]*?)<\/note>/g);
+    for (const nm of noteMatches) {
+        const attrs = nm[1];
+        const inner = nm[2].replace(/<[^>]+>/g, ' ');
+        const nAttr = (attrs.match(/\bn="([^"]*)"/) || [, ''])[1];
+        if (nAttr && re.test(inner)) {
+            ids.push(nAttr);
+        }
+    }
+    return ids;
+}
+
+/**
+ * Lässt einen Notiz-Marker aufblinken, bis er gehovert wird (siehe
+ * jumpToNoteFromUrl weiter unten — gemeinsame Stelle, damit Suchergebnis-
+ * Klick und URL-Deep-Link dasselbe Verhalten haben). — 2026-07-09
+ */
+function flashNoteMarker(marker) {
+    marker.classList.add('footnote-deeplink-flash');
+    marker.addEventListener('mouseenter', () => {
+        marker.classList.remove('footnote-deeplink-flash');
+    }, { once: true });
+}
 
 function setupSearch() {
     const input   = el("searchInput");
@@ -1564,10 +1880,13 @@ function setupSearch() {
                         results.innerHTML = searchMatches.map((m, idx) => {
                             const isTib = /[\u0F00-\u0FFF]/.test(m.snippet);
                             const anderer = m.textId !== (currentEntry?.id || texts[0].id);
+                            const noteBadge = (m.matchedNoteIds && m.matchedNoteIds.length)
+                                ? ' <span class="search-note-badge" title="Treffer in einer Notiz">📝 Notiz</span>'
+                                : '';
                             return `<div class="search-result" onclick="jumpToMatch(${idx})">
                                 <strong style="color:${anderer ? '#5a3e2b' : '#333'}">
                                     ${escapeXml(m.textName)} · Seite ${escapeXml(m.n)}
-                                </strong>:<br>
+                                </strong>${noteBadge}:<br>
                                 <span class="${isTib ? 'u-chen-search' : ''}">${m.snippet}</span>
                             </div>`;
                         }).join("");
@@ -1582,7 +1901,7 @@ function setupSearch() {
                     if (m0) {
                         const aktId0 = currentEntry?.id || texts[0]?.id;
                         if (m0.entry && m0.entry.id !== aktId0) {
-                            window.tibetanTEIPendingNav = { n: m0.n, query: m0.query };
+                            window.tibetanTEIPendingNav = { n: m0.n, query: m0.query, matchedNoteIds: m0.matchedNoteIds };
                             const selTxt = el('selectText');
                             if (selTxt) {
                                 selTxt.value = m0.entry.id;
@@ -1592,6 +1911,22 @@ function setupSearch() {
                             const sel = el('selectPage');
                             if (sel) sel.value = m0.n;
                             renderPage(m0.n, m0.query);
+                            /* Treffer lag (auch) in einer Notiz → hinscrollen,
+                             * blinken lassen — 2026-07-09 */
+                            if (m0.matchedNoteIds && m0.matchedNoteIds.length) {
+                                switchAllPanesToTibetan();
+                                let first = null;
+                                m0.matchedNoteIds.forEach(id => {
+                                    const marker = document.querySelector(`[data-n="${CSS.escape(id)}"]`);
+                                    if (!marker) return;
+                                    if (!first) first = marker;
+                                    flashNoteMarker(marker);
+                                });
+                                if (first) {
+                                    first.scrollIntoView({ behavior: 'smooth', block: 'center' });
+                                    first.click();
+                                }
+                            }
                         }
                     }
                 } else {
@@ -1612,11 +1947,11 @@ function setupSearch() {
             const searchIn = p.xmlRaw.replace(/<[^>]+>/g, '');
             let gefunden = false;
             if (isTibetan) {
-                const qEsc = q.replace(/[.*+?^${}()|[\]\\]/g, '\\$&').replace(/་+$/, '');
+                const qEsc = buildWildcardAwarePattern(q).replace(/་+$/, '');
                 try { gefunden = new RegExp(qEsc, 'g').test(searchIn); }
                 catch(e) { gefunden = searchIn.includes(q); }
             } else {
-                const qEsc = qLower.replace(/[.*+?^${}()|[\]\\]/g, '\\$&').replace(/ /g, '\\s+');
+                const qEsc = buildWildcardAwarePattern(qLower).replace(/ /g, '\\s+');
                 try { gefunden = new RegExp(qEsc, 'gi').test(searchIn.toLowerCase()); }
                 catch(e) { gefunden = searchIn.toLowerCase().includes(qLower); }
             }
@@ -1625,7 +1960,8 @@ function setupSearch() {
                     n: p.n, query: q,
                     snippet: getSnippet(searchIn, q),
                     textId: (currentEntry?.id || texts[0].id),
-                    entry:  currentEntry || texts[0]
+                    entry:  currentEntry || texts[0],
+                    matchedNoteIds: findMatchingNoteIdsOnPage(p.xmlRaw, q)
                 });
             }
         });
@@ -1634,8 +1970,11 @@ function setupSearch() {
             if (results) {
                 results.innerHTML = searchMatches.map((m, idx) => {
                     const isTib = /[\u0F00-\u0FFF]/.test(m.snippet);
+                    const noteBadge = (m.matchedNoteIds && m.matchedNoteIds.length)
+                        ? ' <span class="search-note-badge" title="Treffer in einer Notiz">📝 Notiz</span>'
+                        : '';
                     return `<div class="search-result" onclick="jumpToMatch(${idx})">
-                        <strong>Seite ${escapeXml(m.n)}</strong>:
+                        <strong>Seite ${escapeXml(m.n)}</strong>${noteBadge}:
                         <span class="${isTib ? 'u-chen-search' : ''}">${m.snippet}</span>
                     </div>`;
                 }).join("");
@@ -1726,7 +2065,7 @@ window.jumpToMatch = function (idx) {
 
     /* Anderer Textzeuge → erst wechseln, dann Seite anzeigen */
     if (m.entry && m.entry.id !== aktId) {
-        window.tibetanTEIPendingNav = { n: m.n, query: m.query };
+        window.tibetanTEIPendingNav = { n: m.n, query: m.query, matchedNoteIds: m.matchedNoteIds };
         const selectText = el('selectText');
         if (selectText) {
             selectText.value = m.entry.id;
@@ -1745,6 +2084,24 @@ window.jumpToMatch = function (idx) {
     const select = el('selectPage');
     if (select) select.value = m.n;
     renderPage(m.n, m.query);
+
+    /* Treffer lag (auch) in einer Notiz → Tab wechseln, hinscrollen,
+     * blinken lassen — analog zum URL-Deep-Link. — 2026-07-09 */
+    if (m.matchedNoteIds && m.matchedNoteIds.length) {
+        switchAllPanesToTibetan();
+        let first = null;
+        m.matchedNoteIds.forEach(id => {
+            const marker = document.querySelector(`[data-n="${CSS.escape(id)}"]`);
+            if (!marker) return;
+            if (!first) first = marker;
+            flashNoteMarker(marker);
+        });
+        if (first) {
+            first.scrollIntoView({ behavior: 'smooth', block: 'center' });
+            first.click();
+        }
+    }
+
     /* Dropdown nach Klick auf Ergebnis schließen */
     const results2 = el('searchResults');
     if (results2) results2.style.display = 'none';
@@ -1795,6 +2152,35 @@ function updateMatchDisplay() {
 }
 
 /**
+ * Wrapper um applyHighlightExInner(): schützt data-note-/data-n-Attribute
+ * (freier Notiztext, siehe Notiz-Marker) vor der Such-Hervorhebung, die
+ * sonst blind mitten im Attributwert ein <mark>-Tag einfügen und damit das
+ * HTML zerbrechen würde (kaputte Attribute sichtbar als Text). Ersetzt
+ * diese Werte vor dem Highlighting durch Platzhalter-Tokens und tauscht
+ * sie danach unverändert zurück — die eigentliche Hervorhebungslogik
+ * (inkl. der Tibetisch-Silben-Sonderfälle) bleibt komplett unangetastet.
+ * — 2026-07-09
+ */
+function applyHighlightEx(html, q, crossLine) {
+    if (!q || q.length < 2) return html;
+
+    const protectedValues = [];
+    const protectedHtml = html.replace(
+        /(data-note|data-n)="([^"]*)"/g,
+        (match) => {
+            const token = `@@NOTEATTR${protectedValues.length}@@`;
+            protectedValues.push(match);
+            return token;
+        }
+    );
+
+    const highlighted = applyHighlightExInner(protectedHtml, q, crossLine);
+
+    return highlighted.replace(/@@NOTEATTR(\d+)@@/g,
+        (_, idx) => protectedValues[Number(idx)]);
+}
+
+/**
  * Hebt alle Vorkommen eines Suchbegriffs in einem HTML-String hervor.
  * Setzt die Klasse .search-highlight auf <mark>-Elemente.
  *
@@ -1802,7 +2188,7 @@ function updateMatchDisplay() {
  * @param {string} q     Suchbegriff
  * @returns {string}     HTML mit <mark>-Tags
  */
-function applyHighlightEx(html, q, crossLine) {
+function applyHighlightExInner(html, q, crossLine) {
     if (!q || q.length < 2) return html;
     const isTibetan = /[\u0F00-\u0FFF]/.test(q);
 

@@ -273,7 +273,7 @@
                         <!-- Beispiel-Notiz Typ 2: kritischer Apparat (Lesart-Variante) -->
                         <note
                             place="foot"
-                            n="2"
+                            n="dignaga-var-shriharsa"
                             type="critical"
                             target="#w65a01_12"
                             resp="#albert_brugnara">Einige Textzeugen lesen statt rgyal po zab mo
@@ -1453,6 +1453,9 @@
                             xml:id="pc65b13_01"
                             type="shad">།</pc>
                     </s>
+                    <note place="foot" n="Aussagesatz" type="critical" target="#w65b13_08">
+                        Das ist ein Aussagesatze ...
+                    </note>
                     <s
                         xml:id="s65b14"
                         corresp="#s65b14_de #s65b14_en">

@@ -728,6 +728,17 @@ span.tei-s.parallel-active {
   background: rgba(122, 59, 110, 0.14);
   box-shadow: 0 0 0 1px rgba(122, 59, 110, 0.35);
 }
+/* Deep-Link-Hervorhebung (?note=<id> in der URL) — 2026-07-09:
+   kurzes Aufblitzen, damit klar ist, welche Notiz gemeint war, auch wenn
+   das Popup sich gleich danach automatisch öffnet. */
+@keyframes footnote-deeplink-pulse {
+  0%   { box-shadow: 0 0 0 0 rgba(139, 115, 85, 0.6); }
+  70%  { box-shadow: 0 0 0 8px rgba(139, 115, 85, 0); }
+  100% { box-shadow: 0 0 0 0 rgba(139, 115, 85, 0); }
+}
+.tei-note-marker.footnote-deeplink-flash {
+  animation: footnote-deeplink-pulse 1s ease-out infinite;
+}
 .tei-note-marker[data-type="critical"]:hover,
 .tei-note-marker[data-type="critical"]:focus {
   background: rgba(122, 59, 110, 0.28);
@@ -759,19 +770,9 @@ span.tei-s.parallel-active {
   box-shadow: 0 2px 10px rgba(0,0,0,0.15);
   white-space: normal;
 }
-/* Rand-Kollision: Ziffer sitzt weit rechts im Pane, Popup würde über den
-   Viewport-Rand hinauslaufen — stattdessen rechtsbündig an der Ziffer
-   ausrichten (Akzentrand spiegeln, damit es optisch konsistent bleibt). — 2026-07-08 */
-.footnote-tooltip.footnote-tooltip--left {
-  left: auto;
-  right: 0;
-  border-left: 1px solid rgba(0,0,0,0.08);
-  border-right: 3px solid var(--second);
-  border-radius: 4px 0 0 4px;
-}
-.footnote-tooltip.footnote-tooltip--left[data-type="critical"] {
-  border-right-color: var(--color-date);
-}
+/* Rand-Kollision wird jetzt pixelgenau per JS geklemmt (siehe attachFootnotes()
+   in detail.js) statt über eine binäre links/rechts-Umklapp-Klasse — die
+   band-artige --left-Variante ist damit überflüssig. — 2026-07-09 */
 .footnote-tooltip[data-type="critical"] {
   border-left-color: var(--color-date);
 }
@@ -1060,6 +1061,19 @@ details[open] > .role-heading::before {
 
 .search-result strong {
   color: var(--second-dark);
+}
+
+/* Badge für Suchtreffer, die (auch) in einer Notiz liegen — 2026-07-09 */
+.search-note-badge {
+  display: inline-block;
+  font-size: 11px;
+  font-family: var(--font-sans);
+  font-weight: 600;
+  color: var(--second-dark);
+  background: rgba(139, 115, 85, 0.15);
+  border-radius: 3px;
+  padding: 1px 5px;
+  margin-left: 4px;
 }
 
 /* Treffer-Hervorhebung im Text */

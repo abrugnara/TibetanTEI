@@ -24,24 +24,26 @@
 "use strict";
 
 /**
- * @typedef {{ id: string, name: string, url: string }} TextEntry
+ * @typedef {{ id: string, slug: string, name: string, url: string }} TextEntry
  *   id   — eindeutiger Bezeichner (Ganzzahl als String); wird als URL-Parameter
  *           ?id=... übergeben.
+ *   slug — sprechender Alternativ-Bezeichner fürs selbe ?id=...-Parameter
+ *          (z. B. ?id=dignaga statt ?id=2) — 2026-07-09.
  *   name — Anzeigename für das Dropdown und spätere Textlisten.
  *   url  — relativer Pfad zur TEI-XML-Datei.
  */
 
 /** @type {TextEntry[]} */
 const texts = [
-    { id: "1", name: "Gampopa",                         url: "content/1_gompopa.xml"              },
-    { id: "2", name: "Dignāga",                         url: "content/2_dignaga.xml"              },
-    { id: "3", name: "Ganden",                          url: "content/3_ganden.xml"               },
-    { id: "4", name: "Śrīsena",                         url: "content/4_shrisena.xml"             },
-    { id: "5", name: "Klong chen rab 'byams",           url: "content/5_klong_chen_ran_'byam.xml" },
-    { id: "6", name: "Śāntideva — Bodhicaryāvatāra",    url: "content/6_shantideva_bca.xml"       },
-    { id: "7", name: "Gong dkar rDo rje gdan pa",       url: "content/7_r103.xml"                 },
-    { id: "8", name: "bu ston dignaga",                 url: "content/8_bu_ston_dignaga.xml"      },
-    { id: "9", name: "Vimalaprabha",                    url: "content/9_Vimalaprabha.xml"         },
+    { id: "1", slug: "gampopa",         name: "Gampopa",                         url: "content/1_gompopa.xml"              },
+    { id: "2", slug: "dignaga",         name: "Dignāga",                         url: "content/2_dignaga.xml"              },
+    { id: "3", slug: "ganden",          name: "Ganden",                          url: "content/3_ganden.xml"               },
+    { id: "4", slug: "shrisena",        name: "Śrīsena",                         url: "content/4_shrisena.xml"             },
+    { id: "5", slug: "klongchen",       name: "Klong chen rab 'byams",           url: "content/5_klong_chen_ran_'byam.xml" },
+    { id: "6", slug: "shantideva",      name: "Śāntideva — Bodhicaryāvatāra",    url: "content/6_shantideva_bca.xml"       },
+    { id: "7", slug: "r103",            name: "Gong dkar rDo rje gdan pa",       url: "content/7_r103.xml"                 },
+    { id: "8", slug: "bustondignaga",   name: "bu ston dignaga",                 url: "content/8_bu_ston_dignaga.xml"      },
+    { id: "9", slug: "vimalaprabha",    name: "Vimalaprabha",                    url: "content/9_Vimalaprabha.xml"         },
 ];
 
 /**
