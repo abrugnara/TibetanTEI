@@ -5,7 +5,7 @@
  * Autor:   Albert Brugnara
  *
  * Erstellt: 2025-05-14T10:00:00+02:00
- * Geändert: 2026-07-12T00:03:00+02:00
+ * Geändert: 2026-07-12T00:05:00+02:00
  *
  * Änderungshistorie:
  *   2025-05-14  Zusammenführung von main.css und search.css zu main.css;
@@ -35,6 +35,16 @@
  *               ▲▼ .search-nav-btn) bewusst unverändert gelassen — dort
  *               gilt eher die UI-Komponenten-Schwelle (3:1), die
  *               --second bereits erfüllt.
+ *   2026-07-12  Globales :focus-visible (outline: 2px solid --second,
+ *               3:1-Kontrast auf beiden Hintergründen geprüft) für
+ *               Tastaturfokus ergänzt; Elemente mit eigener :focus-Regel
+ *               (#searchInput, .tei-note-marker) bleiben durch höhere
+ *               Selektor-Spezifität unberührt. .loading-indicator
+ *               ergänzt (neutrales Pendant zu .load-error, für
+ *               #loadingIndicator in detail.html).
+ *   2026-07-12  .translation-pending ergänzt: inline-Pendant zu
+ *               .pane-placeholder für zusammengefasste TODO-Satzläufe
+ *               (siehe detail.js).
  *
  * Beschreibung:
  *   Einheitliches Stylesheet für alle HTML-Seiten des TibetanTEI-Projekts.
@@ -147,6 +157,19 @@ body {
   clip: rect(0, 0, 0, 0);
   white-space: nowrap;
   border: 0;
+}
+
+/* Sichtbarer Fokusring für Tastaturnavigation — greift für alle
+   interaktiven Elemente ohne eigene :focus-Regel (Links, Buttons,
+   Form-Controls). Elemente mit spezifischerer eigener :focus-Regel
+   (z. B. #searchInput, .tei-note-marker) setzen outline:none bewusst
+   und nutzen stattdessen Border-/Background-Änderung — das bleibt
+   durch höhere Selektor-Spezifität unberührt. :focus-visible statt
+   :focus, damit Mausklicks keinen Ring auslösen, nur Tastatur/AT.
+   — 2026-07-12 */
+:focus-visible {
+  outline: 2px solid var(--second);
+  outline-offset: 2px;
 }
 
 /* =========================================================
@@ -328,6 +351,24 @@ header {
 .load-error a {
   color: inherit;
   text-decoration: underline;
+}
+
+/* Ladezustand während fetch() der TEI-XML-Datei — neutral statt
+   Warnfarbe, da kein Fehler. Von detail.js (loadText) ein-/ausgeblendet;
+   role="status"/aria-live="polite" auf dem Element selbst, damit
+   Screenreader "Lade Text …" ansagen, ohne den Ablauf zu unterbrechen.
+   — 2026-07-12 */
+.loading-indicator {
+  display: none;
+  grid-column: 1 / -1;
+  margin: 0 0 var(--space-md);
+  padding: var(--space-sm) var(--space-md);
+  background: var(--background-panel);
+  border: 1px solid var(--second-light);
+  border-radius: 4px;
+  color: var(--color-muted);
+  font-family: var(--font-sans);
+  font-size: 0.95em;
 }
 
 /* Einzelne Spalte — unabhängig scrollbar — 2026-05-18 */
@@ -707,6 +748,18 @@ a.reg-link::after {
   font-style: italic;
   padding: var(--space-md);
   text-align: center;
+}
+
+/* Inline-Pendant zu .pane-placeholder: fasst zusammenhängende Läufe
+   satzweiser TODO-Platzhalter (noch nicht übersetzte <s>-Elemente)
+   innerhalb eines ansonsten bereits übersetzten Absatzes zu einem
+   einzigen dezenten Hinweis zusammen, statt sie einzeln als
+   wiederholtes "TODO" anzuzeigen. Siehe detail.js (page.translations
+   forEach). — 2026-07-12 */
+.translation-pending {
+  color: var(--color-muted);
+  font-style: italic;
+  font-size: 0.9em;
 }
 
 /* Aktiver Registereintrag — permanent bis nächster Seitensprung */

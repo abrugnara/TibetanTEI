@@ -4,7 +4,7 @@
  * Autor:   Albert Brugnara
  *
  * Erstellt: 2025-05-14T10:00:00+02:00
- * Geändert: 2026-07-12T00:01:00+02:00
+ * Geändert: 2026-07-12T00:03:00+02:00
  *
  * Pfad: assets/app/detail.js
  *
@@ -64,6 +64,22 @@
  *               ersetzt (nur el()s eigene Implementierung ausgenommen) —
  *               konsistente Nutzung des zentralen Helpers, rein
  *               mechanisch, keine Verhaltensänderung.
+ *   2026-07-12  #loadingIndicator: wird in loadText() vor fetch(entry.url)
+ *               eingeblendet und in doFinish() (Erfolg, deckt alle 3
+ *               Aufrufstellen ab) sowie im äußeren .catch() (Fehler)
+ *               wieder ausgeblendet.
+ *   2026-07-12  Platzhalter-Sätze <s xml:id="...">TODO</s> (2_dignaga.xml,
+ *               Seiten 65b/66a/66b/67a, 71× de + 71× en = 142 gesamt)
+ *               erschienen bisher einzeln als wiederholtes "TODO" im
+ *               Fließtext. Zusammenhängende Läufe werden jetzt vor der
+ *               <s>→<span>-Konvertierung zu einem einzigen Hinweis
+ *               "[N Sätze noch nicht übersetzt]" zusammengefasst
+ *               (.translation-pending). attachParallelText(): Klick-
+ *               Tooltip auf dem korrespondierenden Tibetisch-Satz zeigt
+ *               "TODO" ebenfalls nicht mehr als vermeintliche Übersetzung
+ *               an (text !== 'TODO'-Filter). XML selbst unverändert —
+ *               reine Anzeige-Behandlung, bis die Übersetzungen ergänzt
+ *               werden.
  *
  * Beschreibung:
  *   Kernlogik der Detail-Ansicht:
@@ -463,6 +479,9 @@ function loadText(id) {
         window.tibetanTEIOriginalEntry = null;
     }
 
+    const loadingEl = el("loadingIndicator");
+    if (loadingEl) loadingEl.style.display = "block";
+
     fetch(entry.url)
         .then(response => {
             if (!response.ok) throw new Error(`HTTP ${response.status}: ${entry.url}`);
@@ -614,6 +633,8 @@ function loadText(id) {
                     }
                 });
                 afterStandOff(xmlDoc);
+                const loadingEl2 = el("loadingIndicator");
+                if (loadingEl2) loadingEl2.style.display = "none";
             };
 
             if (standOffSrc) {
@@ -645,6 +666,8 @@ function loadText(id) {
         })
         .catch(err => {
             console.warn(`TibetanTEI: XML konnte nicht geladen werden (${entry.url}):`, err.message);
+            const loadingEl3 = el("loadingIndicator");
+            if (loadingEl3) loadingEl3.style.display = "none";
         });
 }
 
@@ -1156,8 +1179,23 @@ function renderPage(pageNum, query = "") {
     let noteCounter = page.noteOffset || 0;
 
     page.translations.forEach(tr => {
+        /* Platzhalter-Sätze <s xml:id="...">TODO</s> (noch nicht übersetzte
+         * Sätze, satzweise vorangelegtes Gerüst) NICHT einzeln anzeigen —
+         * das ergäbe eine Wand aus wiederholtem "TODO". Zusammenhängende
+         * Läufe solcher Sätze werden zu einem einzigen dezenten Hinweis
+         * zusammengefasst. Muss vor allen anderen Transformationen laufen,
+         * damit die nachfolgende <s>→<span>-Konvertierung sie nicht
+         * anders behandelt. — 2026-07-12 */
+        const textWithoutTodoRuns = tr.text.replace(
+            /(?:\s*<s\b[^>]*>\s*TODO\s*<\/s>)+/g,
+            (match) => {
+                const n = (match.match(/<s\b/g) || []).length;
+                return ` <span class="translation-pending">[${n} ${n === 1 ? 'Satz' : 'Sätze'} noch nicht übersetzt]</span>`;
+            }
+        );
+
         /* Zeilenumbrüche: <lb .../> → <br /> */
-        const formatted = tr.text.replace(/<lb\s[^>]*\/>/gi, "<br />");
+        const formatted = textWithoutTodoRuns.replace(/<lb\s[^>]*\/>/gi, "<br />");
 
         /* Für bo-Latn: führende Unterstriche entfernen (pyewts-Artefakt) — 2026-05-22
          * NACH Tag-Entfernung anwenden damit _gnyen nach <br/> auch erfasst wird */
@@ -1386,7 +1424,9 @@ function attachParallelText(page) {
                         const m = tr.text.match(idRegex);
                         if (m) {
                             const text = m[1].replace(/<[^>]+>/g, '').trim();
-                            if (text) lines.push({ label: langLabel, text });
+                            /* Platzhalter-Satz — noch nicht übersetzt, nicht
+                             * als Übersetzung anzeigen. — 2026-07-12 */
+                            if (text && text !== 'TODO') lines.push({ label: langLabel, text });
                         }
                     });
                 });

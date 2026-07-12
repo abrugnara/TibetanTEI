@@ -5,7 +5,7 @@
   Autor:   Albert Brugnara
 
   Erstellt: 2025-05-14T10:00:00+02:00
-  Geändert: 2026-07-12T00:01:00+02:00
+  Geändert: 2026-07-12T00:02:00+02:00
 
   Änderungshistorie:
     2025-05-14  Runden 1+2: Korrekturen (CSS, Tabs, Logo).
@@ -23,6 +23,12 @@
     2026-07-12  <link rel="preload"> für PlayfairDisplay-Regular.woff2
                 (.site-title im Header) und YagpoTibetanSambhotaUni.woff2
                 (Tibetan-Panes, lang="bo") ergänzt.
+    2026-07-12  #loadingIndicator ergänzt (role="status" aria-live="polite"),
+                von detail.js beim fetch() der TEI-XML ein-/ausgeblendet.
+                SEO: meta description, meta robots, Open-Graph-Tags
+                ergänzt (og:description generisch, da Inhalt vom
+                ?id=-Parameter abhängt, der erst clientseitig aufgelöst
+                wird).
 
   Beschreibung:
     Detail-Ansicht eines TEI-Texts im zweispaltigen Lesepult-Layout.
@@ -32,6 +38,12 @@
 <head>
     <meta charset="utf-8" />
     <title>Brugnara — TibetanTEI · Textansicht</title>
+    <meta name="description" content="Textansicht der digitalen Edition TibetanTEI: Faksimile, Tibetisch, Wylie-Transliteration, deutsche und englische Übersetzung, linguistische Annotation und Register nebeneinander." />
+    <meta name="robots" content="index, follow" />
+    <meta property="og:title" content="TibetanTEI – Textansicht" />
+    <meta property="og:description" content="Faksimile, Tibetisch, Wylie, Übersetzung und linguistische Annotation im zweispaltigen Lesepult-Layout." />
+    <meta property="og:url" content="https://www.brugnara.at/detail.html" />
+    <meta property="og:type" content="website" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <link rel="icon" type="image/png" href="favicon.png" />
     <link rel="preload" href="assets/fonts/PlayfairDisplay-Regular.woff2" as="font" type="font/woff2" crossorigin>
@@ -108,6 +120,10 @@
         Netzwerkproblem. Bitte die Seite neu laden; besteht das Problem weiterhin, das
         <a href="https://github.com/abrugnara/TibetanTEI" target="_blank" rel="noopener">GitHub-Repository</a>
         prüfen.
+    </div>
+
+    <div id="loadingIndicator" class="loading-indicator" role="status" aria-live="polite">
+        ⏳ Lade Text …
     </div>
 
     <section class="column left" aria-label="Linke Textspalte">
