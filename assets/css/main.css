@@ -5,7 +5,7 @@
  * Autor:   Albert Brugnara
  *
  * Erstellt: 2025-05-14T10:00:00+02:00
- * Geändert: 2026-07-12T00:00:00+02:00
+ * Geändert: 2026-07-12T00:03:00+02:00
  *
  * Änderungshistorie:
  *   2025-05-14  Zusammenführung von main.css und search.css zu main.css;
@@ -20,6 +20,21 @@
  *               Pergament-Palette, nutzt bestehende Tokens --space-md/sm,
  *               --font-sans). Standardmäßig display:none, wird von
  *               detail.js eingeblendet.
+ *   2026-07-12  .sr-only ergänzt (fehlte bisher, obwohl in detail.html
+ *               referenziert — <label for="selectPage"> war dadurch
+ *               visuell sichtbar statt versteckt). Standard-Pattern plus
+ *               white-space:nowrap gegen Umbruch-Edgecases.
+ *   2026-07-12  WCAG-AA-Kontrast: .pane li und .section a nutzten
+ *               --second (#8B7355) als Textfarbe bei Normalgröße
+ *               (14px/15px) — nur 4.20:1 auf --background-panel, unter
+ *               der 4.5:1-Schwelle. Auf --second-dark (#5c4a2e, 7.94:1)
+ *               umgestellt; die bisherigen :hover-Zustände (die exakt
+ *               auf --second-dark zeigten) auf --color verschoben,
+ *               damit der Hover-Effekt erhalten bleibt. Kleine Icon-/
+ *               Button-Glyphen (▶ .role-heading::before, × .search-clear,
+ *               ▲▼ .search-nav-btn) bewusst unverändert gelassen — dort
+ *               gilt eher die UI-Komponenten-Schwelle (3:1), die
+ *               --second bereits erfüllt.
  *
  * Beschreibung:
  *   Einheitliches Stylesheet für alle HTML-Seiten des TibetanTEI-Projekts.
@@ -116,6 +131,22 @@ body {
   font-family: var(--font-tibetan);
   font-size: 1.1em;
   line-height: 2;
+}
+
+/* Nur für Screenreader sichtbar — visuell versteckt, aber im
+   Accessibility-Tree vorhanden (z. B. <label for="selectPage">).
+   Standard-Pattern, kein display:none (das würde Screenreader
+   ebenfalls ausschließen). — 2026-07-12 */
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
 }
 
 /* =========================================================
@@ -551,13 +582,13 @@ header {
   border-bottom: 1px solid var(--second-light);
   font-family: var(--font-serif);
   font-size: 14px;
-  color: var(--second);
+  color: var(--second-dark);
   cursor: pointer;
   transition: color var(--transition);
 }
 
 .pane li:hover {
-  color: var(--second-dark);
+  color: var(--color);
 }
 
 /* =========================================================
@@ -1228,13 +1259,13 @@ main {
 }
 
 .section a {
-  color: var(--second);
+  color: var(--second-dark);
   text-decoration: underline;
   text-underline-offset: 2px;
 }
 
 .section a:hover {
-  color: var(--second-dark);
+  color: var(--color);
 }
 
 .section img {

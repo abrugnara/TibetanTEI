@@ -4,7 +4,7 @@
  * Autor:   Albert Brugnara
  *
  * Erstellt: 2025-05-14T10:00:00+02:00
- * Geändert: 2026-07-12T00:00:00+02:00
+ * Geändert: 2026-07-12T00:01:00+02:00
  *
  * Pfad: assets/app/detail.js
  *
@@ -59,6 +59,11 @@
  *               initTabs()/initFacsimileZoom() laufen davon unabhängig
  *               weiter. loadText(): doppelten texts.find()-Aufruf
  *               (entry/currentEntry) auf eine Abfrage reduziert.
+ *   2026-07-12  Code-Qualität: alle 17 verbliebenen direkten
+ *               document.getElementById(...)-Aufrufe durch el(...)
+ *               ersetzt (nur el()s eigene Implementierung ausgenommen) —
+ *               konsistente Nutzung des zentralen Helpers, rein
+ *               mechanisch, keine Verhaltensänderung.
  *
  * Beschreibung:
  *   Kernlogik der Detail-Ansicht:
@@ -186,7 +191,7 @@ function wtypeAktualisieren() {
                'text-decoration: underline dotted var(--color-place, #c47d00); ' +
                'text-decoration-thickness: 1.5px; text-underline-offset: 4px; }';
     }
-    let dynStyle = document.getElementById('wtype-dyn-style');
+    let dynStyle = el('wtype-dyn-style');
     if (!dynStyle) {
         dynStyle = document.createElement('style');
         dynStyle.id = 'wtype-dyn-style';
@@ -333,7 +338,7 @@ window.onload = function () {
     const id = new URLSearchParams(window.location.search).get("id");
     if (typeof texts === "undefined") {
         console.error("TibetanTEI: texts.js wurde nicht geladen (Netzwerkfehler?) — Textliste nicht verfügbar.");
-        const errEl = document.getElementById("loadError");
+        const errEl = el("loadError");
         if (errEl) errEl.style.display = "block";
     } else if (id) {
         loadText(id);
@@ -1554,7 +1559,7 @@ window.tibetanTEIAllTextsCache = {};
 
 /* ── Dauerhaftes Ergebnispanel für Alle-Textzeugen-Suche — 2026-05-30 ── */
 function alleErgebnisPanel_erstellen() {
-    if (document.getElementById('alleErgebnisPanel')) return;
+    if (el('alleErgebnisPanel')) return;
     const panel = document.createElement('div');
     panel.id = 'alleErgebnisPanel';
     panel.innerHTML =
@@ -1568,9 +1573,9 @@ function alleErgebnisPanel_erstellen() {
 
 function alleErgebnisPanel_aktualisieren(matches, aktIdx) {
     alleErgebnisPanel_erstellen();
-    const panel  = document.getElementById('alleErgebnisPanel');
-    const titel  = document.getElementById('ae-titel');
-    const liste  = document.getElementById('ae-liste');
+    const panel  = el('alleErgebnisPanel');
+    const titel  = el('ae-titel');
+    const liste  = el('ae-liste');
     if (!panel || !liste) return;
 
     if (titel) titel.textContent =
@@ -1590,7 +1595,7 @@ function alleErgebnisPanel_aktualisieren(matches, aktIdx) {
     panel.style.display = 'block';
 
     /* Aktiven Eintrag ins Sichtfeld scrollen */
-    const aktItem = document.getElementById('ae-item-' + aktIdx);
+    const aktItem = el('ae-item-' + aktIdx);
     if (aktItem) aktItem.scrollIntoView({ block: 'nearest' });
 }
 
@@ -1634,7 +1639,7 @@ window.alleErgebnisPanel_navigiere = function(idx) {
 };
 
 function alleErgebnisPanel_schliessen() {
-    const panel = document.getElementById('alleErgebnisPanel');
+    const panel = el('alleErgebnisPanel');
     if (panel) panel.style.display = 'none';
     /* Wie × Button: zurück zum Ursprung */
     const orig = window.tibetanTEIOriginalEntry;
@@ -1756,8 +1761,8 @@ async function sucheAlleTextzeugen(q, resultsEl, ladestatus) {
 (function() {
     /* Wird aufgerufen sobald DOM ready */
     const injectCheckbox = () => {
-        if (document.getElementById('cbAlleTextzeugen')) return;
-        const input = document.getElementById('searchInput');
+        if (el('cbAlleTextzeugen')) return;
+        const input = el('searchInput');
         if (!input) return;
 
         const wrapper = input.closest('div, form, header') || input.parentElement;
@@ -1889,9 +1894,9 @@ function setupSearch() {
         }
 
         /* Checkbox: Alle Textzeugen? — 2026-05-30 */
-        const cbAlle  = document.getElementById('cbAlleTextzeugen');
+        const cbAlle  = el('cbAlleTextzeugen');
         const alleAn  = cbAlle && cbAlle.checked;
-        const laden   = document.getElementById('alleTextzeugenLaden');
+        const laden   = el('alleTextzeugenLaden');
 
         if (alleAn) {
             /* ── Suche über alle Textzeugen (async) ── */
@@ -2031,7 +2036,7 @@ function setupSearch() {
             updateMatchDisplay();
             const orig3 = window.tibetanTEIOriginalEntry;
             window.tibetanTEIOriginalEntry = null;
-            const panel3 = document.getElementById('alleErgebnisPanel');
+            const panel3 = el('alleErgebnisPanel');
             if (panel3) panel3.style.display = 'none';
             if (orig3 && orig3.id !== currentEntry?.id) {
                 loadText(orig3.id);
@@ -2146,7 +2151,7 @@ window.jumpToMatch = function (idx) {
 window.nextMatch = function () {
     if (searchMatches.length === 0) return;
     /* Panel-Navigation wenn Alle-Textzeugen-Suche aktiv */
-    const panel = document.getElementById('alleErgebnisPanel');
+    const panel = el('alleErgebnisPanel');
     if (panel && panel.style.display !== 'none') {
         const idx = (currentMatchIndex + 1) % searchMatches.length;
         alleErgebnisPanel_navigiere(idx);
@@ -2161,7 +2166,7 @@ window.nextMatch = function () {
  */
 window.prevMatch = function () {
     if (searchMatches.length === 0) return;
-    const panel = document.getElementById('alleErgebnisPanel');
+    const panel = el('alleErgebnisPanel');
     if (panel && panel.style.display !== 'none') {
         const idx = (currentMatchIndex - 1 + searchMatches.length) % searchMatches.length;
         alleErgebnisPanel_navigiere(idx);
@@ -2842,7 +2847,7 @@ function attachInteractivity() {
 
             /* Zeile im Vok.-Tab hervorheben und scrollen */
             requestAnimationFrame(() => {
-                const vocPane = document.getElementById(tabId);
+                const vocPane = el(tabId);
                 if (!vocPane) return;
                 const row = vocPane.querySelector(`tr[data-lexid="${lexId}"]`);
                 if (row) {
@@ -2964,7 +2969,7 @@ function initTabs() {
 
         /* Panes umschalten */
         panesContainer.querySelectorAll(".pane").forEach(p => p.classList.remove("active"));
-        const targetPane = document.getElementById(btn.dataset.id);
+        const targetPane = el(btn.dataset.id);
         if (targetPane) {
             targetPane.classList.add("active");
             /* Zoom zurücksetzen wenn Faksimile-Tab aktiviert wird */
