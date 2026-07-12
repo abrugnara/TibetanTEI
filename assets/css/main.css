@@ -5,7 +5,7 @@
  * Autor:   Albert Brugnara
  *
  * Erstellt: 2025-05-14T10:00:00+02:00
- * Geändert: 2026-07-12T00:05:00+02:00
+ * Geändert: 2026-07-12T00:06:00+02:00
  *
  * Änderungshistorie:
  *   2025-05-14  Zusammenführung von main.css und search.css zu main.css;
@@ -45,6 +45,14 @@
  *   2026-07-12  .translation-pending ergänzt: inline-Pendant zu
  *               .pane-placeholder für zusammengefasste TODO-Satzläufe
  *               (siehe detail.js).
+ *   2026-07-12  Code-Qualität: .pane-placeholder und .reg-empty teilten
+ *               sich drei identische Deklarationen (color, font-family,
+ *               font-size) — zu kombiniertem Selektor zusammengezogen,
+ *               je eigene Regel behält nur noch die unterscheidenden
+ *               Eigenschaften (Ausrichtung/Kursivierung/Padding).
+ *               .pane.leer existiert entgegen einer Annahme gar nicht im
+ *               Code — keine Änderung dafür nötig. Visuell keine
+ *               Änderung, reine Deduplizierung.
  *
  * Beschreibung:
  *   Einheitliches Stylesheet für alle HTML-Seiten des TibetanTEI-Projekts.
@@ -741,10 +749,21 @@ a.reg-link::after {
 }
 
 /* Platzhalter für leere Panes */
-.pane-placeholder {
+/* Gemeinsame Basis für Leer-/Platzhalter-Zustände — .pane-placeholder
+   (ganze Pane leer, zentriert/kursiv) und .reg-empty (einzelner
+   Eintrag in Registerliste, linksbündig/kompakt, siehe weiter unten)
+   teilten sich bisher drei identische Deklarationen (Duplikat). Beide
+   bleiben aber bewusst zwei Klassen, nicht eine — sie unterscheiden
+   sich in Ausrichtung, Kursivierung und Padding und stehen in
+   unterschiedlichen Kontexten. — 2026-07-12 */
+.pane-placeholder,
+.reg-empty {
   color: var(--color-muted);
   font-family: var(--font-sans);
   font-size: 13px;
+}
+
+.pane-placeholder {
   font-style: italic;
   padding: var(--space-md);
   text-align: center;
@@ -944,11 +963,9 @@ span.tei-s.parallel-active {
   transition: background 0.3s;
 }
 
-/* Leerer Zustand */
+/* Leerer Zustand — gemeinsame color/font-family/font-size siehe
+   .pane-placeholder weiter oben (kombinierter Selektor). */
 .reg-empty {
-  color: var(--color-muted);
-  font-size: 13px;
-  font-family: var(--font-sans);
   padding: var(--space-sm) 0;
 }
 

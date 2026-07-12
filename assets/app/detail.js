@@ -4,7 +4,7 @@
  * Autor:   Albert Brugnara
  *
  * Erstellt: 2025-05-14T10:00:00+02:00
- * Geändert: 2026-07-12T00:03:00+02:00
+ * Geändert: 2026-07-12T00:04:00+02:00
  *
  * Pfad: assets/app/detail.js
  *
@@ -79,6 +79,22 @@
  *               "TODO" ebenfalls nicht mehr als vermeintliche Übersetzung
  *               an (text !== 'TODO'-Filter). XML selbst unverändert —
  *               reine Anzeige-Behandlung, bis die Übersetzungen ergänzt
+ *               werden.
+ *   2026-07-12  Struktur/Wartbarkeit: TABS-Konfigurationsarray + neue
+ *               Funktion buildColumnTabs(side) ersetzen das bis dahin
+ *               fast 1:1 duplizierte statische HTML für linke/rechte
+ *               Spalte (11 Tab-Buttons + 11 Pane-Divs × 2). Läuft ganz
+ *               oben im Skript, vor der left/right-Konstruktion (die
+ *               per el("facsimile-left") usw. auf bereits vorhandene
+ *               Elemente angewiesen ist). Erzeugt IDs/Klassen/role-
+ *               und aria-Attribute exakt wie das bisherige Markup;
+ *               initTabs()-Invariante (.column: genau zwei Kinder,
+ *               .tabs + .panes-container als nextElementSibling)
+ *               bleibt gewahrt. Per jsdom-Simulation mit echtem
+ *               detail.html gegengeprüft: alle 22 IDs vorhanden,
+ *               Tab-Klick schaltet Panes korrekt um. detail.html:
+ *               beide <section class="column ...">-Elemente sind jetzt
+ *               leere Container, die von buildColumnTabs() befüllt
  *               werden.
  *
  * Beschreibung:
@@ -276,6 +292,89 @@ let searchListenersBound = false;
 function el(id) {
     return document.getElementById(id);
 }
+
+/**
+ * Konfiguration aller Tabs (Reihenfolge = Anzeigereihenfolge).
+ * Ersetzt das bis 2026-07-12 fast 1:1 duplizierte statische HTML
+ * für die linke und rechte Spalte (11 Tab-Buttons + 11 Pane-Divs
+ * × 2 Spalten). Ein neuer Tab braucht jetzt nur einen Array-Eintrag
+ * statt vier Stellen von Hand zu ändern (Button links, Pane links,
+ * Button rechts, Pane rechts).
+ *
+ * @typedef {{ id: string, label: string, lang?: string,
+ *             paneExtraClass?: string, register?: boolean }} TabConfig
+ * @type {TabConfig[]}
+ */
+const TABS = [
+    { id: "facsimile", label: "Faks.",   paneExtraClass: "facsimile" },
+    { id: "xml",       label: "XML" },
+    { id: "tibetan",   label: "Tibetan", lang: "bo" },
+    { id: "wylie",     label: "Wylie",   lang: "bo-Latn" },
+    { id: "sanskrit",  label: "Skt.",    lang: "sa-Latn" },
+    { id: "german",    label: "De",      lang: "de" },
+    { id: "english",   label: "En",      lang: "en" },
+    { id: "persons",   label: "Pers.",   register: true },
+    { id: "places",    label: "Orte",    register: true },
+    { id: "roles",     label: "Rolle",   register: true },
+    { id: "vocab",     label: "Vok.",    register: true },
+];
+
+/**
+ * Baut Tabs + Panes für eine Spalte ('left' oder 'right') aus TABS
+ * und hängt sie in das bereits vorhandene, aber leere
+ * <section class="column ..."> ein. MUSS laufen, bevor irgendein
+ * Code per el("facsimile-left") usw. auf die Panes zugreift — daher
+ * ganz oben im Skript aufgerufen, vor der left/right-Konstruktion.
+ * IDs, Klassen, role/aria-Attribute entsprechen exakt dem bisherigen
+ * statischen Markup (siehe detail.html-Kommentar zu initTabs():
+ * .column braucht genau zwei Kinder, .tabs und .panes-container als
+ * dessen nextElementSibling). — 2026-07-12
+ *
+ * @param {"left"|"right"} side
+ */
+function buildColumnTabs(side) {
+    const column = document.querySelector(`.column.${side}`);
+    if (!column) return;
+
+    const sideLabel = side === "left" ? "Linke Spalte" : "Rechte Spalte";
+
+    const tabsEl = document.createElement("div");
+    tabsEl.className = "tabs";
+    tabsEl.setAttribute("role", "tablist");
+    tabsEl.setAttribute("aria-label", sideLabel);
+
+    const panesEl = document.createElement("div");
+    panesEl.className = "panes-container";
+
+    TABS.forEach((tab, i) => {
+        const isFirst = i === 0;
+        const domId   = `${tab.id}-${side}`;
+
+        const btn = document.createElement("button");
+        btn.className = "tab-button" + (isFirst ? " active" : "") +
+            (tab.register ? " tab-register" : "");
+        btn.dataset.id = domId;
+        btn.setAttribute("role", "tab");
+        btn.setAttribute("aria-selected", isFirst ? "true" : "false");
+        btn.setAttribute("aria-controls", domId);
+        btn.textContent = tab.label;
+        tabsEl.appendChild(btn);
+
+        const pane = document.createElement("div");
+        pane.id = domId;
+        pane.className = "pane" + (tab.paneExtraClass ? ` ${tab.paneExtraClass}` : "") +
+            (isFirst ? " active" : "");
+        pane.setAttribute("role", "tabpanel");
+        if (tab.lang) pane.setAttribute("lang", tab.lang);
+        panesEl.appendChild(pane);
+    });
+
+    column.appendChild(tabsEl);
+    column.appendChild(panesEl);
+}
+
+buildColumnTabs("left");
+buildColumnTabs("right");
 
 /** DOM-Referenzen für die linke Spalte */
 const left = {

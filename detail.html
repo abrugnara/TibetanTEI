@@ -5,7 +5,7 @@
   Autor:   Albert Brugnara
 
   Erstellt: 2025-05-14T10:00:00+02:00
-  Geändert: 2026-07-12T00:02:00+02:00
+  Geändert: 2026-07-12T00:03:00+02:00
 
   Änderungshistorie:
     2025-05-14  Runden 1+2: Korrekturen (CSS, Tabs, Logo).
@@ -29,6 +29,15 @@
                 ergänzt (og:description generisch, da Inhalt vom
                 ?id=-Parameter abhängt, der erst clientseitig aufgelöst
                 wird).
+    2026-07-12  Struktur/Wartbarkeit: beide <section class="column left|
+                right">-Elemente sind jetzt leere Container. Tabs +
+                Panes (bis dahin fast 1:1 dupliziertes statisches HTML,
+                11 Tab-Buttons + 11 Pane-Divs × 2 Spalten) werden von
+                detail.js (TABS-Array, buildColumnTabs()) generiert,
+                bevor irgendein anderer Code darauf zugreift. IDs,
+                Klassen, role-/aria-Attribute unverändert gegenüber dem
+                bisherigen Markup; initTabs()-Invariante (zwei Kinder
+                pro .column) bleibt bestehen.
 
   Beschreibung:
     Detail-Ansicht eines TEI-Texts im zweispaltigen Lesepult-Layout.
@@ -112,7 +121,13 @@
 
 <!-- HAUPTBEREICH
      WICHTIG für initTabs(): jede .column hat genau zwei Kinder:
-     .tabs und .panes-container (nextElementSibling von .tabs). -->
+     .tabs und .panes-container (nextElementSibling von .tabs).
+     Der Inhalt beider .column-Elemente wird von detail.js
+     (buildColumnTabs(), TABS-Konfiguration, ganz oben im Skript
+     ausgeführt) generiert, bevor irgendein anderer Code darauf
+     zugreift. Bis 2026-07-12 war das fast 1:1 dupliziertes
+     statisches HTML (11 Tab-Buttons + 11 Pane-Divs × 2 Spalten);
+     jetzt ein einziges Array als Quelle der Wahrheit. -->
 <main class="reader">
 
     <div id="loadError" class="load-error" role="alert">
@@ -126,63 +141,9 @@
         ⏳ Lade Text …
     </div>
 
-    <section class="column left" aria-label="Linke Textspalte">
-        <div class="tabs" role="tablist" aria-label="Linke Spalte">
-            <button class="tab-button active"       data-id="facsimile-left" role="tab" aria-selected="true"  aria-controls="facsimile-left">Faks.</button>
-            <button class="tab-button"              data-id="xml-left"       role="tab" aria-selected="false" aria-controls="xml-left">XML</button>
-            <button class="tab-button"              data-id="tibetan-left"   role="tab" aria-selected="false" aria-controls="tibetan-left">Tibetan</button>
-            <button class="tab-button"              data-id="wylie-left"     role="tab" aria-selected="false" aria-controls="wylie-left">Wylie</button>
-            <button class="tab-button"              data-id="sanskrit-left"  role="tab" aria-selected="false" aria-controls="sanskrit-left">Skt.</button>
-            <button class="tab-button"              data-id="german-left"    role="tab" aria-selected="false" aria-controls="german-left">De</button>
-            <button class="tab-button"              data-id="english-left"   role="tab" aria-selected="false" aria-controls="english-left">En</button>
-            <button class="tab-button tab-register" data-id="persons-left"   role="tab" aria-selected="false" aria-controls="persons-left">Pers.</button>
-            <button class="tab-button tab-register" data-id="places-left"    role="tab" aria-selected="false" aria-controls="places-left">Orte</button>
-            <button class="tab-button tab-register" data-id="roles-left"     role="tab" aria-selected="false" aria-controls="roles-left">Rolle</button>
-            <button class="tab-button tab-register" data-id="vocab-left"     role="tab" aria-selected="false" aria-controls="vocab-left">Vok.</button>
-        </div>
-        <div class="panes-container">
-            <div id="facsimile-left" class="pane facsimile active" role="tabpanel"></div>
-            <div id="xml-left"       class="pane"                  role="tabpanel"></div>
-            <div id="tibetan-left"   class="pane"                  role="tabpanel" lang="bo"></div>
-            <div id="wylie-left"     class="pane"                  role="tabpanel" lang="bo-Latn"></div>
-            <div id="sanskrit-left"  class="pane"                  role="tabpanel" lang="sa-Latn"></div>
-            <div id="german-left"    class="pane"                  role="tabpanel" lang="de"></div>
-            <div id="english-left"   class="pane"                  role="tabpanel" lang="en"></div>
-            <div id="persons-left"   class="pane"                  role="tabpanel"></div>
-            <div id="places-left"    class="pane"                  role="tabpanel"></div>
-            <div id="roles-left"     class="pane"                  role="tabpanel"></div>
-            <div id="vocab-left"     class="pane"                  role="tabpanel"></div>
-        </div>
-    </section>
+    <section class="column left" aria-label="Linke Textspalte"></section>
 
-    <section class="column right" aria-label="Rechte Textspalte">
-        <div class="tabs" role="tablist" aria-label="Rechte Spalte">
-            <button class="tab-button active"       data-id="facsimile-right" role="tab" aria-selected="true"  aria-controls="facsimile-right">Faks.</button>
-            <button class="tab-button"              data-id="xml-right"       role="tab" aria-selected="false" aria-controls="xml-right">XML</button>
-            <button class="tab-button"              data-id="tibetan-right"   role="tab" aria-selected="false" aria-controls="tibetan-right">Tibetan</button>
-            <button class="tab-button"              data-id="wylie-right"    role="tab" aria-selected="false" aria-controls="wylie-right">Wylie</button>
-            <button class="tab-button"              data-id="sanskrit-right" role="tab" aria-selected="false" aria-controls="sanskrit-right">Skt.</button>
-            <button class="tab-button"              data-id="german-right"    role="tab" aria-selected="false" aria-controls="german-right">De</button>
-            <button class="tab-button"              data-id="english-right"  role="tab" aria-selected="false" aria-controls="english-right">En</button>
-            <button class="tab-button tab-register" data-id="persons-right"   role="tab" aria-selected="false" aria-controls="persons-right">Pers.</button>
-            <button class="tab-button tab-register" data-id="places-right"    role="tab" aria-selected="false" aria-controls="places-right">Orte</button>
-            <button class="tab-button tab-register" data-id="roles-right"    role="tab" aria-selected="false" aria-controls="roles-right">Rolle</button>
-            <button class="tab-button tab-register" data-id="vocab-right"    role="tab" aria-selected="false" aria-controls="vocab-right">Vok.</button>
-        </div>
-        <div class="panes-container">
-            <div id="facsimile-right" class="pane facsimile active" role="tabpanel"></div>
-            <div id="xml-right"       class="pane"                  role="tabpanel"></div>
-            <div id="tibetan-right"   class="pane"                  role="tabpanel" lang="bo"></div>
-            <div id="wylie-right"    class="pane"                  role="tabpanel" lang="bo-Latn"></div>
-            <div id="sanskrit-right" class="pane"                  role="tabpanel" lang="sa-Latn"></div>
-            <div id="german-right"    class="pane"                  role="tabpanel" lang="de"></div>
-            <div id="english-right"  class="pane"                  role="tabpanel" lang="en"></div>
-            <div id="persons-right"   class="pane"                  role="tabpanel"></div>
-            <div id="places-right"    class="pane"                  role="tabpanel"></div>
-            <div id="roles-right"     class="pane"                  role="tabpanel"></div>
-            <div id="vocab-right"     class="pane"                  role="tabpanel"></div>
-        </div>
-    </section>
+    <section class="column right" aria-label="Rechte Textspalte"></section>
 
 </main>
 
