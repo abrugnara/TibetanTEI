@@ -5,7 +5,7 @@
   Autor:   Albert Brugnara
 
   Erstellt: 2025-05-14T10:00:00+02:00
-  Geändert: 2026-05-16T00:00:00+02:00
+  Geändert: 2026-07-12T00:00:00+02:00
 
   Änderungshistorie:
     2025-05-14  Runden 1+2: Korrekturen (CSS, Tabs, Logo).
@@ -14,6 +14,12 @@
       - Seitentitel um Untertitel "Digitale Edition" ergänzt.
       - Seitenauswahl: #textTitle wird per JS mit Textnamen befüllt.
       - Footer mit GitHub-Wordmark und Impressum-Link ergänzt.
+    2026-07-12  - texts.js/detail.js: defer-Attribut ergänzt (Ladeperformance).
+      - Treffer-Navigation ▲/▼: onclick-Attribute entfernt, IDs
+        #searchPrevBtn/#searchNextBtn für addEventListener-Bindung in
+        detail.js ergänzt (statt globaler onclick-Funktionsaufrufe).
+      - #loadError-Banner in <main> ergänzt (verstecktes Hinweisfeld,
+        wird von detail.js eingeblendet, falls texts.js nicht lädt).
 
   Beschreibung:
     Detail-Ansicht eines TEI-Texts im zweispaltigen Lesepult-Layout.
@@ -53,8 +59,8 @@
             <div id="searchControls">
                 <button id="searchClear" class="search-clear" aria-label="Suche löschen">&times;</button>
                 <span class="match-count" id="matchInfo">0/0</span>
-                <button class="search-nav-btn" onclick="prevMatch()" aria-label="Vorheriger Treffer">▲</button>
-                <button class="search-nav-btn" onclick="nextMatch()" aria-label="Nächster Treffer">▼</button>
+                <button class="search-nav-btn" id="searchPrevBtn" aria-label="Vorheriger Treffer">▲</button>
+                <button class="search-nav-btn" id="searchNextBtn" aria-label="Nächster Treffer">▼</button>
             </div>
             <div id="searchResults" role="listbox" aria-label="Suchergebnisse"></div>
         </div>
@@ -91,6 +97,13 @@
      WICHTIG für initTabs(): jede .column hat genau zwei Kinder:
      .tabs und .panes-container (nextElementSibling von .tabs). -->
 <main class="reader">
+
+    <div id="loadError" class="load-error" role="alert">
+        Die Textliste (<code>texts.js</code>) konnte nicht geladen werden — vermutlich ein
+        Netzwerkproblem. Bitte die Seite neu laden; besteht das Problem weiterhin, das
+        <a href="https://github.com/abrugnara/TibetanTEI" target="_blank" rel="noopener">GitHub-Repository</a>
+        prüfen.
+    </div>
 
     <section class="column left" aria-label="Linke Textspalte">
         <div class="tabs" role="tablist" aria-label="Linke Spalte">
@@ -180,8 +193,8 @@
     </nav>
 </footer>
 
-<script src="assets/app/texts.js"></script>
-<script src="assets/app/detail.js"></script>
+<script src="assets/app/texts.js" defer></script>
+<script src="assets/app/detail.js" defer></script>
 
 </body>
 </html>

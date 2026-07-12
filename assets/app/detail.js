@@ -4,7 +4,7 @@
  * Autor:   Albert Brugnara
  *
  * Erstellt: 2025-05-14T10:00:00+02:00
- * Geändert: 2026-07-09T00:00:00+02:00
+ * Geändert: 2026-07-12T00:00:00+02:00
  *
  * Pfad: assets/app/detail.js
  *
@@ -45,6 +45,20 @@
  *               top:0 auf .wtype-legende .tei-note-marker verhindern
  *               leere Tooltip-Klicks und neutralisieren den
  *               Hochstellungs-Offset in der Legenden-Zeile.
+ *   2026-07-12  Treffer-Navigation ▲/▼: setupSearch() bindet jetzt
+ *               #searchPrevBtn/#searchNextBtn per addEventListener an
+ *               window.prevMatch/window.nextMatch (ersetzt die onclick-
+ *               Attribute in detail.html). Neue Guard-Variable
+ *               searchListenersBound sorgt dafür, dass die gesamte
+ *               Listener-Bindung in setupSearch() nur beim ersten Aufruf
+ *               läuft (setupSearch() wird bei jedem loadText() erneut
+ *               aufgerufen, bindet aber an statische, nicht neu
+ *               gerenderte Elemente). window.onload: expliziter
+ *               typeof-texts-Check mit console.error + Einblendung von
+ *               #loadError, falls texts.js nicht geladen wurde;
+ *               initTabs()/initFacsimileZoom() laufen davon unabhängig
+ *               weiter. loadText(): doppelten texts.find()-Aufruf
+ *               (entry/currentEntry) auf eine Abfrage reduziert.
  *
  * Beschreibung:
  *   Kernlogik der Detail-Ansicht:
@@ -222,6 +236,11 @@ let searchMatches = [];
 /** @type {number} Index des aktuell hervorgehobenen Treffers (-1 = keiner) */
 let currentMatchIndex = -1;
 
+/** @type {boolean} setupSearch() wird bei jedem loadText()/initializeUI()
+ *  erneut aufgerufen, bindet aber Listener an statische, nicht neu
+ *  gerenderte Elemente — daher nur beim ersten Aufruf tatsächlich binden. */
+let searchListenersBound = false;
+
 /* =========================================================
    DOM-Referenzen (Links- und Rechtsspalte)
    ========================================================= */
@@ -312,7 +331,11 @@ function getSnippet(text, query) {
 
 window.onload = function () {
     const id = new URLSearchParams(window.location.search).get("id");
-    if (id) {
+    if (typeof texts === "undefined") {
+        console.error("TibetanTEI: texts.js wurde nicht geladen (Netzwerkfehler?) — Textliste nicht verfügbar.");
+        const errEl = document.getElementById("loadError");
+        if (errEl) errEl.style.display = "block";
+    } else if (id) {
         loadText(id);
     } else {
         console.warn("TibetanTEI: Kein Text-ID in der URL gefunden (?id=...).");
@@ -428,7 +451,7 @@ function loadText(id) {
         console.warn(`TibetanTEI: Kein Texteintrag für ID "${id}" gefunden.`);
         return;
     }
-    currentEntry = (typeof texts !== 'undefined') ? (texts.find(t => t.id === id || t.slug === id) || null) : null;
+    currentEntry = entry;
     /* Wenn manuell gewechselt: Ursprungs-Eintrag zurücksetzen */
     if (window.tibetanTEIOriginalEntry &&
         window.tibetanTEIOriginalEntry.id === id) {
@@ -1839,8 +1862,12 @@ function setupSearch() {
     const results = el("searchResults");
     const clear   = el("searchClear");       /* KORREKTUR: ID statt Klasse */
     const ctrl    = el("searchControls");
+    const prevBtn = el("searchPrevBtn");
+    const nextBtn = el("searchNextBtn");
 
     if (!input) return;
+    if (searchListenersBound) return;
+    searchListenersBound = true;
 
     ['input', 'change', 'keyup'].forEach(evtName => {
     input.addEventListener(evtName, function () {
@@ -2013,6 +2040,11 @@ function setupSearch() {
             }
         });
     }
+
+    /* Treffer-Navigation ▲/▼ — vormals onclick="prevMatch()"/"nextMatch()"
+     * im HTML, jetzt per addEventListener gebunden. */
+    if (prevBtn) prevBtn.addEventListener("click", window.prevMatch);
+    if (nextBtn) nextBtn.addEventListener("click", window.nextMatch);
 
     /* Escape-Taste: Suche schließen und zurück — 2026-05-30 */
     document.addEventListener("keydown", (e) => {
