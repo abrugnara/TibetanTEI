@@ -5,7 +5,7 @@
   Autor:   Albert Brugnara
 
   Erstellt: 2025-05-14T10:00:00+02:00
-  Geändert: 2026-05-16T00:00:00+02:00
+  Geändert: 2026-07-12T00:01:00+02:00
 
   Änderungshistorie:
     2026-05-14  Korrektur & Überarbeitung:
@@ -26,6 +26,13 @@
         (vermeidet ID-Kollision mit dem gleichen Symbol im Header).
       - CSS-Referenz auf main.css war bereits korrekt.
       - rel="noopener" zu GitHub-Links ergänzt.
+    2026-07-12  loading="lazy" auf allen 9 Galerie-Thumbnails ergänzt
+                (Performance: Bilder unterhalb des ersten Viewports laden
+                erst bei Bedarf). Kein srcset/@2x, da keine
+                hochauflösenden Zweitdateien existieren.
+    2026-07-12  <link rel="preload"> für PlayfairDisplay-Regular.woff2
+                ergänzt (.site-title im Header ist auf jeder Seite
+                oberhalb des Falzes sichtbar).
 
   Beschreibung:
     Übersichtsseite aller verfügbaren TEI-Textzeugen als Bildergalerie.
@@ -37,6 +44,7 @@
     <title>Brugnara — TibetanTEI · Textzeugen</title>
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <link rel="icon" type="image/png" href="favicon.png" />
+    <link rel="preload" href="assets/fonts/PlayfairDisplay-Regular.woff2" as="font" type="font/woff2" crossorigin>
     <link rel="stylesheet" href="assets/css/main.css" />
 </head>
 
@@ -87,7 +95,7 @@
             <!-- Text 1: Gampopa -->
             <div class="text-item">
                 <a href="detail.html?id=1">
-                    <img src="content/images/1_gompopa/gompopa_page_1_original.jpeg"
+                    <img src="content/images/1_gompopa/gompopa_page_1_original.jpeg" loading="lazy"
                          alt="Gampopa — Vorschau" />
                     <h2>Gampopa</h2>
                 </a>
@@ -96,7 +104,7 @@
             <!-- Text 2: Dignāga -->
             <div class="text-item">
                 <a href="detail.html?id=2">
-                    <img src="content/images/2_dignaga/taranatha_dignaga_Page_593.jpg"
+                    <img src="content/images/2_dignaga/taranatha_dignaga_Page_593.jpg" loading="lazy"
                          alt="Dignāga — Vorschau" />
                     <h2>Dignāga</h2>
                 </a>
@@ -108,7 +116,7 @@
                     <!-- Leerzeichen im Ordnernamen "Ganden history" bleibt
                          erhalten — GitHub Pages toleriert das; lokal ggf.
                          Ordner umbenennen zu "Ganden_history". -->
-                    <img src="content/images/Ganden%20history/W1KG1610_60a.jpg"
+                    <img src="content/images/Ganden%20history/W1KG1610_60a.jpg" loading="lazy"
                          alt="Ganden — Vorschau" />
                     <h2>Ganden</h2>
                 </a>
@@ -117,7 +125,7 @@
             <!-- Text 4: Śrīsena -->
             <div class="text-item">
                 <a href="detail.html?id=4">
-                    <img src="content/images/Shrisena_dpal_gyi_sde_lam_rim/Shrisena_dpal_gyi_sde_lam_rim_Page_1_orginal.jpeg"
+                    <img src="content/images/Shrisena_dpal_gyi_sde_lam_rim/Shrisena_dpal_gyi_sde_lam_rim_Page_1_orginal.jpeg" loading="lazy"
                          alt="Śrīsena — Vorschau" />
                     <h2>Śrīsena</h2>
                 </a>
@@ -128,7 +136,7 @@
                  " " → %20, "'" → %27 -->
             <div class="text-item">
                 <a href="detail.html?id=5">
-                    <img src="content/images/5_klong%20chen%20ran%20%27byam/247_Chos%20bzi%20rin%20chen%20phreng%20ba.png"
+                    <img src="content/images/5_klong%20chen%20ran%20%27byam/247_Chos%20bzi%20rin%20chen%20phreng%20ba.png" loading="lazy"
                          alt="Klong chen rab 'byams — Vorschau" />
                     <h2>Klong chen rab 'byams</h2>
                 </a>
@@ -137,7 +145,7 @@
             <!-- Text 6: Śāntideva — Bodhicaryāvatāra -->
             <div class="text-item">
                 <a href="detail.html?id=6">
-                    <img src="content/images/6_shantideva/shantideva_1.png"
+                    <img src="content/images/6_shantideva/shantideva_1.png" loading="lazy"
                          alt="Śāntideva — Vorschau" />
                     <h2>Śāntideva — Bodhicaryāvatāra</h2>
                 </a>
@@ -146,7 +154,7 @@
             <!-- Text 7: R103 -->
             <div class="text-item">
                 <a href="detail.html?id=7">
-                    <img src="content/images/r103/1a.jpg"
+                    <img src="content/images/r103/1a.jpg" loading="lazy"
                          alt="Gong dkar rDo rje gdan pa — Vorschau" />
                     <h2>Gong dkar rDo rje gdan pa</h2>
                 </a>
@@ -154,7 +162,7 @@
         <!-- Text 8: Himmel und Höllen, und wie man dahin gelangt -->
             <div class="text-item">
                 <a href="detail.html?id=8">
-                    <img src="content/images/8_bu_ston_dignaga/buston_1_Page_1.jpg"
+                    <img src="content/images/8_bu_ston_dignaga/buston_1_Page_1.jpg" loading="lazy"
                          alt="bu ston dignaga — Vorschau" />
                     <h2>bu ston dignaga</h2>
                 </a>
@@ -162,7 +170,7 @@
         <!-- Text 9: Vimalaprabha -->
             <div class="text-item">
                 <a href="detail.html?id=9">
-                    <img src="content/images/9_Vimalaprabha/13310370.png"
+                    <img src="content/images/9_Vimalaprabha/13310370.png" loading="lazy"
                          alt="Gong dkar rDo rje gdan pa — Vorschau" />
                     <h2>Vimalaprabha</h2>
                 </a>

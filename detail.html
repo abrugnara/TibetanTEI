@@ -5,7 +5,7 @@
   Autor:   Albert Brugnara
 
   Erstellt: 2025-05-14T10:00:00+02:00
-  Geändert: 2026-07-12T00:00:00+02:00
+  Geändert: 2026-07-12T00:01:00+02:00
 
   Änderungshistorie:
     2025-05-14  Runden 1+2: Korrekturen (CSS, Tabs, Logo).
@@ -20,6 +20,9 @@
         detail.js ergänzt (statt globaler onclick-Funktionsaufrufe).
       - #loadError-Banner in <main> ergänzt (verstecktes Hinweisfeld,
         wird von detail.js eingeblendet, falls texts.js nicht lädt).
+    2026-07-12  <link rel="preload"> für PlayfairDisplay-Regular.woff2
+                (.site-title im Header) und YagpoTibetanSambhotaUni.woff2
+                (Tibetan-Panes, lang="bo") ergänzt.
 
   Beschreibung:
     Detail-Ansicht eines TEI-Texts im zweispaltigen Lesepult-Layout.
@@ -31,6 +34,8 @@
     <title>Brugnara — TibetanTEI · Textansicht</title>
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <link rel="icon" type="image/png" href="favicon.png" />
+    <link rel="preload" href="assets/fonts/PlayfairDisplay-Regular.woff2" as="font" type="font/woff2" crossorigin>
+    <link rel="preload" href="assets/fonts/YagpoTibetanSambhotaUni.woff2" as="font" type="font/woff2" crossorigin>
     <link rel="stylesheet" href="assets/css/main.css" />
 </head>
 
