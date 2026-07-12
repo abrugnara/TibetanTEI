@@ -5,7 +5,7 @@
   Autor:   Albert Brugnara
 
   Erstellt: 2025-05-14T10:00:00+02:00
-  Geändert: 2026-07-12T00:03:00+02:00
+  Geändert: 2026-07-12T00:04:00+02:00
 
   Änderungshistorie:
     2025-05-14  Runden 1+2: Korrekturen (CSS, Tabs, Logo).
@@ -38,6 +38,15 @@
                 Klassen, role-/aria-Attribute unverändert gegenüber dem
                 bisherigen Markup; initTabs()-Invariante (zwei Kinder
                 pro .column) bleibt bestehen.
+    2026-07-12  Content-Security-Policy-Meta-Tag ergänzt (nach
+                meta charset). script-src ohne 'unsafe-inline' (keine
+                Inline-Skripte/onclick-Attribute mehr im Projekt);
+                style-src mit 'unsafe-inline' (detail.js setzt
+                durchgehend element.style.xxx). Fehlerbehandlung in
+                detail.js verbessert: sichtbare Meldung (.pane-error)
+                bei fetch()/XML-Fehlern statt nur Konsolen-Log; main.css
+                um @media print (Druckoptimierung) und .pane-error
+                ergänzt.
 
   Beschreibung:
     Detail-Ansicht eines TEI-Texts im zweispaltigen Lesepult-Layout.
@@ -46,6 +55,7 @@
 <html lang="de">
 <head>
     <meta charset="utf-8" />
+    <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self'; style-src 'self' 'unsafe-inline'; img-src 'self'; font-src 'self'; base-uri 'self'; form-action 'self';" />
     <title>Brugnara — TibetanTEI · Textansicht</title>
     <meta name="description" content="Textansicht der digitalen Edition TibetanTEI: Faksimile, Tibetisch, Wylie-Transliteration, deutsche und englische Übersetzung, linguistische Annotation und Register nebeneinander." />
     <meta name="robots" content="index, follow" />

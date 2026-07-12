@@ -5,7 +5,7 @@
   Autor:   Albert Brugnara
 
   Erstellt: 2025-05-14T10:00:00+02:00
-  Geändert: 2026-07-12T00:02:00+02:00
+  Geändert: 2026-07-12T00:03:00+02:00
 
   Änderungshistorie:
     2026-05-14  Korrektur & Überarbeitung:
@@ -35,6 +35,11 @@
                 oberhalb des Falzes sichtbar).
     2026-07-12  SEO: meta description, meta robots, Open-Graph-Tags
                 (og:title/description/url/type) ergänzt.
+    2026-07-12  Content-Security-Policy-Meta-Tag ergänzt (nach
+                meta charset). script-src ohne 'unsafe-inline' (keine
+                Inline-Skripte/onclick-Attribute mehr im Projekt);
+                style-src mit 'unsafe-inline' (detail.js setzt
+                durchgehend element.style.xxx).
 
   Beschreibung:
     Übersichtsseite aller verfügbaren TEI-Textzeugen als Bildergalerie.
@@ -43,6 +48,7 @@
 <html lang="de">
 <head>
     <meta charset="utf-8" />
+    <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self'; style-src 'self' 'unsafe-inline'; img-src 'self'; font-src 'self'; base-uri 'self'; form-action 'self';" />
     <title>Brugnara — TibetanTEI · Textzeugen</title>
     <meta name="description" content="Übersicht aller Textzeugen der digitalen Edition TibetanTEI: Gampopa, Dignāga, Ganden-Religionsgeschichte, Śrīsena, Klong chen rab 'byams, Śāntideva und weitere klassisch-tibetische Werke, TEI-P5-kodiert." />
     <meta name="robots" content="index, follow" />

@@ -4,7 +4,7 @@
   Projekt: Brugnara - TibetanTEI
   Autor:   Albert Brugnara
 
-  Geändert: 2026-07-12T00:02:00+02:00
+  Geändert: 2026-07-12T00:03:00+02:00
 
   Änderungshistorie:
     2026-07-12  Header mit Änderungshistorie neu eingeführt (bislang keiner
@@ -19,6 +19,11 @@
                 oberhalb des Falzes sichtbar).
     2026-07-12  SEO: meta description, meta robots, Open-Graph-Tags
                 (og:title/description/url/type) ergänzt.
+    2026-07-12  Content-Security-Policy-Meta-Tag ergänzt (nach
+                meta charset). script-src ohne 'unsafe-inline' (keine
+                Inline-Skripte/onclick-Attribute mehr im Projekt);
+                style-src mit 'unsafe-inline' (detail.js setzt
+                durchgehend element.style.xxx).
 
   Beschreibung:
     Impressum-Seite.
@@ -26,6 +31,7 @@
 <html lang="de">
   <head>
     <meta charset="utf-8" />
+    <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self'; style-src 'self' 'unsafe-inline'; img-src 'self'; font-src 'self'; base-uri 'self'; form-action 'self';" />
     <title>Brugnara - TibetanTEI Impressum</title>
     <meta name="description" content="Impressum der digitalen Edition TibetanTEI — Kontaktangaben nach österreichischem Mediengesetz." />
     <meta name="robots" content="index, follow" />

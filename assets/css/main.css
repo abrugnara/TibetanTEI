@@ -5,7 +5,7 @@
  * Autor:   Albert Brugnara
  *
  * Erstellt: 2025-05-14T10:00:00+02:00
- * Geändert: 2026-07-12T00:06:00+02:00
+ * Geändert: 2026-07-12T00:07:00+02:00
  *
  * Änderungshistorie:
  *   2025-05-14  Zusammenführung von main.css und search.css zu main.css;
@@ -53,6 +53,11 @@
  *               .pane.leer existiert entgegen einer Annahme gar nicht im
  *               Code — keine Änderung dafür nötig. Visuell keine
  *               Änderung, reine Deduplizierung.
+ *   2026-07-12  .pane-error ergänzt (sichtbare Fehlermeldung bei
+ *               fetch()/XML-Fehlern, siehe detail.js). Neuer Abschnitt
+ *               "Druckoptimierung" (@media print) am Dateiende: blendet
+ *               Navigation/Chrome aus, zeigt alle Panes (nicht nur den
+ *               aktiven Tab) untereinander statt im Zwei-Spalten-Grid.
  *
  * Beschreibung:
  *   Einheitliches Stylesheet für alle HTML-Seiten des TibetanTEI-Projekts.
@@ -779,6 +784,19 @@ a.reg-link::after {
   color: var(--color-muted);
   font-style: italic;
   font-size: 0.9em;
+}
+
+/* Sichtbare Fehlermeldung in einem Pane, falls fetch()/XML-Parsing der
+   Textdatei fehlschlägt (siehe detail.js, loadText()-catch). Gleiche
+   Warnrot-Palette wie .load-error, aber als Block-Ersatz für den
+   gesamten Pane-Inhalt statt als Banner über der ganzen Seite.
+   — 2026-07-12 */
+.pane-error {
+  color: #7a3226;
+  font-family: var(--font-sans);
+  font-size: 13px;
+  padding: var(--space-md);
+  text-align: center;
 }
 
 /* Aktiver Registereintrag — permanent bis nächster Seitensprung */
@@ -1508,3 +1526,41 @@ tr.vocab-highlight td {
   background: rgba(139, 115, 85, 0.25) !important;
   transition: background 0.3s;
 }
+
+/* =========================================================
+   Druckoptimierung
+   ========================================================= */
+
+/* Ausgeblendet: Navigation/Chrome, die im Ausdruck keinen Sinn ergibt.
+   .reader von grid (zwei nebeneinanderliegende, unabhängig scrollbare
+   Spalten) auf block umgestellt, da "unabhängig scrollbar" beim Druck
+   irrelevant ist und sonst Inhalt abgeschnitten würde. Alle Panes
+   werden sichtbar (nicht nur der gerade aktive Tab) — beim Ausdruck
+   soll der volle Inhalt erscheinen, nicht nur, was zufällig gerade
+   angezeigt wurde. — 2026-07-12 */
+@media print {
+  header, footer, .tabs, .badge, .search-container,
+  #loadError, #loadingIndicator {
+    display: none !important;
+  }
+
+  .reader {
+    display: block !important;
+  }
+
+  .column {
+    height: auto !important;
+    overflow: visible !important;
+    position: static !important;
+  }
+
+  .pane {
+    display: block !important;
+    page-break-inside: avoid;
+  }
+
+  .pane.facsimile img {
+    max-width: 80%;
+  }
+}
+

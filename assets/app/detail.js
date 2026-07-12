@@ -4,7 +4,7 @@
  * Autor:   Albert Brugnara
  *
  * Erstellt: 2025-05-14T10:00:00+02:00
- * Geändert: 2026-07-12T00:04:00+02:00
+ * Geändert: 2026-07-12T00:06:00+02:00
  *
  * Pfad: assets/app/detail.js
  *
@@ -96,6 +96,30 @@
  *               beide <section class="column ...">-Elemente sind jetzt
  *               leere Container, die von buildColumnTabs() befüllt
  *               werden.
+ *   2026-07-12  Fehlerbehandlung: loadText()-catch zeigt jetzt eine
+ *               sichtbare Meldung ("⚠️ Fehler beim Laden: ...") in
+ *               allen aktiven Panes beider Spalten statt nur in der
+ *               Konsole (.pane-error, escapeHtml() gegen HTML in
+ *               err.message). XML-Parsefehler-Meldung um Dateinamen
+ *               ergänzt und auf 200 Zeichen verlängert (vorher 100,
+ *               ohne URL).
+ *   2026-07-12  BUGFIX (durch mich verursacht): Die neu eingeführte CSP
+ *               (script-src ohne 'unsafe-inline', siehe *.html) blockierte
+ *               8 dynamisch per innerHTML erzeugte onclick-Attribute, die
+ *               ich beim Einbau der CSP übersehen hatte (nur statisches
+ *               HTML geprüft, nicht die von detail.js generierten
+ *               Strings) — betraf jumpToMatch() (Suchergebnis-Klick,
+ *               vom Nutzer gemeldet), jumpToPage() ×2 (Register-
+ *               Seitenlinks), highlightWord() (Vokabelregister),
+ *               alleErgebnisPanel_schliessen()/_navigiere(). Alle auf
+ *               data-Attribute + eine neue zentrale Funktion
+ *               initDelegatedActions() umgestellt (Event-Delegation,
+ *               analog zu initTabs()), in window.onload registriert.
+ *               Per jsdom verifiziert: echte Suche durchgeführt, auf
+ *               Ergebnis geklickt, Seite wechselt korrekt (vorher:
+ *               kein Sprung); alle 5 Fälle zusätzlich isoliert mit
+ *               synthetischen Elementen gegen Spione getestet — jeweils
+ *               korrekter Funktionsaufruf mit korrekten Argumenten.
  *
  * Beschreibung:
  *   Kernlogik der Detail-Ansicht:
@@ -461,6 +485,7 @@ window.onload = function () {
         console.warn("TibetanTEI: Kein Text-ID in der URL gefunden (?id=...).");
     }
     initTabs();
+    initDelegatedActions();
     initFacsimileZoom();
 };
 
@@ -591,7 +616,7 @@ function loadText(id) {
             const xmlDoc = parser.parseFromString(text, "application/xml");
 
             const parseErr = xmlDoc.querySelector("parsererror");
-            if (parseErr) throw new Error(`XML-Parsefehler: ${parseErr.textContent.slice(0, 100)}`);
+            if (parseErr) throw new Error(`XML-Fehler in ${entry.url}: ${parseErr.textContent.slice(0, 200)}`);
 
             /* --- Externes standOff laden falls @source gesetzt — 2026-05-29 */
             const standOffEl = xmlDoc.querySelector("standOff[source]");
@@ -767,6 +792,16 @@ function loadText(id) {
             console.warn(`TibetanTEI: XML konnte nicht geladen werden (${entry.url}):`, err.message);
             const loadingEl3 = el("loadingIndicator");
             if (loadingEl3) loadingEl3.style.display = "none";
+            /* Sichtbare Fehlermeldung statt stillem Konsolen-Log —
+             * in JEDEM aktiven Pane beider Spalten, da nicht bekannt
+             * ist, welcher Tab gerade offen ist. escapeHtml() gegen
+             * unwahrscheinliche, aber theoretisch mögliche HTML-
+             * Sonderzeichen in err.message (z. B. aus einer
+             * XML-Fehlermeldung). — 2026-07-12 */
+            const message = `⚠️ Fehler beim Laden: ${escapeHtml(err.message)}`;
+            document.querySelectorAll(".pane.active").forEach(pane => {
+                pane.innerHTML = `<p class="pane-error">${message}</p>`;
+            });
         });
 }
 
@@ -1704,7 +1739,7 @@ function alleErgebnisPanel_erstellen() {
     panel.innerHTML =
         '<div class="ae-header">' +
         '<span id="ae-titel">Suchergebnisse</span>' +
-        '<button onclick="alleErgebnisPanel_schliessen()" title="Schließen">✕</button>' +
+        '<button class="ae-close-btn" title="Schließen">✕</button>' +
         '</div>' +
         '<div id="ae-liste"></div>';
     document.body.appendChild(panel);
@@ -1723,7 +1758,7 @@ function alleErgebnisPanel_aktualisieren(matches, aktIdx) {
     liste.innerHTML = matches.map((m, idx) => {
         const isTib = /[\u0F00-\u0FFF]/.test(m.snippet);
         return `<div class="ae-item${idx === aktIdx ? ' ae-aktiv' : ''}"
-            onclick="alleErgebnisPanel_navigiere(${idx})"
+            data-idx="${idx}"
             id="ae-item-${idx}">
             <span class="ae-textname">${escapeXml(m.textName)}</span>
             <span class="ae-seite">S. ${escapeXml(m.n)}</span>
@@ -2054,7 +2089,7 @@ function setupSearch() {
                             const noteBadge = (m.matchedNoteIds && m.matchedNoteIds.length)
                                 ? ' <span class="search-note-badge" title="Treffer in einer Notiz">📝 Notiz</span>'
                                 : '';
-                            return `<div class="search-result" onclick="jumpToMatch(${idx})">
+                            return `<div class="search-result" data-idx="${idx}">
                                 <strong style="color:${anderer ? '#5a3e2b' : '#333'}">
                                     ${escapeXml(m.textName)} · Seite ${escapeXml(m.n)}
                                 </strong>${noteBadge}:<br>
@@ -2144,7 +2179,7 @@ function setupSearch() {
                     const noteBadge = (m.matchedNoteIds && m.matchedNoteIds.length)
                         ? ' <span class="search-note-badge" title="Treffer in einer Notiz">📝 Notiz</span>'
                         : '';
-                    return `<div class="search-result" onclick="jumpToMatch(${idx})">
+                    return `<div class="search-result" data-idx="${idx}">
                         <strong>Seite ${escapeXml(m.n)}</strong>${noteBadge}:
                         <span class="${isTib ? 'u-chen-search' : ''}">${m.snippet}</span>
                     </div>`;
@@ -2471,8 +2506,9 @@ function updateRegisters(page) {
         const pageLinks = pages.length > 0
             ? `<span class="reg-pages">${
                 pages.map(p =>
-                    `<button class="reg-page-btn" 
-                             onclick="event.stopPropagation(); jumpToPage('${escapeXml(p)}', '${escapeXml(item.id)}', '${escapeXml(item.name)}', '${escapeXml((item.wylie || '').replace(/'/g, "\\'"))}')"
+                    `<button class="reg-page-btn"
+                             data-page="${escapeXml(p)}" data-id="${escapeXml(item.id)}"
+                             data-name="${escapeXml(item.name)}" data-wylie="${escapeXml(item.wylie || '')}"
                              title="Gehe zu Seite ${escapeXml(p)}">${escapeXml(p)}</button>`
                 ).join("")
               }</span>`
@@ -2558,7 +2594,7 @@ function buildVocabList(page) {
 
         const links = wIds.map(wId =>
             `<button class="reg-page-btn word-ref-btn"
-                     onclick="highlightWord('${escapeXml(wId)}', this)"
+                     data-wid="${escapeXml(wId)}"
                      title="${escapeXml(wId)}">[→]</button>`
         ).join(' ');
 
@@ -2678,8 +2714,9 @@ function buildRoleList() {
             const pageLinks = pages.length > 0
                 ? `<span class="reg-pages">${
                     pages.map(pg =>
-                        `<button class="reg-page-btn" 
-                                 onclick="event.stopPropagation(); jumpToPage('${escapeXml(pg)}', '${escapeXml(p.id)}', '${escapeXml(p.name)}', '${escapeXml((p.wylie || '').replace(/'/g, "\\'"))}')"
+                        `<button class="reg-page-btn"
+                                 data-page="${escapeXml(pg)}" data-id="${escapeXml(p.id)}"
+                                 data-name="${escapeXml(p.name)}" data-wylie="${escapeXml(p.wylie || '')}"
                                  title="Gehe zu Seite ${escapeXml(pg)}">${escapeXml(pg)}</button>`
                     ).join("")
                   }</span>`
@@ -3115,6 +3152,68 @@ function initTabs() {
             if (targetPane.classList.contains("facsimile")) {
                 window.resetFacsimileZoom();
             }
+        }
+    });
+}
+
+/**
+ * Zentrale, delegierte Klick-Behandlung für dynamisch (per innerHTML)
+ * erzeugte interaktive Elemente. Ersetzt fünf vormals inline gesetzte
+ * onclick-Attribute (alleErgebnisPanel_schliessen(), _navigiere(),
+ * jumpToMatch(), jumpToPage() ×2, highlightWord()) — die CSP
+ * (script-src ohne 'unsafe-inline', siehe <meta http-equiv=
+ * "Content-Security-Policy"> in *.html) blockiert dynamisch per
+ * innerHTML eingefügte onclick-Attribute ebenso wie statische.
+ * data-Attribute + Event-Delegation umgehen das, analog zu initTabs().
+ * MUSS vor jedem möglichen Klick registriert sein, daher zusammen mit
+ * initTabs() in window.onload aufgerufen. — 2026-07-12
+ */
+function initDelegatedActions() {
+    document.addEventListener("click", (e) => {
+        /* "Alle Textzeugen"-Ergebnispanel: Schließen-Button */
+        if (e.target.closest(".ae-close-btn")) {
+            window.alleErgebnisPanel_schliessen();
+            return;
+        }
+
+        /* "Alle Textzeugen"-Ergebnispanel: Eintrag anklicken */
+        const aeItem = e.target.closest(".ae-item[data-idx]");
+        if (aeItem) {
+            window.alleErgebnisPanel_navigiere(Number(aeItem.dataset.idx));
+            return;
+        }
+
+        /* Suchergebnis anklicken (Einzeltext oder alle Textzeugen) */
+        const searchResult = e.target.closest(".search-result[data-idx]");
+        if (searchResult) {
+            window.jumpToMatch(Number(searchResult.dataset.idx));
+            return;
+        }
+
+        /* Vokabelregister: Wort im Text hervorheben — MUSS vor dem
+         * allgemeinen .reg-page-btn-Fall geprüft werden, da
+         * .word-ref-btn zusätzlich auch .reg-page-btn trägt. */
+        const wordRefBtn = e.target.closest(".word-ref-btn[data-wid]");
+        if (wordRefBtn) {
+            window.highlightWord(wordRefBtn.dataset.wid, wordRefBtn);
+            return;
+        }
+
+        /* Register (Personen/Rollen): Seitenlink anklicken */
+        const pageBtn = e.target.closest(".reg-page-btn[data-page]");
+        if (pageBtn) {
+            /* Entspricht dem vormaligen inline event.stopPropagation():
+             * verhindert, dass der Klick zum umgebenden <li>
+             * durchreicht und dort ungewollt einen externen
+             * Nachweis-Link öffnet. */
+            e.stopPropagation();
+            window.jumpToPage(
+                pageBtn.dataset.page,
+                pageBtn.dataset.id,
+                pageBtn.dataset.name,
+                pageBtn.dataset.wylie
+            );
+            return;
         }
     });
 }
