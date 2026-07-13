@@ -192,9 +192,6 @@
                     <s
                         xml:id="s65a01"
                         corresp="#s65a01_de #s65a01_en">
-                        <pc
-                            xml:id="pc65a01_01"
-                            type="shad">།</pc>
                         <w
                             xml:id="w65a01_01"
                             ana="#lex_slob_dpon"
@@ -346,7 +343,7 @@
                             resp="#albert_brugnara">zhes bya ba (w65a01_27--28) bildet mit dem
                             vorangehenden Personennamen rgyal po Shri Harsha eine geschlossene
                             Namensapposition ("genannt X"), kein eingebetteter Redesatz mit
-                            folgendem Sprechverb. Belegstelle: Schwieger §6.5.5 (S. 193).</note>་<w
+                            folgendem Sprechverb. Belegstelle: Schwieger (2006) §6.5.5 (S. 193).</note>་<w
                             xml:id="w65a01_29"
                             type="particle"
                             subtype="ablative"
@@ -1453,9 +1450,11 @@
                             xml:id="pc65b13_01"
                             type="shad">།</pc>
                     </s>
-                    <note place="foot" n="Aussagesatz" type="critical" target="#w65b13_08">
-                        Das ist ein Aussagesatze ...
-                    </note>
+                    <note
+                        place="foot"
+                        n="Aussagesatz"
+                        type="critical"
+                        target="#w65b13_08"> Als Beispiel: Das ist ein Aussagesatze ... </note>
                     <s
                         xml:id="s65b14"
                         corresp="#s65b14_de #s65b14_en">
