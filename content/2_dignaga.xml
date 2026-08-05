@@ -337,13 +337,12 @@
                         <!-- Beispiel-Notiz: inline im body, nicht mehr im standOff -->
                         <note
                             place="foot"
-                            n="1"
+                            n="zhes smras"
                             type="editorial"
                             target="#w65a01_27 #w65a01_28"
-                            resp="#albert_brugnara">zhes bya ba (w65a01_27--28) bildet mit dem
-                            vorangehenden Personennamen rgyal po Shri Harsha eine geschlossene
-                            Namensapposition ("genannt X"), kein eingebetteter Redesatz mit
-                            folgendem Sprechverb. Belegstelle: Schwieger (2006) §6.5.5 (S. 193).</note>་<w
+                            resp="#albert_brugnara">Belegstelle: Schwieger (2006)  §6.5.5 (S. 194):
+                            „Als der König sagte 'Wessen Tochter ist jene?', sagte (der Prinz):
+                            'Jene ist die Tochter des Hausvaters mGon-med-zas-sbyin.'" (MBc 399).</note>་<w
                             xml:id="w65a01_29"
                             type="particle"
                             subtype="ablative"
