@@ -1356,6 +1356,15 @@ main {
   color: var(--color);
 }
 
+.section .citation-block {
+  font-size: 14px;
+  color: var(--color-muted);
+  border-left: 3px solid var(--second-light);
+  padding-left: var(--space-md);
+  margin: var(--space-md) 0;
+  font-family: var(--font-sans);
+}
+
 .section img {
   max-width: 100%;
   height: auto;

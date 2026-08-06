@@ -4,23 +4,19 @@
   Projekt: Brugnara - TibetanTEI
   Autor:   Albert Brugnara
 
-  Geändert: 2026-07-12T00:03:00+02:00
+  Geändert: 2026-08-05T12:00:00+02:00
 
   Änderungshistorie:
-    2026-07-12  Header mit Änderungshistorie neu eingeführt (bislang keiner
-                vorhanden — Erstelldatum daher unbekannt, Historie beginnt
-                ab hier).
-                lang="de" im <html>-Tag ergänzt (fehlte bisher).
-    2026-07-12  <link rel="preload"> für PlayfairDisplay-Regular.woff2
-                ergänzt (.site-title im Header ist auf jeder Seite
-                oberhalb des Falzes sichtbar).
-    2026-07-12  SEO: meta description, meta robots, Open-Graph-Tags
-                (og:title/description/url/type) ergänzt.
-    2026-07-12  Content-Security-Policy-Meta-Tag ergänzt (nach
-                meta charset). script-src ohne 'unsafe-inline' (keine
-                Inline-Skripte/onclick-Attribute mehr im Projekt);
-                style-src mit 'unsafe-inline' (detail.js setzt
-                durchgehend element.style.xxx).
+    2026-08-05  Überarbeitung der Startseite: professionellere und
+                wissenschaftlichere Gestaltung. Bildunterschrift ergänzt,
+                Editionsprinzip präziser formuliert, Kontaktblock ausgebaut,
+                Zitierweise, Lizenzangabe, Projektlaufzeit, Förderhinweis
+                (Platzhalter) hinzugefügt.
+    2026-07-12  Header mit Änderungshistorie neu eingeführt.
+                lang="de" im <html>-Tag ergänzt.
+    2026-07-12  <link rel="preload"> für PlayfairDisplay-Regular.woff2 ergänzt.
+    2026-07-12  SEO: meta description, meta robots, Open-Graph-Tags ergänzt.
+    2026-07-12  Content-Security-Policy-Meta-Tag ergänzt.
 
   Beschreibung:
     Projektbeschreibung / Startseite.
@@ -70,34 +66,94 @@
     </div>
   </header>
 
-   <main>
+  <main>
     <section class="section">
-      <h1>Projektbeschreibung: Digitale Erschließung klassisch-tibetischer Textzeugen </h1>
-      
+      <h1>Projektbeschreibung: Digitale Erschließung klassisch-tibetischer Textzeugen</h1>
+
       <figure class="image-figure">
-        <img src="assets/images/csm_Kanjur-Lhasa-Vinaya.jpg" 
-             alt="Tibetischer Kanjur (Vinaya-Text) im traditionellen Pecha-Format" 
-             width="500" 
+        <img src="assets/images/csm_Kanjur-Lhasa-Vinaya.jpg"
+             alt="Tibetischer Kanjur (Vinaya-Text) im traditionellen Pecha-Format"
+             width="500"
              height="200">
         <figcaption>
-          <strong>Abb. 1:</strong> Der Anfang des tibetischen Kanjur (Vinaya-Text) – 
+          <strong>Abb. 1:</strong> Der Anfang des tibetischen Kanjur (Vinaya-Text) –
           Lhasa-Ausgabe im traditionellen Pecha-Format.
+          <span style="font-size:0.85em; color:var(--color-muted); display:block;">
+            (Foto: Bayrische Akademie der Wissenschaften https://wts.badw.de/tibetische-sprache.html)
+          </span>
         </figcaption>
       </figure>
-      <h3>TibetanTEI — Digitale Edition klassisch-tibetischer Texte</h3>
-          <p>Diese Plattform präsentiert ausgewählte Texte aus dem Bereich der klassischen tibetischen Schriftsprache, die im Rahmen von Lehrveranstaltungen am Institut für Südasien-, Tibet- und Buddhismuskunde der Universität Wien erarbeitet wurden. Für Korrekturen und Anregungen wenden Sie sich bitte an den Herausgeber.</p>
-            <h3>Editionsprinzip</h3>
-          <p>Die Text Encoding Initiative (TEI-P5) ist ein offener, community-basierter Standard für die digitale Erschließung und Analyse von Texten, der auf der Auszeichnungssprache XML basiert. Ein digitales Textencoding im Sinne der TEI zielt nicht auf die diplomatische Reproduktion einer Textvorlage, sondern auf deren selektive, strukturierte Aufbereitung für unterschiedliche Nutzungskontexte — sowohl für menschliche Rezipienten als auch für die maschinelle Weiterverarbeitung. Im vorliegenden Projekt werden TEI-P5-kodierte Textzeugen der klassischen Tibetologie mit linguistischer Annotation (POS-Tagging nach SOAS/Nathan Hill, Syntaxanalyse nach TIGER-Schema), Personenregister (BUDA/TBRC), Ortsregister und Vokabular erschlossen und im Browser ohne serverseitige Infrastruktur präsentiert. XML dient dabei zugleich als Single-Source-Publishing-Format und als universelles Datenaustauschformat für die Weiterverarbeitung.</p>
-      <h3>Hinweis zur Seitenbezeichnung</h3>
-          <p>Seitenangaben folgen der Folio-Konvention: a = recto (Vorderseite), b = verso (Rückseite) eines Folio bzw. Pecha-Blatts.</p>
+
+      <h3>Projekt</h3>
+      <p>
+        <strong>TibetanTEI</strong> ist ein laufendes Editionsprojekt aus Textübungen am
+        <a href="https://www.univie.ac.at/istb/">Institut für Südasien-, Tibet- und Buddhismuskunde</a>
+        der Universität Wien. Es präsentiert ausgewählte Texte aus dem Bereich der
+        klassischen tibetischen Schriftsprache, die im Rahmen von Lehrveranstaltungen
+        erarbeitet wurden. Für Korrekturen und Anregungen wenden Sie sich bitte an
+        den Herausgeber.
+      </p>
+      <p style="font-size:0.9em; color:var(--color-muted);">
+        Projektlaufzeit: seit 2024 &middot; Version 1.0 (2026)
+      </p>
+
+      <h3>Editionsprinzip</h3>
+      <p>
+        Die Edition folgt den Richtlinien der
+        <a href="https://tei-c.org/">Text Encoding Initiative (TEI P5)</a>
+        und erschließt die Textzeugen durch linguistische Annotation
+        (POS-Tagging nach dem SOAS-Schema, syntaktische Analyse nach TIGER),
+        Normdatenanbindung (Personen- und Ortsregister via
+        <a href="https://www.tbrc.org/">BUDA/TBRC</a>) sowie ein lemmatisiertes
+        Vokabular. Die Präsentation erfolgt clientseitig im Browser ohne
+        serverseitige Infrastruktur, wodurch die TEI-XML-Daten zugleich als
+        Single-Source-Publishing-Format und als universelles Austauschformat
+        für die wissenschaftliche Weiterverarbeitung dienen.
+      </p>
+
+      <h3>Seitenbezeichnung</h3>
+      <p>
+        Seitenangaben folgen der Folio-Konvention: <strong>a</strong> = recto
+        (Vorderseite), <strong>b</strong> = verso (Rückseite) eines Folio
+        bzw. Pecha-Blatts.
+      </p>
+
+      <h3>Zitierweise</h3>
+      <p class="citation-block">
+        Brugnara, Albert (Hrsg.): <em>TibetanTEI – Digitale Edition klassisch-tibetischer Texte</em>.
+        Wien, Universität Wien, seit 2022 aus diversen Übungen am ISTB. URL: <a href="https://www.brugnara.at">www.brugnara.at</a>
+        [Zugriff: 5. August 2026].
+      </p>
+
       <h3>Kontakt</h3>
-          <p><a href="tel:+436606757138">Rufen Sie an</a> oder <a href="mailto:albert.brugnara@univie.ac.at">E-Mail</a></p>
+      <p>
+        <strong>Projektleitung &amp; Herausgeber</strong><br>
+        Albert Brugnara<br>
+        Textzeugen Übungen am Institut für Südasien-, Tibet- und Buddhismuskunde<br>
+        Universität Wien<br>
+        <a href="mailto:albert.brugnara@univie.ac.at">albert.brugnara@univie.ac.at</a>
+      </p>
+
+      <!-- Förderhinweis (optional – Platzhalter, falls kein Förderer) -->
+      <!--
+      <h3>Förderung</h3>
+      <p>
+        Dieses Projekt wird gefördert durch ...
+      </p>
+      -->
+
     </section>
   </main>
 
   <footer>
     <nav class="footer-menu">
-      <a href="impressum.html">Impressum</a>
+      <div>
+        <a href="impressum.html">Impressum</a>
+        <span style="margin:0 var(--space-sm); color:var(--second-light);">|</span>
+        <span style="font-size:12px; color:var(--color-muted);">
+          &copy; 2026 Albert Brugnara &middot; Lizenz: CC BY-NC 4.0
+        </span>
+      </div>
       <div class="badge">
         <a href="https://github.com/abrugnara/TibetanTEI" target="_blank">
           <svg width="59" height="16" viewBox="0 0 59 16" fill="none" xmlns="http://www.w3.org/2000/svg">
